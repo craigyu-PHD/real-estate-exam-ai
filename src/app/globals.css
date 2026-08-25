@@ -7,24 +7,18 @@
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-200 antialiased font-sans;
+    @apply bg-slate-950 text-slate-200 antialiased font-sans selection:bg-blue-500/30 selection:text-blue-100;
   }
-  * {
-    @apply scroll-smooth;
-  }
-  :focus-visible {
-    @apply outline-none ring-2 ring-blue-500/50 ring-offset-2 ring-offset-slate-950;
-  }
+  * { @apply scroll-smooth; }
+  :focus-visible { @apply outline-none ring-2 ring-blue-500/40 ring-offset-2 ring-offset-slate-950; }
 }
 
 @layer utilities {
-  .animate-float {
-    animation: float 20s infinite alternate ease-in-out;
-  }
-  
-  .animate-float-delayed {
-    animation: float 25s infinite alternate-reverse ease-in-out;
-  }
+  .animate-float { animation: float 20s infinite alternate ease-in-out; }
+  .animate-float-delayed { animation: float 25s infinite alternate-reverse ease-in-out; }
+  .glass { @apply bg-slate-900/70 backdrop-blur border border-slate-800; }
+  .card-hover { @apply hover:border-slate-700 hover:bg-slate-800/60 transition-all; }
+  .shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent); background-size: 200% 100%; animation: shimmer 1.6s infinite; }
 }
 
 @keyframes float {
@@ -32,3 +26,4 @@
   50% { transform: translate(5%, 10%) rotate(5deg) scale(1.05); }
   100% { transform: translate(-5%, 5%) rotate(-5deg) scale(0.95); }
 }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }

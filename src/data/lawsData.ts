@@ -20,8 +20,8 @@ export const lawsData: LawRecord[] = [
     id: 'civil',
     name: '民法',
     category: '民法',
-    description: '包含總則、債編、物權編、親屬編與繼承編',
-    totalArticles: 1225,
+    description: '包含總則、債編、物權編、親屬編與繼承編（對應考試精選範圍）',
+    totalArticles: 1439,
     chapters: [
       { id: 'c1', name: '第一編 總則', startArticle: 1, endArticle: 152, articlesCount: 152 },
       { id: 'c2', name: '第二編 債', startArticle: 153, endArticle: 756, articlesCount: 604 },
@@ -34,14 +34,14 @@ export const lawsData: LawRecord[] = [
     id: 'land',
     name: '土地法',
     category: '土地法與土地相關稅法',
-    description: '土地法及施行法',
-    totalArticles: 247,
+    description: '土地法及施行法（已對齊 07_原始法規實際條文）',
+    totalArticles: 262,
     chapters: [
       { id: 'l1', name: '第一編 總則', startArticle: 1, endArticle: 13, articlesCount: 13 },
       { id: 'l2', name: '第二編 地籍', startArticle: 14, endArticle: 79, articlesCount: 66 },
       { id: 'l3', name: '第三編 土地使用', startArticle: 80, endArticle: 134, articlesCount: 55 },
       { id: 'l4', name: '第四編 土地稅', startArticle: 135, endArticle: 207, articlesCount: 73 },
-      { id: 'l5', name: '第五編 土地徵收', startArticle: 208, endArticle: 247, articlesCount: 40 },
+      { id: 'l5', name: '第五編 土地徵收', startArticle: 208, endArticle: 262, articlesCount: 55 },
     ]
   },
   {
@@ -49,9 +49,9 @@ export const lawsData: LawRecord[] = [
     name: '平均地權條例',
     category: '土地法與土地相關稅法',
     description: '平均地權條例',
-    totalArticles: 87,
+    totalArticles: 113,
     chapters: [
-      { id: 'el1', name: '平均地權條例 全文', startArticle: 1, endArticle: 87, articlesCount: 87 }
+      { id: 'el1', name: '平均地權條例 全文', startArticle: 1, endArticle: 113, articlesCount: 113 }
     ]
   },
   {
@@ -59,9 +59,9 @@ export const lawsData: LawRecord[] = [
     name: '土地稅法',
     category: '土地法與土地相關稅法',
     description: '地價稅、田賦、土地增值稅',
-    totalArticles: 59,
+    totalArticles: 75,
     chapters: [
-      { id: 'lt1', name: '土地稅法 全文', startArticle: 1, endArticle: 59, articlesCount: 59 }
+      { id: 'lt1', name: '土地稅法 全文', startArticle: 1, endArticle: 75, articlesCount: 75 }
     ]
   },
   {
@@ -69,9 +69,9 @@ export const lawsData: LawRecord[] = [
     name: '房屋稅條例',
     category: '土地法與土地相關稅法',
     description: '房屋稅條例',
-    totalArticles: 25,
+    totalArticles: 26,
     chapters: [
-      { id: 'ht1', name: '房屋稅條例 全文', startArticle: 1, endArticle: 25, articlesCount: 25 }
+      { id: 'ht1', name: '房屋稅條例 全文', startArticle: 1, endArticle: 26, articlesCount: 26 }
     ]
   },
   {
@@ -79,9 +79,9 @@ export const lawsData: LawRecord[] = [
     name: '契稅條例',
     category: '土地法與土地相關稅法',
     description: '契稅條例',
-    totalArticles: 33,
+    totalArticles: 35,
     chapters: [
-      { id: 'dt1', name: '契稅條例 全文', startArticle: 1, endArticle: 33, articlesCount: 33 }
+      { id: 'dt1', name: '契稅條例 全文', startArticle: 1, endArticle: 35, articlesCount: 35 }
     ]
   },
   {
@@ -89,9 +89,9 @@ export const lawsData: LawRecord[] = [
     name: '不動產經紀業管理條例',
     category: '不動產經紀相關法規',
     description: '不動產經紀業管理條例',
-    totalArticles: 40,
+    totalArticles: 43,
     chapters: [
-      { id: 'b1', name: '經紀業管理條例 全文', startArticle: 1, endArticle: 40, articlesCount: 40 }
+      { id: 'b1', name: '經紀業管理條例 全文', startArticle: 1, endArticle: 43, articlesCount: 43 }
     ]
   },
   {
@@ -99,9 +99,9 @@ export const lawsData: LawRecord[] = [
     name: '消費者保護法',
     category: '不動產經紀相關法規',
     description: '消費者保護法 (與不動產相關部分)',
-    totalArticles: 63,
+    totalArticles: 78,
     chapters: [
-      { id: 'cs1', name: '消保法 全文', startArticle: 1, endArticle: 63, articlesCount: 63 }
+      { id: 'cs1', name: '消保法 全文', startArticle: 1, endArticle: 78, articlesCount: 78 }
     ]
   },
   {
@@ -109,9 +109,9 @@ export const lawsData: LawRecord[] = [
     name: '公平交易法',
     category: '不動產經紀相關法規',
     description: '公平交易法',
-    totalArticles: 49,
+    totalArticles: 51,
     chapters: [
-      { id: 'ft1', name: '公平交易法 全文', startArticle: 1, endArticle: 49, articlesCount: 49 }
+      { id: 'ft1', name: '公平交易法 全文', startArticle: 1, endArticle: 51, articlesCount: 51 }
     ]
   },
   {
@@ -119,13 +119,13 @@ export const lawsData: LawRecord[] = [
     name: '不動產估價技術規則',
     category: '不動產估價概要',
     description: '不動產估價技術規則',
-    totalArticles: 134,
+    totalArticles: 140,
     chapters: [
       { id: 'ap1', name: '第一章 總則', startArticle: 1, endArticle: 14, articlesCount: 14 },
       { id: 'ap2', name: '第二章 估價作業程序', startArticle: 15, endArticle: 26, articlesCount: 12 },
       { id: 'ap3', name: '第三章 估價方法', startArticle: 27, endArticle: 86, articlesCount: 60 },
       { id: 'ap4', name: '第四章 宗地估價', startArticle: 87, endArticle: 113, articlesCount: 27 },
-      { id: 'ap5', name: '第五章 房地估價', startArticle: 114, endArticle: 134, articlesCount: 21 },
+      { id: 'ap5', name: '第五章 房地估價', startArticle: 114, endArticle: 140, articlesCount: 27 },
     ]
   }
 ];

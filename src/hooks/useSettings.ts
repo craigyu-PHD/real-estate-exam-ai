@@ -1,16 +1,22 @@
 'use client';
 import { useState, useEffect } from 'react';
 
+export type VoiceEngine = 'auto' | 'gemini' | 'edge' | 'web-speech';
+
 interface Settings {
   darkMode: boolean;
   fontSize: 'small' | 'medium' | 'large';
+  voiceEngine: VoiceEngine;
   voiceSpeed: number;
+  autoPlayNext: boolean;
 }
 
 const defaultSettings: Settings = {
   darkMode: true,
   fontSize: 'medium',
+  voiceEngine: 'auto',
   voiceSpeed: 1.0,
+  autoPlayNext: true,
 };
 
 export function useSettings() {
@@ -23,26 +29,20 @@ export function useSettings() {
       try {
         const parsed = JSON.parse(stored);
         setSettings({ ...defaultSettings, ...parsed });
-      } catch (e) {}
+      } catch {}
     }
     setIsLoaded(true);
   }, []);
 
   const updateSettings = (updates: Partial<Settings>) => {
     setSettings(prev => {
-      const newSettings = { ...prev, ...updates };
-      localStorage.setItem('app_settings', JSON.stringify(newSettings));
-      
-      // Apply dark mode globally
+      const next = { ...prev, ...updates };
+      localStorage.setItem('app_settings', JSON.stringify(next));
       if (updates.darkMode !== undefined) {
-        if (updates.darkMode) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+        if (updates.darkMode) document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
       }
-
-      return newSettings;
+      return next;
     });
   };
 
