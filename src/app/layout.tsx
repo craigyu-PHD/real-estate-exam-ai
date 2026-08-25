@@ -7,7 +7,7 @@ import { SettingsProvider } from "@/components/SettingsProvider";
 const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "900"],
 });
 
 const notoSerifTC = Noto_Serif_TC({
@@ -17,15 +17,14 @@ const notoSerifTC = Noto_Serif_TC({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#020617",
+  themeColor: "#4f46e5",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "不動產經紀人 AI 學習系統",
-  description: "結合 PWA 與 AI 的隨身法規家教",
+  title: "不動產經紀人 AI 學習系統｜補習班級",
+  description: "白底企業級・零基礎到考上的 AI 家教，周周進度、逐條精講、聽課連播",
   manifest: "/manifest.json",
 };
 
@@ -35,20 +34,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW" className="dark">
+    <html lang="zh-TW">
       <body
-        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base selection:bg-blue-500/30 selection:text-blue-200`}
+        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base`}
       >
         <SettingsProvider>
-          {/* Animated Background */}
-          <div className="fixed inset-0 z-[-1] overflow-hidden bg-slate-950">
-            <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-900/20 blur-[120px] rounded-full animate-float pointer-events-none"></div>
-            <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-indigo-900/20 blur-[150px] rounded-full animate-float-delayed pointer-events-none"></div>
+          <div className="fixed inset-0 z-[-1] overflow-hidden bg-[#f8fafc]">
+            <div className="absolute -top-32 -left-20 w-[60%] h-[45%] bg-indigo-500/10 blur-[80px] rounded-full animate-float pointer-events-none" />
+            <div className="absolute -bottom-20 -right-20 w-[55%] h-[50%] bg-amber-500/10 blur-[90px] rounded-full animate-float-delayed pointer-events-none" />
           </div>
-          
-          <div className="flex h-screen overflow-hidden">
+          <div className="flex min-h-screen">
             <Navigation />
-            <main className="flex-1 overflow-y-auto md:ml-64 relative">
+            <main className="flex-1 md:ml-64 relative">
               {children}
             </main>
           </div>
