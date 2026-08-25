@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-:root {
 @theme {
   --font-sans: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Noto Serif TC", ui-serif, Georgia, serif;
