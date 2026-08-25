@@ -1,125 +1,94 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, Gauge, RotateCcw, Sparkles } from 'lucide-react';
+import { Play, Pause, Volume2, Sparkles } from 'lucide-react';
 import { getCachedAudio, setCachedAudio, hashText, fetchServerTTS } from '@/lib/tts';
+import { useSettings } from '@/hooks/useSettings';
 
 type Engine = 'gemini' | 'edge' | 'web-speech' | null;
 
-export function AudioPlayer({ text }: { text: string }) {
+export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>void }) {
+  const { settings } = useSettings();
   const [isPlaying, setIsPlaying] = useState(false);
   const [engine, setEngine] = useState<Engine>(null);
-  const [rate, setRate] = useState(1.0);
   const [loading, setLoading] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const synthRef = useRef<SpeechSynthesis | null>(null);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const blobUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') synthRef.current = window.speechSynthesis;
     return () => {
-      if (synthRef.current) synthRef.current.cancel();
-      if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; }
+      synthRef.current?.cancel();
+      audioRef.current?.pause();
       if (blobUrlRef.current) URL.revokeObjectURL(blobUrlRef.current);
     };
   }, []);
 
-  const playWebSpeech = (t: string, r: number) => {
+  const waitVoices = async (): Promise<SpeechSynthesisVoice[]> => {
+    if (!synthRef.current) return [];
+    let v = synthRef.current.getVoices();
+    if (v.length) return v;
+    return await new Promise(res=>{
+      const h = ()=>{ res(synthRef.current!.getVoices()); synthRef.current!.removeEventListener('voiceschanged',h); };
+      synthRef.current!.addEventListener('voiceschanged',h);
+      setTimeout(()=> res(synthRef.current!.getVoices()), 800);
+    });
+  };
+
+  const playWeb = async (t: string, eng: Engine) => {
     if (!synthRef.current) return;
+    const voices = await waitVoices();
     synthRef.current.cancel();
     const u = new SpeechSynthesisUtterance(t);
     u.lang = 'zh-TW';
-    u.rate = r;
-    // Prefer a Mandarin voice if available
-    const voices = synthRef.current.getVoices();
-    const tw = voices.find(v => v.lang.includes('zh-TW') || v.lang.includes('zh_TW')) || voices.find(v => v.lang.startsWith('zh'));
-    if (tw) u.voice = tw;
-    u.onend = () => setIsPlaying(false);
-    u.onerror = () => setIsPlaying(false);
-    utteranceRef.current = u;
+    u.rate = settings.voiceSpeed;
+    // differentiate: edge prefers HsiaoYu, gemini fallback uses slightly slower + higher pitch, web uses default
+    let candidate: SpeechSynthesisVoice | undefined;
+    if (eng==='edge') candidate = voices.find(v=> v.name.includes('HsiaoYu') || v.name.includes('YunJhe')) || voices.find(v=>v.lang.includes('zh-TW'));
+    else if (eng==='gemini') candidate = voices.find(v=> v.name.includes('Google')) || voices.find(v=>v.lang.includes('zh-TW'));
+    else candidate = voices.find(v=> v.lang.includes('zh-TW')) || voices[0];
+    if (candidate) u.voice = candidate;
+    if (eng==='gemini') u.pitch = 1.05;
+    if (eng==='edge') u.pitch = 1.0;
+    u.onend = ()=> { setIsPlaying(false); onEnded?.(); };
+    u.onerror = ()=> setIsPlaying(false);
     synthRef.current.speak(u);
-    setEngine('web-speech');
+    setEngine(eng as Engine);
     setIsPlaying(true);
   };
 
-  const handlePlayPause = async () => {
-    if (isPlaying) {
-      if (audioRef.current && !audioRef.current.paused) audioRef.current.pause();
-      if (synthRef.current?.speaking) synthRef.current.pause();
-      setIsPlaying(false);
-      return;
-    }
-    // resume if web speech paused
-    if (synthRef.current?.paused) { synthRef.current.resume(); setIsPlaying(true); return; }
-    if (audioRef.current && audioRef.current.paused && audioRef.current.src) { audioRef.current.play(); setIsPlaying(true); return; }
-
+  const handle = async ()=>{
+    if (isPlaying){ audioRef.current?.pause(); synthRef.current?.pause(); setIsPlaying(false); return; }
+    if (synthRef.current?.paused){ synthRef.current.resume(); setIsPlaying(true); return; }
+    if (audioRef.current?.paused && audioRef.current.src){ audioRef.current.play(); setIsPlaying(true); return; }
     setLoading(true);
-    const key = hashText(text);
-    // 1) IndexedDB cache
-    const cached = await getCachedAudio(key);
-    if (cached) {
-      const url = URL.createObjectURL(cached);
-      blobUrlRef.current = url;
-      const a = new Audio(url);
-      a.playbackRate = rate;
-      audioRef.current = a;
-      a.onended = () => setIsPlaying(false);
-      a.onerror = () => { playWebSpeech(text, rate); };
-      await a.play();
-      setIsPlaying(true);
-      setEngine('gemini');
-      setLoading(false);
-      return;
+    // decide engine per settings
+    const want = settings.voiceEngine;
+    if (want==='gemini' || want==='auto'){
+      const key = hashText(text);
+      const cached = await getCachedAudio(key);
+      if (cached){ const url=URL.createObjectURL(cached); blobUrlRef.current=url; const a=new Audio(url); a.playbackRate=settings.voiceSpeed; audioRef.current=a; a.onended=()=>{setIsPlaying(false); onEnded?.();}; await a.play(); setIsPlaying(true); setEngine('gemini'); setLoading(false); return; }
+      const blob = await fetchServerTTS(text);
+      if (blob){ await setCachedAudio(key, blob); const url=URL.createObjectURL(blob); blobUrlRef.current=url; const a=new Audio(url); a.playbackRate=settings.voiceSpeed; audioRef.current=a; a.onended=()=>{setIsPlaying(false); onEnded?.();}; await a.play(); setIsPlaying(true); setEngine('gemini'); setLoading(false); return; }
+      // if auto, fall through to edge/web
+      if (want==='gemini'){ setLoading(false); await playWeb(text,'gemini'); return; }
     }
-    // 2) Server TTS
-    const blob = await fetchServerTTS(text);
-    if (blob) {
-      await setCachedAudio(key, blob);
-      const url = URL.createObjectURL(blob);
-      blobUrlRef.current = url;
-      const a = new Audio(url);
-      a.playbackRate = rate;
-      audioRef.current = a;
-      a.onended = () => setIsPlaying(false);
-      a.onerror = () => playWebSpeech(text, rate);
-      await a.play();
-      setIsPlaying(true);
-      setEngine('gemini');
-      setLoading(false);
-      return;
-    }
-    // 3) Fallback
     setLoading(false);
-    playWebSpeech(text, rate);
-  };
-
-  const handleRateChange = (r: number) => {
-    setRate(r);
-    if (audioRef.current) audioRef.current.playbackRate = r;
-    // web speech needs restart to apply rate, do nothing until next play
+    if (want==='edge') await playWeb(text,'edge');
+    else await playWeb(text,'web-speech');
   };
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <button
-        onClick={handlePlayPause}
-        disabled={loading}
-        className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg shadow-emerald-900/20 transition-colors"
-      >
-        {isPlaying ? <Pause size={14} className="fill-current" /> : <Play size={14} className="fill-current" />}
+      <button onClick={handle} disabled={loading} className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white px-4 py-2 rounded-full text-sm font-black shadow">
+        {isPlaying ? <Pause size={14}/> : <Play size={14} className="fill-current"/>}
         {loading ? '準備中…' : isPlaying ? '暫停' : '聽老師說'}
       </button>
-      <div className="flex items-center gap-1.5 text-xs">
-        <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full border ${engine === 'gemini' || engine === 'edge' ? 'bg-purple-500/10 text-purple-300 border-purple-500/20' : 'bg-slate-800 text-slate-400 border-slate-700'}`}>
-          {engine === 'gemini' || engine === 'edge' ? <Sparkles size={12} /> : <Volume2 size={12} />}
-          {engine === 'gemini' ? 'AI 語音' : engine === 'edge' ? 'Edge 語音' : engine === 'web-speech' ? '系統語音' : '自動選源'}
-        </span>
-        <div className="hidden sm:flex items-center gap-1 bg-slate-800 rounded-full p-1 border border-slate-700">
-          {[0.8, 1.0, 1.25, 1.5].map(r => (
-            <button key={r} onClick={() => handleRateChange(r)} className={`px-2 py-0.5 rounded-full text-xs font-medium transition ${rate === r ? 'bg-white text-slate-900' : 'text-slate-400 hover:text-white'}`}>{r}x</button>
-          ))}
-        </div>
-      </div>
+      <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full border text-xs font-bold ${engine==='gemini' ? 'bg-violet-50 text-violet-700 border-violet-200' : engine==='edge' ? 'bg-sky-50 text-sky-700 border-sky-200' : engine==='web-speech' ? 'bg-slate-100 text-slate-600 border-slate-200' : 'bg-slate-50 text-slate-500 border-slate-200'}`}>
+        {engine ? <Sparkles size={12}/> : <Volume2 size={12}/>}
+        {engine==='gemini' ? 'Gemini' : engine==='edge' ? 'Edge' : engine==='web-speech' ? '系統' : `${settings.voiceEngine} · ${settings.voiceSpeed}x`}
+      </span>
+      <span className="text-xs text-slate-500 hidden sm:inline">{settings.voiceSpeed}x · {settings.voiceEngine}</span>
     </div>
   );
 }

@@ -133,9 +133,7 @@ export default function Home() {
               <div className="bg-slate-50 border border-slate-200 rounded-xl py-2"><div className="text-xs text-slate-500">連續</div><div className="text-sm font-black text-orange-600">{streak}天</div></div>
             </div>
           </div>
-          <div className="rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 p-4 text-white flex items-center gap-3 shadow">
-            <Trophy size={20} /><div><div className="text-sm font-black">企業級視覺已套用</div><div className="text-xs opacity-80">白底＋陰影＋層次，達補習班官網等級</div></div>
-          </div>
+
         </div>
       </div>
     </div>

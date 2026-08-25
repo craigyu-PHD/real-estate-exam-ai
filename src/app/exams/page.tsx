@@ -1,7 +1,9 @@
 'use client';
 import { useState, useMemo } from 'react';
-import { PencilRuler, BookOpen, Check, X, RotateCcw, SlidersHorizontal } from 'lucide-react';
+import { PencilRuler, Check, X, RotateCcw, SlidersHorizontal } from 'lucide-react';
 import { examQuestions } from '@/data/examData';
+import { useExamHistory } from '@/hooks/useExamHistory';
+import { useEffect } from 'react';
 
 type Mode = 'all' | 'easy' | 'medium' | 'hard' | 'civil' | 'land' | 'broker';
 const modeLabels: Record<Mode,string> = { all: '全部試題', easy: '簡單', medium: '中等', hard: '困難', civil: '民法', land: '土地法', broker: '經紀法規' };
@@ -13,6 +15,8 @@ export default function ExamsIndex() {
   const [sel, setSel] = useState<number|null>(null);
   const [show, setShow] = useState(false);
   const [score, setScore] = useState(0);
+  const { add } = useExamHistory();
+  const startAtRef = useState(()=> Date.now())[0] as unknown as number;
 
   const pool = useMemo(()=>{
     if (mode==='all') return examQuestions;
@@ -31,7 +35,10 @@ export default function ExamsIndex() {
   };
   const next = ()=>{
     if(idx < pool.length-1){ setIdx(i=>i+1); setSel(null); setShow(false); }
-    else setIdx(pool.length);
+    else {
+      add({ id: Date.now().toString(), date: new Date().toISOString(), mode: modeLabels[mode], score, total: pool.length });
+      setIdx(pool.length);
+    }
   };
   const restart = ()=>{ setStarted(false); setIdx(0); setSel(null); setShow(false); setScore(0); };
 

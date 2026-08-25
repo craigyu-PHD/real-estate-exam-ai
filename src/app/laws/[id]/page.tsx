@@ -1,82 +1,71 @@
 'use client';
 import Link from 'next/link';
-import { ChevronLeft, FileText, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, CheckCircle2, Play, Headphones, Search } from 'lucide-react';
 import { useProgress } from '@/hooks/useProgress';
 import { lawsData } from '@/data/lawsData';
+import { generatedArticles } from '@/data/generatedArticles';
 import { use } from 'react';
 
 export default function LawDetail({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params);
+  const { id } = use(params);
   const { isLoaded, getProgress, isArticleRead } = useProgress() as any;
-  
-  const law = lawsData.find(l => l.id === resolvedParams.id);
-  const prog = getProgress(resolvedParams.id);
-
-  if (!law) return <div className="p-10 text-white text-center">找不到此法規</div>;
-  if (!isLoaded) return <div className="p-10 text-slate-400 text-center">載入中...</div>;
+  const law = lawsData.find(l => l.id === id);
+  const prog = getProgress(id);
+  if (!law) return <div className="p-10 text-center">找不到此法規</div>;
+  if (!isLoaded) return <div className="p-10 text-center text-slate-500">載入中...</div>;
 
   return (
-    <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-8 relative z-10">
-      <Link href="/laws" className="inline-flex items-center text-slate-400 hover:text-white transition-colors">
-        <ChevronLeft size={20} className="mr-1" /> 回法規總覽
-      </Link>
+    <div className="p-6 md:p-8 max-w-4xl mx-auto space-y-6">
+      <Link href="/laws" className="inline-flex items-center gap-1 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-indigo-600"><ChevronLeft size={16}/> 回學習中心</Link>
 
-      <header className="bg-slate-900/80 backdrop-blur border border-slate-800 p-8 rounded-3xl">
-        <div className="flex justify-between items-start mb-6">
+      <header className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+        <div className="flex flex-wrap justify-between gap-4">
           <div>
-            <span className="text-xs font-semibold px-2 py-1 bg-blue-900/30 text-blue-400 rounded border border-blue-500/20 mb-3 inline-block">
-              {law.category}
-            </span>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{law.name}</h1>
-            <p className="text-slate-400">{law.description}</p>
+            <span className="text-xs font-bold px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 border border-indigo-200 rounded-full">{law.category}</span>
+            <h1 className="text-2xl font-black text-slate-900 dark:text-white mt-2">{law.name}</h1>
+            <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">{law.description}</p>
           </div>
-          <div className="text-right bg-slate-950 p-4 rounded-2xl border border-slate-800 hidden md:block">
-            <div className="text-3xl font-bold text-white mb-1">{prog.percentage}%</div>
-            <div className="text-slate-400 text-sm">總進度 {prog.read} / {prog.total}</div>
+          <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl px-5 py-4 text-center min-w-[140px]">
+            <div className="text-2xl font-black text-slate-900 dark:text-white">{prog.percentage}%</div>
+            <div className="text-xs text-slate-500">{prog.read} / {prog.total}</div>
+            <div className="mt-2 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden"><div className="h-1.5 bg-indigo-600 rounded-full" style={{width:`${prog.percentage}%`}}/></div>
           </div>
         </div>
-        
-        {/* Mobile Progress */}
-        <div className="md:hidden mt-4 pt-4 border-t border-slate-800">
-          <div className="flex justify-between text-sm mb-2">
-            <span className="text-slate-400">總進度</span>
-            <span className="text-white font-medium">{prog.percentage}% ({prog.read}/{prog.total})</span>
-          </div>
-          <div className="w-full bg-slate-950 rounded-full h-2">
-            <div className="bg-blue-500 h-2 rounded-full transition-all" style={{ width: `${prog.percentage}%` }}></div>
-          </div>
+        <div className="mt-4 flex gap-2">
+          <Link href={`/listen?law=${law.id}`} className="inline-flex items-center gap-1.5 bg-indigo-600 text-white px-3 py-2 rounded-xl text-xs font-black"><Headphones size={14}/> 聽此法</Link>
+          <Link href="/search" className="inline-flex items-center gap-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-2 rounded-xl text-xs font-bold"><Search size={14}/> 搜條文</Link>
         </div>
       </header>
 
-      <div className="space-y-4">
-        <h2 className="text-xl font-bold text-white mb-4 px-2">法規目錄</h2>
-        {law.chapters.map((chapter) => (
-          <div key={chapter.id} className="bg-slate-900/50 backdrop-blur border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-colors group">
-            <div className="p-4 bg-slate-800/30 border-b border-slate-800/50 flex justify-between items-center">
-              <h3 className="font-bold text-slate-200 group-hover:text-white transition-colors">{chapter.name}</h3>
-              <span className="text-xs text-slate-500">共 {chapter.articlesCount} 條</span>
-            </div>
-            <div className="p-4">
-              <div className="grid grid-cols-5 md:grid-cols-10 gap-2">
-                {Array.from({ length: chapter.articlesCount }).map((_, idx) => {
-                  const articleNum = chapter.startArticle + idx;
-                  const read = isArticleRead ? isArticleRead(law.id, String(articleNum)) : false;
+      <div className="space-y-5">
+        {law.chapters.map((ch) => {
+          const arts = generatedArticles[law.id]?.filter(a=> {
+            const n = parseInt(a.articleNumber,10);
+            return !isNaN(n) && n >= ch.startArticle && n <= ch.endArticle;
+          }) || [];
+          const list = arts.length ? arts : Array.from({length: ch.articlesCount}, (_,i)=> ({ articleNumber: String(ch.startArticle+i), text: `第 ${ch.startArticle+i} 條` }));
+          return (
+            <section key={ch.id} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+              <div className="px-5 py-3 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                <h3 className="font-black text-slate-900 dark:text-white text-sm">{ch.name}</h3>
+                <span className="text-xs text-slate-500 font-bold">共 {list.length} 條</span>
+              </div>
+              <div className="divide-y divide-slate-100 dark:divide-slate-800">
+                {list.map((a:any)=>{
+                  const read = isArticleRead ? isArticleRead(law.id, a.articleNumber) : false;
                   return (
-                    <Link 
-                      key={articleNum}
-                      href={`/articles/${law.id}-${articleNum}`}
-                      title={read ? '已讀' : '未讀'}
-                      className={`aspect-square flex items-center justify-center rounded-lg border font-medium text-sm transition relative ${read ? 'bg-emerald-600 border-emerald-500 text-white' : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-500'}`}
-                    >
-                      {articleNum}
-                      {read && <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-300 rounded-full border border-slate-900" />}
+                    <Link key={a.articleNumber} href={`/articles/${law.id}-${a.articleNumber}`} className="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                      <span className={`w-9 h-9 rounded-xl flex items-center justify-center text-xs font-black border ${read ? 'bg-emerald-500 text-white border-emerald-500' : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700'}`}>{a.articleNumber}</span>
+                      <span className="flex-1 text-sm text-slate-700 dark:text-slate-300 line-clamp-1">{a.text.slice(0,60)}</span>
+                      <span className={`text-xs font-bold ${read ? 'text-emerald-600' : 'text-indigo-600'}`}>{read ? '已讀' : '學習'} →</span>
+                      {read && <CheckCircle2 size={14} className="text-emerald-500"/>}
                     </Link>
                   );
                 })}
               </div>
-            </div>
-          </div>
-        ))}
+            </section>
+          );
+        })}
       </div>
     </div>
   );
