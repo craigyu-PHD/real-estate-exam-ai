@@ -24,28 +24,18 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "不動產經紀人 AI 學習系統｜補習班級",
-  description: "白底企業級・零基礎到考上的 AI 家教，周周進度、逐條精講、聽課連播",
+  description: "零基礎到考上的 AI 家教，法規逐條精講、SM2 複習、聽課連播",
   manifest: "/manifest.json",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-TW">
-      <body
-        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base`}
-      >
+      <body className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased`}>
         <SettingsProvider>
-          <div className="fixed inset-0 z-[-1] overflow-hidden bg-[#f8fafc]">
-            <div className="absolute -top-32 -left-20 w-[60%] h-[45%] bg-indigo-500/10 blur-[80px] rounded-full animate-float pointer-events-none" />
-            <div className="absolute -bottom-20 -right-20 w-[55%] h-[50%] bg-amber-500/10 blur-[90px] rounded-full animate-float-delayed pointer-events-none" />
-          </div>
           <div className="flex min-h-screen">
             <Navigation />
-            <main className="flex-1 md:ml-64 relative">
+            <main className="flex-1 md:ml-64 relative px-0">
               {children}
             </main>
           </div>

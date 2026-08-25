@@ -5,36 +5,71 @@
   --font-serif: "Noto Serif TC", ui-serif, Georgia, serif;
 }
 
+/* Design Tokens */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text-1: #0f172a;
+  --text-2: #334155;
+  --text-3: #64748b;
+  --muted: #f1f5f9;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --accent: #f59e0b;
+}
+
+html.dark {
+  --bg: #020617;
+  --card: #0f172a;
+  --border: #1e293b;
+  --text-1: #f1f5f9;
+  --text-2: #94a3b8;
+  --text-3: #64748b;
+  --muted: #1e293b;
+  color-scheme: dark;
+}
+
 @layer base {
   body {
-    @apply bg-[#f8fafc] text-slate-800 antialiased font-sans selection:bg-indigo-500/20;
-    background-image:
-      radial-gradient(900px 500px at 0% 0%, rgba(79,70,229,0.07), transparent 60%),
-      radial-gradient(600px 400px at 100% 0%, rgba(245,158,11,0.08), transparent 60%),
-      radial-gradient(800px 600px at 100% 100%, rgba(14,165,233,0.06), transparent 60%);
-    background-attachment: fixed;
+    @apply antialiased font-sans;
+    background: var(--bg);
+    color: var(--text-1);
   }
-  html.dark body {
-    @apply bg-[#020617] text-slate-100 selection:bg-indigo-500/30;
-    background-image:
-      radial-gradient(800px 400px at 15% -10%, rgba(79,70,229,0.18), transparent 60%),
-      radial-gradient(600px 300px at 90% 0%, rgba(99,102,241,0.15), transparent 60%),
-      radial-gradient(500px 300px at 100% 100%, rgba(16,185,129,0.10), transparent 60%);
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(900px 500px at 0% 0%, rgba(79,70,229,0.08), transparent 60%),
+      radial-gradient(600px 400px at 100% 0%, rgba(245,158,11,0.07), transparent 60%),
+      radial-gradient(800px 600px at 100% 100%, rgba(14,165,233,0.05), transparent 60%);
+    pointer-events: none;
   }
-  html.dark { color-scheme: dark; }
+  html.dark body::before {
+    background:
+      radial-gradient(800px 400px at 15% -10%, rgba(79,70,229,0.14), transparent 60%),
+      radial-gradient(600px 300px at 90% 0%, rgba(99,102,241,0.12), transparent 60%),
+      radial-gradient(500px 300px at 100% 100%, rgba(16,185,129,0.07), transparent 60%);
+  }
   * { @apply scroll-smooth; }
-  :focus-visible { @apply outline-none ring-2 ring-indigo-500/30 ring-offset-2 ring-offset-white; }
-  html.dark :focus-visible { @apply ring-offset-[#020617]; }
+  :focus-visible { @apply outline-none ring-2 ring-indigo-500/30 ring-offset-2; }
 }
 
 @layer utilities {
+  .card { background: var(--card); border: 1px solid var(--border); }
+  .card-hover { @apply hover:border-indigo-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300; }
+  html.dark .card-hover { @apply hover:border-indigo-800; }
+  .text-primary { color: var(--text-1); }
+  .text-secondary { color: var(--text-2); }
+  .text-tertiary { color: var(--text-3); }
+  .glass { background: color-mix(in srgb, var(--card) 85%, transparent); backdrop-filter: blur(12px); border: 1px solid var(--border); }
+  .text-gradient { background: linear-gradient(90deg, #4338ca, #7c3aed, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .animate-float { animation: float 22s infinite alternate ease-in-out; }
   .animate-float-delayed { animation: float 26s infinite alternate-reverse ease-in-out; }
-  .glass { @apply bg-white/80 backdrop-blur-xl border border-slate-200 shadow-sm; }
-  .glass-strong { @apply bg-white/90 backdrop-blur-xl border border-slate-200 shadow-lg; }
-  .card-hover { @apply hover:border-indigo-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300; }
-  .text-gradient { background: linear-gradient(90deg, #4338ca, #7c3aed, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 }
+
 @keyframes float {
   0% { transform: translate(0,0) scale(1); }
   50% { transform: translate(4%,6%) scale(1.03); }
