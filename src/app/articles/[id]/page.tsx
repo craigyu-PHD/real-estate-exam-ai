@@ -80,7 +80,10 @@ export default function ArticleDetail({ params }: { params: Promise<{ id: string
               {isMarked ? <CheckCircle2 size={24} /> : null}
               {isMarked ? '已完成學習' : '大致懂了，標為已讀'}
             </button>
-            <ChatGPTButton contextText={`法條原文：\n${articleText}\n\n我的問題：`} />
+            <ChatGPTButton 
+              article={`第 ${resolvedParams.id} 條`} 
+              text={articleText} 
+            />
           </div>
         </section>
       </main>
