@@ -38,7 +38,7 @@ export function Navigation() {
           <p className="text-xs text-slate-500 mt-2">零基礎 → 考上的家教系統</p>
         </div>
         <div className="p-3">
-          <Link href="/laws" className="flex items-center gap-2 text-xs text-slate-400 bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-lg px-3 py-2">
+          <Link href="/search" className="flex items-center gap-2 text-xs text-slate-400 bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-lg px-3 py-2">
             <Search size={14} /> 搜法條 / 關鍵字 / 白話問句
           </Link>
         </div>

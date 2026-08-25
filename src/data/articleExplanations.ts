@@ -75,17 +75,31 @@ export const articleDetails: Record<string, ArticleDetailData> = {
   }
 };
 
+import { generatedArticles } from './generatedArticles';
+
+function lookupRealText(lawId: string, articleId: string): string | null {
+  const list = generatedArticles[lawId];
+  if (!list) return null;
+  const found = list.find(a => a.articleNumber === articleId);
+  return found ? found.text : null;
+}
+
 export function getArticleDetail(lawId: string, articleId: string): ArticleDetailData | undefined {
   const key = `${lawId}-${articleId}`;
-  if (articleDetails[key]) return articleDetails[key];
-  // fallback: generate generic detail so every article has distinct content
+  const realText = lookupRealText(lawId, articleId);
+  if (articleDetails[key]) {
+    const base = articleDetails[key];
+    return realText ? { ...base, articleText: realText } : base;
+  }
   return {
     id: key,
     lawId,
     articleNumber: articleId,
-    articleText: `（本條原文待匯入政府 Open Data，此為占位文字，實際內容以全國法規資料庫為準）第 ${articleId} 條`,
-    oneLiner: `第 ${articleId} 條的核心觀念整理（本條詳細解析生成中）`,
-    explanation: `本條屬於 ${lawId} 的重要條文。目前逐條深度解析正在批次建置中。建議先掌握條文文字，並對照前後條文理解其在整編中的位置。若需即時解說，可點擊下方「問 AI 老師」或「帶去 ChatGPT 問」取得口語化教學。`,
+    articleText: realText || `（查無本條原文，請確認條號是否正確）第 ${articleId} 條`,
+    oneLiner: realText ? `第 ${articleId} 條：${realText.slice(0, 30)}…` : `第 ${articleId} 條的核心觀念整理（本條詳細解析生成中）`,
+    explanation: realText
+      ? `本條原文已載入。建議先精讀條文，再對照前後條文理解其在整編中的位置。進階白話解析可點擊「問 AI 老師」取得 300 字口語教學與案例。`
+      : `本條屬於 ${lawId} 的重要條文。目前逐條深度解析正在批次建置中。建議先掌握條文文字，並對照前後條文理解其在整編中的位置。若需即時解說，可點擊下方「問 AI 老師」或「帶去 ChatGPT 問」取得口語化教學。`,
     why: "本條的立法目的與前後條文脈絡相關，完整版將補上構成要件、法律效果與實務見解。",
     cases: [{ title: "通用案例框架", content: "講解團隊將為本條補上 2 則生活化案例（人物＋房屋/土地＋金錢＋登記情境），請先以 758、767 的案例格式類推學習。" }],
     pitfalls: ["待補：本條常見誤解與易混淆點"],
