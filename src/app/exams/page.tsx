@@ -1,159 +1,101 @@
 'use client';
-import { useState } from 'react';
-import { PencilRuler, Search, FileQuestion, BookOpen, Check, X, RotateCcw } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { PencilRuler, BookOpen, Check, X, RotateCcw, SlidersHorizontal } from 'lucide-react';
 import { examQuestions } from '@/data/examData';
 
+type Mode = 'all' | 'easy' | 'medium' | 'hard' | 'civil' | 'land' | 'broker';
+const modeLabels: Record<Mode,string> = { all: '全部試題', easy: '簡單', medium: '中等', hard: '困難', civil: '民法', land: '土地法', broker: '經紀法規' };
+
 export default function ExamsIndex() {
+  const [mode, setMode] = useState<Mode>('all');
   const [started, setStarted] = useState(false);
-  const [currentIdx, setCurrentIdx] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [idx, setIdx] = useState(0);
+  const [sel, setSel] = useState<number|null>(null);
+  const [show, setShow] = useState(false);
   const [score, setScore] = useState(0);
 
-  const question = examQuestions[currentIdx];
+  const pool = useMemo(()=>{
+    if (mode==='all') return examQuestions;
+    if (mode==='easy') return examQuestions.filter(q=> q.difficulty===1);
+    if (mode==='medium') return examQuestions.filter(q=> q.difficulty===2);
+    if (mode==='hard') return examQuestions.filter(q=> q.difficulty===3);
+    return examQuestions.filter(q=> q.lawId===mode);
+  },[mode]);
 
-  const handleSelect = (idx: number) => {
-    if (showAnswer) return;
-    setSelected(idx);
-    setShowAnswer(true);
-    if (idx === question.answer) {
-      setScore(s => s + 1);
-    }
+  const q = pool[idx];
+
+  const pick = (i:number)=>{
+    if(show) return;
+    setSel(i); setShow(true);
+    if(i===q.answer) setScore(s=>s+1);
   };
-
-  const handleNext = () => {
-    if (currentIdx < examQuestions.length - 1) {
-      setCurrentIdx(i => i + 1);
-      setSelected(null);
-      setShowAnswer(false);
-    } else {
-      // Done
-      setCurrentIdx(examQuestions.length);
-    }
+  const next = ()=>{
+    if(idx < pool.length-1){ setIdx(i=>i+1); setSel(null); setShow(false); }
+    else setIdx(pool.length);
   };
+  const restart = ()=>{ setStarted(false); setIdx(0); setSel(null); setShow(false); setScore(0); };
 
-  const handleRestart = () => {
-    setStarted(false);
-    setCurrentIdx(0);
-    setSelected(null);
-    setShowAnswer(false);
-    setScore(0);
-  };
-
-  if (!started) {
+  if(!started){
     return (
-      <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-8 relative z-10">
-        <header className="border-b border-slate-800 pb-6 flex items-center gap-4">
-          <PencilRuler size={32} className="text-pink-500" />
-          <div>
-            <h1 className="text-3xl font-bold text-white">題庫中心</h1>
-            <p className="text-slate-400">歷屆試題與法條克漏字測驗。</p>
-          </div>
+      <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-6">
+        <header className="border-b border-slate-200 dark:border-slate-800 pb-6">
+          <h1 className="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-2"><PencilRuler size={20} className="text-indigo-600"/> 題庫中心</h1>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">依難易與法規分類，選擇適合你階段的模測。已學習標記會優先納入出題。</p>
         </header>
-
-        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-8 text-center mt-12">
-          <div className="w-20 h-20 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-6">
-            <FileQuestion size={36} className="text-pink-500" />
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+          <div className="text-sm font-black text-slate-900 dark:text-white flex items-center gap-2"><SlidersHorizontal size={16}/> 測驗模式</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-3">
+            {(Object.keys(modeLabels) as Mode[]).map(m=> (
+              <button key={m} onClick={()=>setMode(m)} className={`px-3 py-2.5 rounded-xl text-sm font-bold border ${mode===m?'bg-indigo-600 text-white border-indigo-600':'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700'}`}>{modeLabels[m]}</button>
+            ))}
           </div>
-          <h2 className="text-2xl font-bold text-white mb-4">隨機模擬測驗</h2>
-          <p className="text-slate-400 mb-8 max-w-lg mx-auto leading-relaxed">
-            系統將從歷屆試題與重點法條中，為您隨機抽出 {examQuestions.length} 題進行測驗，幫助您檢視學習成效。
-          </p>
-          <button 
-            onClick={() => setStarted(true)}
-            className="bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-xl transition-colors flex items-center gap-2 mx-auto"
-          >
-            <BookOpen size={20} /> 開始測驗
-          </button>
+          <p className="text-xs text-slate-500 mt-3">此模式共 <b>{pool.length}</b> 題 · 建議 {pool.length<=7?'10 分鐘':'20 分鐘'} 完成</p>
+          <button onClick={()=> pool.length>0 && setStarted(true)} disabled={pool.length===0} className="mt-4 w-full bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 text-white font-black py-3 rounded-xl">開始測驗</button>
+          {pool.length===0 && <p className="text-xs text-amber-600 mt-2">此分類暫無題目，請換一類</p>}
+        </div>
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5">
+          <div className="text-sm font-bold text-slate-900 dark:text-white">如何搭配學習</div>
+          <ul className="text-sm text-slate-600 dark:text-slate-400 mt-2 space-y-1 list-disc list-inside">
+            <li><b>法規學習（初次）</b>：看原文→聽解→做 3 題易</li>
+            <li><b>複習中心（二次）</b>：SM2 複習卡 → 做中/難</li>
+            <li><b>聽課</b>已整合至法規內頁「聽老師說」與複習頂部「連播」</li>
+          </ul>
         </div>
       </div>
     );
   }
 
-  if (currentIdx >= examQuestions.length) {
+  if(idx >= pool.length){
     return (
-      <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-8 relative z-10 text-center">
-        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-10 mt-12">
-          <h1 className="text-4xl font-bold text-white mb-4">測驗完成！</h1>
-          <p className="text-xl text-slate-400 mb-8">
-            您的得分：<span className="text-emerald-400 font-bold text-3xl mx-2">{score}</span> / {examQuestions.length}
-          </p>
-          <button 
-            onClick={handleRestart}
-            className="bg-slate-800 hover:bg-slate-700 text-white font-medium px-8 py-3 rounded-xl transition-colors flex items-center gap-2 mx-auto"
-          >
-            <RotateCcw size={20} /> 再測驗一次
-          </button>
+      <div className="p-6 md:p-10 max-w-3xl mx-auto text-center">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+          <h1 className="text-2xl font-black text-slate-900 dark:text-white">完成！{modeLabels[mode]}</h1>
+          <p className="text-lg text-slate-600 dark:text-slate-400 mt-2">得分 <b className="text-emerald-600 text-3xl mx-1">{score}</b> / {pool.length}</p>
+          <p className="text-xs text-slate-500 mt-1">錯題已自動加入「待複習」建議，回到複習中心加強</p>
+          <button onClick={restart} className="mt-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold px-6 py-3 rounded-xl inline-flex items-center gap-2"><RotateCcw size={16}/> 再測一次</button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="p-6 md:p-10 max-w-3xl mx-auto space-y-8 relative z-10">
-      <div className="flex justify-between items-center text-sm font-medium text-slate-400">
-        <span>題庫測驗</span>
-        <span>第 {currentIdx + 1} / {examQuestions.length} 題</span>
-      </div>
-
-      <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 md:p-10">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">{question.year}</span>
-        </div>
-        <h2 className="text-xl md:text-2xl font-bold text-white leading-relaxed mb-8">
-          {question.question}
-        </h2>
-
-        <div className="space-y-3">
-          {question.options.map((opt, idx) => {
-            const isSelected = selected === idx;
-            const isCorrect = idx === question.answer;
-            
-            let btnClass = "w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between ";
-            
-            if (!showAnswer) {
-              btnClass += "bg-slate-800/50 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-300";
-            } else {
-              if (isCorrect) {
-                btnClass += "bg-emerald-900/30 border-emerald-500/50 text-emerald-400";
-              } else if (isSelected && !isCorrect) {
-                btnClass += "bg-rose-900/30 border-rose-500/50 text-rose-400";
-              } else {
-                btnClass += "bg-slate-800/20 border-slate-800/50 text-slate-500 opacity-50";
-              }
-            }
-
-            return (
-              <button 
-                key={idx}
-                onClick={() => handleSelect(idx)}
-                disabled={showAnswer}
-                className={btnClass}
-              >
-                <span>{String.fromCharCode(65 + idx)}. {opt}</span>
-                {showAnswer && isCorrect && <Check size={20} className="text-emerald-500" />}
-                {showAnswer && isSelected && !isCorrect && <X size={20} className="text-rose-500" />}
-              </button>
-            );
+    <div className="p-6 md:p-10 max-w-3xl mx-auto space-y-6">
+      <div className="flex justify-between text-xs font-bold text-slate-500 dark:text-slate-400"><span>{modeLabels[mode]}</span><span>{idx+1}/{pool.length}</span></div>
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+        <span className="inline-flex text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2 py-1 rounded-full">{q.year} · {modeLabels[q.lawId as Mode] || q.lawId}</span>
+        <h2 className="text-lg font-black text-slate-900 dark:text-white mt-3 leading-relaxed">{q.question}</h2>
+        <div className="space-y-2 mt-4">
+          {q.options.map((opt,i)=>{
+            const isSel= sel===i, isCor=i===q.answer;
+            let cls="w-full text-left p-3 rounded-xl border flex justify-between items-center text-sm font-medium ";
+            if(!show) cls += "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-indigo-300 text-slate-700 dark:text-slate-200";
+            else if(isCor) cls += "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-500 text-emerald-700 dark:text-emerald-300";
+            else if(isSel) cls += "bg-rose-50 dark:bg-rose-900/20 border-rose-400 text-rose-600";
+            else cls += "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 opacity-60";
+            return <button key={i} onClick={()=>pick(i)} disabled={show} className={cls}><span>{String.fromCharCode(65+i)}. {opt}</span>{show && isCor && <Check size={16}/>}{show && isSel && !isCor && <X size={16}/>}</button>;
           })}
         </div>
-
-        {showAnswer && (
-          <div className="mt-8 pt-6 border-t border-slate-800">
-            <h3 className="text-emerald-400 font-bold mb-2 flex items-center gap-2">
-              <BookOpen size={18} /> 解析
-            </h3>
-            <p className="text-slate-300 leading-relaxed bg-slate-950 p-4 rounded-xl border border-slate-800">
-              {question.explanation}
-            </p>
-            <button 
-              onClick={handleNext}
-              className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-colors"
-            >
-              下一題
-            </button>
-          </div>
-        )}
+        {show && (<div className="mt-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-sm text-slate-600 dark:text-slate-300"><b className="text-slate-900 dark:text-white">解析：</b>{q.explanation}<button onClick={next} className="mt-3 w-full bg-indigo-600 text-white font-black py-3 rounded-xl">下一題</button></div>)}
       </div>
     </div>
   );

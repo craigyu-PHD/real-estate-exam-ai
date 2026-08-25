@@ -12,7 +12,7 @@ interface Settings {
 }
 
 const defaultSettings: Settings = {
-  darkMode: true,
+  darkMode: false,
   fontSize: 'medium',
   voiceEngine: 'auto',
   voiceSpeed: 1.0,

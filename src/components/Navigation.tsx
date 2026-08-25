@@ -8,33 +8,33 @@ const mainNavItems = [
   { name: '首頁', href: '/', icon: Home },
   { name: '法規學習', href: '/laws', icon: BookOpen },
   { name: '複習中心', href: '/review', icon: Clock },
-  { name: '聽課模式', href: '/listen', icon: Headphones },
   { name: 'AI 老師', href: '/teacher', icon: Bot },
   { name: '題庫', href: '/exams', icon: PencilRuler },
 ];
+// 聽課已整合至法規內頁與複習（右上角「聽」按鈕＋播放列），不再佔主導覽，避免初學混淆
 const bottomNavItems = [
   { name: '我的重點', href: '/bookmarks', icon: Bookmark },
   { name: '學習進度', href: '/progress', icon: BarChart2 },
   { name: '設定', href: '/settings', icon: Settings },
 ];
 const allNavItems = [...mainNavItems, ...bottomNavItems];
-const mobilePrimary = [mainNavItems[0], mainNavItems[1], mainNavItems[2], mainNavItems[5], bottomNavItems[1]];
+const mobilePrimary = [mainNavItems[0], mainNavItems[1], mainNavItems[2], mainNavItems[4], bottomNavItems[1]];
 
 export function Navigation() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
     <>
-      <aside className="hidden md:flex flex-col w-64 h-screen bg-white border-r border-slate-200 fixed shadow-sm">
-        <div className="p-6 border-b border-slate-100">
-          <h1 className="text-[17px] font-black text-slate-900 flex items-center gap-2">
+      <aside className="hidden md:flex flex-col w-64 h-screen bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 fixed shadow-sm">
+        <div className="p-6 border-b border-slate-100 dark:border-slate-800">
+          <h1 className="text-[17px] font-black text-slate-900 dark:text-white flex items-center gap-2">
             <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow"><BookOpen size={16} className="text-white" /></span>
             不動產法規 AI
           </h1>
           <p className="text-xs text-slate-500 mt-1.5 flex items-center gap-1"><ShieldCheck size={12} className="text-emerald-500"/> 補習班級・零基礎到考上</p>
         </div>
         <div className="p-3">
-          <Link href="/search" className="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 hover:bg-white border border-slate-200 rounded-xl px-3 py-2.5 shadow-sm">
+          <Link href="/search" className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-white dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2.5 shadow-sm">
             <Search size={14} className="text-indigo-500" /> 搜法條 / 關鍵字 / 白話問句
           </Link>
         </div>
@@ -43,7 +43,7 @@ export function Navigation() {
           {mainNavItems.map((item) => {
             const active = pathname === item.href;
             return (
-              <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition ${active ? 'bg-indigo-600 text-white shadow' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}>
+              <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition ${active ? 'bg-indigo-600 text-white shadow' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'}`}>
                 <item.icon size={18} /> {item.name}
               </Link>
             );
@@ -52,13 +52,13 @@ export function Navigation() {
           {bottomNavItems.map((item) => {
             const active = pathname === item.href;
             return (
-              <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition ${active ? 'bg-indigo-600 text-white shadow' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}>
+              <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition ${active ? 'bg-indigo-600 text-white shadow' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'}`}>
                 <item.icon size={18} /> {item.name}
               </Link>
             );
           })}
         </nav>
-        <div className="p-4 border-t border-slate-100">
+        <div className="p-4 border-t border-slate-100 dark:border-slate-800">
           <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 p-4 text-white shadow">
             <p className="text-xs font-black">今天先學 10 分鐘？</p>
             <p className="text-xs opacity-80 mt-1">系統已為你排好待複習</p>
@@ -67,11 +67,11 @@ export function Navigation() {
         </div>
       </aside>
 
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 flex justify-around p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] z-50 shadow-[0_-8px_24px_rgba(0,0,0,0.06)]">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-t border-slate-200 dark:border-slate-800 flex justify-around p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] z-50 shadow-[0_-8px_24px_rgba(0,0,0,0.06)]">
         {mobilePrimary.map((item) => {
           const active = pathname === item.href;
           return (
-            <Link key={item.name} href={item.href} className={`flex flex-col items-center gap-1 px-2 py-1 rounded-xl ${active ? 'text-indigo-600 bg-indigo-50' : 'text-slate-500'}`}>
+            <Link key={item.name} href={item.href} className={`flex flex-col items-center gap-1 px-2 py-1 rounded-xl ${active ? 'text-indigo-600 bg-indigo-50 dark:bg-indigo-900/30' : 'text-slate-500 dark:text-slate-400'}`}>
               <item.icon size={20} />
               <span className="text-[10px] font-bold">{item.name}</span>
             </Link>
