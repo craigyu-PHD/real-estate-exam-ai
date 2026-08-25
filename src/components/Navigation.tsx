@@ -1,19 +1,24 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BookOpen, Headphones, Bot, BrainCircuit, PenTool, Star, BarChart3, Settings } from 'lucide-react';
+import { Home, BookOpen, Headphones, Bot, BrainCircuit, PenTool, Star, BarChart3, Settings, Clock, PencilRuler, Bookmark, BarChart2 } from 'lucide-react';
 
-const navItems = [
+const mainNavItems = [
   { name: '首頁', href: '/', icon: Home },
   { name: '法規學習', href: '/laws', icon: BookOpen },
+  { name: '複習中心', href: '/review', icon: Clock },
   { name: '聽課模式', href: '/listen', icon: Headphones },
-  { name: 'AI老師', href: '/teacher', icon: Bot },
-  { name: '複習中心', href: '/review', icon: BrainCircuit },
-  { name: '題庫', href: '/exams', icon: PenTool },
-  { name: '我的重點', href: '/bookmarks', icon: Star },
-  { name: '學習進度', href: '/progress', icon: BarChart3 },
+  { name: 'AI 老師', href: '/teacher', icon: Bot },
+  { name: '題庫', href: '/exams', icon: PencilRuler },
+];
+
+const bottomNavItems = [
+  { name: '我的重點', href: '/bookmarks', icon: Bookmark },
+  { name: '學習進度', href: '/progress', icon: BarChart2 },
   { name: '設定', href: '/settings', icon: Settings },
 ];
+
+const allNavItems = [...mainNavItems, ...bottomNavItems];
 
 export function Navigation() {
   const pathname = usePathname();
@@ -29,7 +34,7 @@ export function Navigation() {
           </h1>
         </div>
         <nav className="flex-1 px-4 space-y-2 overflow-y-auto">
-          {navItems.map((item) => {
+          {allNavItems.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
@@ -49,7 +54,7 @@ export function Navigation() {
 
       {/* Mobile Bottom Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-800 flex justify-around p-3 z-50">
-        {navItems.slice(0, 5).map((item) => {
+        {allNavItems.slice(0, 5).map((item) => {
           const isActive = pathname === item.href;
           return (
             <Link
