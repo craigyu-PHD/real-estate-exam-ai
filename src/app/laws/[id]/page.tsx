@@ -7,7 +7,7 @@ import { use } from 'react';
 
 export default function LawDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
-  const { isLoaded, getProgress } = useProgress();
+  const { isLoaded, getProgress, isArticleRead } = useProgress() as any;
   
   const law = lawsData.find(l => l.id === resolvedParams.id);
   const prog = getProgress(resolvedParams.id);
@@ -60,13 +60,16 @@ export default function LawDetail({ params }: { params: Promise<{ id: string }> 
               <div className="grid grid-cols-5 md:grid-cols-10 gap-2">
                 {Array.from({ length: chapter.articlesCount }).map((_, idx) => {
                   const articleNum = chapter.startArticle + idx;
+                  const read = isArticleRead ? isArticleRead(law.id, String(articleNum)) : false;
                   return (
                     <Link 
                       key={articleNum}
                       href={`/articles/${law.id}-${articleNum}`}
-                      className="aspect-square flex items-center justify-center rounded-lg bg-slate-950 border border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all font-medium text-sm"
+                      title={read ? '已讀' : '未讀'}
+                      className={`aspect-square flex items-center justify-center rounded-lg border font-medium text-sm transition relative ${read ? 'bg-emerald-600 border-emerald-500 text-white' : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-500'}`}
                     >
                       {articleNum}
+                      {read && <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-300 rounded-full border border-slate-900" />}
                     </Link>
                   );
                 })}
