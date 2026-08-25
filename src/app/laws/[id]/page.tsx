@@ -1,79 +1,78 @@
+'use client';
 import Link from 'next/link';
-import { CheckCircle, HelpCircle, Star, AlertTriangle, BookOpen } from 'lucide-react';
+import { ChevronLeft, FileText, CheckCircle2 } from 'lucide-react';
+import { useProgress } from '@/hooks/useProgress';
+import { lawsData } from '@/data/lawsData';
+import { use } from 'react';
 
-const mockChapters = [
-  {
-    title: '第一編 總則',
-    progress: 100,
-    articles: [
-      { id: '1', number: '第 1 條', status: 'read', excerpt: '法源...' },
-      { id: '2', number: '第 2 條', status: 'read', excerpt: '習慣法...' },
-    ]
-  },
-  {
-    title: '第二編 債',
-    progress: 40,
-    articles: [
-      { id: '153', number: '第 153 條', status: 'important', excerpt: '契約之成立...' },
-      { id: '154', number: '第 154 條', status: 'confusing', excerpt: '要約之拘束力...' },
-    ]
-  },
-  {
-    title: '第三編 物權',
-    progress: 10,
-    articles: [
-      { id: '757', number: '第 757 條', status: 'unread', excerpt: '物權法定主義...' },
-      { id: '758', number: '第 758 條', status: 'memorize', excerpt: '設權登記...' },
-    ]
-  }
-];
+export default function LawDetail({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = use(params);
+  const { isLoaded, getProgress } = useProgress();
+  
+  const law = lawsData.find(l => l.id === resolvedParams.id);
+  const prog = getProgress(resolvedParams.id);
 
-export default async function LawDetail({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = await params;
-  // 實作時可由 resolvedParams.id 撈取 db 資料
+  if (!law) return <div className="p-10 text-white text-center">找不到此法規</div>;
+  if (!isLoaded) return <div className="p-10 text-slate-400 text-center">載入中...</div>;
+
   return (
-    <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-8">
-      <header className="border-b border-slate-800 pb-6">
-        <h1 className="text-3xl font-bold text-white mb-2">民法</h1>
-        <div className="flex gap-4 text-sm text-slate-400">
-          <span>共 1,225 條</span>
-          <span>已讀 500 條</span>
+    <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-8 relative z-10">
+      <Link href="/laws" className="inline-flex items-center text-slate-400 hover:text-white transition-colors">
+        <ChevronLeft size={20} className="mr-1" /> 回法規總覽
+      </Link>
+
+      <header className="bg-slate-900/80 backdrop-blur border border-slate-800 p-8 rounded-3xl">
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <span className="text-xs font-semibold px-2 py-1 bg-blue-900/30 text-blue-400 rounded border border-blue-500/20 mb-3 inline-block">
+              {law.category}
+            </span>
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{law.name}</h1>
+            <p className="text-slate-400">{law.description}</p>
+          </div>
+          <div className="text-right bg-slate-950 p-4 rounded-2xl border border-slate-800 hidden md:block">
+            <div className="text-3xl font-bold text-white mb-1">{prog.percentage}%</div>
+            <div className="text-slate-400 text-sm">總進度 {prog.read} / {prog.total}</div>
+          </div>
+        </div>
+        
+        {/* Mobile Progress */}
+        <div className="md:hidden mt-4 pt-4 border-t border-slate-800">
+          <div className="flex justify-between text-sm mb-2">
+            <span className="text-slate-400">總進度</span>
+            <span className="text-white font-medium">{prog.percentage}% ({prog.read}/{prog.total})</span>
+          </div>
+          <div className="w-full bg-slate-950 rounded-full h-2">
+            <div className="bg-blue-500 h-2 rounded-full transition-all" style={{ width: `${prog.percentage}%` }}></div>
+          </div>
         </div>
       </header>
 
-      <div className="flex gap-2 overflow-x-auto pb-2">
-        {['總則', '債', '物權', '親屬', '繼承'].map(tab => (
-          <button key={tab} className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-full whitespace-nowrap transition-colors">
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      <div className="space-y-8 mt-6">
-        {mockChapters.map((chapter) => (
-          <section key={chapter.title} className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-white mb-4">{chapter.title}</h2>
-            <div className="space-y-3">
-              {chapter.articles.map(art => (
-                <Link key={art.id} href={`/articles/${art.id}`} className="flex items-center p-3 rounded-lg hover:bg-slate-800 border border-transparent hover:border-slate-700 transition-colors">
-                  <div className="w-10">
-                    {art.status === 'read' && <CheckCircle size={20} className="text-emerald-500" />}
-                    {art.status === 'unread' && <div className="w-5 h-5 rounded-full border-2 border-slate-600" />}
-                    {art.status === 'important' && <Star size={20} className="text-yellow-400" />}
-                    {art.status === 'confusing' && <HelpCircle size={20} className="text-orange-400" />}
-                    {art.status === 'memorize' && <AlertTriangle size={20} className="text-rose-500" />}
-                  </div>
-                  <div className="flex-1 flex justify-between items-center">
-                    <div>
-                      <span className="font-semibold text-slate-200 mr-4">{art.number}</span>
-                      <span className="text-sm text-slate-500">{art.excerpt}</span>
-                    </div>
-                    <BookOpen size={16} className="text-slate-600" />
-                  </div>
-                </Link>
-              ))}
+      <div className="space-y-4">
+        <h2 className="text-xl font-bold text-white mb-4 px-2">法規目錄</h2>
+        {law.chapters.map((chapter) => (
+          <div key={chapter.id} className="bg-slate-900/50 backdrop-blur border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-colors group">
+            <div className="p-4 bg-slate-800/30 border-b border-slate-800/50 flex justify-between items-center">
+              <h3 className="font-bold text-slate-200 group-hover:text-white transition-colors">{chapter.name}</h3>
+              <span className="text-xs text-slate-500">共 {chapter.articlesCount} 條</span>
             </div>
-          </section>
+            <div className="p-4">
+              <div className="grid grid-cols-5 md:grid-cols-10 gap-2">
+                {Array.from({ length: chapter.articlesCount }).map((_, idx) => {
+                  const articleNum = chapter.startArticle + idx;
+                  return (
+                    <Link 
+                      key={articleNum}
+                      href={`/articles/${law.id}-${articleNum}`}
+                      className="aspect-square flex items-center justify-center rounded-lg bg-slate-950 border border-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all font-medium text-sm"
+                    >
+                      {articleNum}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>

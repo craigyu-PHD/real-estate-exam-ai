@@ -1,79 +1,65 @@
 'use client';
 import Link from 'next/link';
-import { BookOpen, Target, RotateCcw, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Play, Sparkles, BookOpen } from 'lucide-react';
 import { useProgress } from '@/hooks/useProgress';
 
 export default function Home() {
-  const { isLoaded, getProgress, getTotalProgress, lawTotalArticles } = useProgress();
+  const { isLoaded, getTotalProgress, streak, getTodayReadCount } = useProgress();
+  const totalPercentage = getTotalProgress();
+  const todayCount = getTodayReadCount();
 
-  const totalProgress = getTotalProgress();
-  
-  const lawsList = [
-    { id: 'civil', name: '民法' },
-    { id: 'land', name: '土地法' },
-    { id: 'tax', name: '土地相關稅法' },
-    { id: 'broker', name: '不動產經紀相關法規' },
-    { id: 'appraisal', name: '估價相關法規' },
-  ];
+  if (!isLoaded) return <div className="p-10 text-center text-slate-400">載入中...</div>;
 
   return (
-    <div className="p-6 md:p-10 max-w-5xl mx-auto space-y-8 relative z-10">
-      <header>
-        <h1 className="text-3xl font-bold text-white mb-2">下午好，今天繼續建立法律地圖。</h1>
-        <p className="text-slate-400">這是您的個人法規學習中心。</p>
+    <div className="p-6 md:p-10 max-w-5xl mx-auto space-y-10 relative z-10">
+      <header className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-wide">早安，克雷格</h1>
+          <p className="text-slate-400 text-lg">準備好繼續解鎖不動產法規了嗎？</p>
+        </div>
+        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 px-6 py-4 rounded-2xl flex items-center gap-6">
+          <div>
+            <div className="text-sm text-slate-400 mb-1">連續學習</div>
+            <div className="text-2xl font-bold text-orange-400">{streak} <span className="text-sm font-normal text-slate-500">天</span></div>
+          </div>
+          <div className="w-px h-10 bg-slate-800"></div>
+          <div>
+            <div className="text-sm text-slate-400 mb-1">今日已讀</div>
+            <div className="text-2xl font-bold text-blue-400">{todayCount} <span className="text-sm font-normal text-slate-500">條</span></div>
+          </div>
+        </div>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        {/* 主要行動區塊：整合「繼續學習」與「今天複習」 */}
-        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg md:col-span-2 flex flex-col md:flex-row gap-4 justify-between items-center hover:border-slate-700 transition-colors">
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
-              <BookOpen className="text-blue-400" /> 開始今天的學習
-            </h2>
-            <p className="text-slate-400">您目前累積了 {isLoaded ? totalProgress : 0}% 的總進度。繼續保持！</p>
+      {/* 焦點行動區塊 */}
+      <section className="grid md:grid-cols-2 gap-6">
+        <div className="bg-gradient-to-br from-blue-900/40 to-slate-900/80 backdrop-blur border border-blue-500/30 rounded-3xl p-8 hover:border-blue-500/60 transition-colors">
+          <div className="flex items-center gap-2 text-blue-400 mb-4 font-semibold">
+            <BookOpen size={20} /> 目前進度
           </div>
-          <div className="flex gap-3 w-full md:w-auto">
-            <Link href="/review" className="flex-1 md:flex-none px-6 py-3 bg-slate-800 hover:bg-slate-700 text-emerald-400 font-medium rounded-xl transition-colors text-center">
-              10 分鐘複習
-            </Link>
-            <Link href="/laws" className="flex-1 md:flex-none px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors text-center flex items-center justify-center gap-2">
-              探索法規 <ArrowRight size={18} />
-            </Link>
+          <h2 className="text-2xl font-bold text-white mb-2">民法 - 物權編</h2>
+          <p className="text-slate-400 mb-6">您上次讀到第 758 條：設權登記。</p>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="flex-1 bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+              <div className="bg-blue-500 h-2 rounded-full transition-all duration-1000" style={{ width: `${totalPercentage}%` }}></div>
+            </div>
+            <span className="text-slate-300 text-sm font-medium">{totalPercentage}%</span>
           </div>
+          <Link href="/laws/civil" className="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-900/20">
+            繼續學習 <Play size={18} className="ml-2" />
+          </Link>
         </div>
 
-        {/* 第一輪總進度 */}
-        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg md:col-span-2">
-          <div className="flex items-center gap-3 text-purple-400 mb-6">
-            <Target size={24} />
-            <h2 className="text-xl font-semibold text-white">第一輪總進度</h2>
-            <span className="ml-auto text-2xl font-bold text-white">{isLoaded ? totalProgress : 0}%</span>
+        <div className="bg-gradient-to-br from-emerald-900/40 to-slate-900/80 backdrop-blur border border-emerald-500/30 rounded-3xl p-8 hover:border-emerald-500/60 transition-colors">
+          <div className="flex items-center gap-2 text-emerald-400 mb-4 font-semibold">
+            <Sparkles size={20} /> 今日複習
           </div>
-          
-          <div className="space-y-4">
-            {lawsList.map((law) => {
-              const prog = getProgress(law.id);
-              return (
-                <div key={law.name}>
-                  <div className="flex justify-between text-sm mb-1">
-                    <span className="text-slate-300">{law.name}</span>
-                    <span className="text-slate-400">{isLoaded ? prog.percentage : 0}% ({isLoaded ? prog.read : 0}/{prog.total})</span>
-                  </div>
-                  <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                    <div 
-                      className="bg-purple-500 h-2 rounded-full transition-all duration-1000 ease-out" 
-                      style={{ width: `${isLoaded ? prog.percentage : 0}%` }}
-                    ></div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <h2 className="text-2xl font-bold text-white mb-2">待複習法條：12 條</h2>
+          <p className="text-slate-400 mb-8">AI 根據記憶曲線，挑選了您最容易忘記的法條。</p>
+          <Link href="/review" className="inline-flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-emerald-900/20">
+            開始複習
+          </Link>
         </div>
-
-      </div>
+      </section>
     </div>
   );
 }
-

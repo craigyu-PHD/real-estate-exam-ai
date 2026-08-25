@@ -3,32 +3,43 @@ import { useState, use } from 'react';
 import { MessageCircleQuestion, Lightbulb, BookText, Bookmark, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { AudioPlayer } from '@/components/AudioPlayer';
 import { ChatGPTButton } from '@/components/ChatGPTButton';
+import { useBookmarks } from '@/hooks/useBookmarks';
 import { useProgress } from '@/hooks/useProgress';
 
 export default function ArticleDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
   const { markAsRead } = useProgress();
+  const { hasBookmark, toggleBookmark } = useBookmarks();
   const [isMarked, setIsMarked] = useState(false);
+
+  // Parsing civil-758 or just 758
+  const rawId = resolvedParams.id;
+  const lawId = rawId.includes('-') ? rawId.split('-')[0] : 'civil';
+  const articleId = rawId.includes('-') ? rawId.split('-')[1] : rawId;
 
   const explanationText = "這一條先不要急著背。你先記一件事情：不動產（像是房子或土地）因為非常值錢，所以國家規定，如果你們私底下簽約說要賣房子，這只代表你們有「債」的關係（你要付錢、他要交屋）。但是，這棟房子真正「換主人」的那一刻，是發生在你們去地政機關辦理「登記」完成的時候。沒有登記，在法律上這個房子就還不是你的！這就叫做「設權登記」。";
   const articleText = "不動產物權，依法律行為而取得、設定、喪失及變更者，非經登記，不生效力。\n前項行為，應以書面為之。";
 
   const handleMarkAsRead = () => {
-    // 假設這個法條屬於 civil
-    markAsRead('civil', resolvedParams.id);
+    markAsRead(lawId, articleId);
     setIsMarked(true);
   };
+
+  const isImportant = hasBookmark(lawId, articleId, 'important');
 
   return (
     <div className="max-w-3xl mx-auto pb-24 relative z-10">
       <header className="sticky top-0 bg-slate-950/80 backdrop-blur-md border-b border-slate-800 p-4 flex items-center justify-between z-20">
         <div className="flex items-center gap-2">
           <span className="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">民法 / 物權</span>
-          <h1 className="font-bold text-white text-lg">第 {resolvedParams.id} 條</h1>
+          <h1 className="font-bold text-white text-lg">第 {articleId} 條</h1>
         </div>
         <div className="flex gap-2">
-          <button className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-800 text-slate-400 transition-colors">
-            <Bookmark size={20} />
+          <button 
+            onClick={() => toggleBookmark(lawId, articleId, 'important')}
+            className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isImportant ? 'bg-yellow-500/20 text-yellow-400' : 'hover:bg-slate-800 text-slate-400'}`}
+          >
+            <Bookmark size={20} className={isImportant ? "fill-current" : ""} />
           </button>
           <AudioPlayer text={`${articleText}。解釋：${explanationText}`} />
         </div>

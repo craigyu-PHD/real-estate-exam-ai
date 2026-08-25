@@ -1,64 +1,90 @@
-import { BarChart3, Trophy, Flame, Target } from 'lucide-react';
+'use client';
+import { BarChart3, Trophy, Flame, Target, Book, Calendar } from 'lucide-react';
+import { useProgress } from '@/hooks/useProgress';
+import { lawsData } from '@/data/lawsData';
 
 export default function Progress() {
+  const { isLoaded, getProgress, getTotalProgress, streak } = useProgress();
+
+  if (!isLoaded) return <div className="p-10 text-center text-slate-400">載入中...</div>;
+
+  const totalPercentage = getTotalProgress();
+  
+  // Calculate total read and total articles
+  let totalRead = 0;
+  let totalArticles = 0;
+  lawsData.forEach(law => {
+    const p = getProgress(law.id);
+    totalRead += p.read;
+    totalArticles += p.total;
+  });
+
   return (
-    <div className="p-6 md:p-10 max-w-5xl mx-auto space-y-8">
+    <div className="p-6 md:p-10 max-w-5xl mx-auto space-y-8 relative z-10">
       <header className="border-b border-slate-800 pb-6 flex items-center gap-4">
-        <BarChart3 size={32} className="text-purple-500" />
+        <BarChart3 size={32} className="text-emerald-400" />
         <div>
           <h1 className="text-3xl font-bold text-white">學習進度</h1>
-          <p className="text-slate-400">掌握你的法規學習狀況。</p>
+          <p className="text-slate-400">追蹤您的學習軌跡，保持穩定前進。</p>
         </div>
       </header>
 
-      {/* 總覽數據 */}
+      {/* 總體數據 */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-          <Flame size={24} className="text-orange-500 mb-2" />
-          <p className="text-sm text-slate-400 mb-1">連續學習</p>
-          <p className="text-3xl font-bold text-white">6 <span className="text-sm font-normal text-slate-400">天</span></p>
+        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-5 flex flex-col justify-center">
+          <div className="flex items-center gap-2 text-slate-400 mb-2">
+            <Target size={18} />
+            <span className="text-sm font-medium">總進度</span>
+          </div>
+          <div className="text-3xl font-bold text-white">{totalPercentage}%</div>
+          <div className="w-full bg-slate-800 rounded-full h-1.5 mt-3">
+            <div className="bg-emerald-500 h-1.5 rounded-full" style={{ width: `${totalPercentage}%` }}></div>
+          </div>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-          <BookOpenIcon size={24} className="text-blue-500 mb-2" />
-          <p className="text-sm text-slate-400 mb-1">今日完成</p>
-          <p className="text-3xl font-bold text-white">18 <span className="text-sm font-normal text-slate-400">條</span></p>
+        
+        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-5 flex flex-col justify-center">
+          <div className="flex items-center gap-2 text-slate-400 mb-2">
+            <Book size={18} />
+            <span className="text-sm font-medium">已讀法條</span>
+          </div>
+          <div className="text-3xl font-bold text-white">{totalRead} <span className="text-sm text-slate-500">/ {totalArticles}</span></div>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-          <Target size={24} className="text-emerald-500 mb-2" />
-          <p className="text-sm text-slate-400 mb-1">第一輪總進度</p>
-          <p className="text-3xl font-bold text-white">34 <span className="text-sm font-normal text-slate-400">%</span></p>
+
+        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-5 flex flex-col justify-center">
+          <div className="flex items-center gap-2 text-slate-400 mb-2">
+            <Flame size={18} className="text-orange-400" />
+            <span className="text-sm font-medium">連續學習</span>
+          </div>
+          <div className="text-3xl font-bold text-white">{streak} <span className="text-lg text-slate-400 font-normal">天</span></div>
         </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center">
-          <Trophy size={24} className="text-yellow-500 mb-2" />
-          <p className="text-sm text-slate-400 mb-1">獲得成就</p>
-          <p className="text-3xl font-bold text-white">3 <span className="text-sm font-normal text-slate-400">個</span></p>
+
+        <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-5 flex flex-col justify-center">
+          <div className="flex items-center gap-2 text-slate-400 mb-2">
+            <Trophy size={18} className="text-yellow-400" />
+            <span className="text-sm font-medium">解鎖成就</span>
+          </div>
+          <div className="text-3xl font-bold text-white">0 <span className="text-lg text-slate-400 font-normal">個</span></div>
         </div>
       </div>
 
-      {/* 詳細進度 */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-        <h2 className="text-xl font-bold text-white mb-6">各科法規完成度</h2>
+      {/* 各科詳細進度 */}
+      <div className="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 md:p-8 mt-8">
+        <h2 className="text-xl font-bold text-white mb-6">各科詳細進度</h2>
         <div className="space-y-6">
-          {[
-            { name: '民法', progress: 41, read: 500, total: 1225 },
-            { name: '土地法', progress: 37, read: 120, total: 324 },
-            { name: '土地相關稅法', progress: 22, read: 45, total: 200 },
-            { name: '不動產經紀相關法規', progress: 52, read: 80, total: 154 },
-            { name: '估價相關法規', progress: 18, read: 25, total: 139 },
-          ].map((law) => (
-            <div key={law.name}>
-              <div className="flex justify-between text-sm mb-2">
-                <span className="text-slate-200 font-medium">{law.name}</span>
-                <div className="text-slate-400">
-                  <span className="text-white font-medium mr-2">{law.progress}%</span>
-                  ({law.read} / {law.total})
+          {lawsData.map((law) => {
+            const { read, total, percentage } = getProgress(law.id);
+            return (
+              <div key={law.id}>
+                <div className="flex justify-between text-sm mb-2">
+                  <span className="text-slate-300 font-medium">{law.name}</span>
+                  <span className="text-slate-400">{read} / {total} ({percentage}%)</span>
+                </div>
+                <div className="w-full bg-slate-800 rounded-full h-2">
+                  <div className={`h-2 rounded-full transition-all ${percentage === 100 ? 'bg-emerald-500' : 'bg-blue-500'}`} style={{ width: `${percentage}%` }}></div>
                 </div>
               </div>
-              <div className="w-full bg-slate-800 rounded-full h-3">
-                <div className="bg-purple-500 h-3 rounded-full" style={{ width: `${law.progress}%` }}></div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

@@ -1,61 +1,97 @@
+'use client';
+import { RefreshCcw, Check, X, Sparkles, Target, Zap } from 'lucide-react';
+import { useState } from 'react';
+import { useBookmarks } from '@/hooks/useBookmarks';
 import Link from 'next/link';
-import { BrainCircuit, Clock, HelpCircle, Star, AlertTriangle } from 'lucide-react';
 
-export default function ReviewCenter() {
+export default function Review() {
+  const { isLoaded, getBookmarksByType } = useBookmarks();
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  const reviewQueue = getBookmarksByType('confusing');
+
+  if (!isLoaded) return <div className="p-10 text-center text-slate-400">載入中...</div>;
+
+  if (reviewQueue.length === 0) {
+    return (
+      <div className="p-6 md:p-10 max-w-2xl mx-auto text-center mt-20 relative z-10">
+        <div className="w-24 h-24 bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Sparkles size={48} className="text-emerald-400" />
+        </div>
+        <h1 className="text-3xl font-bold text-white mb-4">今日複習已完成！</h1>
+        <p className="text-slate-400 mb-8 text-lg">您已經沒有被標記為「我不懂」的法條了，真是太棒了！</p>
+        <Link href="/laws" className="bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-xl transition-colors inline-block">
+          去學習新法規
+        </Link>
+      </div>
+    );
+  }
+
+  if (currentIdx >= reviewQueue.length) {
+    return (
+      <div className="p-6 md:p-10 max-w-2xl mx-auto text-center mt-20 relative z-10">
+        <div className="w-24 h-24 bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Check size={48} className="text-emerald-400" />
+        </div>
+        <h1 className="text-3xl font-bold text-white mb-4">這批法條複習完了</h1>
+        <p className="text-slate-400 mb-8 text-lg">大腦已經重新鞏固了這些記憶。</p>
+        <button onClick={() => setCurrentIdx(0)} className="bg-slate-800 hover:bg-slate-700 text-white font-medium px-8 py-3 rounded-xl transition-colors">
+          再複習一次
+        </button>
+      </div>
+    );
+  }
+
+  const currentItem = reviewQueue[currentIdx];
+
   return (
-    <div className="p-6 md:p-10 max-w-4xl mx-auto space-y-8">
-      <header className="border-b border-slate-800 pb-6 flex items-center gap-4">
-        <BrainCircuit size={32} className="text-emerald-500" />
-        <div>
-          <h1 className="text-3xl font-bold text-white">複習中心</h1>
-          <p className="text-slate-400">間隔複習，幫助你把短期記憶轉化為長期記憶。</p>
+    <div className="p-6 md:p-10 max-w-3xl mx-auto space-y-8 relative z-10 flex flex-col min-h-screen">
+      <header className="flex justify-between items-center pb-6 border-b border-slate-800">
+        <div className="flex items-center gap-3">
+          <RefreshCcw size={28} className="text-emerald-400" />
+          <h1 className="text-2xl font-bold text-white">間隔複習</h1>
+        </div>
+        <div className="text-slate-400 text-sm font-medium">
+          進度 {currentIdx + 1} / {reviewQueue.length}
         </div>
       </header>
 
-      {/* 複習佇列狀態 */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-emerald-900/20 border border-emerald-500/30 rounded-2xl p-4 text-center">
-          <p className="text-sm text-emerald-400 mb-1">今日待複習</p>
-          <p className="text-3xl font-bold text-white">12 <span className="text-sm font-normal text-slate-400">條</span></p>
-        </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
-          <p className="text-sm text-slate-400 mb-1">明日預計</p>
-          <p className="text-3xl font-bold text-white">18 <span className="text-sm font-normal text-slate-400">條</span></p>
-        </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
-          <p className="text-sm text-slate-400 mb-1">記憶穩定度</p>
-          <p className="text-3xl font-bold text-white">74 <span className="text-sm font-normal text-slate-400">%</span></p>
-        </div>
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center">
-          <p className="text-sm text-slate-400 mb-1">連續複習</p>
-          <p className="text-3xl font-bold text-white">6 <span className="text-sm font-normal text-slate-400">天</span></p>
-        </div>
-      </div>
+      <div className="flex-1 flex flex-col">
+        {/* 卡片區 */}
+        <div className="flex-1 bg-slate-900/80 backdrop-blur border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col justify-center relative">
+          <div className="absolute top-6 left-6 flex gap-2">
+            <span className="text-xs font-semibold px-2 py-1 bg-slate-800 text-slate-400 rounded">民法</span>
+            <span className="text-xs font-semibold px-2 py-1 bg-orange-900/30 text-orange-400 border border-orange-500/20 rounded">我不懂</span>
+          </div>
 
-      <div className="mt-8">
-        <button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg py-4 rounded-2xl shadow-lg shadow-emerald-900/50 flex justify-center items-center gap-2">
-          <Clock size={20} /> 開始今日複習 (約 10 分鐘)
-        </button>
-      </div>
+          <div className="text-center mt-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-wide">第 {currentItem.articleId} 條</h2>
+            <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-serif">
+              請試著回想這條法規的核心重點是什麼？
+            </p>
+          </div>
+        </div>
 
-      <h2 className="text-xl font-bold text-white mt-12 mb-6">特定狀態篩選</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Link href="/bookmarks?type=important" className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-yellow-500/50 transition-colors">
-          <Star size={24} className="text-yellow-400 mb-3" />
-          <h3 className="text-lg font-semibold text-white">我標記的「重要」</h3>
-          <p className="text-slate-400 mt-2">共 42 條</p>
-        </Link>
-        <Link href="/bookmarks?type=confusing" className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors">
-          <HelpCircle size={24} className="text-orange-400 mb-3" />
-          <h3 className="text-lg font-semibold text-white">我標記的「不懂」</h3>
-          <p className="text-slate-400 mt-2">共 15 條</p>
-        </Link>
-        <Link href="/bookmarks?type=memorize" className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-rose-500/50 transition-colors">
-          <AlertTriangle size={24} className="text-rose-500 mb-3" />
-          <h3 className="text-lg font-semibold text-white">我標記的「必背」</h3>
-          <p className="text-slate-400 mt-2">共 28 條</p>
-        </Link>
+        {/* 底部操作區 */}
+        <div className="grid grid-cols-2 gap-4 mt-8">
+          <button 
+            onClick={() => setCurrentIdx(i => i + 1)}
+            className="bg-rose-900/30 hover:bg-rose-900/50 border border-rose-500/30 text-rose-400 py-6 rounded-2xl text-lg font-bold transition-colors flex flex-col items-center gap-2"
+          >
+            <X size={28} /> 還是想不起來
+          </button>
+          <button 
+            onClick={() => setCurrentIdx(i => i + 1)}
+            className="bg-emerald-900/30 hover:bg-emerald-900/50 border border-emerald-500/30 text-emerald-400 py-6 rounded-2xl text-lg font-bold transition-colors flex flex-col items-center gap-2"
+          >
+            <Check size={28} /> 想起來了！
+          </button>
+        </div>
+        <div className="mt-4 text-center">
+          <Link href={`/articles/${currentItem.lawId}-${currentItem.articleId}`} className="text-slate-500 hover:text-white underline transition-colors">
+            偷看答案（前往法條）
+          </Link>
+        </div>
       </div>
     </div>
   );

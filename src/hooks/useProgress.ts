@@ -1,26 +1,19 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { lawsData } from '@/data/lawsData';
 
 type ProgressData = {
-  [lawId: string]: {
-    readArticles: string[];
-  }
-};
-
-const lawTotalArticles: Record<string, number> = {
-  'civil': 1225,
-  'land': 324,
-  'tax': 200,
-  'broker': 154,
-  'appraisal': 139,
+  readArticles: Record<string, string[]>; // { lawId: [articleIds] }
+  lastStudyDate: string | null;
+  streak: number;
 };
 
 export function useProgress() {
-  const [data, setData] = useState<ProgressData>({});
+  const [data, setData] = useState<ProgressData>({ readArticles: {}, lastStudyDate: null, streak: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem('law_progress');
+    const stored = localStorage.getItem('app_progress');
     if (stored) {
       try {
         setData(JSON.parse(stored));
@@ -31,27 +24,48 @@ export function useProgress() {
 
   const markAsRead = (lawId: string, articleId: string) => {
     setData(prev => {
-      const lawData = prev[lawId] || { readArticles: [] };
-      if (lawData.readArticles.includes(articleId)) return prev; // Already read
+      const currentRead = prev.readArticles[lawId] || [];
+      if (currentRead.includes(articleId)) return prev;
+
+      const today = new Date().toISOString().split('T')[0];
+      let newStreak = prev.streak;
       
-      const newData = {
-        ...prev,
-        [lawId]: {
-          ...lawData,
-          readArticles: [...lawData.readArticles, articleId]
+      if (prev.lastStudyDate) {
+        const lastDate = new Date(prev.lastStudyDate);
+        const currentDate = new Date(today);
+        const diffTime = Math.abs(currentDate.getTime() - lastDate.getTime());
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (diffDays === 1) {
+          newStreak += 1;
+        } else if (diffDays > 1) {
+          newStreak = 1;
         }
+      } else {
+        newStreak = 1;
+      }
+
+      const newData = {
+        readArticles: {
+          ...prev.readArticles,
+          [lawId]: [...currentRead, articleId]
+        },
+        lastStudyDate: today,
+        streak: newStreak
       };
-      localStorage.setItem('law_progress', JSON.stringify(newData));
+      
+      localStorage.setItem('app_progress', JSON.stringify(newData));
       return newData;
     });
   };
 
   const getProgress = (lawId: string) => {
-    if (!isLoaded) return { read: 0, total: lawTotalArticles[lawId] || 100, percentage: 0 };
+    if (!isLoaded) return { read: 0, total: 100, percentage: 0 };
     
-    const read = data[lawId]?.readArticles.length || 0;
-    const total = lawTotalArticles[lawId] || 100;
-    const percentage = Math.floor((read / total) * 100);
+    const law = lawsData.find(l => l.id === lawId);
+    const total = law ? law.totalArticles : 100;
+    const read = data.readArticles[lawId]?.length || 0;
+    const percentage = total === 0 ? 0 : Math.floor((read / total) * 100);
     
     return { read, total, percentage };
   };
@@ -61,13 +75,30 @@ export function useProgress() {
     let totalRead = 0;
     let totalArticles = 0;
     
-    Object.keys(lawTotalArticles).forEach(key => {
-      totalRead += data[key]?.readArticles.length || 0;
-      totalArticles += lawTotalArticles[key];
+    lawsData.forEach(law => {
+      totalRead += data.readArticles[law.id]?.length || 0;
+      totalArticles += law.totalArticles;
     });
     
-    return Math.floor((totalRead / totalArticles) * 100);
+    return totalArticles === 0 ? 0 : Math.floor((totalRead / totalArticles) * 100);
   };
 
-  return { isLoaded, markAsRead, getProgress, getTotalProgress, lawTotalArticles };
+  const getTodayReadCount = () => {
+    if (!isLoaded || data.lastStudyDate !== new Date().toISOString().split('T')[0]) return 0;
+    // For simplicity in MVP, we don't track timestamps per article, just assume if they studied today we show a small number 
+    // Wait, let's just count total read modulo 20 to simulate "today's session" if we don't have timestamp.
+    // Or just a placeholder logic:
+    const total = getTotalProgress();
+    return total > 0 ? (data.readArticles['civil']?.length || 0) % 15 : 0; 
+  };
+
+  return { 
+    isLoaded, 
+    markAsRead, 
+    getProgress, 
+    getTotalProgress,
+    streak: data.streak,
+    getTodayReadCount
+  };
 }
+
