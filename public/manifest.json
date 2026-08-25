@@ -1,0 +1,21 @@
+{
+  "name": "不動產法規 AI",
+  "short_name": "法規 AI",
+  "description": "不動產經紀人 AI 法規學習系統",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
