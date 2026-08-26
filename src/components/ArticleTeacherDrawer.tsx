@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Bot, Loader2, Send, Sparkles, X, WandSparkles, RotateCcw, House, Target } from 'lucide-react';
+import { Bot, Loader2, Send, Sparkles, X, RotateCcw, House, Target, Lightbulb, Star, GitCompareArrows } from 'lucide-react';
 import type { ArticleDetailData } from '@/data/articleDetailTypes';
-import { getStoredGeminiKey } from '@/lib/geminiKey';
+import { getStoredAiKeys } from '@/lib/aiKeys';
 
-type Message = { role: 'ai' | 'user'; content: string };
+type Message = { role: 'ai' | 'user'; content: string; provider?: string };
 
 type Props = {
   open: boolean;
@@ -40,11 +40,11 @@ export function ArticleTeacherDrawer({ open, onClose, lawName, articleId, detail
           articleText: detail.articleText,
           teachingContext: context,
           question: q,
-          apiKey: getStoredGeminiKey() || undefined,
+          keys: getStoredAiKeys(),
         }),
       });
       const data = await res.json();
-      setMessages(prev => [...prev, { role: 'ai', content: data.reply || data.error || '目前沒有回覆。' }]);
+      setMessages(prev => [...prev, { role: 'ai', content: data.reply || data.error || '目前沒有回覆。', provider: data.provider }]);
     } catch {
       setMessages(prev => [...prev, { role: 'ai', content: '連線失敗。請先確認 Gemini API 設定與網路連線。' }]);
     } finally {
@@ -69,10 +69,12 @@ export function ArticleTeacherDrawer({ open, onClose, lawName, articleId, detail
 
   if (!open) return null;
   const quick = [
-    { label: '再白話一點', icon: Sparkles, prompt: '把這條重新講成國中生也聽得懂的版本，不要只重複原句。' },
-    { label: '換房仲案例', icon: House, prompt: '請針對這條換一個全新的房仲、買賣或社區實務案例，並指出案例中每個要件。' },
-    { label: '重做考點', icon: Target, prompt: '請重新整理這條最可能怎麼考，列出 3 個具體陷阱與判斷方式。' },
-    { label: 'AI 重整教材', icon: WandSparkles, prompt: '請審查目前 B/C/D 教材是否有空泛或不精確之處，然後給我一版更精準的 B 白話解析、C 制度目的、D 實務案例。' },
+    { label: '再講白一點', icon: Sparkles, prompt: '請不要重複法條原文。把這一條拆成「誰、在什麼情況、可以或必須做什麼、最後法律效果是什麼」，用完全零法律基礎也聽得懂的方式講一次。' },
+    { label: '換一個例子', icon: House, prompt: '請換一個全新的台灣房屋、土地、仲介或地政實務案例。要有人物、具體事實，再逐步指出本條每個要件如何套用。' },
+    { label: '為什麼？', icon: Lightbulb, prompt: '請專門解釋這條的制度目的：法律到底想解決什麼現實問題？如果沒有這條會發生什麼問題？不要只說維護交易秩序。' },
+    { label: '這條重要嗎？', icon: Star, prompt: '請以不動產經紀人國考角度評估這條重要度（1到5星），說明理由，並列出我最低限度一定要背的內容。' },
+    { label: '容易搞混？', icon: GitCompareArrows, prompt: '請找出這條最容易和哪一條或哪個概念搞混，做成「本條 vs 易混淆內容」對照，明確指出主體、要件、效果或期限差異。' },
+    { label: '考試怎麼考？', icon: Target, prompt: '請用國考老師方式告訴我這條最常怎麼出題，列出3個陷阱，再現場出1題四選一題目並附答案解析。' },
   ];
 
   return (
@@ -87,12 +89,12 @@ export function ArticleTeacherDrawer({ open, onClose, lawName, articleId, detail
           <button onClick={onClose} className="icon-button shrink-0"><X size={16}/></button>
         </header>
 
-        <div className="px-4 py-3 border-b overflow-x-auto flex gap-2" style={{ borderColor: 'var(--border)' }}>
-          {quick.map(item => <button key={item.label} onClick={() => void ask(item.prompt)} disabled={loading} className="surface whitespace-nowrap rounded-full px-3 py-2 text-[10px] font-black text-secondary flex items-center gap-1.5"><item.icon size={12}/>{item.label}</button>)}
+        <div className="px-4 py-3 border-b grid grid-cols-2 sm:grid-cols-3 gap-2" style={{ borderColor: 'var(--border)' }}>
+          {quick.map(item => <button key={item.label} onClick={() => void ask(item.prompt)} disabled={loading} className="surface rounded-xl px-3 py-2.5 text-[10px] font-black text-secondary flex items-center justify-center gap-1.5 text-center card-hover"><item.icon size={12}/>{item.label}</button>)}
         </div>
 
         <main className="flex-1 min-h-0 overflow-y-auto p-4 space-y-3">
-          {messages.map((message, index) => <div key={`${message.role}-${index}`} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}><div className={`max-w-[90%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${message.role === 'user' ? 'bg-indigo-600 text-white rounded-tr-sm' : 'card text-secondary rounded-tl-sm'}`}>{message.content}</div></div>)}
+          {messages.map((message, index) => <div key={`${message.role}-${index}`} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}><div className={`max-w-[90%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${message.role === 'user' ? 'bg-indigo-600 text-white rounded-tr-sm' : 'card text-secondary rounded-tl-sm'}`}>{message.role==='ai' && message.provider && <div className="text-[9px] font-black text-indigo-600 mb-1.5">{message.provider} · 備援路由</div>}{message.content}</div></div>)}
           {loading && <div className="flex items-center gap-2 text-xs text-tertiary"><Loader2 size={14} className="animate-spin"/>老師正在讀這一條的脈絡…</div>}
           <div ref={endRef}/>
         </main>

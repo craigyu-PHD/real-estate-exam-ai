@@ -13,7 +13,7 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  serverExternalPackages: ['msedge-tts', 'ws'],
 };
 
 export default withPWA(nextConfig);

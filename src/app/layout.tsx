@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SettingsProvider>
           <div className="flex min-h-screen">
             <Navigation />
-            <main className="flex-1 md:ml-[280px] relative px-0">
+            <main className="flex-1 min-w-0 md:ml-[280px] relative px-0">
               {children}
             </main>
             <ThemeEffects />

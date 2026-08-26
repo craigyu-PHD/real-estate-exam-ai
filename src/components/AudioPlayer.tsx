@@ -4,15 +4,17 @@ import { Play, Pause, Volume2, Sparkles, LoaderCircle } from 'lucide-react';
 import { getCachedAudio, setCachedAudio, ttsCacheKey, fetchServerTTS, pickNaturalTaiwanVoice, waitForSpeechVoices } from '@/lib/tts';
 import { useSettings } from '@/hooks/useSettings';
 import { VOICE_PRESETS } from '@/lib/voiceConfig';
+import { getStoredGeminiKey } from '@/lib/geminiKey';
 
-type Engine = 'gemini' | 'device-natural' | 'web-speech' | null;
+type Engine = 'gemini' | 'edge-neural' | 'server-natural' | 'cached' | 'device-natural' | 'web-speech' | null;
 
-export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>void }) {
+export function AudioPlayer({ text, onEnded, articleRef }: { text: string; onEnded?: ()=>void; articleRef?: { lawId: string; articleId: string } }) {
   const { settings } = useSettings();
   const [isPlaying, setIsPlaying] = useState(false);
   const [engine, setEngine] = useState<Engine>(null);
   const [loading, setLoading] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const requestLockRef = useRef(false);
   const synthRef = useRef<SpeechSynthesis | null>(null);
   const blobUrlRef = useRef<string | null>(null);
 
@@ -44,7 +46,7 @@ export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>voi
     setIsPlaying(true);
   };
 
-  const playBlob = async (blob: Blob) => {
+  const playBlob = async (blob: Blob, source: Engine = 'server-natural') => {
     if (blobUrlRef.current) URL.revokeObjectURL(blobUrlRef.current);
     const url = URL.createObjectURL(blob);
     blobUrlRef.current = url;
@@ -54,11 +56,27 @@ export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>voi
     audio.onended = () => { setIsPlaying(false); onEnded?.(); };
     audio.onerror = () => { setIsPlaying(false); void playDevice(text, true); };
     await audio.play();
-    setEngine('gemini');
+    setEngine(source);
     setIsPlaying(true);
   };
 
+  const playEdgeStream = async () => {
+    if (!articleRef) return false;
+    if (blobUrlRef.current) { URL.revokeObjectURL(blobUrlRef.current); blobUrlRef.current = null; }
+    const query = new URLSearchParams({ lawId: articleRef.lawId, articleId: articleRef.articleId, preset: settings.voicePreset });
+    const audio = new Audio(`/api/material/audio?${query.toString()}`);
+    audio.preload = 'auto';
+    audio.playbackRate = settings.voiceSpeed;
+    audioRef.current = audio;
+    audio.onplaying = () => { setEngine('edge-neural'); setIsPlaying(true); };
+    audio.onended = () => { setIsPlaying(false); onEnded?.(); };
+    audio.onerror = () => { setIsPlaying(false); void playDevice(text, true); };
+    await audio.play();
+    return true;
+  };
+
   const handle = async () => {
+    if (requestLockRef.current) return;
     if (isPlaying) {
       audioRef.current?.pause();
       synthRef.current?.pause();
@@ -76,23 +94,27 @@ export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>voi
       return;
     }
 
+    requestLockRef.current = true;
     setLoading(true);
     try {
       const want = settings.voiceEngine;
-      if (want === 'gemini' || want === 'auto') {
+      const hasGeminiKey = Boolean(getStoredGeminiKey());
+      const shouldStreamEdge = Boolean(articleRef) && (want === 'edge-neural' || ((want === 'auto' || want === 'gemini') && !hasGeminiKey));
+      if (shouldStreamEdge && await playEdgeStream()) return;
+      if (want === 'gemini' || want === 'auto' || want === 'edge-neural') {
         const key = ttsCacheKey(text, settings.voicePreset, settings.voiceSpeed);
         const cached = await getCachedAudio(key);
         if (cached) {
-          await playBlob(cached);
+          await playBlob(cached.blob, (cached.engine as Engine) || 'cached');
           return;
         }
-        const blob = await fetchServerTTS(text, settings.voicePreset);
-        if (blob) {
-          await setCachedAudio(key, blob);
-          await playBlob(blob);
+        const result = await fetchServerTTS(text, settings.voicePreset, want === 'edge-neural' ? 'edge' : want === 'gemini' ? 'gemini' : 'auto');
+        if (result) {
+          await setCachedAudio(key, result);
+          await playBlob(result.blob, (result.engine as Engine) || 'server-natural');
           return;
         }
-        if (want === 'gemini') {
+        if (want === 'gemini' || want === 'edge-neural') {
           await playDevice(text, true);
           return;
         }
@@ -100,18 +122,23 @@ export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>voi
 
       await playDevice(text, want !== 'web-speech');
     } finally {
+      requestLockRef.current = false;
       setLoading(false);
     }
   };
 
   const voice = VOICE_PRESETS[settings.voicePreset];
   const engineLabel = engine === 'gemini'
-    ? `AI 自然語音 · ${voice.shortLabel}`
-    : engine === 'device-natural'
-      ? '裝置自然語音'
-      : engine === 'web-speech'
-        ? '系統語音'
-        : `${voice.emoji} ${voice.shortLabel}`;
+    ? `Gemini 自然語音 · ${voice.shortLabel}`
+    : engine === 'edge-neural'
+      ? `Edge Neural · 台灣自然聲線`
+      : engine === 'server-natural' || engine === 'cached'
+        ? '自然語音快取'
+        : engine === 'device-natural'
+          ? '裝置自然語音'
+          : engine === 'web-speech'
+            ? '系統語音'
+            : `${voice.emoji} ${voice.shortLabel}`;
 
   return (
     <div className="flex flex-wrap items-center gap-2">
@@ -123,8 +150,8 @@ export function AudioPlayer({ text, onEnded }: { text: string; onEnded?: ()=>voi
         {loading ? <LoaderCircle size={15} className="animate-spin"/> : isPlaying ? <Pause size={15}/> : <Play size={15} className="fill-current"/>}
         {loading ? '準備自然語音…' : isPlaying ? '暫停' : '聽老師說'}
       </button>
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-bold card" style={{ color: engine === 'gemini' ? '#6d28d9' : 'var(--text-2)' }}>
-        {engine === 'gemini' ? <Sparkles size={12}/> : <Volume2 size={12}/>}
+      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-bold card" style={{ color: engine === 'gemini' || engine === 'edge-neural' ? 'var(--primary)' : 'var(--text-2)' }}>
+        {engine === 'gemini' || engine === 'edge-neural' ? <Sparkles size={12}/> : <Volume2 size={12}/>}
         {engineLabel}
       </span>
       <span className="text-[11px] hidden sm:inline" style={{ color: 'var(--text-3)' }}>{settings.voiceSpeed}x</span>

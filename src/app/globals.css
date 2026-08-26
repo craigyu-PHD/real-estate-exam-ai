@@ -176,14 +176,14 @@ html.dark[data-theme='cyber-web'] {
   --muted: #182438; --primary: #6fa2ff; --primary-hover: #8ab5ff; --primary-soft: #162b52; --success: #4bd0a9; --warning: #f2b44d; --danger: #ff6577;
 }
 html[data-theme='iron-forge'] {
-  --bg: #f4f3f0; --bg-accent: #ebe9e3; --card: #fffefa; --sidebar: #f8f7f3; --surface: #efede7; --surface-strong: #e1ded5;
-  --border: #d9d4c9; --border-strong: #bcb4a5; --text-1: #282621; --text-2: #59544b; --text-3: #746d61;
-  --muted: #ece9e2; --primary: #b65318; --primary-hover: #943d0e; --primary-soft: #fff0e3; --success: #387c62; --warning: #b56d08; --danger: #b54232;
+  --bg: #f2f5f6; --bg-accent: #e8eef0; --card: #fcfefe; --sidebar: #f6f9fa; --surface: #eaf0f2; --surface-strong: #dce6e9;
+  --border: #d1dde0; --border-strong: #aebfc5; --text-1: #1d2a30; --text-2: #475c65; --text-3: #697d85;
+  --muted: #e8eff1; --primary: #326f82; --primary-hover: #285b6b; --primary-soft: #e3f2f5; --success: #2e8a70; --warning: #a97836; --danger: #b5484c;
 }
 html.dark[data-theme='iron-forge'] {
-  --bg: #10100f; --bg-accent: #181714; --card: #1b1a17; --sidebar: #141310; --surface: #24221e; --surface-strong: #302d27;
-  --border: #3b3730; --border-strong: #5c5448; --text-1: #f3f0e9; --text-2: #c7c0b3; --text-3: #988f80;
-  --muted: #28251f; --primary: #ff914d; --primary-hover: #ffaa72; --primary-soft: #4a2917; --success: #68c9a4; --warning: #ffc160; --danger: #f77863;
+  --bg: #0c1215; --bg-accent: #111b20; --card: #152126; --sidebar: #10191d; --surface: #1c2b31; --surface-strong: #263a42;
+  --border: #30444d; --border-strong: #49636e; --text-1: #eff7f8; --text-2: #bed0d5; --text-3: #8fa6ad;
+  --muted: #1b2b31; --primary: #74c2d3; --primary-hover: #91d2df; --primary-soft: #153842; --success: #64c8a3; --warning: #d6a65b; --danger: #ed7377;
 }
 html[data-theme='apex-racing'] {
   --bg: #f6f7f8; --bg-accent: #eceff2; --card: #ffffff; --sidebar: #f8fafb; --surface: #eff2f4; --surface-strong: #e1e6ea;
@@ -233,14 +233,14 @@ html[data-theme='shadow-ronin'] body::before {
   background-image: linear-gradient(100deg, transparent 0 70%, color-mix(in srgb, var(--primary) 7%, transparent) 70.2% 71%, transparent 71.2%), repeating-linear-gradient(8deg, color-mix(in srgb, var(--text-1) 2.5%, transparent) 0 1px, transparent 1px 9px);
 }
 
-html[data-theme='cyber-web'] .hero-surface { background: linear-gradient(132deg, #132c68 0%, #215fcb 50%, #a3233c 128%); }
-html[data-theme='iron-forge'] .hero-surface { background: linear-gradient(132deg, #2f302f 0%, #5f5145 52%, #c35a1a 128%); }
-html[data-theme='apex-racing'] .hero-surface { background: linear-gradient(132deg, #1a2026 0%, #343d46 52%, #c82d36 128%); }
-html[data-theme='deep-space'] .hero-surface { background: linear-gradient(132deg, #081b3a 0%, #114f73 52%, #168b9d 128%); }
-html[data-theme='shadow-ronin'] .hero-surface { background: linear-gradient(132deg, #25191b 0%, #493236 52%, #9d2930 128%); }
+html[data-theme='cyber-web'] .hero-surface { background: linear-gradient(132deg, #102b66 0%, #286ddd 48%, #c73555 126%); }
+html[data-theme='iron-forge'] .hero-surface { background: linear-gradient(132deg, #17242a 0%, #315b69 52%, #9b654a 128%); }
+html[data-theme='apex-racing'] .hero-surface { background: linear-gradient(132deg, #151d26 0%, #274b68 45%, #d43846 122%); }
+html[data-theme='deep-space'] .hero-surface { background: linear-gradient(132deg, #081932 0%, #174f82 48%, #19a0a5 102%, #5d5ed5 145%); }
+html[data-theme='shadow-ronin'] .hero-surface { background: linear-gradient(132deg, #21171a 0%, #55323f 52%, #bb3545 112%, #70418f 145%); }
 
 html[data-theme='cyber-web'] .brand-mark { background: linear-gradient(145deg,#164eaf,#2867d5 58%,#b52c46 130%); }
-html[data-theme='iron-forge'] .brand-mark { background: linear-gradient(145deg,#373737,#66584a 58%,#d26a22 130%); }
+html[data-theme='iron-forge'] .brand-mark { background: linear-gradient(145deg,#1e3038,#3f7888 58%,#9d694f 130%); }
 html[data-theme='apex-racing'] .brand-mark { background: linear-gradient(145deg,#171c20,#3a444c 58%,#dc3540 130%); }
 html[data-theme='deep-space'] .brand-mark { background: linear-gradient(145deg,#082554,#11698c 58%,#21abc0 130%); }
 html[data-theme='shadow-ronin'] .brand-mark { background: linear-gradient(145deg,#201719,#4b3237 58%,#b62e36 130%); }
@@ -306,3 +306,29 @@ html[data-theme='iron-forge'] .card { background:linear-gradient(145deg,var(--ca
 html[data-theme='apex-racing'] .card { box-shadow:var(--shadow-sm),inset 0 2px 0 color-mix(in srgb,var(--primary) 14%,transparent); }
 html[data-theme='deep-space'] .card { box-shadow:var(--shadow-sm),0 0 28px color-mix(in srgb,var(--primary) 4%,transparent); }
 html[data-theme='shadow-ronin'] .card { background:linear-gradient(170deg,var(--card),color-mix(in srgb,var(--card) 96%,var(--primary) 4%)); box-shadow:var(--shadow-sm),inset 0 -1px 0 color-mix(in srgb,var(--primary) 15%,transparent); }
+
+/* V2.3 listen performance feedback */
+.lecture-loader { position:relative; width:142px; height:142px; display:grid; place-items:center; }
+.lecture-loader-ring { position:absolute; inset:0; border-radius:999px; border:1px solid rgba(255,255,255,.16); transition:.25s ease; }
+.lecture-loader .ring-two { inset:12px; border-color:rgba(94,234,212,.18); }
+.lecture-teacher-avatar { position:relative; z-index:2; width:96px; height:96px; border-radius:999px; display:grid; place-items:center; background:rgba(255,255,255,.11); border:1px solid rgba(255,255,255,.18); backdrop-filter:blur(10px); font-size:42px; box-shadow:0 18px 45px rgba(4,12,28,.28); }
+.lecture-wave-bars { position:absolute; z-index:3; bottom:0; left:50%; transform:translate(-50%,7px); display:flex; gap:3px; align-items:flex-end; height:22px; padding:4px 8px; border-radius:999px; background:rgba(6,16,35,.45); border:1px solid rgba(255,255,255,.12); }
+.lecture-wave-bars i { display:block; width:3px; height:6px; border-radius:999px; background:#a7f3d0; opacity:.65; }
+.lecture-loader.is-loading .ring-one { animation:lecture-orbit 1.15s linear infinite; border-top-color:#fff; border-right-color:rgba(255,255,255,.45); }
+.lecture-loader.is-loading .ring-two { animation:lecture-orbit 1.7s linear infinite reverse; border-bottom-color:#5eead4; }
+.lecture-loader.is-loading .lecture-teacher-avatar { box-shadow:0 0 0 10px rgba(255,255,255,.035),0 20px 50px rgba(4,12,28,.32); }
+.lecture-loader.is-playing .lecture-loader-ring { box-shadow:0 0 28px rgba(94,234,212,.12); }
+.lecture-loader.is-playing .lecture-wave-bars i { animation:lecture-wave .75s ease-in-out infinite alternate; opacity:1; }
+.lecture-loader.is-playing .lecture-wave-bars i:nth-child(2){animation-delay:.12s}.lecture-loader.is-playing .lecture-wave-bars i:nth-child(3){animation-delay:.24s}.lecture-loader.is-playing .lecture-wave-bars i:nth-child(4){animation-delay:.36s}.lecture-loader.is-playing .lecture-wave-bars i:nth-child(5){animation-delay:.48s}
+@keyframes lecture-orbit { to { transform:rotate(360deg); } }
+@keyframes lecture-wave { from { height:5px; } to { height:17px; } }
+@media (prefers-reduced-motion:reduce){.lecture-loader-ring,.lecture-wave-bars i{animation:none!important}}
+
+
+/* V2.3 commercial color polish */
+.ai-cta-panel { border:1px solid color-mix(in srgb,var(--primary) 18%,var(--border)); background:linear-gradient(135deg,var(--card) 0%,color-mix(in srgb,var(--primary-soft) 62%,var(--card)) 100%); box-shadow:var(--shadow-sm); }
+html[data-theme='cyber-web'] .ai-cta-panel { background:linear-gradient(135deg,var(--card),color-mix(in srgb,#2b6de0 10%,var(--card)) 62%,color-mix(in srgb,#c83354 7%,var(--card))); }
+html[data-theme='iron-forge'] .ai-cta-panel { background:linear-gradient(135deg,var(--card),color-mix(in srgb,#4a8392 10%,var(--card)) 65%,color-mix(in srgb,#9b654a 6%,var(--card))); }
+html[data-theme='apex-racing'] .ai-cta-panel { background:linear-gradient(135deg,var(--card),color-mix(in srgb,#315c82 8%,var(--card)) 55%,color-mix(in srgb,#d43846 9%,var(--card))); }
+html[data-theme='deep-space'] .ai-cta-panel { background:linear-gradient(135deg,var(--card),color-mix(in srgb,#16a0ac 9%,var(--card)) 58%,color-mix(in srgb,#615fd7 7%,var(--card))); }
+html[data-theme='shadow-ronin'] .ai-cta-panel { background:linear-gradient(135deg,var(--card),color-mix(in srgb,#b73445 8%,var(--card)) 62%,color-mix(in srgb,#75418e 6%,var(--card))); }

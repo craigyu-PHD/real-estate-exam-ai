@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { MessageCircleQuestion, Lightbulb, BookText, Bookmark, ChevronLeft, ChevronRight, CheckCircle2, AlertTriangle, Scale, GraduationCap, HelpCircle, ArrowLeft, Trophy, Zap, Headphones, Flag, BrainCircuit, ChevronDown, ChevronUp, Bot } from 'lucide-react';
+import { MessageCircleQuestion, Lightbulb, BookText, Bookmark, ChevronLeft, ChevronRight, CheckCircle2, AlertTriangle, Scale, GraduationCap, HelpCircle, ArrowLeft, Trophy, Zap, Headphones, Flag, ChevronDown, ChevronUp, Bot } from 'lucide-react';
 import { AudioPlayer } from '@/components/AudioPlayer';
 import { ChatGPTButton } from '@/components/ChatGPTButton';
 import { ArticleTeacherDrawer } from '@/components/ArticleTeacherDrawer';
@@ -15,7 +15,6 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const { markAsRead, unmarkAsRead, isArticleRead, getGamificationStats } = useProgress();
   const { hasBookmark, toggleBookmark } = useBookmarks();
   const [showToast, setShowToast] = useState<string | null>(null);
-  const [activeHelp, setActiveHelp] = useState<string | null>(null);
   const [showReward, setShowReward] = useState(false);
   const [teacherOpen, setTeacherOpen] = useState(false);
   const [expanded, setExpanded] = useState<'why' | 'cases' | null>('cases');
@@ -52,14 +51,7 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const lectureText = detail.lectureScript || `${lawName}第${articleId}條。先聽法條原文。${detail.articleText}。老師白話解析：${detail.explanation}。為什麼這樣規定：${detail.why}。實務案例：${detail.cases[0]?.content || ''}。考試提醒：${detail.examTips.join(' ')}`;
   const lawProgress = currentIndex >= 0 && articles.length > 0 ? Math.round(((currentIndex + 1) / articles.length) * 100) : 0;
 
-  const helpItems = [
-    { k:'simpler', l:'再講白一點', sub:'國中程度', emoji:'🗣️' },
-    { k:'example', l:'換一個例子', sub:'房仲情境', emoji:'🏠' },
-    { k:'why2', l:'為什麼？', sub:'制度目的', emoji:'💡' },
-    { k:'important', l:'這條重要嗎？', sub:'重要性', emoji:'⭐' },
-    { k:'confuse', l:'容易搞混？', sub:'相鄰條文', emoji:'🔀' },
-    { k:'exam', l:'考試怎麼考？', sub:'題型陷阱', emoji:'🎯' },
-  ];
+
 
   return (
     <div className="max-w-[900px] mx-auto pb-28 relative z-10">
@@ -85,7 +77,7 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
 
         <section className="card rounded-[1.25rem] p-3.5 md:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3"><div className="w-9 h-9 rounded-xl bg-violet-500/10 text-violet-600 flex items-center justify-center"><Headphones size={17}/></div><div><div className="text-sm font-black text-primary">Mini Lecture · 聽老師說</div><div className="text-[10px] mt-0.5 text-tertiary">法條原文 → 白話解析 → 制度目的 → 案例 → 考點</div></div></div>
-          <AudioPlayer text={lectureText}/>
+          <AudioPlayer text={lectureText} articleRef={{lawId, articleId}}/>
         </section>
 
         <section>
@@ -96,35 +88,33 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
 
         <section className="rounded-[1.25rem] p-4 md:p-5 border bg-indigo-500/[0.04] border-indigo-500/15">
           <div className="flex items-center justify-between gap-3 mb-2"><div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-300 font-black text-sm"><MessageCircleQuestion size={16}/> B. 老師白話解析</div><span className="text-[9px] text-tertiary">逐條客製教材</span></div>
-          <p className="leading-[1.85] text-[14px] md:text-[15px] text-primary">{detail.explanation}</p>
+          <p className="leading-[1.9] text-[14px] md:text-[15px] text-primary whitespace-pre-line">{detail.explanation}</p>
         </section>
 
         <section className="grid md:grid-cols-2 gap-3">
           <button onClick={() => setExpanded(expanded === 'why' ? null : 'why')} className="card rounded-[1.25rem] p-4 text-left card-hover self-start">
             <div className="flex items-center justify-between gap-2"><div className="flex items-center gap-2 text-amber-700 dark:text-amber-300 font-black text-sm"><Lightbulb size={16}/> C. 為什麼這樣規定</div>{expanded==='why'?<ChevronUp size={15} className="text-tertiary"/>:<ChevronDown size={15} className="text-tertiary"/>}</div>
-            <p className={`mt-2 text-xs leading-relaxed text-secondary ${expanded==='why'?'':'line-clamp-3'}`}>{detail.why}</p>
+            <p className={`mt-2 text-xs leading-[1.75] text-secondary whitespace-pre-line ${expanded==='why'?'':'line-clamp-3'}`}>{detail.why}</p>
             <div className="text-[9px] mt-2 text-amber-600">{expanded==='why'?'收合制度脈絡':'展開完整制度脈絡'}</div>
           </button>
           <button onClick={() => setExpanded(expanded === 'cases' ? null : 'cases')} className="card rounded-[1.25rem] p-4 text-left card-hover self-start">
             <div className="flex items-center justify-between gap-2"><div className="flex items-center gap-2 text-sky-700 dark:text-sky-300 font-black text-sm"><GraduationCap size={16}/> D. 實務與考場案例</div>{expanded==='cases'?<ChevronUp size={15} className="text-tertiary"/>:<ChevronDown size={15} className="text-tertiary"/>}</div>
-            <div className="mt-2"><div className="text-xs font-black text-primary">{detail.cases[0]?.title}</div><p className={`text-xs mt-1 leading-relaxed text-secondary ${expanded==='cases'?'':'line-clamp-3'}`}>{detail.cases[0]?.content}</p></div>
+            <div className="mt-2"><div className="text-xs font-black text-primary">{detail.cases[0]?.title}</div><p className={`text-xs mt-1 leading-[1.75] text-secondary whitespace-pre-line ${expanded==='cases'?'':'line-clamp-3'}`}>{detail.cases[0]?.content}</p></div>
             {expanded==='cases' && detail.cases.slice(1).map((c,i)=><div key={i} className="mt-3 pt-3 border-t" style={{borderColor:'var(--border)'}}><div className="text-xs font-black text-primary">{c.title}</div><p className="text-xs mt-1 leading-relaxed text-secondary">{c.content}</p></div>)}
             <div className="text-[9px] mt-2 text-sky-600">{expanded==='cases'?'收合案例':'展開第二個案例'}</div>
           </button>
         </section>
 
-        <section className="card rounded-[1.25rem] p-4">
-          <div className="flex items-start justify-between gap-3 mb-3"><div><div className="text-sm font-black flex items-center gap-2 text-primary"><BrainCircuit size={16} className="text-violet-600"/> 卡住就點，不用硬撐</div><div className="text-[10px] mt-1 text-tertiary">每顆按鈕解決不同問題；不是換句話說而已。</div></div><span className="text-lg">🧠</span></div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">{helpItems.map(button => <button key={button.k} onClick={() => setActiveHelp(activeHelp===button.k?null:button.k)} className={`px-3 py-2.5 rounded-xl border text-left transition ${activeHelp===button.k?'bg-indigo-600 border-indigo-600 text-white':'surface card-hover'}`}><div className="flex items-center gap-1.5"><span>{button.emoji}</span><span className="text-xs font-black">{button.l}</span></div><div className={`text-[9px] mt-0.5 ${activeHelp===button.k?'text-white/65':'text-tertiary'}`}>{button.sub}</div></button>)}</div>
-          {activeHelp && <div className="mt-3 rounded-xl p-3.5 text-xs leading-[1.8] border surface text-secondary">
-            {activeHelp==='simpler' && <><b className="text-primary">只記這一句：</b> {detail.oneLiner}<div className="mt-2 text-tertiary">先不用背例外與細節，能用自己的話重講一次就算過關。</div></>}
-            {activeHelp==='example' && <><b className="text-primary">換一個角度：</b> {detail.cases[1]?.content || detail.cases[0]?.content}</>}
-            {activeHelp==='why2' && <><b className="text-primary">制度目的：</b> {detail.why}</>}
-            {activeHelp==='important' && <><b className="text-primary">重要度：</b> {'★'.repeat(detail.importance)}{'☆'.repeat(Math.max(0,5-detail.importance))}<div className="mt-2">{detail.examTips.join('；')}</div></>}
-            {activeHelp==='confuse' && (detail.confuseWith?.length ? detail.confuseWith.map((c,i)=><div key={i} className={i?'mt-2':''}><b className="text-primary">{c.article}</b>：{c.diff}</div>) : '這條目前沒有需要優先對照的相鄰條文。')}
-            {activeHelp==='exam' && <ul className="space-y-1">{detail.examTips.map((tip,i)=><li key={i}>• {tip}</li>)}</ul>}
-          </div>}
-          <button onClick={() => setTeacherOpen(true)} className="mt-3 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl px-4 py-2.5 text-xs font-black transition"><Bot size={14}/>直接問 AI 老師 · 已帶入本條</button>
+        <section className="card rounded-[1.25rem] p-4 md:p-5 ai-cta-panel relative overflow-hidden">
+          <div className="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-violet-500/10 blur-2xl" />
+          <div className="relative flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="w-11 h-11 rounded-2xl bg-violet-600 text-white flex items-center justify-center shrink-0"><Bot size={19}/></div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-black text-primary">這條還有疑問？直接問 AI 老師</div>
+              <div className="text-[10px] mt-1 leading-relaxed text-tertiary">已自動帶入本條原文與 B／C／D 教材。右側對話框內提供「再講白一點、換例子、為什麼、重要嗎、容易搞混、考試怎麼考」六個快捷問題。</div>
+            </div>
+            <button onClick={() => setTeacherOpen(true)} className="shrink-0 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl px-4 py-3 text-xs font-black transition"><Bot size={14}/>直接問 AI 老師</button>
+          </div>
         </section>
 
         <section className="grid md:grid-cols-2 gap-3">

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import type { VoicePreset } from '@/lib/voiceConfig';
 import type { Appearance, ThemeId } from '@/lib/themeConfig';
 
-export type VoiceEngine = 'auto' | 'gemini' | 'device-natural' | 'web-speech';
+export type VoiceEngine = 'auto' | 'gemini' | 'edge-neural' | 'device-natural' | 'web-speech';
 
 export interface Settings {
   appearance: Appearance;

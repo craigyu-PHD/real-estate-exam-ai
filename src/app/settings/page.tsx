@@ -5,32 +5,34 @@ import { Settings, Volume2, Type, Moon, Sun, Monitor, Play, Shield, Trash2, Chec
 import { useSettings, type VoiceEngine } from '@/hooks/useSettings';
 import { AudioPlayer } from '@/components/AudioPlayer';
 import { VOICE_PRESETS, type VoicePreset } from '@/lib/voiceConfig';
-import { getStoredGeminiKey, maskGeminiKey, saveStoredGeminiKey } from '@/lib/geminiKey';
+import { getStoredAiKeys, maskApiKey, saveStoredAiKey, type AiProvider, type StoredAiKeys } from '@/lib/aiKeys';
 import { THEMES, type Appearance, type ThemeId } from '@/lib/themeConfig';
 
-type TestState = { state: 'idle' | 'testing' | 'ok' | 'error'; message: string };
+type TestState = { provider: AiProvider | 'edge' | null; state: 'idle' | 'testing' | 'ok' | 'error'; message: string };
 
 export default function SettingsPage() {
   const { isLoaded, settings, updateSettings } = useSettings();
-  const [geminiKey, setGeminiKey] = useState('');
-  const [savedKey, setSavedKey] = useState('');
-  const [showKey, setShowKey] = useState(false);
-  const [testState, setTestState] = useState<TestState>({ state: 'idle', message: '' });
+  const emptyKeys: StoredAiKeys = { gemini: '', groq: '', openrouter: '' };
+  const [apiKeys, setApiKeys] = useState<StoredAiKeys>(emptyKeys);
+  const [savedKeys, setSavedKeys] = useState<StoredAiKeys>(emptyKeys);
+  const [showProvider, setShowProvider] = useState<AiProvider | null>(null);
+  const [testState, setTestState] = useState<TestState>({ provider: null, state: 'idle', message: '' });
 
   useEffect(() => {
     queueMicrotask(() => {
-      const key = getStoredGeminiKey();
-      setGeminiKey(key);
-      setSavedKey(key);
+      const keys = getStoredAiKeys();
+      setApiKeys(keys);
+      setSavedKeys(keys);
     });
   }, []);
 
   if (!isLoaded) return <div className="p-10 text-center text-tertiary">載入設定中…</div>;
 
   const engines: { id: VoiceEngine; label: string; desc: string; icon: string }[] = [
-    { id: 'auto', label: '智慧自動（推薦）', desc: '有 Gemini Key 時優先自然 AI 語音，否則使用裝置最佳中文聲線。', icon: '✨' },
-    { id: 'gemini', label: 'Gemini 自然語音', desc: '使用 Gemini 2.5 Flash TTS；失敗時仍保留裝置語音備援。', icon: '🎙️' },
-    { id: 'device-natural', label: '裝置自然語音', desc: '免費、免 API；自動挑選 Natural／Neural 中文聲線。', icon: '📱' },
+    { id: 'auto', label: '智慧自動（推薦）', desc: 'Gemini 可用就先用 Gemini；否則自動切到免 Key 的台灣 Edge Neural，再退到裝置語音。', icon: '✨' },
+    { id: 'edge-neural', label: 'Edge Neural（免 Key）', desc: '直接使用 Microsoft 台灣 Natural／Neural 聲線，不需要 API Key，適合當穩定主力。', icon: '🌐' },
+    { id: 'gemini', label: 'Gemini 優先', desc: '有 Gemini Key 時先用 Gemini TTS；失敗會自動切換 Edge Neural。', icon: '🎙️' },
+    { id: 'device-natural', label: '裝置自然語音', desc: '不走伺服器，直接挑選目前裝置最佳中文 Natural／Neural 聲線。', icon: '📱' },
     { id: 'web-speech', label: '系統相容語音', desc: '離線保底方案，音質依裝置與瀏覽器而異。', icon: '🛟' },
   ];
   const appearances: { id: Appearance; label: string; desc: string; icon: typeof Sun }[] = [
@@ -39,22 +41,22 @@ export default function SettingsPage() {
     { id: 'dark', label: '深色', desc: '低亮度，適合夜間與長時間使用', icon: Moon },
   ];
   const testText = '歡迎回來。先聽一次法條原文，再用白話拆解、案例和考點，把這一關真正弄懂。';
-  const hasSavedKey = savedKey.length > 0;
-
-  const saveAndTest = async () => {
-    const key = geminiKey.trim();
-    saveStoredGeminiKey(key);
-    setSavedKey(key);
-    updateSettings({ voiceEngine: 'auto' });
-    setTestState({ state: 'testing', message: '正在驗證 Gemini 模型與權限…' });
+  const testProvider = async (provider: AiProvider | 'edge') => {
+    const key = provider === 'edge' ? '' : apiKeys[provider].trim();
+    if (provider !== 'edge') {
+      saveStoredAiKey(provider, key);
+      setSavedKeys(prev => ({ ...prev, [provider]: key }));
+    }
+    setTestState({ provider, state: 'testing', message: `正在測試 ${provider === 'edge' ? 'Edge Neural' : provider}…` });
     try {
-      const res = await fetch('/api/gemini/test', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ apiKey: key || undefined }) });
+      const res = await fetch('/api/ai/test', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provider, apiKey: key || undefined }) });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || '驗證失敗');
-      const capabilities = [data.textModel ? 'AI 老師 ✓' : 'AI 老師未偵測', data.ttsModel ? '自然語音 ✓' : 'TTS 未偵測'].join(' · ');
-      setTestState({ state: 'ok', message: `連線成功：${capabilities}` });
+      const detail = provider === 'gemini' ? `文字 ${data.text ? '✓' : '—'} · TTS ${data.tts ? '✓' : '—'}` : provider === 'edge' ? `${data.voice} · ${data.bytes} bytes` : `${data.model || 'API'} ✓`;
+      setTestState({ provider, state: 'ok', message: `連線成功：${detail}` });
+      if (provider === 'edge') updateSettings({ voiceEngine: 'edge-neural' });
     } catch (error) {
-      setTestState({ state: 'error', message: error instanceof Error ? error.message : 'Gemini 連線測試失敗' });
+      setTestState({ provider, state: 'error', message: error instanceof Error ? error.message : '連線測試失敗' });
     }
   };
 
@@ -97,11 +99,25 @@ export default function SettingsPage() {
       </section>
 
       <section className="card rounded-[1.4rem] overflow-hidden">
-        <div className="px-5 py-4 border-b flex flex-wrap items-center justify-between gap-3" style={{borderColor:'var(--border)'}}><div className="flex items-center gap-2"><KeyRound size={16} className="text-amber-600"/><span className="text-sm font-black text-primary">Gemini API 連線</span></div><span className={`text-[10px] font-black px-2.5 py-1 rounded-full border ${hasSavedKey?'status-complete':'status-planned'}`}>{hasSavedKey?'本機 BYOK 已設定':'尚未設定 Key'}</span></div>
+        <div className="px-5 py-4 border-b flex flex-wrap items-center justify-between gap-3" style={{borderColor:'var(--border)'}}>
+          <div className="flex items-center gap-2"><KeyRound size={16} className="text-amber-600"/><span className="text-sm font-black text-primary">免費 AI API 備援</span></div>
+          <span className="text-[10px] font-black status-current">Gemini → Groq → OpenRouter</span>
+        </div>
         <div className="p-5 space-y-4">
-          <div className="rounded-2xl p-4 surface flex gap-3"><LockKeyhole size={18} className="text-indigo-600 shrink-0 mt-0.5"/><div><div className="text-xs font-black text-primary">私人裝置 BYOK 模式</div><p className="text-[11px] leading-relaxed mt-1 text-secondary">Key 只存在目前瀏覽器 localStorage，請求經本站後端代理至 Gemini，不寫入 GitHub。正式多人服務仍建議改用 Vercel server-side secret。</p></div></div>
-          <div><label className="text-xs font-black text-secondary">Gemini API Key</label><div className="relative mt-2"><input type={showKey?'text':'password'} value={geminiKey} onChange={e=>{setGeminiKey(e.target.value);setTestState({state:'idle',message:''});}} placeholder="貼上 Google AI Studio 的 API Key" className="input-shell w-full rounded-xl px-4 py-3 pr-12 text-sm outline-none" autoComplete="off" spellCheck={false}/><button onClick={()=>setShowKey(v=>!v)} className="absolute right-2 top-1/2 -translate-y-1/2 icon-button !w-8 !h-8 border-0" title={showKey?'隱藏':'顯示'}>{showKey?<EyeOff size={15}/>:<Eye size={15}/>}</button></div>{hasSavedKey&&<div className="mt-2 text-[10px] text-tertiary">已保存：{maskGeminiKey(savedKey)}</div>}</div>
-          <div className="flex flex-col sm:flex-row gap-2"><button onClick={()=>void saveAndTest()} disabled={testState.state==='testing'} className="flex-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white rounded-xl py-3 text-sm font-black transition flex items-center justify-center gap-2">{testState.state==='testing'?<Loader2 size={15} className="animate-spin"/>:<KeyRound size={14}/>}儲存並測試連線</button><a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer" className="flex-1 surface rounded-xl py-3 px-4 text-sm font-black text-primary flex items-center justify-center gap-2 hover:border-indigo-300 transition">Google AI Studio <ExternalLink size={14}/></a></div>
+          <div className="rounded-2xl p-4 surface flex gap-3"><LockKeyhole size={18} className="text-indigo-600 shrink-0 mt-0.5"/><div><div className="text-xs font-black text-primary">三路 BYOK + 一路免 Key 語音</div><p className="text-[11px] leading-relaxed mt-1 text-secondary">AI 老師會依序嘗試 Gemini、Groq Free、OpenRouter Free。API Key 只存在目前瀏覽器；語音另外有免 Key 的 Edge Neural，所以即使文字 AI Key 暫時失效，Mini Lecture 仍可使用自然台灣聲線。</p></div></div>
+          <div className="grid lg:grid-cols-3 gap-3">
+            {([
+              {id:'gemini' as AiProvider,label:'Gemini Free',desc:'主力：AI 老師＋Gemini TTS',placeholder:'Google AI Studio API Key',href:'https://aistudio.google.com/apikey'},
+              {id:'groq' as AiProvider,label:'Groq Free',desc:'高速文字 AI 備援 · GPT-OSS 20B',placeholder:'Groq API Key',href:'https://console.groq.com/keys'},
+              {id:'openrouter' as AiProvider,label:'OpenRouter Free',desc:'免費模型路由備援',placeholder:'OpenRouter API Key',href:'https://openrouter.ai/settings/keys'},
+            ]).map(provider => <div key={provider.id} className="surface rounded-2xl p-4">
+              <div className="flex items-start justify-between gap-2"><div><div className="text-sm font-black text-primary">{provider.label}</div><div className="text-[10px] mt-1 text-tertiary">{provider.desc}</div></div><span className={`text-[9px] font-black ${savedKeys[provider.id]?'text-emerald-600':'text-tertiary'}`}>{savedKeys[provider.id]?'已保存':'未設定'}</span></div>
+              <div className="relative mt-3"><input type={showProvider===provider.id?'text':'password'} value={apiKeys[provider.id]} onChange={e=>{setApiKeys(prev=>({...prev,[provider.id]:e.target.value}));setTestState({provider:null,state:'idle',message:''});}} placeholder={provider.placeholder} className="input-shell w-full rounded-xl px-3 py-2.5 pr-10 text-xs outline-none" autoComplete="off" spellCheck={false}/><button onClick={()=>setShowProvider(showProvider===provider.id?null:provider.id)} className="absolute right-1.5 top-1/2 -translate-y-1/2 icon-button !w-7 !h-7 border-0">{showProvider===provider.id?<EyeOff size={13}/>:<Eye size={13}/>}</button></div>
+              {savedKeys[provider.id]&&<div className="mt-1.5 text-[9px] text-tertiary">{maskApiKey(savedKeys[provider.id])}</div>}
+              <div className="grid grid-cols-2 gap-2 mt-3"><button onClick={()=>void testProvider(provider.id)} disabled={testState.state==='testing'} className="bg-indigo-600 text-white rounded-xl py-2.5 text-[10px] font-black disabled:opacity-50">{testState.provider===provider.id&&testState.state==='testing'?'測試中…':'儲存＋測試'}</button><a href={provider.href} target="_blank" rel="noreferrer" className="rounded-xl py-2.5 text-[10px] font-black surface text-primary flex items-center justify-center gap-1">取得 Key <ExternalLink size={11}/></a></div>
+            </div>)}
+          </div>
+          <div className="rounded-2xl border p-4 flex flex-col sm:flex-row sm:items-center gap-3" style={{borderColor:'var(--border)',background:'color-mix(in srgb,var(--primary-soft) 55%,var(--card))'}}><div className="w-10 h-10 rounded-xl bg-emerald-500/12 text-emerald-600 flex items-center justify-center">🌐</div><div className="flex-1"><div className="text-sm font-black text-primary">Edge Neural · 免 API Key</div><div className="text-[10px] mt-1 text-secondary">台灣 Natural 聲線 HsiaoChen／YunJhe／HsiaoYu 已直接接到 server TTS，可當 Gemini TTS 的免費備援。</div></div><button onClick={()=>void testProvider('edge')} disabled={testState.state==='testing'} className="surface rounded-xl px-4 py-2.5 text-[10px] font-black text-primary disabled:opacity-50">測試語音連線</button></div>
           {testState.state!=='idle'&&<div className={`rounded-xl p-3 text-xs font-bold flex items-start gap-2 ${testState.state==='ok'?'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300':testState.state==='error'?'bg-rose-500/10 text-rose-700 dark:text-rose-300':'surface text-secondary'}`}>{testState.state==='testing'?<Loader2 size={14} className="animate-spin shrink-0"/>:testState.state==='ok'?<CircleCheck size={14} className="shrink-0"/>:<CircleAlert size={14} className="shrink-0"/>}<span>{testState.message}</span></div>}
         </div>
       </section>
@@ -113,12 +129,12 @@ export default function SettingsPage() {
           <div><div className="text-xs font-black mb-3 text-secondary">2. 老師聲線</div><div className="grid sm:grid-cols-3 gap-3">{(Object.entries(VOICE_PRESETS) as [VoicePreset,(typeof VOICE_PRESETS)[VoicePreset]][]).map(([id,voice])=><button key={id} onClick={()=>updateSettings({voicePreset:id})} className={`p-4 rounded-2xl text-left border card-hover ${settings.voicePreset===id?'ring-2 ring-violet-500/20':''}`} style={{background:settings.voicePreset===id?'color-mix(in srgb,var(--primary-soft) 60%,var(--card))':'var(--card)',borderColor:'var(--border)'}}><div className="text-2xl">{voice.emoji}</div><div className="text-sm font-black mt-2 text-primary">{voice.label}</div><div className="text-xs mt-1 leading-relaxed text-tertiary">{voice.description}</div></button>)}</div></div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"><div><div className="text-sm font-black text-primary">3. 語速</div><div className="text-xs text-tertiary">初學建議 0.85～1.0x</div></div><div className="flex gap-1 rounded-full p-1 progress-track border" style={{borderColor:'var(--border)'}}>{[0.85,1,1.15,1.25].map(speed=><button key={speed} onClick={()=>updateSettings({voiceSpeed:speed})} className={`px-3 py-1.5 rounded-full text-xs font-black ${settings.voiceSpeed===speed?'bg-violet-600 text-white':'text-secondary'}`}>{speed}x</button>)}</div></div>
           <div className="rounded-2xl p-4 surface"><div className="text-xs font-black mb-2 flex items-center gap-2 text-secondary"><Sparkles size={14} className="text-violet-600"/>即時試聽</div><AudioPlayer text={testText}/></div>
-          <div className="grid sm:grid-cols-2 gap-3 text-xs"><div className="surface rounded-2xl p-4 flex gap-3"><Smartphone size={18} className="text-indigo-600 shrink-0"/><div className="text-secondary"><b className="text-primary">裝置自然備援</b><br/>Gemini 不可用時仍自動找最佳中文聲線。</div></div><div className="surface rounded-2xl p-4 flex gap-3"><WifiOff size={18} className="text-emerald-600 shrink-0"/><div className="text-secondary"><b className="text-primary">離線不中斷</b><br/>沒網路仍可用系統語音維持基本學習。</div></div></div>
+          <div className="grid sm:grid-cols-2 gap-3 text-xs"><div className="surface rounded-2xl p-4 flex gap-3"><Smartphone size={18} className="text-indigo-600 shrink-0"/><div className="text-secondary"><b className="text-primary">裝置自然備援</b><br/>伺服器語音不可用時，再自動找目前裝置最佳中文聲線。</div></div><div className="surface rounded-2xl p-4 flex gap-3"><WifiOff size={18} className="text-emerald-600 shrink-0"/><div className="text-secondary"><b className="text-primary">離線不中斷</b><br/>沒網路仍可用系統語音維持基本學習。</div></div></div>
         </div>
       </section>
 
       <section className="card rounded-[1.4rem] p-5">
-        <div className="text-sm font-black flex items-center gap-2 text-primary"><Shield size={16} className="text-emerald-600"/>資料與防呆</div><ul className="text-xs mt-3 space-y-2 text-secondary"><li>✓ 2,399 條教材為預先生成資料，AI Drawer 僅用於追問或修正建議。</li><li>✓ AI 音檔快取在 IndexedDB，減少重複生成。</li><li>✓ Appearance、Theme 與語音設定都保存在本機。</li></ul><button onClick={()=>{if(confirm('確定要清除所有本機進度、標記、API Key 與設定？此動作無法復原。')){localStorage.clear();location.reload();}}} className="mt-4 w-full bg-rose-500/10 hover:bg-rose-500/15 border border-rose-500/20 text-rose-600 dark:text-rose-300 font-black py-3 rounded-xl flex justify-center items-center gap-2"><Trash2 size={16}/>清除所有本機資料</button>
+        <div className="text-sm font-black flex items-center gap-2 text-primary"><Shield size={16} className="text-emerald-600"/>資料與防呆</div><ul className="text-xs mt-3 space-y-2 text-secondary"><li>✓ 2,399 條教材為預先生成資料，AI Drawer 僅用於追問或修正建議。</li><li>✓ AI 音檔快取在 IndexedDB，減少重複生成。</li><li>✓ Appearance、Theme、語音設定與 BYOK API Keys 都只保存在本機。</li></ul><button onClick={()=>{if(confirm('確定要清除所有本機進度、標記、API Key 與設定？此動作無法復原。')){localStorage.clear();location.reload();}}} className="mt-4 w-full bg-rose-500/10 hover:bg-rose-500/15 border border-rose-500/20 text-rose-600 dark:text-rose-300 font-black py-3 rounded-xl flex justify-center items-center gap-2"><Trash2 size={16}/>清除所有本機資料</button>
       </section>
     </div>
   );

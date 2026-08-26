@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { isVoicePreset, VOICE_PRESETS, type VoicePreset } from '@/lib/voiceConfig';
+import { synthesizeEdgeTTS } from '@/lib/server/edgeTts';
 
 function pcm16ToWav(pcm: Buffer, sampleRate = 24000, channels = 1) {
   const header = Buffer.alloc(44);
@@ -63,9 +64,10 @@ export async function POST(req: Request) {
 
     const clean = text.replace(/\s+/g, ' ').trim().slice(0, 6000);
     const suppliedKey = typeof body?.apiKey === 'string' ? body.apiKey.trim() : '';
+    const provider = body?.provider === 'edge' ? 'edge' : body?.provider === 'gemini' ? 'gemini' : 'auto';
     const geminiKey = suppliedKey || process.env.GEMINI_API_KEY;
 
-    if (geminiKey) {
+    if (provider !== 'edge' && geminiKey) {
       try {
         // Preview TTS occasionally fails transiently; one retry keeps the UI resilient.
         let gRes = await requestGeminiTTS(geminiKey, clean, preset);
@@ -91,6 +93,21 @@ export async function POST(req: Request) {
       } catch (error) {
         console.error('Gemini TTS failed', error);
       }
+    }
+
+    // Free server-side Microsoft Edge Neural fallback. This keeps natural zh-TW speech available even without a Gemini key.
+    try {
+      const edge = await synthesizeEdgeTTS(clean, preset);
+      return new NextResponse(edge.audio, {
+        headers: {
+          'Content-Type': 'audio/mpeg',
+          'Cache-Control': 'private, max-age=86400',
+          'X-TTS-Engine': 'edge-neural',
+          'X-TTS-Voice': edge.voice,
+        },
+      });
+    } catch (error) {
+      console.error('Built-in Edge Neural TTS failed', error);
     }
 
     // Optional self-hosted / internal Edge-TTS-compatible endpoint.

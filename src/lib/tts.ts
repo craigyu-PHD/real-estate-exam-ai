@@ -7,6 +7,10 @@ const DB_NAME = 'tts-cache';
 const STORE = 'audio';
 const DB_VERSION = 1;
 
+type CachedAudioRecord = { blob: Blob; engine?: string; voice?: string };
+export type ServerTtsResult = { blob: Blob; engine: string; voice: string };
+const inflight = new Map<string, Promise<ServerTtsResult | null>>();
+
 function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const req = indexedDB.open(DB_NAME, DB_VERSION);
@@ -19,23 +23,29 @@ function openDB(): Promise<IDBDatabase> {
   });
 }
 
-export async function getCachedAudio(key: string): Promise<Blob | null> {
+export async function getCachedAudio(key: string): Promise<CachedAudioRecord | null> {
   try {
     const db = await openDB();
     return await new Promise((resolve) => {
       const tx = db.transaction(STORE, 'readonly');
       const req = tx.objectStore(STORE).get(key);
-      req.onsuccess = () => resolve(req.result || null);
+      req.onsuccess = () => {
+        const value = req.result;
+        if (value instanceof Blob) resolve({ blob: value, engine: 'cached', voice: '' });
+        else if (value?.blob instanceof Blob) resolve(value as CachedAudioRecord);
+        else resolve(null);
+      };
       req.onerror = () => resolve(null);
     });
   } catch { return null; }
 }
 
-export async function setCachedAudio(key: string, blob: Blob) {
+export async function setCachedAudio(key: string, value: Blob | CachedAudioRecord) {
   try {
     const db = await openDB();
     const tx = db.transaction(STORE, 'readwrite');
-    tx.objectStore(STORE).put(blob, key);
+    const record = value instanceof Blob ? { blob: value } : value;
+    tx.objectStore(STORE).put(record, key);
   } catch {}
 }
 
@@ -83,17 +93,30 @@ export async function waitForSpeechVoices(synth: SpeechSynthesis): Promise<Speec
   });
 }
 
-// Primary: Gemini free-tier natural TTS. Fallback stays device-local and free.
-export async function fetchServerTTS(text: string, voicePreset: VoicePreset = 'warm'): Promise<Blob | null> {
-  try {
-    const res = await fetch('/api/tts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, voicePreset, apiKey: getStoredGeminiKey() || undefined }),
-    });
-    if (!res.ok) return null;
-    const blob = await res.blob();
-    if (blob.size < 1000) return null;
-    return blob;
-  } catch { return null; }
+// Server cascade: Gemini (when configured) → free Edge Neural → optional custom endpoint.
+// Client cascade then falls back to device Natural / Web Speech.
+export async function fetchServerTTS(text: string, voicePreset: VoicePreset = 'warm', provider: 'auto' | 'gemini' | 'edge' = 'auto'): Promise<ServerTtsResult | null> {
+  const requestKey = hashText(`${provider}|${voicePreset}|${text}`);
+  const existing = inflight.get(requestKey);
+  if (existing) return existing;
+  const task = (async () => {
+    try {
+      const res = await fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, voicePreset, provider, apiKey: provider === 'edge' ? undefined : getStoredGeminiKey() || undefined }),
+      });
+      if (!res.ok) return null;
+      const blob = await res.blob();
+      if (blob.size < 1000) return null;
+      return {
+        blob,
+        engine: res.headers.get('x-tts-engine') || 'server-natural',
+        voice: res.headers.get('x-tts-voice') || '',
+      };
+    } catch { return null; }
+  })();
+  inflight.set(requestKey, task);
+  try { return await task; }
+  finally { inflight.delete(requestKey); }
 }
