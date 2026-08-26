@@ -115,6 +115,36 @@ export const lawsData: LawRecord[] = [
     ]
   },
   {
+    id: 'land_expropriation',
+    name: '土地徵收條例',
+    category: '土地法與土地相關稅法',
+    description: '土地徵收程序、補償、區段徵收及撤銷廢止',
+    totalArticles: 71,
+    chapters: [
+      { id: 'le1', name: '第一章 總則', startArticle: 1, endArticle: 9, articlesCount: 11 },
+      { id: 'le2', name: '第二章 徵收程序', startArticle: 10, endArticle: 29, articlesCount: 22 },
+      { id: 'le3', name: '第三章 徵收補償', startArticle: 30, endArticle: 36, articlesCount: 9 },
+      { id: 'le4', name: '第四章 區段徵收', startArticle: 37, endArticle: 48, articlesCount: 13 },
+      { id: 'le5', name: '第五章 徵收之撤銷及廢止', startArticle: 49, endArticle: 55, articlesCount: 8 },
+      { id: 'le6', name: '第六章 附則', startArticle: 56, endArticle: 63, articlesCount: 8 },
+    ]
+  },
+  {
+    id: 'apartment',
+    name: '公寓大廈管理條例',
+    category: '不動產經紀相關法規',
+    description: '公寓大廈住戶權利義務、管理組織、管理服務與罰則',
+    totalArticles: 66,
+    chapters: [
+      { id: 'apt1', name: '第一章 總則', startArticle: 1, endArticle: 3, articlesCount: 3 },
+      { id: 'apt2', name: '第二章 住戶之權利義務', startArticle: 4, endArticle: 24, articlesCount: 21 },
+      { id: 'apt3', name: '第三章 管理組織', startArticle: 25, endArticle: 40, articlesCount: 17 },
+      { id: 'apt4', name: '第四章 管理服務人', startArticle: 41, endArticle: 46, articlesCount: 6 },
+      { id: 'apt5', name: '第五章 罰則', startArticle: 47, endArticle: 52, articlesCount: 7 },
+      { id: 'apt6', name: '第六章 附則', startArticle: 53, endArticle: 63, articlesCount: 12 },
+    ]
+  },
+  {
     id: 'appraisal',
     name: '不動產估價技術規則',
     category: '不動產估價概要',

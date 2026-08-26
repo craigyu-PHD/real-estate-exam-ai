@@ -33,10 +33,11 @@ function buildTeachingPrompt(text: string, preset: VoicePreset) {
 }
 
 async function requestGeminiTTS(apiKey: string, text: string, preset: VoicePreset) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+  const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent';
   return fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+    signal: AbortSignal.timeout(30000),
     body: JSON.stringify({
       contents: [{ parts: [{ text: buildTeachingPrompt(text, preset) }] }],
       generationConfig: {

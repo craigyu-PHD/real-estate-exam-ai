@@ -3,6 +3,7 @@ import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { SettingsProvider } from "@/components/SettingsProvider";
+import { ThemeEffects } from "@/components/ThemeEffects";
 
 const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="flex-1 md:ml-[280px] relative px-0">
               {children}
             </main>
+            <ThemeEffects />
           </div>
         </SettingsProvider>
       </body>

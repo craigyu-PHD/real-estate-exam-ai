@@ -74,6 +74,24 @@ export default function ListenPage() {
     await speakDevice(text, onEnd);
   }, [settings.voiceEngine, settings.voicePreset, settings.voiceSpeed, speakDevice, voice.emoji, voice.label]);
 
+  const getLecture = useCallback(async (articleNumber: string, fallback: string) => {
+    try {
+      const response = await fetch('/api/material/lecture', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lawId, articleId: articleNumber }),
+      });
+      if (!response.ok) return fallback;
+      const data = await response.json();
+      return typeof data.lectureScript === 'string' && data.lectureScript ? data.lectureScript : fallback;
+    } catch { return fallback; }
+  }, [lawId]);
+
+  const playArticle = useCallback(async (article: { articleNumber: string; text: string }, onEnd?: () => void) => {
+    setStatus('正在準備 Mini Lecture…');
+    const lecture = await getLecture(article.articleNumber, article.text);
+    await speakWithFallback(lecture, onEnd);
+  }, [getLecture, speakWithFallback]);
+
   const handleToggle = () => {
     if (isPlaying) {
       if (audioRef.current && !audioRef.current.paused) audioRef.current.pause();
@@ -91,10 +109,10 @@ export default function ListenPage() {
       if (settings.autoPlayNext && nextIdx < queue.length) {
         setIdx(nextIdx);
         const next = queue[nextIdx];
-        if (next) setTimeout(() => { void speakWithFallback(next.text, doNext); }, 650);
+        if (next) setTimeout(() => { void playArticle(next, doNext); }, 650);
       }
     };
-    void speakWithFallback(cur.text, doNext);
+    void playArticle(cur, doNext);
   };
 
   const stopCurrent = () => {
@@ -120,7 +138,7 @@ export default function ListenPage() {
         <div className="relative flex items-start justify-between gap-4">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-2xl bg-violet-600 text-white flex items-center justify-center shadow-sm"><Headphones size={22} /></div>
-            <div><div className="text-xs font-black tracking-[0.18em] text-violet-600">HANDS-FREE STUDY</div><h1 className="text-2xl font-black mt-1" style={{ color: 'var(--text-1)' }}>AI 聽課模式</h1><p className="text-sm mt-1" style={{ color: 'var(--text-2)' }}>不必盯螢幕，把通勤與散步變成一輪法規推進。</p></div>
+            <div><div className="text-xs font-black tracking-[0.18em] text-violet-600">HANDS-FREE STUDY</div><h1 className="text-2xl font-black mt-1" style={{ color: 'var(--text-1)' }}>AI 聽課模式</h1><p className="text-sm mt-1" style={{ color: 'var(--text-2)' }}>每條都播放同一套 Mini Lecture：法條原文、白話解析、制度目的、案例與考點。</p></div>
           </div>
           <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-black px-3 py-1.5 rounded-full bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-500/20"><Sparkles size={13}/> {voice.emoji} {voice.label}</span>
         </div>
@@ -130,7 +148,7 @@ export default function ListenPage() {
         <div className="card rounded-[1.75rem] p-5 shadow-sm">
           <div className="text-xs font-black mb-3 flex items-center gap-2" style={{ color: 'var(--text-2)' }}><Route size={14} className="text-indigo-600"/> 選擇今天的路線</div>
           <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
-            {lawsData.slice(0, 8).map(l => (
+            {lawsData.map(l => (
               <button key={l.id} onClick={() => { stopCurrent(); setLawId(l.id); setIdx(0); }} className={`px-3.5 py-2.5 rounded-full text-xs font-black border whitespace-nowrap transition ${lawId===l.id?'bg-indigo-600 border-indigo-600 text-white shadow-sm':'card'}`} style={lawId!==l.id?{color:'var(--text-2)'}:undefined}>{l.name}</button>
             ))}
           </div>
@@ -155,7 +173,7 @@ export default function ListenPage() {
           </div>
           <div className="mt-5 inline-flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-white/10 border border-white/10"><Volume2 size={13}/> {status || '準備好就開始這一輪'}</div>
           <h2 className="text-xl font-black mt-4">{lawsData.find(l => l.id === lawId)?.name} 第 {cur.articleNumber} 條</h2>
-          <p className="text-sm opacity-80 mt-2 leading-relaxed line-clamp-3">{cur.text}</p>
+          <p className="text-sm opacity-80 mt-2 leading-relaxed line-clamp-3">先聽法條原文，再由老師拆解本條重點與實務情境。</p>
           <button onClick={handleToggle} className={`mt-6 inline-flex items-center gap-2 px-9 py-3.5 rounded-full font-black text-sm shadow-lg transition active:scale-[0.98] ${isPlaying ? 'bg-amber-400 text-slate-950 hover:bg-amber-300' : 'bg-white text-indigo-700 hover:bg-indigo-50'}`}>
             {isPlaying ? <><Pause size={17}/> 暫停這一輪</> : <><Play size={17} className="fill-current"/> 開始聽課</>}
           </button>

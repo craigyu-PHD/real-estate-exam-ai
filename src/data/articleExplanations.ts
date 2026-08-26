@@ -1,20 +1,5 @@
-export interface ArticleDetailData {
-  id: string; // e.g. civil-758
-  lawId: string;
-  articleNumber: string;
-  articleText: string;
-  oneLiner: string;
-  explanation: string; // 300字白話
-  why: string;
-  cases: { title: string; content: string }[];
-  pitfalls: string[];
-  confuseWith?: { article: string; diff: string }[];
-  examTips: string[];
-  relatedArticles: string[];
-  keywords: string[];
-  importance: number; // 1-5
-}
-
+import 'server-only';
+import type { ArticleDetailData } from './articleDetailTypes';
 export const articleDetails: Record<string, ArticleDetailData> = {
   "civil-758": {
     id: "civil-758",
@@ -76,6 +61,7 @@ export const articleDetails: Record<string, ArticleDetailData> = {
 };
 
 import { generatedArticles } from './generatedArticles';
+import { generatedTeachingMaterials } from './generatedTeachingMaterials';
 
 function lookupRealText(lawId: string, articleId: string): string | null {
   const list = generatedArticles[lawId];
@@ -87,25 +73,30 @@ function lookupRealText(lawId: string, articleId: string): string | null {
 export function getArticleDetail(lawId: string, articleId: string): ArticleDetailData | undefined {
   const key = `${lawId}-${articleId}`;
   const realText = lookupRealText(lawId, articleId);
-  if (articleDetails[key]) {
-    const base = articleDetails[key];
-    return realText ? { ...base, articleText: realText } : base;
-  }
-  return {
-    id: key,
-    lawId,
-    articleNumber: articleId,
-    articleText: realText || `（查無本條原文，請確認條號是否正確）第 ${articleId} 條`,
-    oneLiner: realText ? `第 ${articleId} 條：${realText.slice(0, 30)}…` : `第 ${articleId} 條的核心觀念整理（本條詳細解析生成中）`,
-    explanation: realText
-      ? `本條原文已載入。建議先精讀條文，再對照前後條文理解其在整編中的位置。進階白話解析可點擊「問 AI 老師」取得 300 字口語教學與案例。`
-      : `本條屬於 ${lawId} 的重要條文。目前逐條深度解析正在批次建置中。建議先掌握條文文字，並對照前後條文理解其在整編中的位置。若需即時解說，可點擊下方「問 AI 老師」或「帶去 ChatGPT 問」取得口語化教學。`,
-    why: "本條的立法目的與前後條文脈絡相關，完整版將補上構成要件、法律效果與實務見解。",
-    cases: [{ title: "通用案例框架", content: "講解團隊將為本條補上 2 則生活化案例（人物＋房屋/土地＋金錢＋登記情境），請先以 758、767 的案例格式類推學習。" }],
-    pitfalls: ["待補：本條常見誤解與易混淆點"],
-    examTips: ["待補：數字、期間、主體判斷等考試題眼"],
-    relatedArticles: [],
-    keywords: [],
-    importance: 3
+  const generated = generatedTeachingMaterials[key];
+  const expert = articleDetails[key];
+  if (!realText && !generated && !expert) return undefined;
+
+  const base: ArticleDetailData = generated ? {
+    ...generated,
+    articleText: realText || '',
+  } : expert!;
+
+  if (!expert) return { ...base, articleText: realText || base.articleText };
+
+  const merged: ArticleDetailData = {
+    ...base,
+    ...expert,
+    articleText: realText || expert.articleText,
   };
+  merged.lectureScript = [
+    `現在學的是第${articleId}條。先聽一次法條原文。`,
+    merged.articleText,
+    `一句話先抓重點：${merged.oneLiner}`,
+    `老師白話解析：${merged.explanation}`,
+    `為什麼這樣規定：${merged.why}`,
+    merged.cases[0] ? `實務案例：${merged.cases[0].title}。${merged.cases[0].content}` : '',
+    `考試提醒：${merged.examTips.join(' ')}`,
+  ].filter(Boolean).join('\n');
+  return merged;
 }

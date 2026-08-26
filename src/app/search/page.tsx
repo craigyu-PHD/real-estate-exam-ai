@@ -17,7 +17,7 @@ export default function SearchPage() {
     <div className="page-shell max-w-5xl space-y-5">
       <header className="page-header flex items-start gap-4">
         <div className="w-11 h-11 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center"><Search size={20}/></div>
-        <div><div className="text-[10px] font-black tracking-[.16em] text-indigo-600">SMART SEARCH</div><h1 className="text-2xl font-black mt-1 text-primary">搜尋法條</h1><p className="text-sm mt-1 text-secondary">從 2,262 條資料中搜尋法規名稱、條號與原文關鍵字。</p></div>
+        <div><div className="text-[10px] font-black tracking-[.16em] text-indigo-600">SMART SEARCH</div><h1 className="text-2xl font-black mt-1 text-primary">搜尋法條</h1><p className="text-sm mt-1 text-secondary">從 2,399 條現行法規資料中搜尋法規名稱、條號與原文關鍵字。</p></div>
       </header>
 
       <section className="card rounded-[1.4rem] p-4 md:p-5">

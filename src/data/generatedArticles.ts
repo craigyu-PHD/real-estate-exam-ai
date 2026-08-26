@@ -20,7 +20,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "5",
-      "text": "第 5 條關於一定之數量，以文字或號碼為數次之表示者，其表示有不符合時，如法院不能決定何者為當事人之原意，應以最低額為準。 第 二 章 人 第 一 節 自然人"
+      "text": "第 5 條關於一定之數量，以文字或號碼為數次之表示者，其表示有不符合時，如法院不能決定何者為當事人之原意，應以最低額為準。"
     },
     {
       "articleNumber": "6",
@@ -104,7 +104,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "24",
-      "text": "第 24 條依一定事實，足認以廢止之意思離去其住所者，即為廢止其住所。 第 二 節 法人 第 一 款 通則"
+      "text": "第 24 條依一定事實，足認以廢止之意思離去其住所者，即為廢止其住所。"
     },
     {
       "articleNumber": "25",
@@ -184,7 +184,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "44",
-      "text": "第 44 條法人解散後，除法律另有規定外，於清償債務後，其賸餘財產之歸屬，應依其章程之規定，或總會之決議。但以公益為目的之法人解散時，其賸餘財產不得歸屬於自然人或以營利為目的之團體。如無前項法律或章程之規定或總會之決議時，其賸餘財產歸屬於法人住所所在地之地方自治團體。 第 二 款 社團"
+      "text": "第 44 條法人解散後，除法律另有規定外，於清償債務後，其賸餘財產之歸屬，應依其章程之規定，或總會之決議。但以公益為目的之法人解散時，其賸餘財產不得歸屬於自然人或以營利為目的之團體。如無前項法律或章程之規定或總會之決議時，其賸餘財產歸屬於法人住所所在地之地方自治團體。"
     },
     {
       "articleNumber": "45",
@@ -240,7 +240,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "58",
-      "text": "第 58 條社團之事務，無從依章程所定進行時，法院得因主管機關、檢察官或利害關係人之聲請解散之。 第 三 款 財團"
+      "text": "第 58 條社團之事務，無從依章程所定進行時，法院得因主管機關、檢察官或利害關係人之聲請解散之。"
     },
     {
       "articleNumber": "59",
@@ -268,7 +268,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "65",
-      "text": "第 65 條因情事變更，致財團之目的不能達到時，主管機關得斟酌捐助人之意思，變更其目的及其必要之組織，或解散之。 第 三 章 物"
+      "text": "第 65 條因情事變更，致財團之目的不能達到時，主管機關得斟酌捐助人之意思，變更其目的及其必要之組織，或解散之。"
     },
     {
       "articleNumber": "66",
@@ -288,7 +288,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "70",
-      "text": "第 70 條有收取天然孳息權利之人，其權利存續期間內，取得與原物分離之孳息。有收取法定孳息權利之人，按其權利存續期間內之日數，取得其孳息。 第 四 章 法律行為 第 一 節 通則"
+      "text": "第 70 條有收取天然孳息權利之人，其權利存續期間內，取得與原物分離之孳息。有收取法定孳息權利之人，按其權利存續期間內之日數，取得其孳息。"
     },
     {
       "articleNumber": "71",
@@ -304,7 +304,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "74",
-      "text": "第 74 條法律行為，係乘他人之急迫、輕率或無經驗，使其為財產上之給付或為給付之約定，依當時情形顯失公平者，法院得因利害關係人之聲請，撤銷其法律行為或減輕其給付。前項聲請，應於法律行為後一年內為之。 第 二 節 行為能力"
+      "text": "第 74 條法律行為，係乘他人之急迫、輕率或無經驗，使其為財產上之給付或為給付之約定，依當時情形顯失公平者，法院得因利害關係人之聲請，撤銷其法律行為或減輕其給付。前項聲請，應於法律行為後一年內為之。"
     },
     {
       "articleNumber": "75",
@@ -348,7 +348,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "85",
-      "text": "第 85 條法定代理人允許限制行為能力人獨立營業者，限制行為能力人，關於其營業，有行為能力。限制行為能力人，就其營業有不勝任之情形時，法定代理人得將其允許撤銷或限制之。但不得對抗善意第三人。 第 三 節 意思表示"
+      "text": "第 85 條法定代理人允許限制行為能力人獨立營業者，限制行為能力人，關於其營業，有行為能力。限制行為能力人，就其營業有不勝任之情形時，法定代理人得將其允許撤銷或限制之。但不得對抗善意第三人。"
     },
     {
       "articleNumber": "86",
@@ -400,7 +400,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "98",
-      "text": "第 98 條解釋意思表示，應探求當事人之真意，不得拘泥於所用之辭句。 第 四 節 條件及期限"
+      "text": "第 98 條解釋意思表示，應探求當事人之真意，不得拘泥於所用之辭句。"
     },
     {
       "articleNumber": "99",
@@ -416,7 +416,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "102",
-      "text": "第 102 條附始期之法律行為，於期限屆至時，發生效力。附終期之法律行為，於期限屆滿時，失其效力。第一百條之規定，於前二項情形準用之。 第 五 節 代理"
+      "text": "第 102 條附始期之法律行為，於期限屆至時，發生效力。附終期之法律行為，於期限屆滿時，失其效力。第一百條之規定，於前二項情形準用之。"
     },
     {
       "articleNumber": "103",
@@ -448,7 +448,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "110",
-      "text": "第 110 條無代理權人，以他人之代理人名義所為之法律行為，對於善意之相對人，負損害賠償之責。 第 六 節 無效及撤銷"
+      "text": "第 110 條無代理權人，以他人之代理人名義所為之法律行為，對於善意之相對人，負損害賠償之責。"
     },
     {
       "articleNumber": "111",
@@ -480,7 +480,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "118",
-      "text": "第 118 條無權利人就權利標的物所為之處分，經有權利人之承認始生效力。無權利人就權利標的物為處分後，取得其權利者，其處分自始有效。但原權利人或第三人已取得之利益，不因此而受影響。前項情形，若數處分相牴觸時，以其最初之處分為有效。 第 五 章 期日及期間"
+      "text": "第 118 條無權利人就權利標的物所為之處分，經有權利人之承認始生效力。無權利人就權利標的物為處分後，取得其權利者，其處分自始有效。但原權利人或第三人已取得之利益，不因此而受影響。前項情形，若數處分相牴觸時，以其最初之處分為有效。"
     },
     {
       "articleNumber": "119",
@@ -504,7 +504,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "124",
-      "text": "第 124 條年齡自出生之日起算。出生之月、日無從確定時，推定其為七月一日出生。知其出生之月，而不知出生之日者，推定其為該月十五日出生。 第 六 章 消滅時效"
+      "text": "第 124 條年齡自出生之日起算。出生之月、日無從確定時，推定其為七月一日出生。知其出生之月，而不知出生之日者，推定其為該月十五日出生。"
     },
     {
       "articleNumber": "125",
@@ -596,7 +596,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "147",
-      "text": "第 147 條時效期間，不得以法律行為加長或減短之，並不得預先拋棄時效之利益。 第 七 章 權利之行使"
+      "text": "第 147 條時效期間，不得以法律行為加長或減短之，並不得預先拋棄時效之利益。"
     },
     {
       "articleNumber": "148",
@@ -616,7 +616,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "152",
-      "text": "第 152 條依前條之規定，拘束他人自由或押收他人財產者，應即時向法院聲請處理。前項聲請被駁回或其聲請遲延者，行為人應負損害賠償之責。 第 二 編 債 第 一 章 通則 第 一 節 債之發生 第 一 款 契約"
+      "text": "第 152 條依前條之規定，拘束他人自由或押收他人財產者，應即時向法院聲請處理。前項聲請被駁回或其聲請遲延者，行為人應負損害賠償之責。"
     },
     {
       "articleNumber": "153",
@@ -696,7 +696,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "166-1",
-      "text": "第 166-1 條契約以負擔不動產物權之移轉、設定或變更之義務為標的者，應由公證人作成公證書。未依前項規定公證之契約，如當事人已合意為不動產物權之移轉、設定或變更而完成登記者，仍為有效。 第 二 款 代理權之授與"
+      "text": "第 166-1 條契約以負擔不動產物權之移轉、設定或變更之義務為標的者，應由公證人作成公證書。未依前項規定公證之契約，如當事人已合意為不動產物權之移轉、設定或變更而完成登記者，仍為有效。"
     },
     {
       "articleNumber": "167",
@@ -716,7 +716,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "171",
-      "text": "第 171 條無代理權人所為之法律行為，其相對人於本人未承認前，得撤回之。但為法律行為時，明知其無代理權者，不在此限。 第 三 款 無因管理"
+      "text": "第 171 條無代理權人所為之法律行為，其相對人於本人未承認前，得撤回之。但為法律行為時，明知其無代理權者，不在此限。"
     },
     {
       "articleNumber": "172",
@@ -744,7 +744,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "178",
-      "text": "第 178 條管理事務經本人承認者，除當事人有特別意思表示外，溯及管理事務開始時，適用關於委任之規定。 第 四 款 不當得利"
+      "text": "第 178 條管理事務經本人承認者，除當事人有特別意思表示外，溯及管理事務開始時，適用關於委任之規定。"
     },
     {
       "articleNumber": "179",
@@ -764,7 +764,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "183",
-      "text": "第 183 條不當得利之受領人，以其所受者，無償讓與第三人，而受領人因此免返還義務者，第三人於其所免返還義務之限度內，負返還責任。 第 五 款 侵權行為"
+      "text": "第 183 條不當得利之受領人，以其所受者，無償讓與第三人，而受領人因此免返還義務者，第三人於其所免返還義務之限度內，負返還責任。"
     },
     {
       "articleNumber": "184",
@@ -836,7 +836,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "198",
-      "text": "第 198 條因侵權行為對於被害人取得債權者，被害人對該債權之廢止請求權，雖因時效而消滅，仍得拒絕履行。 第 二 節 債之標的"
+      "text": "第 198 條因侵權行為對於被害人取得債權者，被害人對該債權之廢止請求權，雖因時效而消滅，仍得拒絕履行。"
     },
     {
       "articleNumber": "199",
@@ -924,7 +924,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "218-1",
-      "text": "第 218-1 條關於物或權利之喪失或損害，負賠償責任之人，得向損害賠償請求權人，請求讓與基於其物之所有權或基於其權利對於第三人之請求權。第二百六十四條之規定，於前項情形準用之。 第 三 節 債之效力 第 一 款 給付"
+      "text": "第 218-1 條關於物或權利之喪失或損害，負賠償責任之人，得向損害賠償請求權人，請求讓與基於其物之所有權或基於其權利對於第三人之請求權。第二百六十四條之規定，於前項情形準用之。"
     },
     {
       "articleNumber": "219",
@@ -972,7 +972,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "228",
-      "text": "第 228 條（刪除） 第 二 款 遲延"
+      "text": "第 228 條（刪除）"
     },
     {
       "articleNumber": "229",
@@ -1024,7 +1024,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "241",
-      "text": "第 241 條有交付不動產義務之債務人，於債權人遲延後，得拋棄其占有。前項拋棄，應預先通知債權人。但不能通知者，不在此限。 第 三 款 保全"
+      "text": "第 241 條有交付不動產義務之債務人，於債權人遲延後，得拋棄其占有。前項拋棄，應預先通知債權人。但不能通知者，不在此限。"
     },
     {
       "articleNumber": "242",
@@ -1040,7 +1040,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "245",
-      "text": "第 245 條前條撤銷權，自債權人知有撤銷原因時起，一年間不行使，或自行為時起，經過十年而消滅。 第 四 款 契約"
+      "text": "第 245 條前條撤銷權，自債權人知有撤銷原因時起，一年間不行使，或自行為時起，經過十年而消滅。"
     },
     {
       "articleNumber": "245-1",
@@ -1148,7 +1148,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "270",
-      "text": "第 270 條前條債務人，得以由契約所生之一切抗辯，對抗受益之第三人。 第 四 節 多數債務人及債權人"
+      "text": "第 270 條前條債務人，得以由契約所生之一切抗辯，對抗受益之第三人。"
     },
     {
       "articleNumber": "271",
@@ -1240,7 +1240,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "293",
-      "text": "第 293 條數人有同一債權，而其給付不可分者，各債權人僅得請求向債權人全體為給付，債務人亦僅得向債權人全體為給付。除前項規定外，債權人中之一人與債務人間所生之事項，其利益或不利益，對他債權人不生效力。債權人相互間，準用第二百九十一條之規定。 第 五 節 債之移轉"
+      "text": "第 293 條數人有同一債權，而其給付不可分者，各債權人僅得請求向債權人全體為給付，債務人亦僅得向債權人全體為給付。除前項規定外，債權人中之一人與債務人間所生之事項，其利益或不利益，對他債權人不生效力。債權人相互間，準用第二百九十一條之規定。"
     },
     {
       "articleNumber": "294",
@@ -1292,7 +1292,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "306",
-      "text": "第 306 條營業與他營業合併，而互相承受其資產及負債者，與前條之概括承受同，其合併之新營業，對於各營業之債務，負其責任。 第 六 節 債之消滅 第 一 款 通則"
+      "text": "第 306 條營業與他營業合併，而互相承受其資產及負債者，與前條之概括承受同，其合併之新營業，對於各營業之債務，負其責任。"
     },
     {
       "articleNumber": "307",
@@ -1300,7 +1300,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "308",
-      "text": "第 308 條債之全部消滅者，債務人得請求返還或塗銷負債之字據，其僅一部消滅或負債字據上載有債權人他項權利者，債務人得請求將消滅事由，記入字據。負債字據，如債權人主張有不能返還或有不能記入之事情者，債務人得請求給與債務消滅之公認證書。 第 二 款 清償"
+      "text": "第 308 條債之全部消滅者，債務人得請求返還或塗銷負債之字據，其僅一部消滅或負債字據上載有債權人他項權利者，債務人得請求將消滅事由，記入字據。負債字據，如債權人主張有不能返還或有不能記入之事情者，債務人得請求給與債務消滅之公認證書。"
     },
     {
       "articleNumber": "309",
@@ -1368,7 +1368,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "325",
-      "text": "第 325 條關於利息或其他定期給付，如債權人給與受領一期給付之證書，未為他期之保留者，推定其以前各期之給付已為清償。如債權人給與受領原本之證書者，推定其利息亦已受領。債權證書已返還者，推定其債之關係消滅。 第 三 款 提存"
+      "text": "第 325 條關於利息或其他定期給付，如債權人給與受領一期給付之證書，未為他期之保留者，推定其以前各期之給付已為清償。如債權人給與受領原本之證書者，推定其利息亦已受領。債權證書已返還者，推定其債之關係消滅。"
     },
     {
       "articleNumber": "326",
@@ -1400,7 +1400,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "333",
-      "text": "第 333 條提存拍賣及出賣之費用，由債權人負擔。 第 四 款 抵銷"
+      "text": "第 333 條提存拍賣及出賣之費用，由債權人負擔。"
     },
     {
       "articleNumber": "334",
@@ -1436,15 +1436,15 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "342",
-      "text": "第 342 條第三百二十一條至第三百二十三條之規定，於抵銷準用之。 第 五 款 免除"
+      "text": "第 342 條第三百二十一條至第三百二十三條之規定，於抵銷準用之。"
     },
     {
       "articleNumber": "343",
-      "text": "第 343 條債權人向債務人表示免除其債務之意思者，債之關係消滅。 第 六 款 混同"
+      "text": "第 343 條債權人向債務人表示免除其債務之意思者，債之關係消滅。"
     },
     {
       "articleNumber": "344",
-      "text": "第 344 條債權與其債務同歸一人時，債之關係消滅。但其債權為他人權利之標的或法律另有規定者，不在此限。 第 二 章 各種之債 第 一 節 買賣 第 一 款 通則"
+      "text": "第 344 條債權與其債務同歸一人時，債之關係消滅。但其債權為他人權利之標的或法律另有規定者，不在此限。"
     },
     {
       "articleNumber": "345",
@@ -1456,7 +1456,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "347",
-      "text": "第 347 條本節規定，於買賣契約以外之有償契約準用之。但為其契約性質所不許者，不在此限。 第 二 款 效力"
+      "text": "第 347 條本節規定，於買賣契約以外之有償契約準用之。但為其契約性質所不許者，不在此限。"
     },
     {
       "articleNumber": "348",
@@ -1580,7 +1580,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "378",
-      "text": "第 378 條買賣費用之負擔，除法律另有規定或契約另有訂定或另有習慣外，依左列之規定。一、買賣契約之費用，由當事人雙方平均負擔。二、移轉權利之費用，運送標的物至清償地之費用及交付之費用，由出賣人負擔。三、受領標的物之費用，登記之費用及送交清償地以外處所之費用，由買受人負擔。 第 三 款 買回"
+      "text": "第 378 條買賣費用之負擔，除法律另有規定或契約另有訂定或另有習慣外，依左列之規定。一、買賣契約之費用，由當事人雙方平均負擔。二、移轉權利之費用，運送標的物至清償地之費用及交付之費用，由出賣人負擔。三、受領標的物之費用，登記之費用及送交清償地以外處所之費用，由買受人負擔。"
     },
     {
       "articleNumber": "379",
@@ -1600,7 +1600,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "383",
-      "text": "第 383 條買受人對於買回人，負交付標的物及其附屬物之義務。買受人因可歸責於自己之事由，致不能交付標的物或標的物顯有變更者，應賠償因此所生之損害。 第 四 款 特種買賣"
+      "text": "第 383 條買受人對於買回人，負交付標的物及其附屬物之義務。買受人因可歸責於自己之事由，致不能交付標的物或標的物顯有變更者，應賠償因此所生之損害。"
     },
     {
       "articleNumber": "384",
@@ -1656,7 +1656,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "397",
-      "text": "第 397 條拍賣之買受人如不按時支付價金者，拍賣人得解除契約，將其物再為拍賣。再行拍賣所得之價金，如少於原拍賣之價金及再行拍賣之費用者，原買受人應負賠償其差額之責任。 第 二 節 互易"
+      "text": "第 397 條拍賣之買受人如不按時支付價金者，拍賣人得解除契約，將其物再為拍賣。再行拍賣所得之價金，如少於原拍賣之價金及再行拍賣之費用者，原買受人應負賠償其差額之責任。"
     },
     {
       "articleNumber": "398",
@@ -1664,7 +1664,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "399",
-      "text": "第 399 條當事人之一方，約定移轉前條所定之財產權，並應交付金錢者，其金錢部分，準用關於買賣價金之規定。 第 三 節 交互計算"
+      "text": "第 399 條當事人之一方，約定移轉前條所定之財產權，並應交付金錢者，其金錢部分，準用關於買賣價金之規定。"
     },
     {
       "articleNumber": "400",
@@ -1688,7 +1688,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "405",
-      "text": "第 405 條記入交互計算之項目，自計算後，經過一年，不得請求除去或改正。 第 四 節 贈與"
+      "text": "第 405 條記入交互計算之項目，自計算後，經過一年，不得請求除去或改正。"
     },
     {
       "articleNumber": "406",
@@ -1748,7 +1748,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "420",
-      "text": "第 420 條贈與之撤銷權，因受贈人之死亡而消滅。 第 五 節 租賃"
+      "text": "第 420 條贈與之撤銷權，因受贈人之死亡而消滅。"
     },
     {
       "articleNumber": "421",
@@ -1952,7 +1952,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "463-1",
-      "text": "第 463-1 條本節規定，於權利之租賃準用之。 第 六 節 借貸 第 一 款 使用借貸"
+      "text": "第 463-1 條本節規定，於權利之租賃準用之。"
     },
     {
       "articleNumber": "464",
@@ -1996,7 +1996,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "473",
-      "text": "第 473 條貸與人就借用物所受損害，對於借用人之賠償請求權、借用人依第四百六十六條所定之賠償請求權、第四百六十九條所定有益費用償還請求權及其工作物之取回權，均因六個月間不行使而消滅。前項期間，於貸與人，自受借用物返還時起算。於借用人，自借貸關係終止時起算。 第 二 款 消費借貸"
+      "text": "第 473 條貸與人就借用物所受損害，對於借用人之賠償請求權、借用人依第四百六十六條所定之賠償請求權、第四百六十九條所定有益費用償還請求權及其工作物之取回權，均因六個月間不行使而消滅。前項期間，於貸與人，自受借用物返還時起算。於借用人，自借貸關係終止時起算。"
     },
     {
       "articleNumber": "474",
@@ -2032,7 +2032,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "481",
-      "text": "第 481 條以貨物或有價證券折算金錢而為借貸者，縱有反對之約定，仍應以該貨物或有價證券按照交付時交付地之市價所應有之價值，為其借貸金額。 第 七 節 僱傭"
+      "text": "第 481 條以貨物或有價證券折算金錢而為借貸者，縱有反對之約定，仍應以該貨物或有價證券按照交付時交付地之市價所應有之價值，為其借貸金額。"
     },
     {
       "articleNumber": "482",
@@ -2072,7 +2072,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "489",
-      "text": "第 489 條當事人之一方，遇有重大事由，其僱傭契約，縱定有期限，仍得於期限屆滿前終止之。前項事由，如因當事人一方之過失而生者，他方得向其請求損害賠償。 第 八 節 承攬"
+      "text": "第 489 條當事人之一方，遇有重大事由，其僱傭契約，縱定有期限，仍得於期限屆滿前終止之。前項事由，如因當事人一方之過失而生者，他方得向其請求損害賠償。"
     },
     {
       "articleNumber": "490",
@@ -2224,7 +2224,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "514-12",
-      "text": "第 514-12 條本節規定之增加、減少或退還費用請求權，損害賠償請求權及墊付費用償還請求權，均自旅遊終了或應終了時起，一年間不行使而消滅。 第 九 節 出版"
+      "text": "第 514-12 條本節規定之增加、減少或退還費用請求權，損害賠償請求權及墊付費用償還請求權，均自旅遊終了或應終了時起，一年間不行使而消滅。"
     },
     {
       "articleNumber": "515",
@@ -2280,7 +2280,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "527",
-      "text": "第 527 條著作未完成前，如著作人死亡，或喪失能力，或非因其過失致不能完成其著作者，其出版契約關係消滅。前項情形，如出版契約關係之全部或一部之繼續，為可能且公平者，法院得許其繼續，並命為必要之處置。 第 十 節 委任"
+      "text": "第 527 條著作未完成前，如著作人死亡，或喪失能力，或非因其過失致不能完成其著作者，其出版契約關係消滅。前項情形，如出版契約關係之全部或一部之繼續，為可能且公平者，法院得許其繼續，並命為必要之處置。"
     },
     {
       "articleNumber": "528",
@@ -2380,7 +2380,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "552",
-      "text": "第 552 條委任關係消滅之事由，係由當事人之一方發生者，於他方知其事由或可得而知其事由前，委任關係視為存續。 第 十一 節 經理人及代辦商"
+      "text": "第 552 條委任關係消滅之事由，係由當事人之一方發生者，於他方知其事由或可得而知其事由前，委任關係視為存續。"
     },
     {
       "articleNumber": "553",
@@ -2428,7 +2428,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "564",
-      "text": "第 564 條經理權或代辦權，不因商號所有人之死亡、破產或喪失行為能力而消滅。 第 十二 節 居間"
+      "text": "第 564 條經理權或代辦權，不因商號所有人之死亡、破產或喪失行為能力而消滅。"
     },
     {
       "articleNumber": "565",
@@ -2472,7 +2472,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "575",
-      "text": "第 575 條當事人之一方，指定居間人不得以其姓名或商號告知相對人者，居間人有不告知之義務。居間人不以當事人一方之姓名或商號告知相對人時，應就該方當事人由契約所生之義務，自己負履行之責，並得為其受領給付。 第 十三 節 行紀"
+      "text": "第 575 條當事人之一方，指定居間人不得以其姓名或商號告知相對人者，居間人有不告知之義務。居間人不以當事人一方之姓名或商號告知相對人時，應就該方當事人由契約所生之義務，自己負履行之責，並得為其受領給付。"
     },
     {
       "articleNumber": "576",
@@ -2524,7 +2524,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "588",
-      "text": "第 588 條行紀人得自為買受人或出賣人時，如僅將訂立契約之情事通知委託人，而不以他方當事人之姓名告知者，視為自己負擔該方當事人之義務。 第 十四 節 寄託"
+      "text": "第 588 條行紀人得自為買受人或出賣人時，如僅將訂立契約之情事通知委託人，而不以他方當事人之姓名告知者，視為自己負擔該方當事人之義務。"
     },
     {
       "articleNumber": "589",
@@ -2632,7 +2632,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "612",
-      "text": "第 612 條主人就住宿、飲食、沐浴或其他服務及墊款所生之債權，於未受清償前，對於客人所攜帶之行李及其他物品，有留置權。第四百四十五條至第四百四十八條之規定，於前項留置權準用之。 第 十五 節 倉庫"
+      "text": "第 612 條主人就住宿、飲食、沐浴或其他服務及墊款所生之債權，於未受清償前，對於客人所攜帶之行李及其他物品，有留置權。第四百四十五條至第四百四十八條之規定，於前項留置權準用之。"
     },
     {
       "articleNumber": "613",
@@ -2672,7 +2672,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "621",
-      "text": "第 621 條倉庫契約終止後，寄託人或倉單持有人，拒絕或不能移去寄託物者，倉庫營業人，得定相當期限，請求於期限內移去寄託物。逾期不移去者，倉庫營業人，得拍賣寄託物，由拍賣代價中扣去拍賣費用，及保管費用，並應以其餘額交付於應得之人。 第 十六 節 運送 第 一 款 通則"
+      "text": "第 621 條倉庫契約終止後，寄託人或倉單持有人，拒絕或不能移去寄託物者，倉庫營業人，得定相當期限，請求於期限內移去寄託物。逾期不移去者，倉庫營業人，得拍賣寄託物，由拍賣代價中扣去拍賣費用，及保管費用，並應以其餘額交付於應得之人。"
     },
     {
       "articleNumber": "622",
@@ -2680,7 +2680,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "623",
-      "text": "第 623 條關於物品之運送，因喪失、毀損或遲到而生之賠償請求權，自運送終了，或應終了之時起，一年間不行使而消滅。關於旅客之運送，因傷害或遲到而生之賠償請求權，自運送終了，或應終了之時起，二年間不行使而消滅。 第 二 款 物品運送"
+      "text": "第 623 條關於物品之運送，因喪失、毀損或遲到而生之賠償請求權，自運送終了，或應終了之時起，一年間不行使而消滅。關於旅客之運送，因傷害或遲到而生之賠償請求權，自運送終了，或應終了之時起，二年間不行使而消滅。"
     },
     {
       "articleNumber": "624",
@@ -2804,7 +2804,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "653",
-      "text": "第 653 條運送物由數運送人相繼運送者，其最後之運送人，就運送人全體應得之運費及其他費用，得行使第六百四十七條、第六百五十條及第六百五十二條所定之權利。 第 三 款 旅客運送"
+      "text": "第 653 條運送物由數運送人相繼運送者，其最後之運送人，就運送人全體應得之運費及其他費用，得行使第六百四十七條、第六百五十條及第六百五十二條所定之權利。"
     },
     {
       "articleNumber": "654",
@@ -2828,7 +2828,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "659",
-      "text": "第 659 條運送人交與旅客之票、收據或其他文件上，有免除或限制運送人責任之記載者，除能證明旅客對於其責任之免除或限制明示同意外，不生效力。 第 十七 節 承攬運送"
+      "text": "第 659 條運送人交與旅客之票、收據或其他文件上，有免除或限制運送人責任之記載者，除能證明旅客對於其責任之免除或限制明示同意外，不生效力。"
     },
     {
       "articleNumber": "660",
@@ -2856,7 +2856,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "666",
-      "text": "第 666 條對於承攬運送人因運送物之喪失、毀損或遲到所生之損害賠償請求權，自運送物交付或應交付之時起，一年間不行使而消滅。 第 十八 節 合夥"
+      "text": "第 666 條對於承攬運送人因運送物之喪失、毀損或遲到所生之損害賠償請求權，自運送物交付或應交付之時起，一年間不行使而消滅。"
     },
     {
       "articleNumber": "667",
@@ -2988,7 +2988,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "699",
-      "text": "第 699 條合夥財產，於清償合夥債務及返還各合夥人出資後，尚有賸餘者，按各合夥人應受分配利益之成數分配之。 第 十九 節 隱名合夥"
+      "text": "第 699 條合夥財產，於清償合夥債務及返還各合夥人出資後，尚有賸餘者，按各合夥人應受分配利益之成數分配之。"
     },
     {
       "articleNumber": "700",
@@ -3064,7 +3064,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "709-9",
-      "text": "第 709-9 條因會首破產、逃匿或有其他事由致合會不能繼續進行時，會首及已得標會員應給付之各期會款，應於每屆標會期日平均交付於未得標之會員。但另有約定者，依其約定。會首就已得標會員依前項規定應給付之各期會款，負連帶責任。會首或已得標會員依第一項規定應平均交付於未得標會員之會款遲延給付，其遲付之數額已達兩期之總額時，該未得標會員得請求其給付全部會款。第一項情形，得由未得標之會員共同推選一人或數人處理相關事宜。 第 二十 節 指示證券"
+      "text": "第 709-9 條因會首破產、逃匿或有其他事由致合會不能繼續進行時，會首及已得標會員應給付之各期會款，應於每屆標會期日平均交付於未得標之會員。但另有約定者，依其約定。會首就已得標會員依前項規定應給付之各期會款，負連帶責任。會首或已得標會員依第一項規定應平均交付於未得標會員之會款遲延給付，其遲付之數額已達兩期之總額時，該未得標會員得請求其給付全部會款。第一項情形，得由未得標之會員共同推選一人或數人處理相關事宜。"
     },
     {
       "articleNumber": "710",
@@ -3100,7 +3100,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "718",
-      "text": "第 718 條指示證券遺失、被盜或滅失者，法院得因持有人之聲請，依公示催告之程序，宣告無效。 第 二十一 節 無記名證券"
+      "text": "第 718 條指示證券遺失、被盜或滅失者，法院得因持有人之聲請，依公示催告之程序，宣告無效。"
     },
     {
       "articleNumber": "719",
@@ -3144,7 +3144,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "728",
-      "text": "第 728 條無利息見票即付之無記名證券，除利息、年金及分配利益之證券外，不適用第七百二十條第一項但書及第七百二十五條之規定。 第 二十二 節 終身定期金"
+      "text": "第 728 條無利息見票即付之無記名證券，除利息、年金及分配利益之證券外，不適用第七百二十條第一項但書及第七百二十五條之規定。"
     },
     {
       "articleNumber": "729",
@@ -3172,7 +3172,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "735",
-      "text": "第 735 條本節之規定，於終身定期金之遺贈準用之。 第 二十三 節 和解"
+      "text": "第 735 條本節之規定，於終身定期金之遺贈準用之。"
     },
     {
       "articleNumber": "736",
@@ -3184,7 +3184,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "738",
-      "text": "第 738 條和解不得以錯誤為理由撤銷之。但有左列事項之一者，不在此限：一、和解所依據之文件，事後發見為偽造或變造，而和解當事人若知其為偽造或變造，即不為和解者。二、和解事件，經法院確定判決，而為當事人雙方或一方於和解當時所不知者。三、當事人之一方，對於他方當事人之資格或對於重要之爭點有錯誤，而為和解者。 第 二十四 節 保證"
+      "text": "第 738 條和解不得以錯誤為理由撤銷之。但有左列事項之一者，不在此限：一、和解所依據之文件，事後發見為偽造或變造，而和解當事人若知其為偽造或變造，即不為和解者。二、和解事件，經法院確定判決，而為當事人雙方或一方於和解當時所不知者。三、當事人之一方，對於他方當事人之資格或對於重要之爭點有錯誤，而為和解者。"
     },
     {
       "articleNumber": "739",
@@ -3304,7 +3304,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "756-9",
-      "text": "第 756-9 條人事保證，除本節有規定者外，準用關於保證之規定。 第 三 編 物權 第 一 章 通則"
+      "text": "第 756-9 條人事保證，除本節有規定者外，準用關於保證之規定。"
     },
     {
       "articleNumber": "757",
@@ -3340,7 +3340,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "764",
-      "text": "第 764 條物權除法律另有規定外，因拋棄而消滅。前項拋棄，第三人有以該物權為標的物之其他物權或於該物權有其他法律上之利益者，非經該第三人同意，不得為之。拋棄動產物權者，並應拋棄動產之占有。 第 二 章 所有權 第 一 節 通則"
+      "text": "第 764 條物權除法律另有規定外，因拋棄而消滅。前項拋棄，第三人有以該物權為標的物之其他物權或於該物權有其他法律上之利益者，非經該第三人同意，不得為之。拋棄動產物權者，並應拋棄動產之占有。"
     },
     {
       "articleNumber": "765",
@@ -3376,7 +3376,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "772",
-      "text": "第 772 條前五條之規定，於所有權以外財產權之取得，準用之。於已登記之不動產，亦同。 第 二 節 不動產所有權"
+      "text": "第 772 條前五條之規定，於所有權以外財產權之取得，準用之。於已登記之不動產，亦同。"
     },
     {
       "articleNumber": "773",
@@ -3508,7 +3508,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "800-1",
-      "text": "第 800-1 條第七百七十四條至前條規定，於地上權人、農育權人、不動產役權人、典權人、承租人、其他土地、建築物或其他工作物利用人準用之。 第 三 節 動產所有權"
+      "text": "第 800-1 條第七百七十四條至前條規定，於地上權人、農育權人、不動產役權人、典權人、承租人、其他土地、建築物或其他工作物利用人準用之。"
     },
     {
       "articleNumber": "801",
@@ -3580,7 +3580,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "816",
-      "text": "第 816 條因前五條之規定而受損害者，得依關於不當得利之規定，請求償還價額。 第 四 節 共有"
+      "text": "第 816 條因前五條之規定而受損害者，得依關於不當得利之規定，請求償還價額。"
     },
     {
       "articleNumber": "817",
@@ -3648,7 +3648,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "831",
-      "text": "第 831 條本節規定，於所有權以外之財產權，由數人共有或公同共有者準用之。 第 三 章 地上權 第 一 節 普通地上權"
+      "text": "第 831 條本節規定，於所有權以外之財產權，由數人共有或公同共有者準用之。"
     },
     {
       "articleNumber": "832",
@@ -3716,7 +3716,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "841",
-      "text": "第 841 條地上權不因建築物或其他工作物之滅失而消滅。 第 二 節 區分地上權"
+      "text": "第 841 條地上權不因建築物或其他工作物之滅失而消滅。"
     },
     {
       "articleNumber": "841-1",
@@ -3740,7 +3740,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "841-6",
-      "text": "第 841-6 條區分地上權，除本節另有規定外，準用關於普通地上權之規定。 第 四 章 （刪除）"
+      "text": "第 841-6 條區分地上權，除本節另有規定外，準用關於普通地上權之規定。"
     },
     {
       "articleNumber": "842",
@@ -3812,7 +3812,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "850-9",
-      "text": "第 850-9 條第八百三十四條、第八百三十五條第一項、第二項、第八百三十五條之一至第八百三十六條之一、第八百三十六條之二第二項規定，於農育權準用之。 第 五 章 不動產役權"
+      "text": "第 850-9 條第八百三十四條、第八百三十五條第一項、第二項、第八百三十五條之一至第八百三十六條之一、第八百三十六條之二第二項規定，於農育權準用之。"
     },
     {
       "articleNumber": "851",
@@ -3876,7 +3876,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "859-5",
-      "text": "第 859-5 條第八百五十一條至第八百五十九條之二規定，於前二條準用之。 第 六 章 抵押權 第 一 節 普通抵押權"
+      "text": "第 859-5 條第八百五十一條至第八百五十九條之二規定，於前二條準用之。"
     },
     {
       "articleNumber": "860",
@@ -4008,7 +4008,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "881",
-      "text": "第 881 條抵押權除法律另有規定外，因抵押物滅失而消滅。但抵押人因滅失得受賠償或其他利益者，不在此限。抵押權人對於前項抵押人所得行使之賠償或其他請求權有權利質權，其次序與原抵押權同。給付義務人因故意或重大過失向抵押人為給付者，對於抵押權人不生效力。抵押物因毀損而得受之賠償或其他利益，準用前三項之規定。 第 二 節 最高限額抵押權"
+      "text": "第 881 條抵押權除法律另有規定外，因抵押物滅失而消滅。但抵押人因滅失得受賠償或其他利益者，不在此限。抵押權人對於前項抵押人所得行使之賠償或其他請求權有權利質權，其次序與原抵押權同。給付義務人因故意或重大過失向抵押人為給付者，對於抵押權人不生效力。抵押物因毀損而得受之賠償或其他利益，準用前三項之規定。"
     },
     {
       "articleNumber": "881-1",
@@ -4076,7 +4076,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "881-17",
-      "text": "第 881-17 條最高限額抵押權，除第八百六十一條第二項、第八百六十九條第一項、第八百七十條、第八百七十條之一、第八百七十條之二、第八百八十條之規定外，準用關於普通抵押權之規定。 第 三 節 其他抵押權"
+      "text": "第 881-17 條最高限額抵押權，除第八百六十一條第二項、第八百六十九條第一項、第八百七十條、第八百七十條之一、第八百七十條之二、第八百八十條之規定外，準用關於普通抵押權之規定。"
     },
     {
       "articleNumber": "882",
@@ -4084,7 +4084,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "883",
-      "text": "第 883 條普通抵押權及最高限額抵押權之規定，於前條抵押權及其他抵押權準用之。 第 七 章 質權 第 一 節 動產質權"
+      "text": "第 883 條普通抵押權及最高限額抵押權之規定，於前條抵押權及其他抵押權準用之。"
     },
     {
       "articleNumber": "884",
@@ -4156,7 +4156,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "899-2",
-      "text": "第 899-2 條質權人係經許可以受質為營業者，僅得就質物行使其權利。出質人未於取贖期間屆滿後五日內取贖其質物時，質權人取得質物之所有權，其所擔保之債權同時消滅。前項質權，不適用第八百八十九條至第八百九十五條、第八百九十九條、第八百九十九條之一之規定。 第 二 節 權利質權"
+      "text": "第 899-2 條質權人係經許可以受質為營業者，僅得就質物行使其權利。出質人未於取贖期間屆滿後五日內取贖其質物時，質權人取得質物之所有權，其所擔保之債權同時消滅。前項質權，不適用第八百八十九條至第八百九十五條、第八百九十九條、第八百九十九條之一之規定。"
     },
     {
       "articleNumber": "900",
@@ -4220,7 +4220,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "910",
-      "text": "第 910 條質權以有價證券為標的物者，其附屬於該證券之利息證券、定期金證券或其他附屬證券，以已交付於質權人者為限，亦為質權效力所及。附屬之證券，係於質權設定後發行者，除另有約定外，質權人得請求發行人或出質人交付之。 第 八 章 典權"
+      "text": "第 910 條質權以有價證券為標的物者，其附屬於該證券之利息證券、定期金證券或其他附屬證券，以已交付於質權人者為限，亦為質權效力所及。附屬之證券，係於質權設定後發行者，除另有約定外，質權人得請求發行人或出質人交付之。"
     },
     {
       "articleNumber": "911",
@@ -4304,7 +4304,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "927",
-      "text": "第 927 條典權人因支付有益費用，使典物價值增加，或依第九百二十一條規定，重建或修繕者，於典物回贖時，得於現存利益之限度內，請求償還。第八百三十九條規定，於典物回贖時準用之。典物為土地，出典人同意典權人在其上營造建築物者，除另有約定外，於典物回贖時，應按該建築物之時價補償之。出典人不願補償者，於回贖時視為已有地上權之設定。出典人願依前項規定為補償而就時價不能協議時，得聲請法院裁定之；其不願依裁定之時價補償者，於回贖時亦視為已有地上權之設定。前二項視為已有地上權設定之情形，其地租、期間及範圍，當事人不能協議時，得請求法院以判決定之。 第 九 章 留置權"
+      "text": "第 927 條典權人因支付有益費用，使典物價值增加，或依第九百二十一條規定，重建或修繕者，於典物回贖時，得於現存利益之限度內，請求償還。第八百三十九條規定，於典物回贖時準用之。典物為土地，出典人同意典權人在其上營造建築物者，除另有約定外，於典物回贖時，應按該建築物之時價補償之。出典人不願補償者，於回贖時視為已有地上權之設定。出典人願依前項規定為補償而就時價不能協議時，得聲請法院裁定之；其不願依裁定之時價補償者，於回贖時亦視為已有地上權之設定。前二項視為已有地上權設定之情形，其地租、期間及範圍，當事人不能協議時，得請求法院以判決定之。"
     },
     {
       "articleNumber": "928",
@@ -4356,7 +4356,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "939",
-      "text": "第 939 條本章留置權之規定，於其他留置權準用之。但其他留置權另有規定者，從其規定。 第 十 章 占有"
+      "text": "第 939 條本章留置權之規定，於其他留置權準用之。但其他留置權另有規定者，從其規定。"
     },
     {
       "articleNumber": "940",
@@ -4472,7 +4472,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "966",
-      "text": "第 966 條財產權，不因物之占有而成立者，行使其財產權之人，為準占有人。本章關於占有之規定，於前項準占有準用之。 第 四 編 親屬 第 一 章 通則"
+      "text": "第 966 條財產權，不因物之占有而成立者，行使其財產權之人，為準占有人。本章關於占有之規定，於前項準占有準用之。"
     },
     {
       "articleNumber": "967",
@@ -4492,7 +4492,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "971",
-      "text": "第 971 條姻親關係，因離婚而消滅；結婚經撤銷者亦同。 第 二 章 婚姻 第 一 節 婚約"
+      "text": "第 971 條姻親關係，因離婚而消滅；結婚經撤銷者亦同。"
     },
     {
       "articleNumber": "972",
@@ -4532,7 +4532,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "979-2",
-      "text": "第 979-2 條第九百七十七條至第九百七十九條之一所規定之請求權，因二年間不行使而消滅。 第 二 節 結婚"
+      "text": "第 979-2 條第九百七十七條至第九百七十九條之一所規定之請求權，因二年間不行使而消滅。"
     },
     {
       "articleNumber": "980",
@@ -4620,7 +4620,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "999-1",
-      "text": "第 999-1 條第一千零五十七條及第一千零五十八條之規定，於結婚無效時準用之。第一千零五十五條、第一千零五十五條之一、第一千零五十五條之二、第一千零五十七條及第一千零五十八條之規定，於結婚經撤銷時準用之。 第 三 節 婚姻之普通效力"
+      "text": "第 999-1 條第一千零五十七條及第一千零五十八條之規定，於結婚無效時準用之。第一千零五十五條、第一千零五十五條之一、第一千零五十五條之二、第一千零五十七條及第一千零五十八條之規定，於結婚經撤銷時準用之。"
     },
     {
       "articleNumber": "1000",
@@ -4640,7 +4640,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1003-1",
-      "text": "第 1003-1 條家庭生活費用，除法律或契約另有約定外，由夫妻各依其經濟能力、家事勞動或其他情事分擔之。因前項費用所生之債務，由夫妻負連帶責任。 第 四 節 夫妻財產制 第 一 款 通則"
+      "text": "第 1003-1 條家庭生活費用，除法律或契約另有約定外，由夫妻各依其經濟能力、家事勞動或其他情事分擔之。因前項費用所生之債務，由夫妻負連帶責任。"
     },
     {
       "articleNumber": "1004",
@@ -4692,7 +4692,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1015",
-      "text": "第 1015 條（刪除） 第 二 款 法定財產制"
+      "text": "第 1015 條（刪除）"
     },
     {
       "articleNumber": "1016",
@@ -4780,7 +4780,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1030-4",
-      "text": "第 1030-4 條夫妻現存之婚後財產，其價值計算以法定財產制關係消滅時為準。但夫妻因判決而離婚者，以起訴時為準。依前條應追加計算之婚後財產，其價值計算以處分時為準。 第 三 款 約定財產制 第 一 目 共同財產制"
+      "text": "第 1030-4 條夫妻現存之婚後財產，其價值計算以法定財產制關係消滅時為準。但夫妻因判決而離婚者，以起訴時為準。依前條應追加計算之婚後財產，其價值計算以處分時為準。"
     },
     {
       "articleNumber": "1031",
@@ -4828,7 +4828,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1041",
-      "text": "第 1041 條夫妻得以契約訂定僅以勞力所得為限為共同財產。前項勞力所得，指夫或妻於婚姻關係存續中取得之薪資、工資、紅利、獎金及其他與勞力所得有關之財產收入。勞力所得之孳息及代替利益，亦同。不能證明為勞力所得或勞力所得以外財產者，推定為勞力所得。夫或妻勞力所得以外之財產，適用關於分別財產制之規定。第一千零三十四條、第一千零三十八條及第一千零四十條之規定，於第一項情形準用之。 第 二 目 （刪除）"
+      "text": "第 1041 條夫妻得以契約訂定僅以勞力所得為限為共同財產。前項勞力所得，指夫或妻於婚姻關係存續中取得之薪資、工資、紅利、獎金及其他與勞力所得有關之財產收入。勞力所得之孳息及代替利益，亦同。不能證明為勞力所得或勞力所得以外財產者，推定為勞力所得。夫或妻勞力所得以外之財產，適用關於分別財產制之規定。第一千零三十四條、第一千零三十八條及第一千零四十條之規定，於第一項情形準用之。"
     },
     {
       "articleNumber": "1042",
@@ -4836,7 +4836,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1043",
-      "text": "第 1043 條（刪除） 第 三 目 分別財產制"
+      "text": "第 1043 條（刪除）"
     },
     {
       "articleNumber": "1044",
@@ -4856,7 +4856,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1048",
-      "text": "第 1048 條（刪除） 第 五 節 離婚"
+      "text": "第 1048 條（刪除）"
     },
     {
       "articleNumber": "1049",
@@ -4908,7 +4908,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1058",
-      "text": "第 1058 條夫妻離婚時，除採用分別財產制者外，各自取回其結婚或變更夫妻財產制時之財產。如有剩餘，各依其夫妻財產制之規定分配之。 第 三 章 父母子女"
+      "text": "第 1058 條夫妻離婚時，除採用分別財產制者外，各自取回其結婚或變更夫妻財產制時之財產。如有剩餘，各依其夫妻財產制之規定分配之。"
     },
     {
       "articleNumber": "1059",
@@ -5096,7 +5096,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1090",
-      "text": "第 1090 條父母之一方濫用其對於子女之權利時，法院得依他方、未成年子女、主管機關、社會福利機構或其他利害關係人之請求或依職權，為子女之利益，宣告停止其權利之全部或一部。 第 四 章 監護 第 一 節 未成年人之監護"
+      "text": "第 1090 條父母之一方濫用其對於子女之權利時，法院得依他方、未成年子女、主管機關、社會福利機構或其他利害關係人之請求或依職權，為子女之利益，宣告停止其權利之全部或一部。"
     },
     {
       "articleNumber": "1091",
@@ -5196,7 +5196,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1109-2",
-      "text": "第 1109-2 條未成年人依第十四條受監護之宣告者，適用本章第二節成年人監護之規定。 第 二 節 成年人之監護及輔助"
+      "text": "第 1109-2 條未成年人依第十四條受監護之宣告者，適用本章第二節成年人監護之規定。"
     },
     {
       "articleNumber": "1110",
@@ -5232,7 +5232,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1113-1",
-      "text": "第 1113-1 條受輔助宣告之人，應置輔助人。輔助人及有關輔助之職務，準用第一千零九十五條、第一千零九十六條、第一千零九十八條第二項、第一千一百條、第一千一百零二條、第一千一百零三條第二項、第一千一百零四條、第一千一百零六條、第一千一百零六條之一、第一千一百零九條、第一千一百十一條至第一千一百十一條之二、第一千一百十二條之一及第一千一百十二條之二之規定。 第 三 節 成年人之意定監護"
+      "text": "第 1113-1 條受輔助宣告之人，應置輔助人。輔助人及有關輔助之職務，準用第一千零九十五條、第一千零九十六條、第一千零九十八條第二項、第一千一百條、第一千一百零二條、第一千一百零三條第二項、第一千一百零四條、第一千一百零六條、第一千一百零六條之一、第一千一百零九條、第一千一百十一條至第一千一百十一條之二、第一千一百十二條之一及第一千一百十二條之二之規定。"
     },
     {
       "articleNumber": "1113-2",
@@ -5268,7 +5268,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1113-10",
-      "text": "第 1113-10 條意定監護，除本節有規定者外，準用關於成年人監護之規定。 第 五 章 扶養"
+      "text": "第 1113-10 條意定監護，除本節有規定者外，準用關於成年人監護之規定。"
     },
     {
       "articleNumber": "1114",
@@ -5312,7 +5312,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1121",
-      "text": "第 1121 條扶養之程度及方法，當事人得因情事之變更，請求變更之。 第 六 章 家"
+      "text": "第 1121 條扶養之程度及方法，當事人得因情事之變更，請求變更之。"
     },
     {
       "articleNumber": "1122",
@@ -5340,7 +5340,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1128",
-      "text": "第 1128 條家長對於已成年之家屬，得令其由家分離。但以有正當理由時為限。 第 七 章 親屬會議"
+      "text": "第 1128 條家長對於已成年之家屬，得令其由家分離。但以有正當理由時為限。"
     },
     {
       "articleNumber": "1129",
@@ -5376,7 +5376,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1137",
-      "text": "第 1137 條第一千一百二十九條所定有召集權之人，對於親屬會議之決議有不服者，得於三個月內向法院聲訴。 第 五 編 繼承 第 一 章 遺產繼承人"
+      "text": "第 1137 條第一千一百二十九條所定有召集權之人，對於親屬會議之決議有不服者，得於三個月內向法院聲訴。"
     },
     {
       "articleNumber": "1138",
@@ -5412,7 +5412,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1146",
-      "text": "第 1146 條繼承權被侵害者，被害人或其法定代理人得請求回復之。前項回復請求權，自知悉被侵害之時起，二年間不行使而消滅；自繼承開始時起逾十年者亦同。 第 二 章 遺產之繼承 第 一 節 效力"
+      "text": "第 1146 條繼承權被侵害者，被害人或其法定代理人得請求回復之。前項回復請求權，自知悉被侵害之時起，二年間不行使而消滅；自繼承開始時起逾十年者亦同。"
     },
     {
       "articleNumber": "1147",
@@ -5444,7 +5444,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1153",
-      "text": "第 1153 條繼承人對於被繼承人之債務，以因繼承所得遺產為限，負連帶責任。繼承人相互間對於被繼承人之債務，除法律另有規定或另有約定外，按其應繼分比例負擔之。 第 二 節 （刪除）"
+      "text": "第 1153 條繼承人對於被繼承人之債務，以因繼承所得遺產為限，負連帶責任。繼承人相互間對於被繼承人之債務，除法律另有規定或另有約定外，按其應繼分比例負擔之。"
     },
     {
       "articleNumber": "1154",
@@ -5496,7 +5496,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1163",
-      "text": "第 1163 條繼承人中有下列各款情事之一者，不得主張第一千一百四十八條第二項所定之利益：一、隱匿遺產情節重大。二、在遺產清冊為虛偽之記載情節重大。三、意圖詐害被繼承人之債權人之權利而為遺產之處分。 第 三 節 遺產之分割"
+      "text": "第 1163 條繼承人中有下列各款情事之一者，不得主張第一千一百四十八條第二項所定之利益：一、隱匿遺產情節重大。二、在遺產清冊為虛偽之記載情節重大。三、意圖詐害被繼承人之債權人之權利而為遺產之處分。"
     },
     {
       "articleNumber": "1164",
@@ -5536,7 +5536,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1173",
-      "text": "第 1173 條繼承人中有在繼承開始前因結婚、分居或營業，已從被繼承人受有財產之贈與者，應將該贈與價額加入繼承開始時被繼承人所有之財產中，為應繼遺產。但被繼承人於贈與時有反對之意思表示者，不在此限。前項贈與價額，應於遺產分割時，由該繼承人之應繼分中扣除。贈與價額，依贈與時之價值計算。 第 四 節 繼承之拋棄"
+      "text": "第 1173 條繼承人中有在繼承開始前因結婚、分居或營業，已從被繼承人受有財產之贈與者，應將該贈與價額加入繼承開始時被繼承人所有之財產中，為應繼遺產。但被繼承人於贈與時有反對之意思表示者，不在此限。前項贈與價額，應於遺產分割時，由該繼承人之應繼分中扣除。贈與價額，依贈與時之價值計算。"
     },
     {
       "articleNumber": "1174",
@@ -5552,7 +5552,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1176-1",
-      "text": "第 1176-1 條拋棄繼承權者，就其所管理之遺產，於其他繼承人或遺產管理人開始管理前，應與處理自己事務為同一之注意，繼續管理之。 第 五 節 無人承認之繼承"
+      "text": "第 1176-1 條拋棄繼承權者，就其所管理之遺產，於其他繼承人或遺產管理人開始管理前，應與處理自己事務為同一之注意，繼續管理之。"
     },
     {
       "articleNumber": "1177",
@@ -5592,7 +5592,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1185",
-      "text": "第 1185 條第一千一百七十八條所定之期限屆滿，無繼承人承認繼承時，其遺產於清償債權並交付遺贈物後，如有賸餘，歸屬國庫。 第 三 章 遺囑 第 一 節 通則"
+      "text": "第 1185 條第一千一百七十八條所定之期限屆滿，無繼承人承認繼承時，其遺產於清償債權並交付遺贈物後，如有賸餘，歸屬國庫。"
     },
     {
       "articleNumber": "1186",
@@ -5604,7 +5604,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1188",
-      "text": "第 1188 條第一千一百四十五條喪失繼承權之規定，於受遺贈人準用之。 第 二 節 方式"
+      "text": "第 1188 條第一千一百四十五條喪失繼承權之規定，於受遺贈人準用之。"
     },
     {
       "articleNumber": "1189",
@@ -5644,7 +5644,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1198",
-      "text": "第 1198 條下列之人，不得為遺囑見證人：一、未成年人。二、受監護或輔助宣告之人。三、繼承人及其配偶或其直系血親。四、受遺贈人及其配偶或其直系血親。五、為公證人或代行公證職務人之同居人助理人或受僱人。 第 三 節 效力"
+      "text": "第 1198 條下列之人，不得為遺囑見證人：一、未成年人。二、受監護或輔助宣告之人。三、繼承人及其配偶或其直系血親。四、受遺贈人及其配偶或其直系血親。五、為公證人或代行公證職務人之同居人助理人或受僱人。"
     },
     {
       "articleNumber": "1199",
@@ -5684,7 +5684,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1208",
-      "text": "第 1208 條遺贈無效或拋棄時，其遺贈之財產，仍屬於遺產。 第 四 節 執行"
+      "text": "第 1208 條遺贈無效或拋棄時，其遺贈之財產，仍屬於遺產。"
     },
     {
       "articleNumber": "1209",
@@ -5728,7 +5728,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1218",
-      "text": "第 1218 條遺囑執行人怠於執行職務，或有其他重大事由時，利害關係人，得請求親屬會議改選他人；其由法院指定者，得聲請法院另行指定。 第 五 節 撤回"
+      "text": "第 1218 條遺囑執行人怠於執行職務，或有其他重大事由時，利害關係人，得請求親屬會議改選他人；其由法院指定者，得聲請法院另行指定。"
     },
     {
       "articleNumber": "1219",
@@ -5744,7 +5744,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "1222",
-      "text": "第 1222 條遺囑人故意破毀或塗銷遺囑，或在遺囑上記明廢棄之意思者，其遺囑視為撤回。 第 六 節 特留分"
+      "text": "第 1222 條遺囑人故意破毀或塗銷遺囑，或在遺囑上記明廢棄之意思者，其遺囑視為撤回。"
     },
     {
       "articleNumber": "1223",
@@ -5794,7 +5794,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "9",
-      "text": "第 9 條本法之施行法，另定之。 第 二 章 地權"
+      "text": "第 9 條本法之施行法，另定之。"
     },
     {
       "articleNumber": "10",
@@ -5810,7 +5810,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "13",
-      "text": "第 13 條湖澤及可通運之水道及岸地，如因水流變遷而自然增加時，其接連地之所有權人，有優先依法取得其所有權或使用受益之權。 第 三 章 地權限制"
+      "text": "第 13 條湖澤及可通運之水道及岸地，如因水流變遷而自然增加時，其接連地之所有權人，有優先依法取得其所有權或使用受益之權。"
     },
     {
       "articleNumber": "14",
@@ -5854,7 +5854,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "24",
-      "text": "第 24 條外國人租賃或購買之土地，經登記後，依法令之所定，享受權利，負擔義務。 第 四 章 公有土地"
+      "text": "第 24 條外國人租賃或購買之土地，經登記後，依法令之所定，享受權利，負擔義務。"
     },
     {
       "articleNumber": "25",
@@ -5866,7 +5866,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "27",
-      "text": "第 27 條直轄市或縣（市）政府應將該管公有土地之收益，列入各該政府預算。 第 五 章 地權調整"
+      "text": "第 27 條直轄市或縣（市）政府應將該管公有土地之收益，列入各該政府預算。"
     },
     {
       "articleNumber": "28",
@@ -5910,7 +5910,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "35",
-      "text": "第 35 條自耕農場之創設，另以法律定之。 第 二 編 地籍 第 一 章 通則"
+      "text": "第 35 條自耕農場之創設，另以法律定之。"
     },
     {
       "articleNumber": "36",
@@ -5946,7 +5946,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "43",
-      "text": "第 43 條依本法所為之登記，有絕對效力。 第 二 章 地籍測量"
+      "text": "第 43 條依本法所為之登記，有絕對效力。"
     },
     {
       "articleNumber": "44",
@@ -5986,7 +5986,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "47-2",
-      "text": "第 47-2 條土地複丈費及建築改良物測量費標準，由中央地政機關定之。 第 三 章 土地總登記"
+      "text": "第 47-2 條土地複丈費及建築改良物測量費標準，由中央地政機關定之。"
     },
     {
       "articleNumber": "48",
@@ -6082,7 +6082,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "71",
-      "text": "第 71 條損害賠償之請求，如經該地政機關拒絕，受損害人得向司法機關起訴。 第 四 章 土地權利變更登記"
+      "text": "第 71 條損害賠償之請求，如經該地政機關拒絕，受損害人得向司法機關起訴。"
     },
     {
       "articleNumber": "72",
@@ -6130,7 +6130,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "79-2",
-      "text": "第 79-2 條有左列情形之一者，應繳納工本費或閱覽費：一、聲請換給或補給權利書狀者。二、聲請發給登記簿或地籍圖謄本或節本者。三、聲請抄錄或影印登記聲請書及其附件者。四、聲請分割登記，就新編地號另發權利書狀者。五、聲請閱覽地籍圖之藍曬圖或複製圖者。六、聲請閱覽電子處理之地籍資料者。前項工本費、閱覽費費額，由中央地政機關定之。 第 三 編 土地使用 第 一 章 通則"
+      "text": "第 79-2 條有左列情形之一者，應繳納工本費或閱覽費：一、聲請換給或補給權利書狀者。二、聲請發給登記簿或地籍圖謄本或節本者。三、聲請抄錄或影印登記聲請書及其附件者。四、聲請分割登記，就新編地號另發權利書狀者。五、聲請閱覽地籍圖之藍曬圖或複製圖者。六、聲請閱覽電子處理之地籍資料者。前項工本費、閱覽費費額，由中央地政機關定之。"
     },
     {
       "articleNumber": "80",
@@ -6170,7 +6170,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "89",
-      "text": "第 89 條直轄市或縣（市）地政機關對於管轄區內之私有空地及荒地，得劃定區域，規定期限，強制依法使用。前項私有荒地，逾期不使用者，該管直轄市或縣（市）政府得照申報地價收買之。 第 二 章 使用限制"
+      "text": "第 89 條直轄市或縣（市）地政機關對於管轄區內之私有空地及荒地，得劃定區域，規定期限，強制依法使用。前項私有荒地，逾期不使用者，該管直轄市或縣（市）政府得照申報地價收買之。"
     },
     {
       "articleNumber": "90",
@@ -6186,7 +6186,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "93",
-      "text": "第 93 條依都市計畫已公布為道路或其他公共使用之土地，得為保留征收，並限制其建築。但臨時性質之建築，不在此限。 第 三 章 房屋及基地租用"
+      "text": "第 93 條依都市計畫已公布為道路或其他公共使用之土地，得為保留征收，並限制其建築。但臨時性質之建築，不在此限。"
     },
     {
       "articleNumber": "94",
@@ -6234,7 +6234,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "105",
-      "text": "第 105 條第九十七條第九十九條及第一百零一條之規定，於租用基地建築房屋均準用之。 第 四 章 耕地租用"
+      "text": "第 105 條第九十七條第九十九條及第一百零一條之規定，於租用基地建築房屋均準用之。"
     },
     {
       "articleNumber": "106",
@@ -6310,7 +6310,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "124",
-      "text": "第 124 條第一百零七條至第一百十三條及第一百二十一條各規定，於有永佃權之土地準用之。 第 五 章 荒地使用"
+      "text": "第 124 條第一百零七條至第一百十三條及第一百二十一條各規定，於有永佃權之土地準用之。"
     },
     {
       "articleNumber": "125",
@@ -6350,7 +6350,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "134",
-      "text": "第 134 條公有荒地，非農戶或農業生產合作社所能開墾者，得設墾務機關辦理之。 第 六 章 土地重劃"
+      "text": "第 134 條公有荒地，非農戶或農業生產合作社所能開墾者，得設墾務機關辦理之。"
     },
     {
       "articleNumber": "135",
@@ -6382,7 +6382,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "142",
-      "text": "第 142 條新設都市內之土地重劃，應於分區開放前為之。 第 四 編 土地稅 第 一 章 通則"
+      "text": "第 142 條新設都市內之土地重劃，應於分區開放前為之。"
     },
     {
       "articleNumber": "143",
@@ -6402,7 +6402,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "147",
-      "text": "第 147 條土地及其改良物，除依本法規定外，不得用任何名目征收或附加稅款。但因建築道路、堤防、溝渠、或其他土地改良之水陸工程，所需費用，得依法征收工程受益費。 第 二 章 地價及改良物價"
+      "text": "第 147 條土地及其改良物，除依本法規定外，不得用任何名目征收或附加稅款。但因建築道路、堤防、溝渠、或其他土地改良之水陸工程，所需費用，得依法征收工程受益費。"
     },
     {
       "articleNumber": "148",
@@ -6478,7 +6478,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "166",
-      "text": "第 166 條建築改良物之價值，得與重新規定地價時重為估定。 第 三 章 地價稅"
+      "text": "第 166 條建築改良物之價值，得與重新規定地價時重為估定。"
     },
     {
       "articleNumber": "167",
@@ -6514,7 +6514,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "175",
-      "text": "第 175 條（刪除） 第 四 章 土地增值稅"
+      "text": "第 175 條（刪除）"
     },
     {
       "articleNumber": "176",
@@ -6550,7 +6550,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "184",
-      "text": "第 184 條土地增值實數額，應減去土地所有權人為改良土地所用之資本及已繳納之工程受益費。 第 五 章 土地改良物稅"
+      "text": "第 184 條土地增值實數額，應減去土地所有權人為改良土地所用之資本及已繳納之工程受益費。"
     },
     {
       "articleNumber": "185",
@@ -6574,7 +6574,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "190",
-      "text": "第 190 條土地改良物稅全部為地方稅。 第 六 章 土地稅之減免"
+      "text": "第 190 條土地改良物稅全部為地方稅。"
     },
     {
       "articleNumber": "191",
@@ -6610,7 +6610,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "199",
-      "text": "第 199 條凡減稅或免稅之土地，其減免之原因事實有變更或消滅時，仍應繼續征稅。 第 七 章 欠稅"
+      "text": "第 199 條凡減稅或免稅之土地，其減免之原因事實有變更或消滅時，仍應繼續征稅。"
     },
     {
       "articleNumber": "200",
@@ -6642,7 +6642,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "207",
-      "text": "第 207 條建築改良物欠稅，準用本章關於地價稅欠稅各條之規定。 第 五 編 土地征收 第 一 章 通則"
+      "text": "第 207 條建築改良物欠稅，準用本章關於地價稅欠稅各條之規定。"
     },
     {
       "articleNumber": "208",
@@ -6702,7 +6702,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "221",
-      "text": "第 221 條被徵收之土地應有之負擔，其款額計算，以該土地所應得之補償金額為限，並由該管直轄市或縣（市）地政機關於補償地價時為清算結束之。 第 二 章 征收程序"
+      "text": "第 221 條被徵收之土地應有之負擔，其款額計算，以該土地所應得之補償金額為限，並由該管直轄市或縣（市）地政機關於補償地價時為清算結束之。"
     },
     {
       "articleNumber": "222",
@@ -6758,7 +6758,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "235",
-      "text": "第 235 條被征收土地之所有權人，對於其土地之權利義務，於應受之補償發給完竣時終止，在補償費未發給完竣以前，有繼續使用該土地之權。但合於第二百三十一條但書之規定者，不在此限。 第 三 章 征收補償"
+      "text": "第 235 條被征收土地之所有權人，對於其土地之權利義務，於應受之補償發給完竣時終止，在補償費未發給完竣以前，有繼續使用該土地之權。但合於第二百三十一條但書之規定者，不在此限。"
     },
     {
       "articleNumber": "236",
@@ -6856,7 +6856,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "12",
-      "text": "第 12 條本條例施行區域內地籍總歸戶內容、作業程序、查詢、資料提供範圍與對象及收費等事項之辦法，由中央主管機關擬訂，報請行政院核定。 第 二 章 規定地價"
+      "text": "第 12 條本條例施行區域內地籍總歸戶內容、作業程序、查詢、資料提供範圍與對象及收費等事項之辦法，由中央主管機關擬訂，報請行政院核定。"
     },
     {
       "articleNumber": "13",
@@ -6872,7 +6872,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "16",
-      "text": "第 16 條舉辦規定地價或重新規定地價時，土地所有權人未於公告期間申報地價者，以公告地價百分之八十為其申報地價。土地所有權人於公告期間申報地價者，其申報之地價超過公告地價百分之一百二十時，以公告地價百分之一百二十為其申報地價；申報之地價未滿公告地價百分之八十時，得照價收買或以公告地價百分之八十為其申報地價。 第 三 章 照價徵稅"
+      "text": "第 16 條舉辦規定地價或重新規定地價時，土地所有權人未於公告期間申報地價者，以公告地價百分之八十為其申報地價。土地所有權人於公告期間申報地價者，其申報之地價超過公告地價百分之一百二十時，以公告地價百分之一百二十為其申報地價；申報之地價未滿公告地價百分之八十時，得照價收買或以公告地價百分之八十為其申報地價。"
     },
     {
       "articleNumber": "17",
@@ -6920,7 +6920,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "26-1",
-      "text": "第 26-1 條農業用地閒置不用，經直轄市或縣（市）政府報經內政部核准通知限期使用或命其委託經營，逾期仍未使用或委託經營者，按應納田賦加徵一倍至三倍之荒地稅；經加徵荒地稅滿三年，仍不使用者，得照價收買。但有左列情形之一者不在此限：一、因農業生產或政策之必要而休閒者。二、因地區性生產不經濟而休耕者。三、因公害污染不能耕作者。四、因灌溉、排水設施損壞不能耕作者。五、因不可抗力不能耕作者。前項規定之實施辦法，由中央主管機關會同農業主管機關定之。 第 四 章 照價收買"
+      "text": "第 26-1 條農業用地閒置不用，經直轄市或縣（市）政府報經內政部核准通知限期使用或命其委託經營，逾期仍未使用或委託經營者，按應納田賦加徵一倍至三倍之荒地稅；經加徵荒地稅滿三年，仍不使用者，得照價收買。但有左列情形之一者不在此限：一、因農業生產或政策之必要而休閒者。二、因地區性生產不經濟而休耕者。三、因公害污染不能耕作者。四、因灌溉、排水設施損壞不能耕作者。五、因不可抗力不能耕作者。前項規定之實施辦法，由中央主管機關會同農業主管機關定之。"
     },
     {
       "articleNumber": "27",
@@ -6952,7 +6952,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "34",
-      "text": "第 34 條照價收買之土地，地上建築改良物同屬土地所有權人所有者，應一併收買。但不屬土地所有權人所有者，不在此限。前項改良物之價額，由直轄市或縣（市）政府查估後，提交地價評議委員會評定之。 第 五 章 漲價歸公"
+      "text": "第 34 條照價收買之土地，地上建築改良物同屬土地所有權人所有者，應一併收買。但不屬土地所有權人所有者，不在此限。前項改良物之價額，由直轄市或縣（市）政府查估後，提交地價評議委員會評定之。"
     },
     {
       "articleNumber": "35",
@@ -7064,7 +7064,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "51",
-      "text": "第 51 條依本條例施行漲價歸公之收入，以供育幼、養老、救災、濟貧、衛生、扶助身心障礙等公共福利事業、興辦社會住宅、徵收公共設施保留地、興辦公共設施、促進農業發展、農村建設、推展國民教育及實施平均地權之用。 第 六 章 土地使用"
+      "text": "第 51 條依本條例施行漲價歸公之收入，以供育幼、養老、救災、濟貧、衛生、扶助身心障礙等公共福利事業、興辦社會住宅、徵收公共設施保留地、興辦公共設施、促進農業發展、農村建設、推展國民教育及實施平均地權之用。"
     },
     {
       "articleNumber": "52",
@@ -7208,7 +7208,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "79-1",
-      "text": "第 79-1 條私法人買受供住宅使用之房屋，應檢具使用計畫，經中央主管機關許可。但私法人經中央主管機關公告免經許可之情形者，不在此限。前項許可之文件有效期限為一年。私法人取得第一項房屋，於登記完畢後五年內不得辦理移轉、讓與或預告登記。但因強制執行、徵收、法院判決或其他法律規定而移轉或讓與者，不在此限。中央主管機關為審核第一項許可案件，得遴聘（派）專家學者、民間團體及相關機關代表，以合議制方式辦理之。第一項規定適用範圍、許可條件、用途、使用計畫內容、應備文件、審核程序、免經許可情形及其他應遵行事項之辦法，由中央主管機關定之。 第 七 章 罰則"
+      "text": "第 79-1 條私法人買受供住宅使用之房屋，應檢具使用計畫，經中央主管機關許可。但私法人經中央主管機關公告免經許可之情形者，不在此限。前項許可之文件有效期限為一年。私法人取得第一項房屋，於登記完畢後五年內不得辦理移轉、讓與或預告登記。但因強制執行、徵收、法院判決或其他法律規定而移轉或讓與者，不在此限。中央主管機關為審核第一項許可案件，得遴聘（派）專家學者、民間團體及相關機關代表，以合議制方式辦理之。第一項規定適用範圍、許可條件、用途、使用計畫內容、應備文件、審核程序、免經許可情形及其他應遵行事項之辦法，由中央主管機關定之。"
     },
     {
       "articleNumber": "80",
@@ -7244,7 +7244,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "83-1",
-      "text": "第 83-1 條有左列行為之一者，處三年以下有期徒刑、拘役或科或併科五千元以下罰金：一、移動或毀損重劃測量標樁，致妨害市地重劃工程之設計、施工或土地之分配者。二、以強暴、脅迫或其他非法方法妨害市地重劃之實施者。 第 八 章 附則"
+      "text": "第 83-1 條有左列行為之一者，處三年以下有期徒刑、拘役或科或併科五千元以下罰金：一、移動或毀損重劃測量標樁，致妨害市地重劃工程之設計、施工或土地之分配者。二、以強暴、脅迫或其他非法方法妨害市地重劃之實施者。"
     },
     {
       "articleNumber": "84",
@@ -7298,7 +7298,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "6",
-      "text": "第 6 條為發展經濟，促進土地利用，增進社會福利，對於國防、政府機關、公共設施、騎樓走廊、研究機構、教育、交通、水利、給水、鹽業、宗教、醫療、衛生、公私墓、慈善或公益事業及合理之自用住宅等所使用之土地，及重劃、墾荒、改良土地者，得予適當之減免；其減免標準及程序，由行政院定之。 第 二 節 名詞定義"
+      "text": "第 6 條為發展經濟，促進土地利用，增進社會福利，對於國防、政府機關、公共設施、騎樓走廊、研究機構、教育、交通、水利、給水、鹽業、宗教、醫療、衛生、公私墓、慈善或公益事業及合理之自用住宅等所使用之土地，及重劃、墾荒、改良土地者，得予適當之減免；其減免標準及程序，由行政院定之。"
     },
     {
       "articleNumber": "7",
@@ -7326,7 +7326,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "13",
-      "text": "第 13 條本法課徵田賦之用辭定義如左：一、地目：指各直轄市、縣（市）地籍冊所載之土地使用類別。二、等則：指按各種地目土地單位面積全年收益或地價高低所區分之賦率等級。三、賦元：指按各種地目等則土地單位面積全年收益或地價釐定全年賦額之單位。四、賦額：指依每種地目等則之土地面積，乘各該地目等則單位面積釐定之賦元所得每筆土地全年賦元之積。五、實物：指各地區徵收之稻穀、小麥或就其折徵之他種農作產物。六、代金：指按應徵實物折徵之現金。七、夾雜物：指實物中含帶之沙、泥、土、石、稗子等雜物。 第 二 章 地價稅"
+      "text": "第 13 條本法課徵田賦之用辭定義如左：一、地目：指各直轄市、縣（市）地籍冊所載之土地使用類別。二、等則：指按各種地目土地單位面積全年收益或地價高低所區分之賦率等級。三、賦元：指按各種地目等則土地單位面積全年收益或地價釐定全年賦額之單位。四、賦額：指依每種地目等則之土地面積，乘各該地目等則單位面積釐定之賦元所得每筆土地全年賦元之積。五、實物：指各地區徵收之稻穀、小麥或就其折徵之他種農作產物。六、代金：指按應徵實物折徵之現金。七、夾雜物：指實物中含帶之沙、泥、土、石、稗子等雜物。"
     },
     {
       "articleNumber": "14",
@@ -7358,7 +7358,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "21",
-      "text": "第 21 條凡經直轄市或縣（市）政府核定應徵空地稅之土地，按該宗土地應納地價稅基本稅額加徵二至五倍之空地稅。 第 三 章 田賦"
+      "text": "第 21 條凡經直轄市或縣（市）政府核定應徵空地稅之土地，按該宗土地應納地價稅基本稅額加徵二至五倍之空地稅。"
     },
     {
       "articleNumber": "22",
@@ -7390,7 +7390,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "27-1",
-      "text": "第 27-1 條為調劑農業生產狀況或因應農業發展需要，行政院得決定停徵全部或部分田賦。 第 四 章 土地增值稅"
+      "text": "第 27-1 條為調劑農業生產狀況或因應農業發展需要，行政院得決定停徵全部或部分田賦。"
     },
     {
       "articleNumber": "28",
@@ -7474,7 +7474,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "39-3",
-      "text": "第 39-3 條依前條第一項規定申請不課徵土地增值稅者，應由權利人及義務人於申報土地移轉現值時，於土地現值申報書註明農業用地字樣提出申請；其未註明者，得於土地增值稅繳納期間屆滿前補行申請，逾期不得申請不課徵土地增值稅。但依規定得由權利人單獨申報土地移轉現值者，該權利人得單獨提出申請。農業用地移轉，其屬無須申報土地移轉現值者，主管稽徵機關應通知權利人及義務人，其屬權利人單獨申報土地移轉現值者，應通知義務人，如合於前條第一項規定不課徵土地增值稅之要件者，權利人或義務人應於收到通知之次日起三十日內提出申請，逾期不得申請不課徵土地增值稅。 第 五 章 稽徵程序"
+      "text": "第 39-3 條依前條第一項規定申請不課徵土地增值稅者，應由權利人及義務人於申報土地移轉現值時，於土地現值申報書註明農業用地字樣提出申請；其未註明者，得於土地增值稅繳納期間屆滿前補行申請，逾期不得申請不課徵土地增值稅。但依規定得由權利人單獨申報土地移轉現值者，該權利人得單獨提出申請。農業用地移轉，其屬無須申報土地移轉現值者，主管稽徵機關應通知權利人及義務人，其屬權利人單獨申報土地移轉現值者，應通知義務人，如合於前條第一項規定不課徵土地增值稅之要件者，權利人或義務人應於收到通知之次日起三十日內提出申請，逾期不得申請不課徵土地增值稅。"
     },
     {
       "articleNumber": "40",
@@ -7526,7 +7526,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "52",
-      "text": "第 52 條經徵收或收買之土地，該管直轄市、縣（市）地政機關或收買機關，應檢附土地清冊及補償清冊，通知主管稽徵機關，核算土地增值稅及應納未納之地價稅或田賦，稽徵機關應於收到通知後十五日內，造具代扣稅款證明冊，送由徵收或收買機關，於發放價款或補償費時代為扣繳。 第 六 章 罰則"
+      "text": "第 52 條經徵收或收買之土地，該管直轄市、縣（市）地政機關或收買機關，應檢附土地清冊及補償清冊，通知主管稽徵機關，核算土地增值稅及應納未納之地價稅或田賦，稽徵機關應於收到通知後十五日內，造具代扣稅款證明冊，送由徵收或收買機關，於發放價款或補償費時代為扣繳。"
     },
     {
       "articleNumber": "53",
@@ -7550,7 +7550,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "56",
-      "text": "第 56 條（刪除） 第 七 章 附則"
+      "text": "第 56 條（刪除）"
     },
     {
       "articleNumber": "57",
@@ -7828,7 +7828,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "4",
-      "text": "第 4 條本條例用辭定義如下︰一、不動產︰指土地、土地定著物或房屋及其可移轉之權利；房屋指成屋、預售屋及其可移轉之權利。二、成屋︰指領有使用執照，或於實施建築管理前建造完成之建築物。三、預售屋︰指領有建造執照尚未建造完成而以將來完成之建築物為交易標的之物。四、經紀業︰指依本條例規定經營仲介或代銷業務之公司或商號。五、仲介業務︰指從事不動產買賣、互易、租賃之居間或代理業務。六、代銷業務︰指受起造人或建築業之委託，負責企劃並代理銷售不動產之業務。七、經紀人員︰指經紀人或經紀營業員。經紀人之職務為執行仲介或代銷業務；經紀營業員之職務為協助經紀人執行仲介或代銷業務。八、加盟經營者︰經紀業之一方以契約約定使用他方所發展之服務、營運方式、商標或服務標章等，並受其規範或監督。九、差價︰係指實際買賣交易價格與委託銷售價格之差額。十、營業處所︰指經紀業經營仲介或代銷業務之店面、辦公室或非常態之固定場所。 第 二 章 經紀業"
+      "text": "第 4 條本條例用辭定義如下︰一、不動產︰指土地、土地定著物或房屋及其可移轉之權利；房屋指成屋、預售屋及其可移轉之權利。二、成屋︰指領有使用執照，或於實施建築管理前建造完成之建築物。三、預售屋︰指領有建造執照尚未建造完成而以將來完成之建築物為交易標的之物。四、經紀業︰指依本條例規定經營仲介或代銷業務之公司或商號。五、仲介業務︰指從事不動產買賣、互易、租賃之居間或代理業務。六、代銷業務︰指受起造人或建築業之委託，負責企劃並代理銷售不動產之業務。七、經紀人員︰指經紀人或經紀營業員。經紀人之職務為執行仲介或代銷業務；經紀營業員之職務為協助經紀人執行仲介或代銷業務。八、加盟經營者︰經紀業之一方以契約約定使用他方所發展之服務、營運方式、商標或服務標章等，並受其規範或監督。九、差價︰係指實際買賣交易價格與委託銷售價格之差額。十、營業處所︰指經紀業經營仲介或代銷業務之店面、辦公室或非常態之固定場所。"
     },
     {
       "articleNumber": "5",
@@ -7860,7 +7860,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "12",
-      "text": "第 12 條經紀業應於經紀人到職之日起十五日內，造具名冊報請所在地主管機關層報中央主管機關備查，異動時，亦同。 第 三 章 經紀人員"
+      "text": "第 12 條經紀業應於經紀人到職之日起十五日內，造具名冊報請所在地主管機關層報中央主管機關備查，異動時，亦同。"
     },
     {
       "articleNumber": "13",
@@ -7880,7 +7880,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "17",
-      "text": "第 17 條經紀業不得僱用未具備經紀人員資格者從事仲介或代銷業務。 第 四 章 業務及責任"
+      "text": "第 17 條經紀業不得僱用未具備經紀人員資格者從事仲介或代銷業務。"
     },
     {
       "articleNumber": "18",
@@ -7928,7 +7928,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "27",
-      "text": "第 27 條主管機關檢查經紀業之業務，經紀業不得拒絕。 第 五 章 獎懲"
+      "text": "第 27 條主管機關檢查經紀業之業務，經紀業不得拒絕。"
     },
     {
       "articleNumber": "28",
@@ -7960,7 +7960,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "35",
-      "text": "第 35 條依本條例所處罰鍰，經通知繳納而逾期不繳納者，移送法院強制執行。 第 六 章 附則"
+      "text": "第 35 條依本條例所處罰鍰，經通知繳納而逾期不繳納者，移送法院強制執行。"
     },
     {
       "articleNumber": "36",
@@ -8010,7 +8010,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "6",
-      "text": "第 6 條本法所稱主管機關：在中央為目的事業主管機關；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 二 章 消費者權益 第 一 節 健康與安全保障"
+      "text": "第 6 條本法所稱主管機關：在中央為目的事業主管機關；在直轄市為直轄市政府；在縣（市）為縣（市）政府。"
     },
     {
       "articleNumber": "7",
@@ -8034,7 +8034,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "10-1",
-      "text": "第 10-1 條本節所定企業經營者對消費者或第三人之損害賠償責任，不得預先約定限制或免除。 第 二 節 定型化契約"
+      "text": "第 10-1 條本節所定企業經營者對消費者或第三人之損害賠償責任，不得預先約定限制或免除。"
     },
     {
       "articleNumber": "11",
@@ -8070,7 +8070,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "17-1",
-      "text": "第 17-1 條企業經營者與消費者訂立定型化契約，主張符合本節規定之事實者，就其事實負舉證責任。 第 三 節 特種交易"
+      "text": "第 17-1 條企業經營者與消費者訂立定型化契約，主張符合本節規定之事實者，就其事實負舉證責任。"
     },
     {
       "articleNumber": "18",
@@ -8094,7 +8094,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "21",
-      "text": "第 21 條企業經營者與消費者分期付款買賣契約應以書面為之。前項契約書應載明下列事項：一、頭期款。二、各期價款與其他附加費用合計之總價款與現金交易價格之差額。三、利率。企業經營者未依前項規定記載利率者，其利率按現金交易價格週年利率百分之五計算之。企業經營者違反第二項第一款、第二款之規定者，消費者不負現金交易價格以外價款之給付義務。 第 四 節 消費資訊之規範"
+      "text": "第 21 條企業經營者與消費者分期付款買賣契約應以書面為之。前項契約書應載明下列事項：一、頭期款。二、各期價款與其他附加費用合計之總價款與現金交易價格之差額。三、利率。企業經營者未依前項規定記載利率者，其利率按現金交易價格週年利率百分之五計算之。企業經營者違反第二項第一款、第二款之規定者，消費者不負現金交易價格以外價款之給付義務。"
     },
     {
       "articleNumber": "22",
@@ -8118,7 +8118,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "26",
-      "text": "第 26 條企業經營者對於所提供之商品應按其性質及交易習慣，為防震、防潮、防塵或其他保存商品所必要之包裝，以確保商品之品質與消費者之安全。但不得誇張其內容或為過大之包裝。 第 三 章 消費者保護團體"
+      "text": "第 26 條企業經營者對於所提供之商品應按其性質及交易習慣，為防震、防潮、防塵或其他保存商品所必要之包裝，以確保商品之品質與消費者之安全。但不得誇張其內容或為過大之包裝。"
     },
     {
       "articleNumber": "27",
@@ -8142,7 +8142,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "32",
-      "text": "第 32 條消費者保護團體辦理消費者保護工作成績優良者，主管機關得予以財務上之獎助。 第 四 章 行政監督"
+      "text": "第 32 條消費者保護團體辦理消費者保護工作成績優良者，主管機關得予以財務上之獎助。"
     },
     {
       "articleNumber": "33",
@@ -8182,7 +8182,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "42",
-      "text": "第 42 條直轄市、縣（市）政府應設消費者服務中心，辦理消費者之諮詢服務、教育宣導、申訴等事項。直轄市、縣（市）政府消費者服務中心得於轄區內設分中心。 第 五 章 消費爭議之處理 第 一 節 申訴與調解"
+      "text": "第 42 條直轄市、縣（市）政府應設消費者服務中心，辦理消費者之諮詢服務、教育宣導、申訴等事項。直轄市、縣（市）政府消費者服務中心得於轄區內設分中心。"
     },
     {
       "articleNumber": "43",
@@ -8222,7 +8222,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "46",
-      "text": "第 46 條調解成立者應作成調解書。前項調解書之作成及效力，準用鄉鎮市調解條例第二十五條至第二十九條之規定。 第 二 節 消費訴訟"
+      "text": "第 46 條調解成立者應作成調解書。前項調解書之作成及效力，準用鄉鎮市調解條例第二十五條至第二十九條之規定。"
     },
     {
       "articleNumber": "47",
@@ -8258,7 +8258,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "55",
-      "text": "第 55 條民事訴訟法第四十八條、第四十九條之規定，於依前條為訴訟行為者，準用之。 第 六 章 罰則"
+      "text": "第 55 條民事訴訟法第四十八條、第四十九條之規定，於依前條為訴訟行為者，準用之。"
     },
     {
       "articleNumber": "56",
@@ -8290,7 +8290,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "62",
-      "text": "第 62 條本法所定之罰鍰，由主管機關處罰，經限期繳納後，屆期仍未繳納者，依法移送行政執行。 第 七 章 附則"
+      "text": "第 62 條本法所定之罰鍰，由主管機關處罰，經限期繳納後，屆期仍未繳納者，依法移送行政執行。"
     },
     {
       "articleNumber": "63",
@@ -8324,7 +8324,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "6",
-      "text": "第 6 條本法所稱主管機關為公平交易委員會。本法規定事項，涉及其他部會之職掌者，由主管機關商同各該部會辦理之。 第 二 章 限制競爭"
+      "text": "第 6 條本法所稱主管機關為公平交易委員會。本法規定事項，涉及其他部會之職掌者，由主管機關商同各該部會辦理之。"
     },
     {
       "articleNumber": "7",
@@ -8380,7 +8380,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "20",
-      "text": "第 20 條有下列各款行為之一，而有限制競爭之虞者，事業不得為之：一、以損害特定事業為目的，促使他事業對該特定事業斷絕供給、購買或其他交易之行為。二、無正當理由，對他事業給予差別待遇之行為。三、以低價利誘或其他不正當方法，阻礙競爭者參與或從事競爭之行為。四、以脅迫、利誘或其他不正當方法，使他事業不為價格之競爭、參與結合、聯合或為垂直限制競爭之行為。五、以不正當限制交易相對人之事業活動為條件，而與其交易之行為。 第 三 章 不公平競爭"
+      "text": "第 20 條有下列各款行為之一，而有限制競爭之虞者，事業不得為之：一、以損害特定事業為目的，促使他事業對該特定事業斷絕供給、購買或其他交易之行為。二、無正當理由，對他事業給予差別待遇之行為。三、以低價利誘或其他不正當方法，阻礙競爭者參與或從事競爭之行為。四、以脅迫、利誘或其他不正當方法，使他事業不為價格之競爭、參與結合、聯合或為垂直限制競爭之行為。五、以不正當限制交易相對人之事業活動為條件，而與其交易之行為。"
     },
     {
       "articleNumber": "21",
@@ -8400,7 +8400,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "25",
-      "text": "第 25 條除本法另有規定者外，事業亦不得為其他足以影響交易秩序之欺罔或顯失公平之行為。 第 四 章 調查及裁處程序"
+      "text": "第 25 條除本法另有規定者外，事業亦不得為其他足以影響交易秩序之欺罔或顯失公平之行為。"
     },
     {
       "articleNumber": "26",
@@ -8412,7 +8412,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "28",
-      "text": "第 28 條主管機關對於事業涉有違反本法規定之行為進行調查時，事業承諾在主管機關所定期限內，採取具體措施停止並改正涉有違法之行為者，主管機關得中止調查。前項情形，主管機關應對事業有無履行其承諾進行監督。事業已履行其承諾，採取具體措施停止並改正涉有違法之行為者，主管機關得決定終止該案之調查。但有下列情形之一者，應恢復調查：一、事業未履行其承諾。二、作成中止調查之決定所依據之事實發生重大變化。三、作成中止調查之決定係基於事業提供不完整或不真實之資訊。第一項情形，裁處權時效自中止調查之日起，停止進行。主管機關恢復調查者，裁處權時效自恢復調查之翌日起，與停止前已經過之期間一併計算。 第 五 章 損害賠償"
+      "text": "第 28 條主管機關對於事業涉有違反本法規定之行為進行調查時，事業承諾在主管機關所定期限內，採取具體措施停止並改正涉有違法之行為者，主管機關得中止調查。前項情形，主管機關應對事業有無履行其承諾進行監督。事業已履行其承諾，採取具體措施停止並改正涉有違法之行為者，主管機關得決定終止該案之調查。但有下列情形之一者，應恢復調查：一、事業未履行其承諾。二、作成中止調查之決定所依據之事實發生重大變化。三、作成中止調查之決定係基於事業提供不完整或不真實之資訊。第一項情形，裁處權時效自中止調查之日起，停止進行。主管機關恢復調查者，裁處權時效自恢復調查之翌日起，與停止前已經過之期間一併計算。"
     },
     {
       "articleNumber": "29",
@@ -8432,7 +8432,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "33",
-      "text": "第 33 條被害人依本法之規定，向法院起訴時，得請求由侵害人負擔費用，將判決書內容登載新聞紙。 第 六 章 罰則"
+      "text": "第 33 條被害人依本法之規定，向法院起訴時，得請求由侵害人負擔費用，將判決書內容登載新聞紙。"
     },
     {
       "articleNumber": "34",
@@ -8476,7 +8476,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "44",
-      "text": "第 44 條主管機關依第二十七條規定進行調查時，受調查者違反第二十七條第三項規定，得處新臺幣五萬元以上五十萬元以下罰鍰；受調查者再經通知，無正當理由規避、妨礙或拒絕者，主管機關得繼續通知調查，並按次處新臺幣十萬元以上一百萬元以下罰鍰，至接受調查、到場陳述意見或提出有關帳冊、文件等資料或證物為止。 第 七 章 附則"
+      "text": "第 44 條主管機關依第二十七條規定進行調查時，受調查者違反第二十七條第三項規定，得處新臺幣五萬元以上五十萬元以下罰鍰；受調查者再經通知，無正當理由規避、妨礙或拒絕者，主管機關得繼續通知調查，並按次處新臺幣十萬元以上一百萬元以下罰鍰，至接受調查、到場陳述意見或提出有關帳冊、文件等資料或證物為止。"
     },
     {
       "articleNumber": "45",
@@ -8534,7 +8534,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "7",
-      "text": "第 7 條依本規則辦理估價所稱之面積，已辦理登記者，以登記之面積為準；其未辦理登記或以部分面積為估價者，應調查註明之。 第 二 章 估價作業程序"
+      "text": "第 7 條依本規則辦理估價所稱之面積，已辦理登記者，以登記之面積為準；其未辦理登記或以部分面積為估價者，應調查註明之。"
     },
     {
       "articleNumber": "8",
@@ -8574,7 +8574,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "17",
-      "text": "第 17 條估價報告書之事實描述應真實確切，其用語應明確肯定，有難以確定之事項者，應在估價報告書中說明其可能影響勘估標的權利或價值之情形。 第 三 章 估價方法 第 一 節 比較法"
+      "text": "第 17 條估價報告書之事實描述應真實確切，其用語應明確肯定，有難以確定之事項者，應在估價報告書中說明其可能影響勘估標的權利或價值之情形。"
     },
     {
       "articleNumber": "18",
@@ -8614,7 +8614,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "27",
-      "text": "第 27 條不動產估價師應採用三件以上比較標的，就其經前條推估檢討後之勘估標的試算價格，考量各比較標的蒐集資料可信度、各比較標的與勘估標的價格形成因素之相近程度，決定勘估標的之比較價格，並將比較修正內容敘明之。 第 二 節 收益法"
+      "text": "第 27 條不動產估價師應採用三件以上比較標的，就其經前條推估檢討後之勘估標的試算價格，考量各比較標的蒐集資料可信度、各比較標的與勘估標的價格形成因素之相近程度，決定勘估標的之比較價格，並將比較修正內容敘明之。"
     },
     {
       "articleNumber": "28",
@@ -8698,7 +8698,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "47",
-      "text": "第 47 條（因條文排版無法完整呈現內容，請詳閱完整條文檔案）一定期間之收益價格，依下列計算式求取：1 1－────── n’ （1＋r） P＝a×──────── r 其中： P ：收益價格 a ：平均一年期間折舊前淨收益 r ：收益資本化率 n ’：可收益之年數收益價格已知者，適用該公式反推平均一年期間折舊前淨收益。一定期間終止後，有期末價值者，收益價格得加計該期末價值之現值，期末價值並得扣除處分不動產所需之相關費用。 第 三 節 成本法"
+      "text": "第 47 條（因條文排版無法完整呈現內容，請詳閱完整條文檔案）一定期間之收益價格，依下列計算式求取：1 1－────── n’ （1＋r） P＝a×──────── r 其中： P ：收益價格 a ：平均一年期間折舊前淨收益 r ：收益資本化率 n ’：可收益之年數收益價格已知者，適用該公式反推平均一年期間折舊前淨收益。一定期間終止後，有期末價值者，收益價格得加計該期末價值之現值，期末價值並得扣除處分不動產所需之相關費用。"
     },
     {
       "articleNumber": "48",
@@ -8838,7 +8838,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "82",
-      "text": "第 82 條全聯會依第五十六條、第六十條、第六十一條、第六十三條、第六十六條、第六十七條及第七十七條公告之資料，應先報請中央主管機關備查。 第 四 章 宗地估價 第 一 節 通則"
+      "text": "第 82 條全聯會依第五十六條、第六十條、第六十一條、第六十三條、第六十六條、第六十七條及第七十七條公告之資料，應先報請中央主管機關備查。"
     },
     {
       "articleNumber": "83",
@@ -8866,7 +8866,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "89",
-      "text": "第 89 條受有土壤或地下水污染之土地，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤或地下水污染之影響，並計算其地價減損額後，從正常價格中扣除之，以其餘額為該宗地之價格。 第 二 節 特殊宗地估價"
+      "text": "第 89 條受有土壤或地下水污染之土地，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤或地下水污染之影響，並計算其地價減損額後，從正常價格中扣除之，以其餘額為該宗地之價格。"
     },
     {
       "articleNumber": "90",
@@ -8898,7 +8898,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "97",
-      "text": "第 97 條公共設施用地及公共設施保留地之估價，以比較法估價為原則。無買賣實例者，得比較其與毗鄰土地使用分區及使用強度差異，及土地價值減損情況，並斟酌毗鄰土地平均價格為基礎推算之。 第 五 章 房地估價"
+      "text": "第 97 條公共設施用地及公共設施保留地之估價，以比較法估價為原則。無買賣實例者，得比較其與毗鄰土地使用分區及使用強度差異，及土地價值減損情況，並斟酌毗鄰土地平均價格為基礎推算之。"
     },
     {
       "articleNumber": "98",
@@ -8938,7 +8938,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "106",
-      "text": "第 106 條建物已不具備使用價值，得將其基地視為素地估價。但應考量建物拆除成本予以調整之。 第 六 章 土地改良物估價"
+      "text": "第 106 條建物已不具備使用價值，得將其基地視為素地估價。但應考量建物拆除成本予以調整之。"
     },
     {
       "articleNumber": "107",
@@ -8966,7 +8966,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "113",
-      "text": "第 113 條受有土壤及地下水污染之建物，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤及地下水污染之影響，並計算其減損額後，從正常價格中扣除之，以其餘額為該建物之價格。 第 七 章 權利估價"
+      "text": "第 113 條受有土壤及地下水污染之建物，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤及地下水污染之影響，並計算其減損額後，從正常價格中扣除之，以其餘額為該建物之價格。"
     },
     {
       "articleNumber": "114",
@@ -9042,7 +9042,7 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "128",
-      "text": "第 128 條權利變換後區分所有建物及其土地應有部分，應考量都市更新權利變換計畫之建築計畫、建材標準、設備等級、工程造價水準及更新前後樓層別效用比關聯性等因素，以都市更新評價基準日當時之新成屋價格查估之。 第 八 章 租金估計"
+      "text": "第 128 條權利變換後區分所有建物及其土地應有部分，應考量都市更新權利變換計畫之建築計畫、建材標準、設備等級、工程造價水準及更新前後樓層別效用比關聯性等因素，以都市更新評價基準日當時之新成屋價格查估之。"
     },
     {
       "articleNumber": "129",
@@ -9062,11 +9062,563 @@ export const generatedArticles: Record<string, { articleNumber: string; text: st
     },
     {
       "articleNumber": "133",
-      "text": "第 133 條續訂租約之租金估計，得採下列方式為之：一、以續訂租約之租賃實例為比較標的，運用比較法估計之。二、以勘估標的於價格日期當時之正常價格為基礎，乘以續租之租金收益率，以估計淨收益，再加計必要費用。三、以勘估標的原契約租金之淨收益，就其租金變動趨勢調整後，再加計必要費用。四、分析勘估標的原契約租金與市場經濟租金之差額中，應歸屬於出租人之適當部分，加計契約租金。 第 九 章 附則"
+      "text": "第 133 條續訂租約之租金估計，得採下列方式為之：一、以續訂租約之租賃實例為比較標的，運用比較法估計之。二、以勘估標的於價格日期當時之正常價格為基礎，乘以續租之租金收益率，以估計淨收益，再加計必要費用。三、以勘估標的原契約租金之淨收益，就其租金變動趨勢調整後，再加計必要費用。四、分析勘估標的原契約租金與市場經濟租金之差額中，應歸屬於出租人之適當部分，加計契約租金。"
     },
     {
       "articleNumber": "134",
       "text": "第 134 條本規則自發布日施行。"
+    }
+  ],
+  "land_expropriation": [
+    {
+      "articleNumber": "1",
+      "text": "第 1 條為規範土地徵收，確保土地合理利用，並保障私人財產，增進公共利益，特制定本條例。土地徵收，依本條例之規定，本條例未規定者，適用其他法律之規定。其他法律有關徵收程序、徵收補償標準與本條例牴觸者，優先適用本條例。"
+    },
+    {
+      "articleNumber": "2",
+      "text": "第 2 條本條例所稱主管機關：在中央為內政部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。"
+    },
+    {
+      "articleNumber": "3",
+      "text": "第 3 條國家因公益需要，興辦下列各款事業，得徵收私有土地；徵收之範圍，應以其事業所必須者為限：一、國防事業。二、交通事業。三、公用事業。四、水利事業。五、公共衛生及環境保護事業。六、政府機關、地方自治機關及其他公共建築。七、教育、學術及文化事業。八、社會福利事業。九、國營事業。十、其他依法得徵收土地之事業。"
+    },
+    {
+      "articleNumber": "3-1",
+      "text": "第 3-1 條需用土地人興辦公益事業，應按事業性質及實際需要，勘選適當用地及範圍，並應儘量避免耕地及優先使用無使用計畫之公有土地或國營事業土地。對於經依都市計畫法、區域計畫法或國家公園法劃設或變更後，依法得予徵收或區段徵收之農業用地，於劃設或變更時，應經目的事業主管機關考量徵收之公益性及必要性。需用土地人勘選用地內之農業用地，免經區域計畫擬定機關許可者，於變更為非農業使用時，應先徵得直轄市或縣（市）農業主管機關同意。特定農業區農牧用地，除零星夾雜難以避免者外，不得徵收。但國防、交通、水利事業、公用事業供輸電線路使用者所必須或經行政院核定之重大建設所需者，不在此限。"
+    },
+    {
+      "articleNumber": "3-2",
+      "text": "第 3-2 條需用土地人興辦事業徵收土地時，應依下列因素評估興辦事業之公益性及必要性，並為綜合評估分析：一、社會因素：包括徵收所影響人口之多寡、年齡結構及徵收計畫對周圍社會現況、弱勢族群生活型態及健康風險之影響程度。二、經濟因素：包括徵收計畫對稅收、糧食安全、增減就業或轉業人口、徵收費用、各級政府配合興辦公共設施與政府財務支出及負擔情形、農林漁牧產業鏈及土地利用完整性。三、文化及生態因素：包括因徵收計畫而導致城鄉自然風貌、文化古蹟、生活條件或模式發生改變及對該地區生態環境、周邊居民或社會整體之影響。四、永續發展因素：包括國家永續發展政策、永續指標及國土計畫。五、其他：依徵收計畫個別情形，認為適當或應加以評估參考之事項。"
+    },
+    {
+      "articleNumber": "4",
+      "text": "第 4 條有下列各款情形之一者，得為區段徵收：一、新設都市地區之全部或一部，實施開發建設者。二、舊都市地區為公共安全、衛生、交通之需要或促進土地之合理使用實施更新者。三、都市土地之農業區、保護區變更為建築用地或工業區變更為住宅區、商業區者。四、非都市土地實施開發建設者。五、農村社區為加強公共設施、改善公共衛生之需要或配合農業發展之規劃實施更新者。六、其他依法得為區段徵收者。前項第一款至第三款之開發範圍經中央主管機關核定者，得先行區段徵收，並於區段徵收公告期滿後一年內發布實施都市計畫，不受都市計畫法第五十二條規定之限制。第一項第五款之開發，需用土地人得會同有關機關研擬開發範圍，並檢具經上級目的事業主管機關核准之興辦事業計畫書，報經中央主管機關核定後，先行區段徵收，於區段徵收公告期滿後，依土地使用計畫完成非都市土地分區或用地編定之變更。第一項第四款或第六款之開發，涉及都市計畫之新訂、擴大或變更者，得依第二項之規定辦理；未涉及者，得依前項之規定辦理。不相連之地區，得依都市計畫或興辦事業計畫書內容、範圍合併辦理區段徵收，並適用前三項之規定。區段徵收範圍勘選、計畫之擬定、核定、用地取得、拆遷補償、工程施工、分配設計、地籍整理、權利清理、財務結算及區段徵收與都市計畫配合等事項之實施辦法，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "5",
+      "text": "第 5 條徵收土地時，其土地改良物應一併徵收。但有下列情形之一者，不在此限：一、土地改良物所有權人要求取回，並自公告期滿之日起十五日內自行遷移。二、墳墓及其他紀念物必須遷移。三、建築改良物依法令規定不得建造。四、農作改良物之種類或數量與正常種植情形不相當者，其不相當部分。五、其他法律另有規定。前項應徵收之土地改良物，得視其興辦事業計畫之需要，於土地徵收公告之日起三年內徵收之。但土地改良物所有權人於需用土地人報請徵收土地前，請求同時一併徵收其改良物時，需用土地人應同時辦理一併徵收。第一項第三款及第四款之土地改良物，於徵收土地公告期滿後，由該管直轄市或縣（市）主管機關通知其所有權人或使用人限期遷移或拆除之，不予補償；屆期不拆遷者，由該管直轄市或縣（市）主管機關會同有關機關逕行除去。"
+    },
+    {
+      "articleNumber": "6",
+      "text": "第 6 條需用土地人取得經核准撥用或提供開發之公有土地，該公有土地上之私有土地改良物，得準用前條規定徵收之。"
+    },
+    {
+      "articleNumber": "7",
+      "text": "第 7 條申請徵收之土地遇有古蹟、遺址或登錄之歷史建築，應於可能範圍內避免之；其未能避免者，需用土地人應先擬訂保存計畫，徵得目的事業主管機關同意，始得徵收。"
+    },
+    {
+      "articleNumber": "8",
+      "text": "第 8 條有下列各款情形之一者，所有權人得於徵收公告之日起一年內向該管直轄市或縣（市）主管機關申請一併徵收，逾期不予受理：一、徵收土地之殘餘部分面積過小或形勢不整，致不能為相當之使用者。二、徵收建築改良物之殘餘部分不能為相當之使用者。前項申請，應以書面為之。於補償費發給完竣前，得以書面撤回之。一併徵收之土地或建築改良物殘餘部分，應以現金補償之。"
+    },
+    {
+      "articleNumber": "9",
+      "text": "第 9 條被徵收之土地，除區段徵收及本條例或其他法律另有規定外，有下列情形之一者，原土地所有權人得於徵收公告之日起二十年內，向該管直轄市或縣（市）主管機關申請照原徵收補償價額收回其土地，不適用土地法第二百十九條之規定：一、徵收補償費發給完竣屆滿三年，未依徵收計畫開始使用者。二、未依核准徵收原定興辦事業使用者。三、依原徵收計畫開始使用後未滿五年，不繼續依原徵收計畫使用者。該管直轄市或縣（市）主管機關收受申請後，經查明合於前項規定時，應報原核准徵收機關核准後，通知原土地所有權人於六個月內繳還原受領之補償地價及地價加成補償，逾期視為放棄收回權。第一項第一款之情形，係因不可歸責於需用土地人之事由者，不得申請收回土地。第一項第一款所稱開始使用，指興辦事業之主體工程動工。但依其事業性質無需興建工程者，不在此限。"
+    },
+    {
+      "articleNumber": "10",
+      "text": "第 10 條需用土地人興辦之事業依法應經目的事業主管機關許可者，於申請徵收土地或土地改良物前，應將其事業計畫報經目的事業主管機關許可。需用土地人於事業計畫報請目的事業主管機關許可前，應舉行公聽會，聽取土地所有權人及利害關係人之意見。但因舉辦具機密性之國防事業或已舉行公聽會或說明會者，不在此限。特定農業區經行政院核定為重大建設須辦理徵收者，若有爭議，應依行政程序法舉行聽證。需用土地人興辦之事業無須報經目的事業主管機關許可者，除有第二項但書情形外，應於與所有權人協議價購或以其他方式取得前，先舉行公聽會。"
+    },
+    {
+      "articleNumber": "11",
+      "text": "第 11 條需用土地人申請徵收土地或土地改良物前，除國防、交通或水利事業，因公共安全急需使用土地未及與所有權人協議者外，應先與所有權人協議價購或以其他方式取得；所有權人拒絕參與協議或經開會未能達成協議且無法以其他方式取得者，始得依本條例申請徵收。前項協議之內容應作成書面，並應記明協議之結果。如未能達成協議，應記明未達成協議之理由，於申請時送交中央主管機關。第一項協議價購，依其他法律規定有優先購買權者，無優先購買權之適用。第一項協議價購，應由需用土地人依市價與所有權人協議。前項所稱市價，指市場正常交易價格。"
+    },
+    {
+      "articleNumber": "12",
+      "text": "第 12 條需用土地人經依前條規定協議不成時，為申請徵收土地或土地改良物之需，得洽請直轄市或縣（市）主管機關會同有關人員進入公、私有土地或土地改良物內實施調查或勘測，其所有權人、占有人、使用人或管理人不得拒絕或阻撓。但進入建築物或設有圍障之土地調查或勘測，應於七日前通知其所有權人、占有人、使用人或管理人。為實施前項調查或勘測，須遷移或拆除地上障礙物，致所有權人或使用人遭受之損失，應先予適當之補償，其補償價額以協議為之。"
+    },
+    {
+      "articleNumber": "13",
+      "text": "第 13 條申請徵收土地或土地改良物，應由需用土地人擬具詳細徵收計畫書，並附具徵收土地圖冊或土地改良物清冊及土地使用計畫圖，送由核准徵收機關核准，並副知該管直轄市或縣（市）主管機關。中央主管機關為前項之審核，應審查下列事項：一、是否符合徵收之公益性、必要性及是否適當與合理。二、需用土地人是否具有執行該事業之能力。三、該事業計畫申請徵收之土地是否符合現行都市計畫、區域計畫或國土計畫。四、該事業計畫是否有助於土地適當且合理之利用。五、該事業計畫之財務評估是否合理可行。六、依本條例第三十四條之一提出之安置計畫是否合理可行。七、其他依法應為或得為審查之事項。需用土地人有第二十七條但書之情形者，應一併載明於徵收計畫書送交審核。中央主管機關收受第一項申請後，視需要得會同利害關係人進行現場勘查並作成勘查紀錄。勘查紀錄作成後應於十四日內寄送利害關係人。"
+    },
+    {
+      "articleNumber": "13-1",
+      "text": "第 13-1 條前條所稱徵收計畫書，應記載下列事項，並檢附相關證明文件：一、徵收土地或土地改良物原因。二、徵收土地或土地改良物所在地範圍及面積。三、興辦事業之種類及法令依據。四、興辦事業計畫之必要性說明。五、與土地所有權人或土地改良物所有權人協議價購或以其他方式取得之經過情形及所有權人陳述意見之情形。六、公益性及必要性評估報告。七、土地使用之現狀及其使用人之姓名、住所。八、土地改良物情形。九、一併徵收之土地改良物。十、四鄰接連土地之使用狀況及其改良情形。十一、徵收土地區內有無古蹟、遺址或登錄之歷史建築，並註明其現狀及維護措施。十二、舉行聽證、公聽會、說明會之情形，並應檢附會議紀錄及出席紀錄。十三、土地或土地改良物所有權人或管理人之姓名、住所。十四、被徵收土地之使用配置。十五、興辦事業概略及其計畫進度。十六、應需補償金額總數及其分配。十七、準備金額總數及其來源。十八、涉及原住民土地之徵收，應檢附中央原住民族主管機關之書面同意文件。十九、安置計畫。如僅申請徵收土地改良物，得免記明前項第九款及第十四款事項。"
+    },
+    {
+      "articleNumber": "14",
+      "text": "第 14 條徵收土地或土地改良物，由中央主管機關核准之。"
+    },
+    {
+      "articleNumber": "15",
+      "text": "第 15 條中央主管機關為審議徵收案件，應遴聘（派）專家學者、民間團體及相關機關代表，以合議制方式辦理之。前項專家學者應由地政、環境影響評估、都市計畫、城鄉規劃等專業領域學者組成，其中專家學者及民間團體代表不得少於二分之一。"
+    },
+    {
+      "articleNumber": "16",
+      "text": "第 16 條同一土地有二以上需用土地人申請徵收時，以其興辦事業性質之輕重為核定原則。其性質相同者，以其申請之先後為核定原則。"
+    },
+    {
+      "articleNumber": "17",
+      "text": "第 17 條中央主管機關於核准徵收土地或土地改良物後，應將原案通知該管直轄市或縣（市）主管機關。"
+    },
+    {
+      "articleNumber": "18",
+      "text": "第 18 條直轄市或縣（市）主管機關於接到中央主管機關通知核准徵收案時，應即公告，並以書面通知土地或土地改良物所有權人及他項權利人。前項公告之期間為三十日。"
+    },
+    {
+      "articleNumber": "18-1",
+      "text": "第 18-1 條被徵收土地或土地改良物之所有權已登記者，以公告之日土地登記簿或建築改良物登記簿記載之所有權人及他項權利人姓名、住所辦理公告及通知；其效力並及於公告前因繼承、強制執行或法院之判決已取得土地或土地改良物所有權或他項權利，而尚未辦竣登記之人。"
+    },
+    {
+      "articleNumber": "19",
+      "text": "第 19 條徵收土地或土地改良物應發給之補償費，由需用土地人負擔，並繳交該管直轄市或縣（市）主管機關轉發之。"
+    },
+    {
+      "articleNumber": "20",
+      "text": "第 20 條徵收土地或土地改良物應發給之補償費，應於公告期滿後十五日內發給之。但依第二十二條第五項規定發給應補償價額之差額者，不在此限。需用土地人未於公告期滿十五日內將應發給之補償費繳交該管直轄市或縣（市）主管機關發給完竣者，該部分土地或土地改良物之徵收從此失其效力。但有下列各款情形之一者，不在此限：一、於公告期間內因對補償之估定有異議，而由該管直轄市或縣（市）主管機關依第二十二條規定提交地價評議委員會復議。二、經應受補償人以書面同意延期或分期發給。三、應受補償人拒絕受領或不能受領。四、應受補償人所在地不明。"
+    },
+    {
+      "articleNumber": "21",
+      "text": "第 21 條被徵收土地或土地改良物之所有權人，對於其土地或土地改良物之權利義務，於應受之補償費發給完竣時終止。前項補償費未發給完竣前，得繼續為從來之使用。但合於第二十七條但書規定者，不在此限。"
+    },
+    {
+      "articleNumber": "22",
+      "text": "第 22 條權利關係人對於第十八條第一項之公告事項有異議者，得於公告期間內向該管直轄市或縣（市）主管機關以書面提出。該管直轄市或縣（市）主管機關接受異議後應即查明處理，並將查處情形以書面通知權利關係人。權利關係人對於徵收補償價額有異議者，得於公告期間屆滿之次日起三十日內以書面向該管直轄市或縣（市）主管機關提出異議，該管直轄市或縣（市）主管機關於接受異議後應即查明處理，並將查處情形以書面通知權利關係人。權利關係人對於前項查處不服者，該管直轄市或縣（市）主管機關得提請地價評議委員會復議，權利關係人不服復議結果者，得依法提起行政救濟。直轄市或縣（市）主管機關依第二十條規定發給補償費完竣後，徵收計畫之執行，不因權利關係人依前三項規定提出異議或提起行政救濟而停止。徵收補償價額經復議、行政救濟結果有變動或補償費經依法發給完竣，嗣經發現原補償價額認定錯誤者，其應補償價額差額，應於其結果確定之日起三個月內發給之。"
+    },
+    {
+      "articleNumber": "23",
+      "text": "第 23 條被徵收之土地或土地改良物自公告日起，除於公告前因繼承、強制執行或法院之判決而取得所有權或他項權利，並於公告期間內申請登記者外，不得分割、合併、移轉或設定負擔。土地權利人或使用人並不得在該土地為建築改良物之新建、增建、改建或採取土石、變更地形或為農作改良物之增加種植。其於公告時已在工作中者，應即停止。共有分管之耕地，部分被徵收者，土地所有權人得於徵收補償地價發給完竣前或核定發給抵價地前，申請共有物分割登記或應有部分交換移轉登記，不受前項不得分割、移轉規定之限制。"
+    },
+    {
+      "articleNumber": "24",
+      "text": "第 24 條被徵收土地或建築改良物之所有權或他項權利，以公告之日土地登記簿或建築改良物登記簿記載者為準。但於公告前因繼承、強制執行、法院之判決或其他依法律規定取得土地或建築改良物之所有權或他項權利而未經登記完畢者，其權利人應於徵收公告期間內，向該管直轄市或縣（市）主管機關申請將其權利備案。被徵收土地因前條第二項規定辦理登記，其權利以登記後土地登記簿記載者為準。"
+    },
+    {
+      "articleNumber": "25",
+      "text": "第 25 條被徵收之土地或土地改良物，所有權人死亡未辦竣繼承登記，其徵收補償費得由部分繼承人按其應繼分領取之；其已辦竣公同共有繼承登記者，亦同。前項規定，於本條例施行前尚未領取徵收補償費之土地或土地改良物，適用之。"
+    },
+    {
+      "articleNumber": "26",
+      "text": "第 26 條直轄市或縣（市）主管機關應於國庫設立土地徵收補償費保管專戶，保管因受領遲延、拒絕受領或不能受領之補償費，不適用提存法之規定。直轄市或縣（市）主管機關應於本條例規定應發給補償費之期限屆滿次日起三個月內存入專戶保管，並通知應受補償人。自通知送達發生效力之日起，逾十五年未領取之補償費，歸屬國庫。前項保管專戶儲存之補償費應給付利息。以實收利息照付。未受領之徵收補償費，依第一項規定繳存專戶保管時，視同補償完竣。第一項未受領補償費保管辦法，由中央主管機關定之。前四項規定，於本條例施行前未辦竣提存之未受領補償費，準用之。"
+    },
+    {
+      "articleNumber": "27",
+      "text": "第 27 條需用土地人應俟補償費發給完竣或核定發給抵價地後，始得進入被徵收土地內工作。但國防、交通及水利事業，因公共安全急需先行使用者，不在此限。"
+    },
+    {
+      "articleNumber": "28",
+      "text": "第 28 條被徵收土地或土地改良物應受之補償費發給完竣或核定發給抵價地後，直轄市或縣（市）主管機關應通知土地權利人或使用人限期遷移完竣。應受領遷移費人無可考或所在地不明，致其應遷移之物件未能遷移者，直轄市或縣（市）主管機關應公告三十日限期遷移完竣。徵收範圍內應遷移之物件逾期未遷移者，由直轄市或縣（市）主管機關或需用土地人依行政執行法執行。"
+    },
+    {
+      "articleNumber": "29",
+      "text": "第 29 條徵收範圍內應行遷葬之墳墓，需用土地人應申請當地墳墓主管機關依殯葬管理條例規定辦理，並將情形詳細記載列冊，報請直轄市或縣（市）政府備案。"
+    },
+    {
+      "articleNumber": "30",
+      "text": "第 30 條被徵收之土地，應按照徵收當期之市價補償其地價。在都市計畫區內之公共設施保留地，應按毗鄰非公共設施保留地之平均市價補償其地價。前項市價，由直轄市、縣（市）主管機關提交地價評議委員會評定之。各直轄市、縣（市）主管機關應經常調查轄區地價動態，每六個月提交地價評議委員會評定被徵收土地市價變動幅度，作為調整徵收補償地價之依據。前三項查估市價之地價調查估計程序、方法及應遵行事項等辦法，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "31",
+      "text": "第 31 條建築改良物之補償費，按徵收當時該建築改良物之重建價格估定之。農作改良物之補償費，於農作改良物被徵收時與其孳息成熟時期相距在一年以內者，按成熟時之孳息估定之；其逾一年者，按其種植及培育費用，並參酌現值估定之。建築改良物及農作改良物之補償費，由直轄市或縣（市）主管機關會同有關機關估定之；其查估基準，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "32",
+      "text": "第 32 條徵收土地公告前已領有建築執照或於農地上為合法改良土地，依第二十三條第一項規定停止工作者，其已支付之土地改良費用，應給予補償。"
+    },
+    {
+      "articleNumber": "33",
+      "text": "第 33 條土地或土地改良物原供合法營業之用，因徵收而致營業停止或營業規模縮小之損失，應給予補償。前項補償基準，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "34",
+      "text": "第 34 條徵收土地或土地改良物時，有下列情形之一，應發給遷移費：一、依第五條第一項第一款或第二款規定遷移者。二、徵收公告六個月前設有戶籍之人口必須遷移者。但因結婚或出生而設籍者，不受六個月期限之限制。三、動力機具、生產原料或經營設備等必須遷移者。四、因土地一部分之徵收而其改良物須全部遷移者。五、水產養殖物或畜產必須遷移者。前項遷移費查估基準，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "34-1",
+      "text": "第 34-1 條徵收公告一年前有居住事實之低收入戶或中低收入戶人口，因其所有建築改良物被徵收，致無屋可居住者，或情境相同經直轄市或縣（市）政府社會工作人員查訪屬實者，需用土地人應訂定安置計畫，並於徵收計畫書內敘明安置計畫情形。前項安置，包括安置住宅、購置住宅貸款利息補貼、租金補貼等。"
+    },
+    {
+      "articleNumber": "35",
+      "text": "第 35 條被徵收之土地或建築改良物應有之負擔，除申請發給抵價地者依第四十一條及第四十二條規定辦理外，其款額計算，以該土地或建築改良物應得之補償金額為限，由該管直轄市或縣（市）主管機關於發給地價補償費或建築改良物補償費時為清償結束之。前項所稱應有之負擔，指他項權利價值及依法應補償耕地三七五租約承租人之地價。"
+    },
+    {
+      "articleNumber": "36",
+      "text": "第 36 條被徵收之土地或建築改良物原設定之他項權利因徵收而消滅。其款額計算，該管直轄市或縣（市）主管機關應通知當事人限期自行協議，再依其協議結果代為清償；協議不成者，其補償費依第二十六條規定辦理。"
+    },
+    {
+      "articleNumber": "36-1",
+      "text": "第 36-1 條被徵收土地或土地改良物，其補償費之核計、核發對象、領取補償費應備文件等事項之辦法，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "37",
+      "text": "第 37 條區段徵收範圍勘定後，該管直轄市或縣（市）主管機關得視實際需要，報經上級主管機關核定後，分別或同時公告禁止建築改良物之新建、增建、改建或重建及採取土石或變更地形。前項禁止期間，不得超過一年六個月。"
+    },
+    {
+      "articleNumber": "38",
+      "text": "第 38 條需用土地人申請區段徵收土地，應檢具區段徵收計畫書、徵收土地圖冊及土地使用計畫圖，送由當地直轄市或縣（市）主管機關邀集需用土地人及土地所有權人舉行公聽會後，報請中央主管機關核准。內政部申請區段徵收時，準用前項規定報請行政院核准。"
+    },
+    {
+      "articleNumber": "39",
+      "text": "第 39 條區段徵收土地時，應依第三十條規定補償其地價。除地價補償得經土地所有權人申請，以徵收後可供建築之抵價地折算抵付外，其餘各項補償費依第三十一條至第三十四條規定補償之。抵價地總面積，以徵收總面積百分之五十為原則。因情況特殊，經上級主管機關核准者，不在此限。但不得少於百分之四十。曾經農地重劃者，該重劃地區部分不得少於百分之四十五。"
+    },
+    {
+      "articleNumber": "40",
+      "text": "第 40 條實施區段徵收時，原土地所有權人不願領取現金補償者，應於徵收公告期間內，檢具有關證明文件，以書面向該管直轄巿或縣（巿）主管機關申請發給抵價地。該管直轄巿或縣（巿）主管機關收受申請後，應即審查，並將審查結果，以書面通知申請人。土地所有權人依前項規定申請發給抵價地時，得就其全部或部分被徵收土地應領之補償地價提出申請。申請發給抵價地者，對其土地之權利義務，於接到該管直轄巿或縣（巿）主管機關核定發給抵價地通知時終止。經核定發給抵價地或已領竣徵收補償地價之土地所有權人，得向直轄巿或縣（巿）主管機關申請，改按原徵收補償地價發給現金補償或發給抵價地，經直轄巿或縣（巿）主管機關徵得需用土地人同意後核准。前項申請改發給現金補償或改發給抵價地者，應於核定發給抵價地通知之日，或現金補償發給完竣之日，或通知補償地價存入保管專戶之日起一個月內為之，並以一次為限。申請改發給抵價地者，直轄巿或縣（巿）主管機關應限期繳回其申請改發給抵價地之徵收補償地價後始得核准。申請發給抵價地者，直轄巿或縣（巿）主管機關不受第二十條第一項發給期限之限制。經核定發給抵價地者，其應領之抵價地由該管直轄巿或縣（巿）主管機關於規劃分配後，囑託該管登記機關逕行辦理土地所有權登記，並通知原土地所有權人定期到場接管。未按指定期限接管者，視為已接管。"
+    },
+    {
+      "articleNumber": "41",
+      "text": "第 41 條土地所有權人申請發給抵價地之原有土地上訂有耕地租約或設定他項權利或限制登記者，除第四十二條另有規定外，直轄市或縣（市）主管機關應通知申請人限期自行清理，並依規定期限提出證明文件。申請人未依前項規定辦理者，直轄市或縣（市）主管機關應核定不發給抵價地。直轄市或縣（市）主管機關經核定不發給抵價地者，應於核定之次日起十五日內發給現金補償。"
+    },
+    {
+      "articleNumber": "42",
+      "text": "第 42 條土地所有權人申請發給抵價地之原有土地上設定有抵押權或典權者，原土地所有權人及該他項權利人得申請於發給之抵價地設定抵押權或典權，申請時並應提出同意塗銷原有土地抵押權或典權之證明文件。依前項規定於發給之抵價地設定抵押權或典權，其權利範圍、價值、次序等內容，由原土地所有權人及他項權利人協議定之。依第一項設定之抵押權或典權，應於抵價地登記時，同時登記；並應於登記後通知該他項權利人。"
+    },
+    {
+      "articleNumber": "43",
+      "text": "第 43 條區段徵收範圍內之公有土地，管理機關應以作價或領回土地方式撥供該管區段徵收主管機關統籌規劃開發、分配。但區段徵收前已作為第四十四條第一項第二款用地使用者，應無償撥供主管機關統籌規劃開發。前項以作價方式提供者，其地價準用第三十條規定計算。以領回土地方式提供者，其領回土地面積按區段徵收之抵價地面積比率計算，配回原管理機關，配回之土地應以第四十四條第一項第二款以外之公共設施用地為優先，並依區段徵收計畫處理。"
+    },
+    {
+      "articleNumber": "43-1",
+      "text": "第 43-1 條區段徵收範圍內得規劃配設農業專用區，供原土地所有權人以其已領之現金地價補償費數額申請折算配售土地，作為農業耕作使用。前項農業專用區規劃原則、申請配售資格、條件、面積、作業程序及其他應遵行事項之辦法，由各級主管機關定之。"
+    },
+    {
+      "articleNumber": "44",
+      "text": "第 44 條區段徵收範圍內土地，經規劃整理後，除依第四十三條規定配回原管理機關及第四十三條之一規定配售外，其處理方式如下：一、抵價地發交被徵收土地所有權人領回。其應領回抵價地之面積，由該管直轄市或縣（市）主管機關按其應領地價補償費與區段徵收補償地價總額之比率計算其應領之權利價值，並以實際領回抵價地之單位地價折算之。二、道路、溝渠、公園、綠地、兒童遊樂場、廣場、停車場、體育場所及國民學校用地，無償登記為當地直轄市有、縣（市）有或鄉（鎮、市）有。三、前款以外之公共設施用地，得由主管機關依財務計畫需要，於徵收計畫書載明有償或無償撥供需地機關或讓售供公營事業機構使用。四、國民住宅用地、安置原住戶或經行政院專案核准所需土地得以讓售。五、其餘可供建築土地，得予標售、標租或設定地上權。依前項第一款規定領回面積不足最小建築單位面積者，應於規定期間內提出申請合併，未於規定期間內申請者，該管直轄市或縣（市）主管機關應於規定期間屆滿之日起三十日內，按原徵收地價補償費發給現金補償。第一項第二款以外之公共設施用地，如該事業得許民營者，其用地應依第一項第五款之規定辦理。依第一項第三款至第五款撥用或讓售地價及標售底價，以開發總費用為基準，按其土地之位置、地勢、交通、道路寬度、公共設施及預期發展等條件之優劣估定之。依第一項第五款標租或設定地上權時，其期限不得逾九十九年。第一項第五款土地之標售、標租及設定地上權辦法，由各級主管機關定之。"
+    },
+    {
+      "articleNumber": "45",
+      "text": "第 45 條實施區段徵收時，直轄市或縣（市）主管機關應預計區段徵收土地平均開發成本，並斟酌區段徵收後各街廓之位置、地勢、交通、道路寬度、公共設施及預期發展情形，估計區段徵收後各路街之路線價或區段價，提經地價評議委員會評定後，作為原土地所有權人領回抵價地之計算基準。"
+    },
+    {
+      "articleNumber": "46",
+      "text": "第 46 條區段徵收土地所有權人應領抵價地面積與實際領回抵價地之面積有所增減時，依下列規定處理：一、實際領回抵價地之面積超過應領之面積者，就其超過部分按評定區段徵收後地價繳納差額地價。二、實際領回抵價地之面積小於應領之面積者，就其不足部分按評定區段徵收後地價發給差額地價。前項第一款應繳納之差額地價，經限期繳納，屆期仍未繳納者，得移送法院強制執行。未繳納差額地價之抵價地，不得移轉或設定他項權利。"
+    },
+    {
+      "articleNumber": "47",
+      "text": "第 47 條區段徵收範圍內不妨礙都市計畫事業及區段徵收計畫之既成建築物基地或已辦竣財團法人登記之私立學校、社會福利、慈善事業、宗教團體用地，得按原位置保留分配，並減輕其依前條規定應繳納之差額地價，其減輕比例由主管機關視實際情形定之，並載明於區段徵收計畫書。"
+    },
+    {
+      "articleNumber": "48",
+      "text": "第 48 條區段徵收之程序及補償，本章未規定者，準用第二章及第三章規定。"
+    },
+    {
+      "articleNumber": "49",
+      "text": "第 49 條已公告徵收之土地，需用土地人應切實按核准計畫及所定期限使用。在未依徵收計畫完成使用前，需用土地人應每年檢討其興辦事業計畫，並由其上級事業主管機關列管。有下列情形之一者，應辦理撤銷徵收：一、因作業錯誤，致原徵收之土地不在工程用地範圍內。二、公告徵收時，都市計畫已規定以聯合開發、市地重劃或其他方式開發。但以聯合開發方式開發之土地，土地所有權人不願參與聯合開發者，不在此限。已公告徵收之土地，有下列情形之一者，應廢止徵收：一、因工程變更設計，致原徵收之土地不在工程用地範圍內。二、依徵收計畫開始使用前，興辦之事業改變、興辦事業計畫經註銷、開發方式改變或取得方式改變。三、已依徵收計畫開始使用，尚未依徵收計畫完成使用之土地，因情事變更，致原徵收土地之全部或一部已無徵收之必要。依前二項辦理撤銷或廢止徵收之土地或土地改良物，其已一併徵收之殘餘部分，應同時辦理撤銷或廢止。但該殘餘部分已移轉或另有他用者，不在此限。前三項規定，於本條例施行前公告徵收之土地，適用之。"
+    },
+    {
+      "articleNumber": "50",
+      "text": "第 50 條撤銷或廢止徵收，由需用土地人向中央主管機關申請之。已公告徵收之土地有前條第一項或第二項各款情形之一，而需用土地人未申請撤銷或廢止徵收者，原土地所有權人得向該管直轄巿或縣（巿）主管機關請求之。該管直轄巿或縣（巿）主管機關收受前項請求後，應會同需用土地人及其他有關機關審查。其合於規定者，由需用土地人依第一項規定申請之；不合規定者，該管直轄巿或縣（巿）主管機關應將處理結果函復原土地所有權人。原土地所有權人不服前項處理結果，應於直轄巿或縣（巿）主管機關函復送達之日起三十日內向中央主管機關請求撤銷或廢止徵收。其合於規定者，由中央主管機關逕予撤銷或廢止；不合規定者，由中央主管機關將處理結果函復原土地所有權人。原土地所有權人不服處理結果者，依法提起行政救濟。已公告徵收之土地有前條第一項或第二項各款情形之一，而需用土地人未申請撤銷或廢止徵收者，由該管直轄市或縣（市）主管機關會同需用土地人及其他有關機關審查後向中央主管機關申請撤銷或廢止徵收。"
+    },
+    {
+      "articleNumber": "51",
+      "text": "第 51 條中央主管機關於核准撤銷或廢止徵收後，應將原案通知該管直轄市或縣（市）主管機關。直轄市或縣（市）主管機關於收到中央主管機關通知核准撤銷或廢止徵收案時，應公告三十日，並通知原土地所有權人於一定期間繳清應繳納之價額，發還其原有土地。未於一定期間繳清者，不發還其土地，並不得依第九條規定申請收回該土地。前項一定期間，不得少於六個月。第二項所稱應繳納之價額，指徵收補償地價、地價加成補償及遷移費。但第三十四條第一項規定之人口或物件已遷移者，無須繳納遷移費。前項徵收補償地價，於徵收前設定有他項權利或耕地租約者，包括他項權利人或耕地承租人原應受領之價金。"
+    },
+    {
+      "articleNumber": "52",
+      "text": "第 52 條撤銷或廢止徵收後，徵收前原設定之他項權利及耕地租約不予回復。但依第四十二條規定由原土地所有權人及他項權利人申請於發給之抵價地設定抵押權或典權者，其原抵押權或典權准予回復。"
+    },
+    {
+      "articleNumber": "52-1",
+      "text": "第 52-1 條土地徵收處分有下列情形之一者，其徵收補償費之繳清、土地之發還、原設定他項權利及耕地租約之處理，準用前二條規定：一、經中央主管機關依行政程序法撤銷或廢止。二、經相對人或利害關係人依行政程序法第一百二十八條規定向行政機關申請後予以撤銷或廢止。三、經行政救濟結果撤銷或廢止。"
+    },
+    {
+      "articleNumber": "53",
+      "text": "第 53 條前五條規定，於土地改良物撤銷或廢止徵收時準用之。"
+    },
+    {
+      "articleNumber": "54",
+      "text": "第 54 條土地撤銷或廢止徵收時，原一併徵收之土地改良物應一併辦理撤銷或廢止徵收。但該土地改良物已滅失者，不在此限。前項土地改良物與徵收當時相較已減輕其價值，而仍得為相當之使用者，原需用土地人得就其現存部分酌定價額，一併辦理撤銷或廢止徵收。"
+    },
+    {
+      "articleNumber": "55",
+      "text": "第 55 條撤銷或廢止徵收之土地與一併辦理撤銷或廢止徵收之土地改良物原所有權人相同者，應同時繳清土地及土地改良物應繳納之價額後，發還其原有之土地及現存之土地改良物。"
+    },
+    {
+      "articleNumber": "56",
+      "text": "第 56 條徵收之土地，得於徵收計畫書載明以信託、聯合開發、委託開發、委託經營、合作經營、設定地上權或出租提供民間機構投資建設。本條例施行前申請徵收之土地，經申請中央主管機關備案者，得依前項規定之方式提供民間機構投資建設。"
+    },
+    {
+      "articleNumber": "57",
+      "text": "第 57 條需用土地人因興辦第三條規定之事業，需穿越私有土地之上空或地下，得就需用之空間範圍協議取得地上權，協議不成時，準用徵收規定取得地上權。但應擇其損害最少之處所及方法為之。前項土地因事業之興辦，致不能為相當之使用時，土地所有權人得自施工之日起至完工後一年內，請求需用土地人徵收土地所有權，需用土地人不得拒絕。前項土地所有權人原設定地上權取得之對價，應在徵收補償地價內扣除之。地上權徵收補償辦法，由中央目的事業主管機關會同中央主管機關定之。"
+    },
+    {
+      "articleNumber": "58",
+      "text": "第 58 條國家因興辦臨時性之公共建設工程，得徵用私有土地或土地改良物。徵用期間逾三年，或二次以上徵用，期間合計逾三年者，需用土地人應於申請徵用前，以書面通知；土地或土地改良物所有權人於收到通知書之日起三十日內，得請求需用土地人徵收所有權，需用土地人不得拒絕。依前項規定請求徵收土地或土地改良物所有權者，不得再依第九條規定申請收回其土地或土地改良物。第二章規定，於徵用土地或土地改良物時，準用之。但因情況緊急，如遲延使用土地或土地改良物，公共利益有受重大危害之虞者，得經中央主管機關核准後，先行使用該土地或土地改良物。徵用土地或土地改良物，應自公告徵用之日起計算使用補償費，並於公告期滿後十五日內一次發給所有權人、地上權、典權、不動產役權、農育權、永佃權或耕作權人；其每年補償費，土地依徵用公告期滿第十五日之公告土地現值百分之十計算，土地改良物依徵收補償費百分之十計算；徵用期間不足一年者，按月計算之；不足一月者，按日計算之。前項使用補償費，經應受補償人同意者，得延期或分期發給。因徵用致土地改良物必需拆除或未能回復為徵用前之使用者，準用第三十一條規定給予補償。但其使用方式經徵得所有權人同意者，不在此限。"
+    },
+    {
+      "articleNumber": "59",
+      "text": "第 59 條私有土地經依徵收計畫使用後，依法變更原使用目的，土地管理機關標售該土地時，應公告一個月，被徵收之原土地所有權人或其繼承人有依同樣條件優先購買權。但優先購買權人未於決標後十日內表示優先購買者，其優先購買權視為放棄。依第八條第一項規定一併徵收之土地，須與原徵收土地同時標售時，適用前項之規定。前二項規定，於區段徵收不適用之。"
+    },
+    {
+      "articleNumber": "60",
+      "text": "第 60 條本條例施行前，已公告徵收但尚未辦竣結案者，除本條例另有規定外，應依其公告徵收時所依據之法律規定，繼續辦理結案。"
+    },
+    {
+      "articleNumber": "61",
+      "text": "第 61 條本條例施行前公告徵收之土地，其申請收回，仍依施行前之規定辦理。"
+    },
+    {
+      "articleNumber": "62",
+      "text": "第 62 條本條例施行細則，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "63",
+      "text": "第 63 條本條例自公布日施行。本條例中華民國一百年十二月十三日修正之第三十條之施行日期，由行政院定之。"
+    }
+  ],
+  "apartment": [
+    {
+      "articleNumber": "1",
+      "text": "第 1 條為加強公寓大廈之管理維護，提昇居住品質，特制定本條例。本條例未規定者，適用其他法令之規定。"
+    },
+    {
+      "articleNumber": "2",
+      "text": "第 2 條本條例所稱主管機關：在中央為內政部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。"
+    },
+    {
+      "articleNumber": "3",
+      "text": "第 3 條本條例用辭定義如下：一、公寓大廈：指構造上或使用上或在建築執照設計圖樣標有明確界線，得區分為數部分之建築物及其基地。二、區分所有：指數人區分一建築物而各有其專有部分，並就其共用部分按其應有部分有所有權。三、專有部分：指公寓大廈之一部分，具有使用上之獨立性，且為區分所有之標的者。四、共用部分：指公寓大廈專有部分以外之其他部分及不屬專有之附屬建築物，而供共同使用者。五、約定專用部分：公寓大廈共用部分經約定供特定區分所有權人使用者。六、約定共用部分：指公寓大廈專有部分經約定供共同使用者。七、區分所有權人會議：指區分所有權人為共同事務及涉及權利義務之有關事項，召集全體區分所有權人所舉行之會議。八、住戶：指公寓大廈之區分所有權人、承租人或其他經區分所有權人同意而為專有部分之使用者或業經取得停車空間建築物所有權者。九、管理委員會：指為執行區分所有權人會議決議事項及公寓大廈管理維護工作，由區分所有權人選任住戶若干人為管理委員所設立之組織。十、管理負責人：指未成立管理委員會，由區分所有權人推選住戶一人或依第二十八條第三項、第二十九條第六項規定為負責管理公寓大廈事務者。十一、管理服務人：指由區分所有權人會議決議或管理負責人或管理委員會僱傭或委任而執行建築物管理維護事務之公寓大廈管理服務人員或管理維護公司。十二、規約：公寓大廈區分所有權人為增進共同利益，確保良好生活環境，經區分所有權人會議決議之共同遵守事項。"
+    },
+    {
+      "articleNumber": "4",
+      "text": "第 4 條區分所有權人除法律另有限制外，對其專有部分，得自由使用、收益、處分，並排除他人干涉。專有部分不得與其所屬建築物共用部分之應有部分及其基地所有權或地上權之應有部分分離而為移轉或設定負擔。"
+    },
+    {
+      "articleNumber": "5",
+      "text": "第 5 條區分所有權人對專有部分之利用，不得有妨害建築物之正常使用及違反區分所有權人共同利益之行為。"
+    },
+    {
+      "articleNumber": "6",
+      "text": "第 6 條住戶應遵守下列事項：一、於維護、修繕專有部分、約定專用部分或行使其權利時，不得妨害其他住戶之安寧、安全及衛生。二、他住戶因維護、修繕專有部分、約定專用部分或設置管線，必須進入或使用其專有部分或約定專用部分時，不得拒絕。三、管理負責人或管理委員會因維護、修繕共用部分或設置管線，必須進入或使用其專有部分或約定專用部分時，不得拒絕。四、於維護、修繕專有部分、約定專用部分或設置管線，必須使用共用部分時，應經管理負責人或管理委員會之同意後為之。五、其他法令或規約規定事項。前項第二款至第四款之進入或使用，應擇其損害最少之處所及方法為之，並應修復或補償所生損害。住戶違反第一項規定，經協調仍不履行時，住戶、管理負責人或管理委員會得按其性質請求各該主管機關或訴請法院為必要之處置。"
+    },
+    {
+      "articleNumber": "7",
+      "text": "第 7 條公寓大廈共用部分不得獨立使用供做專有部分。其為下列各款者，並不得為約定專用部分：一、公寓大廈本身所占之地面。二、連通數個專有部分之走廊或樓梯，及其通往室外之通路或門廳；社區內各巷道、防火巷弄。三、公寓大廈基礎、主要樑柱、承重牆壁、樓地板及屋頂之構造。四、約定專用有違法令使用限制之規定者。五、其他有固定使用方法，並屬區分所有權人生活利用上不可或缺之共用部分。"
+    },
+    {
+      "articleNumber": "8",
+      "text": "第 8 條公寓大廈周圍上下、外牆面、樓頂平臺及不屬專有部分之防空避難設備，其變更構造、顏色、設置廣告物、鐵鋁窗或其他類似之行為，除應依法令規定辦理外，該公寓大廈規約另有規定或區分所有權人會議已有決議，經向直轄市、縣（市）主管機關完成報備有案者，應受該規約或區分所有權人會議決議之限制。公寓大廈有十二歲以下兒童或六十五歲以上老人之住戶，外牆開口部或陽臺得設置不妨礙逃生且不突出外牆面之防墜設施。防墜設施設置後，設置理由消失且不符前項限制者，區分所有權人應予改善或回復原狀。住戶違反第一項規定，管理負責人或管理委員會應予制止，經制止而不遵從者，應報請主管機關依第四十九條第一項規定處理，該住戶並應於一個月內回復原狀。屆期未回復原狀者，得由管理負責人或管理委員會回復原狀，其費用由該住戶負擔。"
+    },
+    {
+      "articleNumber": "9",
+      "text": "第 9 條各區分所有權人按其共有之應有部分比例，對建築物之共用部分及其基地有使用收益之權。但另有約定者從其約定。住戶對共用部分之使用應依其設置目的及通常使用方法為之。但另有約定者從其約定。前二項但書所約定事項，不得違反本條例、區域計畫法、都市計畫法及建築法令之規定。住戶違反第二項規定，管理負責人或管理委員會應予制止，並得按其性質請求各該主管機關或訴請法院為必要之處置。如有損害並得請求損害賠償。"
+    },
+    {
+      "articleNumber": "10",
+      "text": "第 10 條專有部分、約定專用部分之修繕、管理、維護，由各該區分所有權人或約定專用部分之使用人為之，並負擔其費用。共用部分、約定共用部分之修繕、管理、維護，由管理負責人或管理委員會為之。其費用由公共基金支付或由區分所有權人按其共有之應有部分比例分擔之。但修繕費係因可歸責於區分所有權人或住戶之事由所致者，由該區分所有權人或住戶負擔。其費用若區分所有權人會議或規約另有規定者，從其規定。前項共用部分、約定共用部分，若涉及公共環境清潔衛生之維持、公共消防滅火器材之維護、公共通道溝渠及相關設施之修繕，其費用政府得視情況予以補助，補助辦法由直轄市、縣（市）政府定之。"
+    },
+    {
+      "articleNumber": "11",
+      "text": "第 11 條共用部分及其相關設施之拆除、重大修繕或改良，應依區分所有權人會議之決議為之。前項費用，由公共基金支付或由區分所有權人按其共有之應有部分比例分擔。"
+    },
+    {
+      "articleNumber": "12",
+      "text": "第 12 條專有部分之共同壁及樓地板或其內之管線，其維修費用由該共同壁雙方或樓地板上下方之區分所有權人共同負擔。但修繕費係因可歸責於區分所有權人之事由所致者，由該區分所有權人負擔。"
+    },
+    {
+      "articleNumber": "13",
+      "text": "第 13 條公寓大廈之重建，應經全體區分所有權人及基地所有權人、地上權人或典權人之同意。但有下列情形之一者，不在此限：一、配合都市更新計畫而實施重建者。二、嚴重毀損、傾頹或朽壞，有危害公共安全之虞者。三、因地震、水災、風災、火災或其他重大事變，肇致危害公共安全者。"
+    },
+    {
+      "articleNumber": "14",
+      "text": "第 14 條公寓大廈有前條第二款或第三款所定情形之一，經區分所有權人會議決議重建時，區分所有權人不同意決議又不出讓區分所有權或同意後不依決議履行其義務者，管理負責人或管理委員會得訴請法院命區分所有權人出讓其區分所有權及其基地所有權應有部分。前項之受讓人視為同意重建。重建之建造執照之申請，其名義以區分所有權人會議之決議為之。"
+    },
+    {
+      "articleNumber": "15",
+      "text": "第 15 條住戶應依使用執照所載用途及規約使用專有部分、約定專用部分，不得擅自變更。住戶違反前項規定，管理負責人或管理委員會應予制止，經制止而不遵從者，報請直轄市、縣（市）主管機關處理，並要求其回復原狀。"
+    },
+    {
+      "articleNumber": "16",
+      "text": "第 16 條住戶不得任意棄置垃圾、排放各種污染物、惡臭物質或發生喧囂、振動及其他與此相類之行為。住戶不得於私設通路、防火間隔、防火巷弄、開放空間、退縮空地、樓梯間、共同走廊、防空避難設備等處所堆置雜物、設置柵欄、門扇或營業使用，或違規設置廣告物或私設路障及停車位侵占巷道妨礙出入。但開放空間及退縮空地，在直轄市、縣（市）政府核准範圍內，得依規約或區分所有權人會議決議供營業使用；防空避難設備，得為原核准範圍之使用；其兼作停車空間使用者，得依法供公共收費停車使用。住戶為維護、修繕、裝修或其他類似之工作時，未經申請主管建築機關核准，不得破壞或變更建築物之主要構造。住戶飼養動物，不得妨礙公共衛生、公共安寧及公共安全。但法令或規約另有禁止飼養之規定時，從其規定。住戶違反前四項規定時，管理負責人或管理委員會應予制止或按規約處理，經制止而不遵從者，得報請直轄市、縣（市）主管機關處理。"
+    },
+    {
+      "articleNumber": "17",
+      "text": "第 17 條住戶於公寓大廈內依法經營餐飲、瓦斯、電焊或其他危險營業或存放有爆炸性或易燃性物品者，應依中央主管機關所定保險金額投保公共意外責任保險。其因此增加其他住戶投保火災保險之保險費者，並應就其差額負補償責任。其投保、補償辦法及保險費率由中央主管機關會同財政部定之。前項投保公共意外責任保險，經催告於七日內仍未辦理者，管理負責人或管理委員會應代為投保；其保險費、差額補償費及其他費用，由該住戶負擔。"
+    },
+    {
+      "articleNumber": "18",
+      "text": "第 18 條公寓大廈應設置公共基金，其來源如下：一、起造人就公寓大廈領得使用執照一年內之管理維護事項，應按工程造價一定比例或金額提列。二、區分所有權人依區分所有權人會議決議繳納。三、本基金之孳息。四、其他收入。依前項第一款規定提列之公共基金，起造人於該公寓大廈使用執照申請時，應提出繳交各直轄市、縣（市）主管機關公庫代收之證明；於公寓大廈成立管理委員會或推選管理負責人，並完成依第五十七條規定點交共用部分、約定共用部分及其附屬設施設備後向直轄市、縣（市）主管機關報備，由公庫代為撥付。同款所稱比例或金額，由中央主管機關定之。公共基金應設專戶儲存，並由管理負責人或管理委員會負責管理；如經區分所有權人會議決議交付信託者，由管理負責人或管理委員會交付信託。其運用應依區分所有權人會議之決議為之。第一項及第二項所規定起造人應提列之公共基金，於本條例公布施行前，起造人已取得建造執照者，不適用之。"
+    },
+    {
+      "articleNumber": "19",
+      "text": "第 19 條區分所有權人對於公共基金之權利應隨區分所有權之移轉而移轉；不得因個人事由為讓與、扣押、抵銷或設定負擔。"
+    },
+    {
+      "articleNumber": "20",
+      "text": "第 20 條管理負責人或管理委員會應定期將公共基金或區分所有權人、住戶應分擔或其他應負擔費用之收支、保管及運用情形公告，並於解職、離職或管理委員會改組時，將公共基金收支情形、會計憑證、會計帳簿、財務報表、印鑑及餘額移交新管理負責人或新管理委員會。管理負責人或管理委員會拒絕前項公告或移交，經催告於七日內仍不公告或移交時，得報請主管機關或訴請法院命其公告或移交。"
+    },
+    {
+      "articleNumber": "21",
+      "text": "第 21 條區分所有權人或住戶積欠應繳納之公共基金或應分擔或其他應負擔之費用已逾二期或達相當金額，經定相當期間催告仍不給付者，管理負責人或管理委員會得訴請法院命其給付應繳之金額及遲延利息。"
+    },
+    {
+      "articleNumber": "22",
+      "text": "第 22 條住戶有下列情形之一者，由管理負責人或管理委員會促請其改善，於三個月內仍未改善者，管理負責人或管理委員會得依區分所有權人會議之決議，訴請法院強制其遷離：一、積欠依本條例規定應分擔之費用，經強制執行後再度積欠金額達其區分所有權總價百分之一者。二、違反本條例規定經依第四十九條第一項第一款至第四款規定處以罰鍰後，仍不改善或續犯者。三、其他違反法令或規約情節重大者。前項之住戶如為區分所有權人時，管理負責人或管理委員會得依區分所有權人會議之決議，訴請法院命區分所有權人出讓其區分所有權及其基地所有權應有部分；於判決確定後三個月內不自行出讓並完成移轉登記手續者，管理負責人或管理委員會得聲請法院拍賣之。前項拍賣所得，除其他法律另有規定外，於積欠本條例應分擔之費用，其受償順序與第一順位抵押權同。"
+    },
+    {
+      "articleNumber": "23",
+      "text": "第 23 條有關公寓大廈、基地或附屬設施之管理使用及其他住戶間相互關係，除法令另有規定外，得以規約定之。規約除應載明專有部分及共用部分範圍外，下列各款事項，非經載明於規約者，不生效力：一、約定專用部分、約定共用部分之範圍及使用主體。二、各區分所有權人對建築物共用部分及其基地之使用收益權及住戶對共用部分使用之特別約定。三、禁止住戶飼養動物之特別約定。四、違反義務之處理方式。五、財務運作之監督規定。六、區分所有權人會議決議有出席及同意之區分所有權人人數及其區分所有權比例之特別約定。七、糾紛之協調程序。"
+    },
+    {
+      "articleNumber": "24",
+      "text": "第 24 條區分所有權之繼受人，應於繼受前向管理負責人或管理委員會請求閱覽或影印第三十五條所定文件，並應於繼受後遵守原區分所有權人依本條例或規約所定之一切權利義務事項。公寓大廈專有部分之無權占有人，應遵守依本條例規定住戶應盡之義務。無權占有人違反前項規定，準用第二十一條、第二十二條、第四十七條、第四十九條住戶之規定。"
+    },
+    {
+      "articleNumber": "25",
+      "text": "第 25 條區分所有權人會議，由全體區分所有權人組成，每年至少應召開定期會議一次。有下列情形之一者，應召開臨時會議：一、發生重大事故有及時處理之必要，經管理負責人或管理委員會請求者。二、經區分所有權人五分之一以上及其區分所有權比例合計五分之一以上，以書面載明召集之目的及理由請求召集者。區分所有權人會議除第二十八條規定外，由具區分所有權人身分之管理負責人、管理委員會主任委員或管理委員為召集人；管理負責人、管理委員會主任委員或管理委員喪失區分所有權人資格日起，視同解任。無管理負責人或管理委員會，或無區分所有權人擔任管理負責人、主任委員或管理委員時，由區分所有權人互推一人為召集人；召集人任期依區分所有權人會議或依規約規定，任期一至二年，連選得連任一次。但區分所有權人會議或規約未規定者，任期一年，連選得連任一次。召集人無法依前項規定互推產生時，各區分所有權人得申請直轄市、縣（市）主管機關指定臨時召集人，區分所有權人不申請指定時，直轄市、縣（市）主管機關得視實際需要指定區分所有權人一人為臨時召集人，或依規約輪流擔任，其任期至互推召集人為止。"
+    },
+    {
+      "articleNumber": "26",
+      "text": "第 26 條非封閉式之公寓大廈集居社區其地面層為各自獨立之數幢建築物，且區內屬住宅與辦公、商場混合使用，其辦公、商場之出入口各自獨立之公寓大廈，各該幢內之辦公、商場部分，得就該幢或結合他幢內之辦公、商場部分，經其區分所有權人過半數書面同意，及全體區分所有權人會議決議或規約明定下列各款事項後，以該辦公、商場部分召開區分所有權人會議，成立管理委員會，並向直轄市、縣（市）主管機關報備。一、共用部分、約定共用部分範圍之劃分。二、共用部分、約定共用部分之修繕、管理、維護範圍及管理維護費用之分擔方式。三、公共基金之分配。四、會計憑證、會計帳簿、財務報表、印鑑、餘額及第三十六條第八款規定保管文件之移交。五、全體區分所有權人會議與各該辦公、商場部分之區分所有權人會議之分工事宜。第二十條、第二十七條、第二十九條至第三十九條、第四十八條、第四十九條第一項第七款及第五十四條規定，於依前項召開或成立之區分所有權人會議、管理委員會及其主任委員、管理委員準用之。"
+    },
+    {
+      "articleNumber": "27",
+      "text": "第 27 條各專有部分之區分所有權人有一表決權。數人共有一專有部分者，該表決權應推由一人行使。區分所有權人會議之出席人數與表決權之計算，於任一區分所有權人之區分所有權占全部區分所有權五分之一以上者，或任一區分所有權人所有之專有部分之個數超過全部專有部分個數總合之五分之一以上者，其超過部分不予計算。區分所有權人因故無法出席區分所有權人會議時，得以書面委託配偶、有行為能力之直系血親、其他區分所有權人或承租人代理出席；受託人於受託之區分所有權占全部區分所有權五分之一以上者，或以單一區分所有權計算之人數超過區分所有權人數五分之一者，其超過部分不予計算。"
+    },
+    {
+      "articleNumber": "28",
+      "text": "第 28 條公寓大廈建築物所有權登記之區分所有權人達半數以上及其區分所有權比例合計半數以上時，起造人應於三個月內召集區分所有權人召開區分所有權人會議，成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。前項起造人為數人時，應互推一人為之。出席區分所有權人之人數或其區分所有權比例合計未達第三十一條規定之定額而未能成立管理委員會時，起造人應就同一議案重新召集會議一次。起造人於召集區分所有權人召開區分所有權人會議成立管理委員會或推選管理負責人前，為公寓大廈之管理負責人。"
+    },
+    {
+      "articleNumber": "29",
+      "text": "第 29 條公寓大廈應成立管理委員會或推選管理負責人。公寓大廈成立管理委員會者，應由管理委員互推一人為主任委員，主任委員對外代表管理委員會。主任委員、管理委員之選任、解任、權限與其委員人數、召集方式及事務執行方法與代理規定，依區分所有權人會議之決議。但規約另有規定者，從其規定。管理委員、主任委員及管理負責人之任期，依區分所有權人會議或規約之規定，任期一至二年，主任委員、管理負責人、負責財務管理及監察業務之管理委員，連選得連任一次，其餘管理委員，連選得連任。但區分所有權人會議或規約未規定者，任期一年，主任委員、管理負責人、負責財務管理及監察業務之管理委員，連選得連任一次，其餘管理委員，連選得連任。前項管理委員、主任委員及管理負責人任期屆滿未再選任或有第二十條第二項所定之拒絕移交者，自任期屆滿日起，視同解任。公寓大廈之住戶非該專有部分之區分所有權人者，除區分所有權人會議之決議或規約另有規定外，得被選任、推選為管理委員、主任委員或管理負責人。公寓大廈未組成管理委員會且未推選管理負責人時，以第二十五條區分所有權人互推之召集人或申請指定之臨時召集人為管理負責人。區分所有權人無法互推召集人或申請指定臨時召集人時，區分所有權人得申請直轄市、縣（市）主管機關指定住戶一人為管理負責人，其任期至成立管理委員會、推選管理負責人或互推召集人為止。"
+    },
+    {
+      "articleNumber": "29-1",
+      "text": "第 29-1 條本條例施行前或施行後已取得建造執照之未成立管理委員會或推選管理負責人之公寓大廈，經直轄市、縣（市）主管機關認定有危險之虞者，其區分所有權人應於直轄市、縣（市）主管機關通知後一定期限內成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。因故未能於一定期限內成立管理委員會或推選管理負責人並辦理報備者，直轄市、縣（市）主管機關得視實際情況展延一次，並不得超過一年。前項公寓大廈有危險之虞之認定要件及成立管理委員會或推選管理負責人並辦理報備之期限，由中央主管機關公告；直轄市、縣（市）主管機關認有必要時，得公告擴大認定要件並另定其成立管理委員會或推選管理負責人並辦理報備之期限。直轄市、縣（市）主管機關應輔導或委託專業機構輔導第一項之公寓大廈成立管理委員會或推選管理負責人並辦理報備。公寓大廈區分所有權人經依第四十九條之一處罰後，仍未依規定成立管理委員會或推選管理負責人並辦理報備者，必要時，由直轄市、縣（市）主管機關指定住戶一人為管理負責人，其任期至成立管理委員會、推選管理負責人或互推召集人為止。"
+    },
+    {
+      "articleNumber": "30",
+      "text": "第 30 條區分所有權人會議，應由召集人於開會前十日以書面載明開會內容，通知各區分所有權人。但有急迫情事須召開臨時會者，得以公告為之；公告期間不得少於二日。管理委員之選任事項，應在前項開會通知中載明並公告之，不得以臨時動議提出。"
+    },
+    {
+      "articleNumber": "31",
+      "text": "第 31 條區分所有權人會議之決議，除規約另有規定外，應有區分所有權人三分之二以上及其區分所有權比例合計三分之二以上出席，以出席人數四分之三以上及其區分所有權比例占出席人數區分所有權四分之三以上之同意行之。"
+    },
+    {
+      "articleNumber": "32",
+      "text": "第 32 條區分所有權人會議依前條規定未獲致決議、出席區分所有權人之人數或其區分所有權比例合計未達前條定額者，召集人得就同一議案重新召集會議；其開議除規約另有規定出席人數外，應有區分所有權人三人並五分之一以上及其區分所有權比例合計五分之一以上出席，以出席人數過半數及其區分所有權比例占出席人數區分所有權合計過半數之同意作成決議。前項決議之會議紀錄依第三十四條第一項規定送達各區分所有權人後，各區分所有權人得於七日內以書面表示反對意見。書面反對意見未超過全體區分所有權人及其區分所有權比例合計半數時，該決議視為成立。第一項會議主席應於會議決議成立後十日內以書面送達全體區分所有權人並公告之。"
+    },
+    {
+      "articleNumber": "33",
+      "text": "第 33 條區分所有權人會議之決議，未經依下列各款事項辦理者，不生效力：一、專有部分經依區分所有權人會議約定為約定共用部分者，應經該專有部分區分所有權人同意。二、公寓大廈外牆面、樓頂平臺，設置廣告物、無線電台基地台等類似強波發射設備或其他類似之行為，設置於屋頂者，應經頂層區分所有權人同意；設置其他樓層者，應經該樓層區分所有權人同意。該層住戶，並得參加區分所有權人會議陳述意見。三、依第五十六條第一項規定成立之約定專用部分變更時，應經使用該約定專用部分之區分所有權人同意。但該約定專用顯已違反公共利益，經管理委員會或管理負責人訴請法院判決確定者，不在此限。"
+    },
+    {
+      "articleNumber": "34",
+      "text": "第 34 條區分所有權人會議應作成會議紀錄，載明開會經過及決議事項，由主席簽名，於會後十五日內送達各區分所有權人並公告之。前項會議紀錄，應與出席區分所有權人之簽名簿及代理出席之委託書一併保存。"
+    },
+    {
+      "articleNumber": "35",
+      "text": "第 35 條利害關係人於必要時，得請求閱覽或影印規約、公共基金餘額、會計憑證、會計帳簿、財務報表、欠繳公共基金與應分攤或其他應負擔費用情形、管理委員會會議紀錄及前條會議紀錄，管理負責人或管理委員會不得拒絕。"
+    },
+    {
+      "articleNumber": "36",
+      "text": "第 36 條管理委員會之職務如下：一、區分所有權人會議決議事項之執行。二、共有及共用部分之清潔、維護、修繕及一般改良。三、公寓大廈及其周圍之安全及環境維護事項。四、住戶共同事務應興革事項之建議。五、住戶違規情事之制止及相關資料之提供。六、住戶違反第六條第一項規定之協調。七、收益、公共基金及其他經費之收支、保管及運用。八、規約、會議紀錄、使用執照謄本、竣工圖說、水電、消防、機械設施、管線圖說、會計憑證、會計帳簿、財務報表、公共安全檢查及消防安全設備檢修之申報文件、印鑑及有關文件之保管。九、管理服務人之委任、僱傭及監督。十、會計報告、結算報告及其他管理事項之提出及公告。十一、共用部分、約定共用部分及其附屬設施設備之點收及保管。十二、依規定應由管理委員會申報之公共安全檢查與消防安全設備檢修之申報及改善之執行。十三、其他依本條例或規約所定事項。"
+    },
+    {
+      "articleNumber": "37",
+      "text": "第 37 條管理委員會會議決議之內容不得違反本條例、規約或區分所有權人會議決議。"
+    },
+    {
+      "articleNumber": "38",
+      "text": "第 38 條管理委員會有當事人能力。管理委員會為原告或被告時，應將訴訟事件要旨速告區分所有權人。"
+    },
+    {
+      "articleNumber": "39",
+      "text": "第 39 條管理委員會應向區分所有權人會議負責，並向其報告會務。"
+    },
+    {
+      "articleNumber": "40",
+      "text": "第 40 條第三十六條、第三十八條及前條規定，於管理負責人準用之。"
+    },
+    {
+      "articleNumber": "41",
+      "text": "第 41 條公寓大廈管理維護公司應經中央主管機關許可及辦理公司登記，並向中央主管機關申領登記證後，始得執業。"
+    },
+    {
+      "articleNumber": "42",
+      "text": "第 42 條公寓大廈管理委員會、管理負責人或區分所有權人會議，得委任或僱傭領有中央主管機關核發之登記證或認可證之公寓大廈管理維護公司或管理服務人員執行管理維護事務。"
+    },
+    {
+      "articleNumber": "43",
+      "text": "第 43 條公寓大廈管理維護公司，應依下列規定執行業務：一、應依規定類別，聘僱一定人數領有中央主管機關核發認可證之繼續性從業之管理服務人員，並負監督考核之責。二、應指派前款之管理服務人員辦理管理維護事務。三、應依業務執行規範執行業務。"
+    },
+    {
+      "articleNumber": "44",
+      "text": "第 44 條受僱於公寓大廈管理維護公司之管理服務人員，應依下列規定執行業務：一、應依核准業務類別、項目執行管理維護事務。二、不得將管理服務人員認可證提供他人使用或使用他人之認可證執業。三、不得同時受聘於二家以上之管理維護公司。四、應參加中央主管機關舉辦或委託之相關機構、團體辦理之訓練。"
+    },
+    {
+      "articleNumber": "45",
+      "text": "第 45 條前條以外之公寓大廈管理服務人員，應依下列規定執行業務：一、應依核准業務類別、項目執行管理維護事務。二、不得將管理服務人員認可證提供他人使用或使用他人之認可證執業。三、應參加中央主管機關舉辦或委託之相關機構、團體辦理之訓練。"
+    },
+    {
+      "articleNumber": "46",
+      "text": "第 46 條第四十一條至前條公寓大廈管理維護公司及管理服務人員之資格、條件、管理維護公司聘僱管理服務人員之類別與一定人數、登記證與認可證之申請與核發、業務範圍、業務執行規範、責任、輔導、獎勵、參加訓練之方式、內容與時數、受委託辦理訓練之機構、團體之資格、條件與責任及登記費之收費基準等事項之管理辦法，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "47",
+      "text": "第 47 條有下列行為之一者，由直轄市、縣（市）主管機關處新臺幣三千元以上一萬五千元以下罰鍰，並得令其限期改善或履行義務、職務；屆期不改善或不履行者，得連續處罰：一、區分所有權人會議召集人、起造人或臨時召集人違反第二十五條或第二十八條所定之召集義務者。二、住戶違反第十六條第一項或第四項規定者。三、區分所有權人或住戶違反第六條規定，主管機關受理住戶、管理負責人或管理委員會之請求，經通知限期改善，屆期不改善者。"
+    },
+    {
+      "articleNumber": "48",
+      "text": "第 48 條有下列行為之一者，由直轄市、縣（市）主管機關處新臺幣一千元以上五千元以下罰鍰，並得令其限期改善或履行義務、職務；屆期不改善或不履行者，得連續處罰：一、管理負責人、主任委員或管理委員未善盡督促第十七條所定住戶投保責任保險之義務者。二、管理負責人、主任委員或管理委員無正當理由未執行第二十二條所定促請改善或訴請法院強制遷離或強制出讓該區分所有權之職務者。三、管理負責人、主任委員或管理委員無正當理由違反第三十五條規定者。四、管理負責人、主任委員或管理委員無正當理由未執行第三十六條第一款、第五款至第十二款所定之職務，顯然影響住戶權益者。"
+    },
+    {
+      "articleNumber": "49",
+      "text": "第 49 條有下列行為之一者，由直轄市、縣（市）主管機關處新臺幣四萬元以上二十萬元以下罰鍰，並得令其限期改善或履行義務；屆期不改善或不履行者，得連續處罰：一、區分所有權人對專有部分之利用違反第五條規定者。二、住戶違反第八條第一項或第九條第二項關於公寓大廈變更使用限制規定，經制止而不遵從者。三、住戶違反第十五條第一項規定擅自變更專有或約定專用之使用者。四、住戶違反第十六條第二項或第三項規定者。五、住戶違反第十七條所定投保責任保險之義務者。六、區分所有權人違反第十八條第一項第二款規定未繳納公共基金者。七、管理負責人、主任委員或管理委員違反第二十條所定之公告或移交義務者。八、起造人或建築業者違反第五十七條或第五十八條規定者。有供營業使用事實之住戶有前項第三款或第四款行為，因而致人於死者，處一年以上七年以下有期徒刑，得併科新臺幣一百萬元以上五百萬元以下罰金；致重傷者，處六個月以上五年以下有期徒刑，得併科新臺幣五十萬元以上二百五十萬元以下罰金。"
+    },
+    {
+      "articleNumber": "49-1",
+      "text": "第 49-1 條公寓大廈未依第二十九條之一第一項規定於期限內成立管理委員會或推選管理負責人並辦理報備者，由直轄市、縣（市）主管機關按每一專有部分處區分所有權人新臺幣四萬元以上二十萬元以下罰鍰，並令其限期辦理；屆期仍未辦理者，得按次處罰。"
+    },
+    {
+      "articleNumber": "50",
+      "text": "第 50 條從事公寓大廈管理維護業務之管理維護公司或管理服務人員違反第四十二條規定，未經領得登記證、認可證或經廢止登記證、認可證而營業，或接受公寓大廈管理委員會、管理負責人或區分所有權人會議決議之委任或僱傭執行公寓大廈管理維護服務業務者，由直轄市、縣（市）主管機關勒令其停業或停止執行業務，並處新臺幣四萬元以上二十萬元以下罰鍰；其拒不遵從者，得按次連續處罰。"
+    },
+    {
+      "articleNumber": "51",
+      "text": "第 51 條公寓大廈管理維護公司，違反第四十三條規定者，中央主管機關應通知限期改正；屆期不改正者，得予停業、廢止其許可或登記證或處新臺幣三萬元以上十五萬元以下罰鍰；其未依規定向中央主管機關申領登記證者，中央主管機關應廢止其許可。受僱於公寓大廈管理維護公司之管理服務人員，違反第四十四條規定者，中央主管機關應通知限期改正；屆期不改正者，得廢止其認可證或停止其執行公寓大廈管理維護業務三個月以上三年以下或處新臺幣三千元以上一萬五千元以下罰鍰。前項以外之公寓大廈管理服務人員，違反第四十五條規定者，中央主管機關應通知限期改正；屆期不改正者，得廢止其認可證或停止其執行公寓大廈管理維護業務六個月以上三年以下或處新臺幣三千元以上一萬五千元以下罰鍰。"
+    },
+    {
+      "articleNumber": "52",
+      "text": "第 52 條依本條例所處之罰鍰，經限期繳納，屆期仍不繳納者，依法移送強制執行。"
+    },
+    {
+      "articleNumber": "53",
+      "text": "第 53 條多數各自獨立使用之建築物、公寓大廈，其共同設施之使用與管理具有整體不可分性之集居地區者，其管理及組織準用本條例之規定。"
+    },
+    {
+      "articleNumber": "54",
+      "text": "第 54 條本條例所定應行催告事項，由管理負責人或管理委員會以書面為之。"
+    },
+    {
+      "articleNumber": "55",
+      "text": "第 55 條本條例施行前已取得建造執照之公寓大廈，其區分所有權人應依第二十五條第四項規定，互推一人為召集人，並召開第一次區分所有權人會議，成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。前項公寓大廈於區分所有權人會議訂定規約前，以第六十條規約範本視為規約。但得不受第七條各款不得為約定專用部分之限制。對第一項未成立管理組織並報備之公寓大廈，直轄市、縣（市）主管機關得分期、分區、分類（按樓高或使用之不同等分類）擬定計畫，輔導召開區分所有權人會議成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。"
+    },
+    {
+      "articleNumber": "56",
+      "text": "第 56 條公寓大廈之起造人於申請建造執照時，應檢附專有部分、共用部分、約定專用部分、約定共用部分標示之詳細圖說及規約草約。於設計變更時亦同。前項規約草約經承受人簽署同意後，於區分所有權人會議訂定規約前，視為規約。公寓大廈之起造人或區分所有權人應依使用執照所記載之用途及下列測繪規定，辦理建物所有權第一次登記：一、獨立建築物所有權之牆壁，以牆之外緣為界。二、建築物共用之牆壁，以牆壁之中心為界。三、附屬建物以其外緣為界辦理登記。四、有隔牆之共用牆壁，依第二款之規定，無隔牆設置者，以使用執照竣工平面圖區分範圍為界，其面積應包括四周牆壁之厚度。第一項共用部分之圖說，應包括設置管理維護使用空間之詳細位置圖說。本條例中華民國九十二年十二月九日修正施行前，領得使用執照之公寓大廈，得設置一定規模、高度之管理維護使用空間，並不計入建築面積及總樓地板面積；其免計入建築面積及總樓地板面積之一定規模、高度之管理維護使用空間及設置條件等事項之辦法，由直轄市、縣（市）主管機關定之。"
+    },
+    {
+      "articleNumber": "57",
+      "text": "第 57 條起造人應將公寓大廈共用部分、約定共用部分與其附屬設施設備；設施設備使用維護手冊及廠商資料、使用執照謄本、竣工圖說、水電、機械設施、消防及管線圖說，於管理委員會成立或管理負責人推選或指定後七日內會同政府主管機關、公寓大廈管理委員會或管理負責人現場針對水電、機械設施、消防設施及各類管線進行檢測，確認其功能正常無誤後，移交之。前項公寓大廈之水電、機械設施、消防設施及各類管線不能通過檢測，或其功能有明顯缺陷者，管理委員會或管理負責人得報請主管機關處理，其歸責起造人者，主管機關命起造人負責修復改善，並於一個月內，起造人再會同管理委員會或管理負責人辦理移交手續。"
+    },
+    {
+      "articleNumber": "58",
+      "text": "第 58 條公寓大廈起造人或建築業者，非經領得建造執照，不得辦理銷售。公寓大廈之起造人或建築業者，不得將共用部分，包含法定空地、法定停車空間及法定防空避難設備，讓售於特定人或為區分所有權人以外之特定人設定專用使用權或為其他有損害區分所有權人權益之行為。"
+    },
+    {
+      "articleNumber": "59",
+      "text": "第 59 條區分所有權人會議召集人、臨時召集人、起造人、建築業者、區分所有權人、住戶、管理負責人、主任委員或管理委員有第四十七條、第四十八條或第四十九條各款所定情事之一時，他區分所有權人、利害關係人、管理負責人或管理委員會得列舉事實及提出證據，報直轄市、縣（市）主管機關處理。"
+    },
+    {
+      "articleNumber": "59-1",
+      "text": "第 59-1 條直轄市、縣（市）政府為處理有關公寓大廈爭議事件，得聘請資深之專家、學者及建築師、律師，並指定公寓大廈及建築管理主管人員，組設公寓大廈爭議事件調處委員會。前項調處委員會之組織，由內政部定之。"
+    },
+    {
+      "articleNumber": "60",
+      "text": "第 60 條規約範本，由中央主管機關定之。第五十六條規約草約，得依前項規約範本制作。"
+    },
+    {
+      "articleNumber": "61",
+      "text": "第 61 條第六條、第九條、第十五條、第十六條、第二十條、第二十五條、第二十八條、第二十九條及第五十九條所定主管機關應處理事項，得委託或委辦鄉（鎮、市、區）公所辦理。"
+    },
+    {
+      "articleNumber": "62",
+      "text": "第 62 條本條例施行細則，由中央主管機關定之。"
+    },
+    {
+      "articleNumber": "63",
+      "text": "第 63 條本條例自公布日施行。"
     }
   ]
 };
@@ -9094,7 +9646,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "5",
-    "text": "第 5 條關於一定之數量，以文字或號碼為數次之表示者，其表示有不符合時，如法院不能決定何者為當事人之原意，應以最低額為準。 第 二 章 人 第 一 節 自然人"
+    "text": "第 5 條關於一定之數量，以文字或號碼為數次之表示者，其表示有不符合時，如法院不能決定何者為當事人之原意，應以最低額為準。"
   },
   {
     "lawId": "civil",
@@ -9199,7 +9751,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "24",
-    "text": "第 24 條依一定事實，足認以廢止之意思離去其住所者，即為廢止其住所。 第 二 節 法人 第 一 款 通則"
+    "text": "第 24 條依一定事實，足認以廢止之意思離去其住所者，即為廢止其住所。"
   },
   {
     "lawId": "civil",
@@ -9299,7 +9851,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "44",
-    "text": "第 44 條法人解散後，除法律另有規定外，於清償債務後，其賸餘財產之歸屬，應依其章程之規定，或總會之決議。但以公益為目的之法人解散時，其賸餘財產不得歸屬於自然人或以營利為目的之團體。如無前項法律或章程之規定或總會之決議時，其賸餘財產歸屬於法人住所所在地之地方自治團體。 第 二 款 社團"
+    "text": "第 44 條法人解散後，除法律另有規定外，於清償債務後，其賸餘財產之歸屬，應依其章程之規定，或總會之決議。但以公益為目的之法人解散時，其賸餘財產不得歸屬於自然人或以營利為目的之團體。如無前項法律或章程之規定或總會之決議時，其賸餘財產歸屬於法人住所所在地之地方自治團體。"
   },
   {
     "lawId": "civil",
@@ -9369,7 +9921,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "58",
-    "text": "第 58 條社團之事務，無從依章程所定進行時，法院得因主管機關、檢察官或利害關係人之聲請解散之。 第 三 款 財團"
+    "text": "第 58 條社團之事務，無從依章程所定進行時，法院得因主管機關、檢察官或利害關係人之聲請解散之。"
   },
   {
     "lawId": "civil",
@@ -9404,7 +9956,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "65",
-    "text": "第 65 條因情事變更，致財團之目的不能達到時，主管機關得斟酌捐助人之意思，變更其目的及其必要之組織，或解散之。 第 三 章 物"
+    "text": "第 65 條因情事變更，致財團之目的不能達到時，主管機關得斟酌捐助人之意思，變更其目的及其必要之組織，或解散之。"
   },
   {
     "lawId": "civil",
@@ -9429,7 +9981,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "70",
-    "text": "第 70 條有收取天然孳息權利之人，其權利存續期間內，取得與原物分離之孳息。有收取法定孳息權利之人，按其權利存續期間內之日數，取得其孳息。 第 四 章 法律行為 第 一 節 通則"
+    "text": "第 70 條有收取天然孳息權利之人，其權利存續期間內，取得與原物分離之孳息。有收取法定孳息權利之人，按其權利存續期間內之日數，取得其孳息。"
   },
   {
     "lawId": "civil",
@@ -9449,7 +10001,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "74",
-    "text": "第 74 條法律行為，係乘他人之急迫、輕率或無經驗，使其為財產上之給付或為給付之約定，依當時情形顯失公平者，法院得因利害關係人之聲請，撤銷其法律行為或減輕其給付。前項聲請，應於法律行為後一年內為之。 第 二 節 行為能力"
+    "text": "第 74 條法律行為，係乘他人之急迫、輕率或無經驗，使其為財產上之給付或為給付之約定，依當時情形顯失公平者，法院得因利害關係人之聲請，撤銷其法律行為或減輕其給付。前項聲請，應於法律行為後一年內為之。"
   },
   {
     "lawId": "civil",
@@ -9504,7 +10056,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "85",
-    "text": "第 85 條法定代理人允許限制行為能力人獨立營業者，限制行為能力人，關於其營業，有行為能力。限制行為能力人，就其營業有不勝任之情形時，法定代理人得將其允許撤銷或限制之。但不得對抗善意第三人。 第 三 節 意思表示"
+    "text": "第 85 條法定代理人允許限制行為能力人獨立營業者，限制行為能力人，關於其營業，有行為能力。限制行為能力人，就其營業有不勝任之情形時，法定代理人得將其允許撤銷或限制之。但不得對抗善意第三人。"
   },
   {
     "lawId": "civil",
@@ -9569,7 +10121,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "98",
-    "text": "第 98 條解釋意思表示，應探求當事人之真意，不得拘泥於所用之辭句。 第 四 節 條件及期限"
+    "text": "第 98 條解釋意思表示，應探求當事人之真意，不得拘泥於所用之辭句。"
   },
   {
     "lawId": "civil",
@@ -9589,7 +10141,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "102",
-    "text": "第 102 條附始期之法律行為，於期限屆至時，發生效力。附終期之法律行為，於期限屆滿時，失其效力。第一百條之規定，於前二項情形準用之。 第 五 節 代理"
+    "text": "第 102 條附始期之法律行為，於期限屆至時，發生效力。附終期之法律行為，於期限屆滿時，失其效力。第一百條之規定，於前二項情形準用之。"
   },
   {
     "lawId": "civil",
@@ -9629,7 +10181,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "110",
-    "text": "第 110 條無代理權人，以他人之代理人名義所為之法律行為，對於善意之相對人，負損害賠償之責。 第 六 節 無效及撤銷"
+    "text": "第 110 條無代理權人，以他人之代理人名義所為之法律行為，對於善意之相對人，負損害賠償之責。"
   },
   {
     "lawId": "civil",
@@ -9669,7 +10221,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "118",
-    "text": "第 118 條無權利人就權利標的物所為之處分，經有權利人之承認始生效力。無權利人就權利標的物為處分後，取得其權利者，其處分自始有效。但原權利人或第三人已取得之利益，不因此而受影響。前項情形，若數處分相牴觸時，以其最初之處分為有效。 第 五 章 期日及期間"
+    "text": "第 118 條無權利人就權利標的物所為之處分，經有權利人之承認始生效力。無權利人就權利標的物為處分後，取得其權利者，其處分自始有效。但原權利人或第三人已取得之利益，不因此而受影響。前項情形，若數處分相牴觸時，以其最初之處分為有效。"
   },
   {
     "lawId": "civil",
@@ -9699,7 +10251,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "124",
-    "text": "第 124 條年齡自出生之日起算。出生之月、日無從確定時，推定其為七月一日出生。知其出生之月，而不知出生之日者，推定其為該月十五日出生。 第 六 章 消滅時效"
+    "text": "第 124 條年齡自出生之日起算。出生之月、日無從確定時，推定其為七月一日出生。知其出生之月，而不知出生之日者，推定其為該月十五日出生。"
   },
   {
     "lawId": "civil",
@@ -9814,7 +10366,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "147",
-    "text": "第 147 條時效期間，不得以法律行為加長或減短之，並不得預先拋棄時效之利益。 第 七 章 權利之行使"
+    "text": "第 147 條時效期間，不得以法律行為加長或減短之，並不得預先拋棄時效之利益。"
   },
   {
     "lawId": "civil",
@@ -9839,7 +10391,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "152",
-    "text": "第 152 條依前條之規定，拘束他人自由或押收他人財產者，應即時向法院聲請處理。前項聲請被駁回或其聲請遲延者，行為人應負損害賠償之責。 第 二 編 債 第 一 章 通則 第 一 節 債之發生 第 一 款 契約"
+    "text": "第 152 條依前條之規定，拘束他人自由或押收他人財產者，應即時向法院聲請處理。前項聲請被駁回或其聲請遲延者，行為人應負損害賠償之責。"
   },
   {
     "lawId": "civil",
@@ -9939,7 +10491,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "166-1",
-    "text": "第 166-1 條契約以負擔不動產物權之移轉、設定或變更之義務為標的者，應由公證人作成公證書。未依前項規定公證之契約，如當事人已合意為不動產物權之移轉、設定或變更而完成登記者，仍為有效。 第 二 款 代理權之授與"
+    "text": "第 166-1 條契約以負擔不動產物權之移轉、設定或變更之義務為標的者，應由公證人作成公證書。未依前項規定公證之契約，如當事人已合意為不動產物權之移轉、設定或變更而完成登記者，仍為有效。"
   },
   {
     "lawId": "civil",
@@ -9964,7 +10516,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "171",
-    "text": "第 171 條無代理權人所為之法律行為，其相對人於本人未承認前，得撤回之。但為法律行為時，明知其無代理權者，不在此限。 第 三 款 無因管理"
+    "text": "第 171 條無代理權人所為之法律行為，其相對人於本人未承認前，得撤回之。但為法律行為時，明知其無代理權者，不在此限。"
   },
   {
     "lawId": "civil",
@@ -9999,7 +10551,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "178",
-    "text": "第 178 條管理事務經本人承認者，除當事人有特別意思表示外，溯及管理事務開始時，適用關於委任之規定。 第 四 款 不當得利"
+    "text": "第 178 條管理事務經本人承認者，除當事人有特別意思表示外，溯及管理事務開始時，適用關於委任之規定。"
   },
   {
     "lawId": "civil",
@@ -10024,7 +10576,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "183",
-    "text": "第 183 條不當得利之受領人，以其所受者，無償讓與第三人，而受領人因此免返還義務者，第三人於其所免返還義務之限度內，負返還責任。 第 五 款 侵權行為"
+    "text": "第 183 條不當得利之受領人，以其所受者，無償讓與第三人，而受領人因此免返還義務者，第三人於其所免返還義務之限度內，負返還責任。"
   },
   {
     "lawId": "civil",
@@ -10114,7 +10666,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "198",
-    "text": "第 198 條因侵權行為對於被害人取得債權者，被害人對該債權之廢止請求權，雖因時效而消滅，仍得拒絕履行。 第 二 節 債之標的"
+    "text": "第 198 條因侵權行為對於被害人取得債權者，被害人對該債權之廢止請求權，雖因時效而消滅，仍得拒絕履行。"
   },
   {
     "lawId": "civil",
@@ -10224,7 +10776,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "218-1",
-    "text": "第 218-1 條關於物或權利之喪失或損害，負賠償責任之人，得向損害賠償請求權人，請求讓與基於其物之所有權或基於其權利對於第三人之請求權。第二百六十四條之規定，於前項情形準用之。 第 三 節 債之效力 第 一 款 給付"
+    "text": "第 218-1 條關於物或權利之喪失或損害，負賠償責任之人，得向損害賠償請求權人，請求讓與基於其物之所有權或基於其權利對於第三人之請求權。第二百六十四條之規定，於前項情形準用之。"
   },
   {
     "lawId": "civil",
@@ -10284,7 +10836,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "228",
-    "text": "第 228 條（刪除） 第 二 款 遲延"
+    "text": "第 228 條（刪除）"
   },
   {
     "lawId": "civil",
@@ -10349,7 +10901,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "241",
-    "text": "第 241 條有交付不動產義務之債務人，於債權人遲延後，得拋棄其占有。前項拋棄，應預先通知債權人。但不能通知者，不在此限。 第 三 款 保全"
+    "text": "第 241 條有交付不動產義務之債務人，於債權人遲延後，得拋棄其占有。前項拋棄，應預先通知債權人。但不能通知者，不在此限。"
   },
   {
     "lawId": "civil",
@@ -10369,7 +10921,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "245",
-    "text": "第 245 條前條撤銷權，自債權人知有撤銷原因時起，一年間不行使，或自行為時起，經過十年而消滅。 第 四 款 契約"
+    "text": "第 245 條前條撤銷權，自債權人知有撤銷原因時起，一年間不行使，或自行為時起，經過十年而消滅。"
   },
   {
     "lawId": "civil",
@@ -10504,7 +11056,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "270",
-    "text": "第 270 條前條債務人，得以由契約所生之一切抗辯，對抗受益之第三人。 第 四 節 多數債務人及債權人"
+    "text": "第 270 條前條債務人，得以由契約所生之一切抗辯，對抗受益之第三人。"
   },
   {
     "lawId": "civil",
@@ -10619,7 +11171,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "293",
-    "text": "第 293 條數人有同一債權，而其給付不可分者，各債權人僅得請求向債權人全體為給付，債務人亦僅得向債權人全體為給付。除前項規定外，債權人中之一人與債務人間所生之事項，其利益或不利益，對他債權人不生效力。債權人相互間，準用第二百九十一條之規定。 第 五 節 債之移轉"
+    "text": "第 293 條數人有同一債權，而其給付不可分者，各債權人僅得請求向債權人全體為給付，債務人亦僅得向債權人全體為給付。除前項規定外，債權人中之一人與債務人間所生之事項，其利益或不利益，對他債權人不生效力。債權人相互間，準用第二百九十一條之規定。"
   },
   {
     "lawId": "civil",
@@ -10684,7 +11236,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "306",
-    "text": "第 306 條營業與他營業合併，而互相承受其資產及負債者，與前條之概括承受同，其合併之新營業，對於各營業之債務，負其責任。 第 六 節 債之消滅 第 一 款 通則"
+    "text": "第 306 條營業與他營業合併，而互相承受其資產及負債者，與前條之概括承受同，其合併之新營業，對於各營業之債務，負其責任。"
   },
   {
     "lawId": "civil",
@@ -10694,7 +11246,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "308",
-    "text": "第 308 條債之全部消滅者，債務人得請求返還或塗銷負債之字據，其僅一部消滅或負債字據上載有債權人他項權利者，債務人得請求將消滅事由，記入字據。負債字據，如債權人主張有不能返還或有不能記入之事情者，債務人得請求給與債務消滅之公認證書。 第 二 款 清償"
+    "text": "第 308 條債之全部消滅者，債務人得請求返還或塗銷負債之字據，其僅一部消滅或負債字據上載有債權人他項權利者，債務人得請求將消滅事由，記入字據。負債字據，如債權人主張有不能返還或有不能記入之事情者，債務人得請求給與債務消滅之公認證書。"
   },
   {
     "lawId": "civil",
@@ -10779,7 +11331,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "325",
-    "text": "第 325 條關於利息或其他定期給付，如債權人給與受領一期給付之證書，未為他期之保留者，推定其以前各期之給付已為清償。如債權人給與受領原本之證書者，推定其利息亦已受領。債權證書已返還者，推定其債之關係消滅。 第 三 款 提存"
+    "text": "第 325 條關於利息或其他定期給付，如債權人給與受領一期給付之證書，未為他期之保留者，推定其以前各期之給付已為清償。如債權人給與受領原本之證書者，推定其利息亦已受領。債權證書已返還者，推定其債之關係消滅。"
   },
   {
     "lawId": "civil",
@@ -10819,7 +11371,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "333",
-    "text": "第 333 條提存拍賣及出賣之費用，由債權人負擔。 第 四 款 抵銷"
+    "text": "第 333 條提存拍賣及出賣之費用，由債權人負擔。"
   },
   {
     "lawId": "civil",
@@ -10864,17 +11416,17 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "342",
-    "text": "第 342 條第三百二十一條至第三百二十三條之規定，於抵銷準用之。 第 五 款 免除"
+    "text": "第 342 條第三百二十一條至第三百二十三條之規定，於抵銷準用之。"
   },
   {
     "lawId": "civil",
     "articleNumber": "343",
-    "text": "第 343 條債權人向債務人表示免除其債務之意思者，債之關係消滅。 第 六 款 混同"
+    "text": "第 343 條債權人向債務人表示免除其債務之意思者，債之關係消滅。"
   },
   {
     "lawId": "civil",
     "articleNumber": "344",
-    "text": "第 344 條債權與其債務同歸一人時，債之關係消滅。但其債權為他人權利之標的或法律另有規定者，不在此限。 第 二 章 各種之債 第 一 節 買賣 第 一 款 通則"
+    "text": "第 344 條債權與其債務同歸一人時，債之關係消滅。但其債權為他人權利之標的或法律另有規定者，不在此限。"
   },
   {
     "lawId": "civil",
@@ -10889,7 +11441,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "347",
-    "text": "第 347 條本節規定，於買賣契約以外之有償契約準用之。但為其契約性質所不許者，不在此限。 第 二 款 效力"
+    "text": "第 347 條本節規定，於買賣契約以外之有償契約準用之。但為其契約性質所不許者，不在此限。"
   },
   {
     "lawId": "civil",
@@ -11044,7 +11596,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "378",
-    "text": "第 378 條買賣費用之負擔，除法律另有規定或契約另有訂定或另有習慣外，依左列之規定。一、買賣契約之費用，由當事人雙方平均負擔。二、移轉權利之費用，運送標的物至清償地之費用及交付之費用，由出賣人負擔。三、受領標的物之費用，登記之費用及送交清償地以外處所之費用，由買受人負擔。 第 三 款 買回"
+    "text": "第 378 條買賣費用之負擔，除法律另有規定或契約另有訂定或另有習慣外，依左列之規定。一、買賣契約之費用，由當事人雙方平均負擔。二、移轉權利之費用，運送標的物至清償地之費用及交付之費用，由出賣人負擔。三、受領標的物之費用，登記之費用及送交清償地以外處所之費用，由買受人負擔。"
   },
   {
     "lawId": "civil",
@@ -11069,7 +11621,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "383",
-    "text": "第 383 條買受人對於買回人，負交付標的物及其附屬物之義務。買受人因可歸責於自己之事由，致不能交付標的物或標的物顯有變更者，應賠償因此所生之損害。 第 四 款 特種買賣"
+    "text": "第 383 條買受人對於買回人，負交付標的物及其附屬物之義務。買受人因可歸責於自己之事由，致不能交付標的物或標的物顯有變更者，應賠償因此所生之損害。"
   },
   {
     "lawId": "civil",
@@ -11139,7 +11691,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "397",
-    "text": "第 397 條拍賣之買受人如不按時支付價金者，拍賣人得解除契約，將其物再為拍賣。再行拍賣所得之價金，如少於原拍賣之價金及再行拍賣之費用者，原買受人應負賠償其差額之責任。 第 二 節 互易"
+    "text": "第 397 條拍賣之買受人如不按時支付價金者，拍賣人得解除契約，將其物再為拍賣。再行拍賣所得之價金，如少於原拍賣之價金及再行拍賣之費用者，原買受人應負賠償其差額之責任。"
   },
   {
     "lawId": "civil",
@@ -11149,7 +11701,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "399",
-    "text": "第 399 條當事人之一方，約定移轉前條所定之財產權，並應交付金錢者，其金錢部分，準用關於買賣價金之規定。 第 三 節 交互計算"
+    "text": "第 399 條當事人之一方，約定移轉前條所定之財產權，並應交付金錢者，其金錢部分，準用關於買賣價金之規定。"
   },
   {
     "lawId": "civil",
@@ -11179,7 +11731,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "405",
-    "text": "第 405 條記入交互計算之項目，自計算後，經過一年，不得請求除去或改正。 第 四 節 贈與"
+    "text": "第 405 條記入交互計算之項目，自計算後，經過一年，不得請求除去或改正。"
   },
   {
     "lawId": "civil",
@@ -11254,7 +11806,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "420",
-    "text": "第 420 條贈與之撤銷權，因受贈人之死亡而消滅。 第 五 節 租賃"
+    "text": "第 420 條贈與之撤銷權，因受贈人之死亡而消滅。"
   },
   {
     "lawId": "civil",
@@ -11509,7 +12061,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "463-1",
-    "text": "第 463-1 條本節規定，於權利之租賃準用之。 第 六 節 借貸 第 一 款 使用借貸"
+    "text": "第 463-1 條本節規定，於權利之租賃準用之。"
   },
   {
     "lawId": "civil",
@@ -11564,7 +12116,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "473",
-    "text": "第 473 條貸與人就借用物所受損害，對於借用人之賠償請求權、借用人依第四百六十六條所定之賠償請求權、第四百六十九條所定有益費用償還請求權及其工作物之取回權，均因六個月間不行使而消滅。前項期間，於貸與人，自受借用物返還時起算。於借用人，自借貸關係終止時起算。 第 二 款 消費借貸"
+    "text": "第 473 條貸與人就借用物所受損害，對於借用人之賠償請求權、借用人依第四百六十六條所定之賠償請求權、第四百六十九條所定有益費用償還請求權及其工作物之取回權，均因六個月間不行使而消滅。前項期間，於貸與人，自受借用物返還時起算。於借用人，自借貸關係終止時起算。"
   },
   {
     "lawId": "civil",
@@ -11609,7 +12161,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "481",
-    "text": "第 481 條以貨物或有價證券折算金錢而為借貸者，縱有反對之約定，仍應以該貨物或有價證券按照交付時交付地之市價所應有之價值，為其借貸金額。 第 七 節 僱傭"
+    "text": "第 481 條以貨物或有價證券折算金錢而為借貸者，縱有反對之約定，仍應以該貨物或有價證券按照交付時交付地之市價所應有之價值，為其借貸金額。"
   },
   {
     "lawId": "civil",
@@ -11659,7 +12211,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "489",
-    "text": "第 489 條當事人之一方，遇有重大事由，其僱傭契約，縱定有期限，仍得於期限屆滿前終止之。前項事由，如因當事人一方之過失而生者，他方得向其請求損害賠償。 第 八 節 承攬"
+    "text": "第 489 條當事人之一方，遇有重大事由，其僱傭契約，縱定有期限，仍得於期限屆滿前終止之。前項事由，如因當事人一方之過失而生者，他方得向其請求損害賠償。"
   },
   {
     "lawId": "civil",
@@ -11849,7 +12401,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "514-12",
-    "text": "第 514-12 條本節規定之增加、減少或退還費用請求權，損害賠償請求權及墊付費用償還請求權，均自旅遊終了或應終了時起，一年間不行使而消滅。 第 九 節 出版"
+    "text": "第 514-12 條本節規定之增加、減少或退還費用請求權，損害賠償請求權及墊付費用償還請求權，均自旅遊終了或應終了時起，一年間不行使而消滅。"
   },
   {
     "lawId": "civil",
@@ -11919,7 +12471,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "527",
-    "text": "第 527 條著作未完成前，如著作人死亡，或喪失能力，或非因其過失致不能完成其著作者，其出版契約關係消滅。前項情形，如出版契約關係之全部或一部之繼續，為可能且公平者，法院得許其繼續，並命為必要之處置。 第 十 節 委任"
+    "text": "第 527 條著作未完成前，如著作人死亡，或喪失能力，或非因其過失致不能完成其著作者，其出版契約關係消滅。前項情形，如出版契約關係之全部或一部之繼續，為可能且公平者，法院得許其繼續，並命為必要之處置。"
   },
   {
     "lawId": "civil",
@@ -12044,7 +12596,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "552",
-    "text": "第 552 條委任關係消滅之事由，係由當事人之一方發生者，於他方知其事由或可得而知其事由前，委任關係視為存續。 第 十一 節 經理人及代辦商"
+    "text": "第 552 條委任關係消滅之事由，係由當事人之一方發生者，於他方知其事由或可得而知其事由前，委任關係視為存續。"
   },
   {
     "lawId": "civil",
@@ -12104,7 +12656,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "564",
-    "text": "第 564 條經理權或代辦權，不因商號所有人之死亡、破產或喪失行為能力而消滅。 第 十二 節 居間"
+    "text": "第 564 條經理權或代辦權，不因商號所有人之死亡、破產或喪失行為能力而消滅。"
   },
   {
     "lawId": "civil",
@@ -12159,7 +12711,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "575",
-    "text": "第 575 條當事人之一方，指定居間人不得以其姓名或商號告知相對人者，居間人有不告知之義務。居間人不以當事人一方之姓名或商號告知相對人時，應就該方當事人由契約所生之義務，自己負履行之責，並得為其受領給付。 第 十三 節 行紀"
+    "text": "第 575 條當事人之一方，指定居間人不得以其姓名或商號告知相對人者，居間人有不告知之義務。居間人不以當事人一方之姓名或商號告知相對人時，應就該方當事人由契約所生之義務，自己負履行之責，並得為其受領給付。"
   },
   {
     "lawId": "civil",
@@ -12224,7 +12776,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "588",
-    "text": "第 588 條行紀人得自為買受人或出賣人時，如僅將訂立契約之情事通知委託人，而不以他方當事人之姓名告知者，視為自己負擔該方當事人之義務。 第 十四 節 寄託"
+    "text": "第 588 條行紀人得自為買受人或出賣人時，如僅將訂立契約之情事通知委託人，而不以他方當事人之姓名告知者，視為自己負擔該方當事人之義務。"
   },
   {
     "lawId": "civil",
@@ -12359,7 +12911,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "612",
-    "text": "第 612 條主人就住宿、飲食、沐浴或其他服務及墊款所生之債權，於未受清償前，對於客人所攜帶之行李及其他物品，有留置權。第四百四十五條至第四百四十八條之規定，於前項留置權準用之。 第 十五 節 倉庫"
+    "text": "第 612 條主人就住宿、飲食、沐浴或其他服務及墊款所生之債權，於未受清償前，對於客人所攜帶之行李及其他物品，有留置權。第四百四十五條至第四百四十八條之規定，於前項留置權準用之。"
   },
   {
     "lawId": "civil",
@@ -12409,7 +12961,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "621",
-    "text": "第 621 條倉庫契約終止後，寄託人或倉單持有人，拒絕或不能移去寄託物者，倉庫營業人，得定相當期限，請求於期限內移去寄託物。逾期不移去者，倉庫營業人，得拍賣寄託物，由拍賣代價中扣去拍賣費用，及保管費用，並應以其餘額交付於應得之人。 第 十六 節 運送 第 一 款 通則"
+    "text": "第 621 條倉庫契約終止後，寄託人或倉單持有人，拒絕或不能移去寄託物者，倉庫營業人，得定相當期限，請求於期限內移去寄託物。逾期不移去者，倉庫營業人，得拍賣寄託物，由拍賣代價中扣去拍賣費用，及保管費用，並應以其餘額交付於應得之人。"
   },
   {
     "lawId": "civil",
@@ -12419,7 +12971,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "623",
-    "text": "第 623 條關於物品之運送，因喪失、毀損或遲到而生之賠償請求權，自運送終了，或應終了之時起，一年間不行使而消滅。關於旅客之運送，因傷害或遲到而生之賠償請求權，自運送終了，或應終了之時起，二年間不行使而消滅。 第 二 款 物品運送"
+    "text": "第 623 條關於物品之運送，因喪失、毀損或遲到而生之賠償請求權，自運送終了，或應終了之時起，一年間不行使而消滅。關於旅客之運送，因傷害或遲到而生之賠償請求權，自運送終了，或應終了之時起，二年間不行使而消滅。"
   },
   {
     "lawId": "civil",
@@ -12574,7 +13126,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "653",
-    "text": "第 653 條運送物由數運送人相繼運送者，其最後之運送人，就運送人全體應得之運費及其他費用，得行使第六百四十七條、第六百五十條及第六百五十二條所定之權利。 第 三 款 旅客運送"
+    "text": "第 653 條運送物由數運送人相繼運送者，其最後之運送人，就運送人全體應得之運費及其他費用，得行使第六百四十七條、第六百五十條及第六百五十二條所定之權利。"
   },
   {
     "lawId": "civil",
@@ -12604,7 +13156,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "659",
-    "text": "第 659 條運送人交與旅客之票、收據或其他文件上，有免除或限制運送人責任之記載者，除能證明旅客對於其責任之免除或限制明示同意外，不生效力。 第 十七 節 承攬運送"
+    "text": "第 659 條運送人交與旅客之票、收據或其他文件上，有免除或限制運送人責任之記載者，除能證明旅客對於其責任之免除或限制明示同意外，不生效力。"
   },
   {
     "lawId": "civil",
@@ -12639,7 +13191,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "666",
-    "text": "第 666 條對於承攬運送人因運送物之喪失、毀損或遲到所生之損害賠償請求權，自運送物交付或應交付之時起，一年間不行使而消滅。 第 十八 節 合夥"
+    "text": "第 666 條對於承攬運送人因運送物之喪失、毀損或遲到所生之損害賠償請求權，自運送物交付或應交付之時起，一年間不行使而消滅。"
   },
   {
     "lawId": "civil",
@@ -12804,7 +13356,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "699",
-    "text": "第 699 條合夥財產，於清償合夥債務及返還各合夥人出資後，尚有賸餘者，按各合夥人應受分配利益之成數分配之。 第 十九 節 隱名合夥"
+    "text": "第 699 條合夥財產，於清償合夥債務及返還各合夥人出資後，尚有賸餘者，按各合夥人應受分配利益之成數分配之。"
   },
   {
     "lawId": "civil",
@@ -12899,7 +13451,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "709-9",
-    "text": "第 709-9 條因會首破產、逃匿或有其他事由致合會不能繼續進行時，會首及已得標會員應給付之各期會款，應於每屆標會期日平均交付於未得標之會員。但另有約定者，依其約定。會首就已得標會員依前項規定應給付之各期會款，負連帶責任。會首或已得標會員依第一項規定應平均交付於未得標會員之會款遲延給付，其遲付之數額已達兩期之總額時，該未得標會員得請求其給付全部會款。第一項情形，得由未得標之會員共同推選一人或數人處理相關事宜。 第 二十 節 指示證券"
+    "text": "第 709-9 條因會首破產、逃匿或有其他事由致合會不能繼續進行時，會首及已得標會員應給付之各期會款，應於每屆標會期日平均交付於未得標之會員。但另有約定者，依其約定。會首就已得標會員依前項規定應給付之各期會款，負連帶責任。會首或已得標會員依第一項規定應平均交付於未得標會員之會款遲延給付，其遲付之數額已達兩期之總額時，該未得標會員得請求其給付全部會款。第一項情形，得由未得標之會員共同推選一人或數人處理相關事宜。"
   },
   {
     "lawId": "civil",
@@ -12944,7 +13496,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "718",
-    "text": "第 718 條指示證券遺失、被盜或滅失者，法院得因持有人之聲請，依公示催告之程序，宣告無效。 第 二十一 節 無記名證券"
+    "text": "第 718 條指示證券遺失、被盜或滅失者，法院得因持有人之聲請，依公示催告之程序，宣告無效。"
   },
   {
     "lawId": "civil",
@@ -12999,7 +13551,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "728",
-    "text": "第 728 條無利息見票即付之無記名證券，除利息、年金及分配利益之證券外，不適用第七百二十條第一項但書及第七百二十五條之規定。 第 二十二 節 終身定期金"
+    "text": "第 728 條無利息見票即付之無記名證券，除利息、年金及分配利益之證券外，不適用第七百二十條第一項但書及第七百二十五條之規定。"
   },
   {
     "lawId": "civil",
@@ -13034,7 +13586,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "735",
-    "text": "第 735 條本節之規定，於終身定期金之遺贈準用之。 第 二十三 節 和解"
+    "text": "第 735 條本節之規定，於終身定期金之遺贈準用之。"
   },
   {
     "lawId": "civil",
@@ -13049,7 +13601,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "738",
-    "text": "第 738 條和解不得以錯誤為理由撤銷之。但有左列事項之一者，不在此限：一、和解所依據之文件，事後發見為偽造或變造，而和解當事人若知其為偽造或變造，即不為和解者。二、和解事件，經法院確定判決，而為當事人雙方或一方於和解當時所不知者。三、當事人之一方，對於他方當事人之資格或對於重要之爭點有錯誤，而為和解者。 第 二十四 節 保證"
+    "text": "第 738 條和解不得以錯誤為理由撤銷之。但有左列事項之一者，不在此限：一、和解所依據之文件，事後發見為偽造或變造，而和解當事人若知其為偽造或變造，即不為和解者。二、和解事件，經法院確定判決，而為當事人雙方或一方於和解當時所不知者。三、當事人之一方，對於他方當事人之資格或對於重要之爭點有錯誤，而為和解者。"
   },
   {
     "lawId": "civil",
@@ -13199,7 +13751,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "756-9",
-    "text": "第 756-9 條人事保證，除本節有規定者外，準用關於保證之規定。 第 三 編 物權 第 一 章 通則"
+    "text": "第 756-9 條人事保證，除本節有規定者外，準用關於保證之規定。"
   },
   {
     "lawId": "civil",
@@ -13244,7 +13796,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "764",
-    "text": "第 764 條物權除法律另有規定外，因拋棄而消滅。前項拋棄，第三人有以該物權為標的物之其他物權或於該物權有其他法律上之利益者，非經該第三人同意，不得為之。拋棄動產物權者，並應拋棄動產之占有。 第 二 章 所有權 第 一 節 通則"
+    "text": "第 764 條物權除法律另有規定外，因拋棄而消滅。前項拋棄，第三人有以該物權為標的物之其他物權或於該物權有其他法律上之利益者，非經該第三人同意，不得為之。拋棄動產物權者，並應拋棄動產之占有。"
   },
   {
     "lawId": "civil",
@@ -13289,7 +13841,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "772",
-    "text": "第 772 條前五條之規定，於所有權以外財產權之取得，準用之。於已登記之不動產，亦同。 第 二 節 不動產所有權"
+    "text": "第 772 條前五條之規定，於所有權以外財產權之取得，準用之。於已登記之不動產，亦同。"
   },
   {
     "lawId": "civil",
@@ -13454,7 +14006,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "800-1",
-    "text": "第 800-1 條第七百七十四條至前條規定，於地上權人、農育權人、不動產役權人、典權人、承租人、其他土地、建築物或其他工作物利用人準用之。 第 三 節 動產所有權"
+    "text": "第 800-1 條第七百七十四條至前條規定，於地上權人、農育權人、不動產役權人、典權人、承租人、其他土地、建築物或其他工作物利用人準用之。"
   },
   {
     "lawId": "civil",
@@ -13544,7 +14096,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "816",
-    "text": "第 816 條因前五條之規定而受損害者，得依關於不當得利之規定，請求償還價額。 第 四 節 共有"
+    "text": "第 816 條因前五條之規定而受損害者，得依關於不當得利之規定，請求償還價額。"
   },
   {
     "lawId": "civil",
@@ -13629,7 +14181,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "831",
-    "text": "第 831 條本節規定，於所有權以外之財產權，由數人共有或公同共有者準用之。 第 三 章 地上權 第 一 節 普通地上權"
+    "text": "第 831 條本節規定，於所有權以外之財產權，由數人共有或公同共有者準用之。"
   },
   {
     "lawId": "civil",
@@ -13714,7 +14266,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "841",
-    "text": "第 841 條地上權不因建築物或其他工作物之滅失而消滅。 第 二 節 區分地上權"
+    "text": "第 841 條地上權不因建築物或其他工作物之滅失而消滅。"
   },
   {
     "lawId": "civil",
@@ -13744,7 +14296,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "841-6",
-    "text": "第 841-6 條區分地上權，除本節另有規定外，準用關於普通地上權之規定。 第 四 章 （刪除）"
+    "text": "第 841-6 條區分地上權，除本節另有規定外，準用關於普通地上權之規定。"
   },
   {
     "lawId": "civil",
@@ -13834,7 +14386,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "850-9",
-    "text": "第 850-9 條第八百三十四條、第八百三十五條第一項、第二項、第八百三十五條之一至第八百三十六條之一、第八百三十六條之二第二項規定，於農育權準用之。 第 五 章 不動產役權"
+    "text": "第 850-9 條第八百三十四條、第八百三十五條第一項、第二項、第八百三十五條之一至第八百三十六條之一、第八百三十六條之二第二項規定，於農育權準用之。"
   },
   {
     "lawId": "civil",
@@ -13914,7 +14466,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "859-5",
-    "text": "第 859-5 條第八百五十一條至第八百五十九條之二規定，於前二條準用之。 第 六 章 抵押權 第 一 節 普通抵押權"
+    "text": "第 859-5 條第八百五十一條至第八百五十九條之二規定，於前二條準用之。"
   },
   {
     "lawId": "civil",
@@ -14079,7 +14631,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "881",
-    "text": "第 881 條抵押權除法律另有規定外，因抵押物滅失而消滅。但抵押人因滅失得受賠償或其他利益者，不在此限。抵押權人對於前項抵押人所得行使之賠償或其他請求權有權利質權，其次序與原抵押權同。給付義務人因故意或重大過失向抵押人為給付者，對於抵押權人不生效力。抵押物因毀損而得受之賠償或其他利益，準用前三項之規定。 第 二 節 最高限額抵押權"
+    "text": "第 881 條抵押權除法律另有規定外，因抵押物滅失而消滅。但抵押人因滅失得受賠償或其他利益者，不在此限。抵押權人對於前項抵押人所得行使之賠償或其他請求權有權利質權，其次序與原抵押權同。給付義務人因故意或重大過失向抵押人為給付者，對於抵押權人不生效力。抵押物因毀損而得受之賠償或其他利益，準用前三項之規定。"
   },
   {
     "lawId": "civil",
@@ -14164,7 +14716,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "881-17",
-    "text": "第 881-17 條最高限額抵押權，除第八百六十一條第二項、第八百六十九條第一項、第八百七十條、第八百七十條之一、第八百七十條之二、第八百八十條之規定外，準用關於普通抵押權之規定。 第 三 節 其他抵押權"
+    "text": "第 881-17 條最高限額抵押權，除第八百六十一條第二項、第八百六十九條第一項、第八百七十條、第八百七十條之一、第八百七十條之二、第八百八十條之規定外，準用關於普通抵押權之規定。"
   },
   {
     "lawId": "civil",
@@ -14174,7 +14726,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "883",
-    "text": "第 883 條普通抵押權及最高限額抵押權之規定，於前條抵押權及其他抵押權準用之。 第 七 章 質權 第 一 節 動產質權"
+    "text": "第 883 條普通抵押權及最高限額抵押權之規定，於前條抵押權及其他抵押權準用之。"
   },
   {
     "lawId": "civil",
@@ -14264,7 +14816,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "899-2",
-    "text": "第 899-2 條質權人係經許可以受質為營業者，僅得就質物行使其權利。出質人未於取贖期間屆滿後五日內取贖其質物時，質權人取得質物之所有權，其所擔保之債權同時消滅。前項質權，不適用第八百八十九條至第八百九十五條、第八百九十九條、第八百九十九條之一之規定。 第 二 節 權利質權"
+    "text": "第 899-2 條質權人係經許可以受質為營業者，僅得就質物行使其權利。出質人未於取贖期間屆滿後五日內取贖其質物時，質權人取得質物之所有權，其所擔保之債權同時消滅。前項質權，不適用第八百八十九條至第八百九十五條、第八百九十九條、第八百九十九條之一之規定。"
   },
   {
     "lawId": "civil",
@@ -14344,7 +14896,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "910",
-    "text": "第 910 條質權以有價證券為標的物者，其附屬於該證券之利息證券、定期金證券或其他附屬證券，以已交付於質權人者為限，亦為質權效力所及。附屬之證券，係於質權設定後發行者，除另有約定外，質權人得請求發行人或出質人交付之。 第 八 章 典權"
+    "text": "第 910 條質權以有價證券為標的物者，其附屬於該證券之利息證券、定期金證券或其他附屬證券，以已交付於質權人者為限，亦為質權效力所及。附屬之證券，係於質權設定後發行者，除另有約定外，質權人得請求發行人或出質人交付之。"
   },
   {
     "lawId": "civil",
@@ -14449,7 +15001,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "927",
-    "text": "第 927 條典權人因支付有益費用，使典物價值增加，或依第九百二十一條規定，重建或修繕者，於典物回贖時，得於現存利益之限度內，請求償還。第八百三十九條規定，於典物回贖時準用之。典物為土地，出典人同意典權人在其上營造建築物者，除另有約定外，於典物回贖時，應按該建築物之時價補償之。出典人不願補償者，於回贖時視為已有地上權之設定。出典人願依前項規定為補償而就時價不能協議時，得聲請法院裁定之；其不願依裁定之時價補償者，於回贖時亦視為已有地上權之設定。前二項視為已有地上權設定之情形，其地租、期間及範圍，當事人不能協議時，得請求法院以判決定之。 第 九 章 留置權"
+    "text": "第 927 條典權人因支付有益費用，使典物價值增加，或依第九百二十一條規定，重建或修繕者，於典物回贖時，得於現存利益之限度內，請求償還。第八百三十九條規定，於典物回贖時準用之。典物為土地，出典人同意典權人在其上營造建築物者，除另有約定外，於典物回贖時，應按該建築物之時價補償之。出典人不願補償者，於回贖時視為已有地上權之設定。出典人願依前項規定為補償而就時價不能協議時，得聲請法院裁定之；其不願依裁定之時價補償者，於回贖時亦視為已有地上權之設定。前二項視為已有地上權設定之情形，其地租、期間及範圍，當事人不能協議時，得請求法院以判決定之。"
   },
   {
     "lawId": "civil",
@@ -14514,7 +15066,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "939",
-    "text": "第 939 條本章留置權之規定，於其他留置權準用之。但其他留置權另有規定者，從其規定。 第 十 章 占有"
+    "text": "第 939 條本章留置權之規定，於其他留置權準用之。但其他留置權另有規定者，從其規定。"
   },
   {
     "lawId": "civil",
@@ -14659,7 +15211,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "966",
-    "text": "第 966 條財產權，不因物之占有而成立者，行使其財產權之人，為準占有人。本章關於占有之規定，於前項準占有準用之。 第 四 編 親屬 第 一 章 通則"
+    "text": "第 966 條財產權，不因物之占有而成立者，行使其財產權之人，為準占有人。本章關於占有之規定，於前項準占有準用之。"
   },
   {
     "lawId": "civil",
@@ -14684,7 +15236,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "971",
-    "text": "第 971 條姻親關係，因離婚而消滅；結婚經撤銷者亦同。 第 二 章 婚姻 第 一 節 婚約"
+    "text": "第 971 條姻親關係，因離婚而消滅；結婚經撤銷者亦同。"
   },
   {
     "lawId": "civil",
@@ -14734,7 +15286,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "979-2",
-    "text": "第 979-2 條第九百七十七條至第九百七十九條之一所規定之請求權，因二年間不行使而消滅。 第 二 節 結婚"
+    "text": "第 979-2 條第九百七十七條至第九百七十九條之一所規定之請求權，因二年間不行使而消滅。"
   },
   {
     "lawId": "civil",
@@ -14844,7 +15396,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "999-1",
-    "text": "第 999-1 條第一千零五十七條及第一千零五十八條之規定，於結婚無效時準用之。第一千零五十五條、第一千零五十五條之一、第一千零五十五條之二、第一千零五十七條及第一千零五十八條之規定，於結婚經撤銷時準用之。 第 三 節 婚姻之普通效力"
+    "text": "第 999-1 條第一千零五十七條及第一千零五十八條之規定，於結婚無效時準用之。第一千零五十五條、第一千零五十五條之一、第一千零五十五條之二、第一千零五十七條及第一千零五十八條之規定，於結婚經撤銷時準用之。"
   },
   {
     "lawId": "civil",
@@ -14869,7 +15421,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1003-1",
-    "text": "第 1003-1 條家庭生活費用，除法律或契約另有約定外，由夫妻各依其經濟能力、家事勞動或其他情事分擔之。因前項費用所生之債務，由夫妻負連帶責任。 第 四 節 夫妻財產制 第 一 款 通則"
+    "text": "第 1003-1 條家庭生活費用，除法律或契約另有約定外，由夫妻各依其經濟能力、家事勞動或其他情事分擔之。因前項費用所生之債務，由夫妻負連帶責任。"
   },
   {
     "lawId": "civil",
@@ -14934,7 +15486,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1015",
-    "text": "第 1015 條（刪除） 第 二 款 法定財產制"
+    "text": "第 1015 條（刪除）"
   },
   {
     "lawId": "civil",
@@ -15044,7 +15596,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1030-4",
-    "text": "第 1030-4 條夫妻現存之婚後財產，其價值計算以法定財產制關係消滅時為準。但夫妻因判決而離婚者，以起訴時為準。依前條應追加計算之婚後財產，其價值計算以處分時為準。 第 三 款 約定財產制 第 一 目 共同財產制"
+    "text": "第 1030-4 條夫妻現存之婚後財產，其價值計算以法定財產制關係消滅時為準。但夫妻因判決而離婚者，以起訴時為準。依前條應追加計算之婚後財產，其價值計算以處分時為準。"
   },
   {
     "lawId": "civil",
@@ -15104,7 +15656,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1041",
-    "text": "第 1041 條夫妻得以契約訂定僅以勞力所得為限為共同財產。前項勞力所得，指夫或妻於婚姻關係存續中取得之薪資、工資、紅利、獎金及其他與勞力所得有關之財產收入。勞力所得之孳息及代替利益，亦同。不能證明為勞力所得或勞力所得以外財產者，推定為勞力所得。夫或妻勞力所得以外之財產，適用關於分別財產制之規定。第一千零三十四條、第一千零三十八條及第一千零四十條之規定，於第一項情形準用之。 第 二 目 （刪除）"
+    "text": "第 1041 條夫妻得以契約訂定僅以勞力所得為限為共同財產。前項勞力所得，指夫或妻於婚姻關係存續中取得之薪資、工資、紅利、獎金及其他與勞力所得有關之財產收入。勞力所得之孳息及代替利益，亦同。不能證明為勞力所得或勞力所得以外財產者，推定為勞力所得。夫或妻勞力所得以外之財產，適用關於分別財產制之規定。第一千零三十四條、第一千零三十八條及第一千零四十條之規定，於第一項情形準用之。"
   },
   {
     "lawId": "civil",
@@ -15114,7 +15666,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1043",
-    "text": "第 1043 條（刪除） 第 三 目 分別財產制"
+    "text": "第 1043 條（刪除）"
   },
   {
     "lawId": "civil",
@@ -15139,7 +15691,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1048",
-    "text": "第 1048 條（刪除） 第 五 節 離婚"
+    "text": "第 1048 條（刪除）"
   },
   {
     "lawId": "civil",
@@ -15204,7 +15756,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1058",
-    "text": "第 1058 條夫妻離婚時，除採用分別財產制者外，各自取回其結婚或變更夫妻財產制時之財產。如有剩餘，各依其夫妻財產制之規定分配之。 第 三 章 父母子女"
+    "text": "第 1058 條夫妻離婚時，除採用分別財產制者外，各自取回其結婚或變更夫妻財產制時之財產。如有剩餘，各依其夫妻財產制之規定分配之。"
   },
   {
     "lawId": "civil",
@@ -15439,7 +15991,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1090",
-    "text": "第 1090 條父母之一方濫用其對於子女之權利時，法院得依他方、未成年子女、主管機關、社會福利機構或其他利害關係人之請求或依職權，為子女之利益，宣告停止其權利之全部或一部。 第 四 章 監護 第 一 節 未成年人之監護"
+    "text": "第 1090 條父母之一方濫用其對於子女之權利時，法院得依他方、未成年子女、主管機關、社會福利機構或其他利害關係人之請求或依職權，為子女之利益，宣告停止其權利之全部或一部。"
   },
   {
     "lawId": "civil",
@@ -15564,7 +16116,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1109-2",
-    "text": "第 1109-2 條未成年人依第十四條受監護之宣告者，適用本章第二節成年人監護之規定。 第 二 節 成年人之監護及輔助"
+    "text": "第 1109-2 條未成年人依第十四條受監護之宣告者，適用本章第二節成年人監護之規定。"
   },
   {
     "lawId": "civil",
@@ -15609,7 +16161,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1113-1",
-    "text": "第 1113-1 條受輔助宣告之人，應置輔助人。輔助人及有關輔助之職務，準用第一千零九十五條、第一千零九十六條、第一千零九十八條第二項、第一千一百條、第一千一百零二條、第一千一百零三條第二項、第一千一百零四條、第一千一百零六條、第一千一百零六條之一、第一千一百零九條、第一千一百十一條至第一千一百十一條之二、第一千一百十二條之一及第一千一百十二條之二之規定。 第 三 節 成年人之意定監護"
+    "text": "第 1113-1 條受輔助宣告之人，應置輔助人。輔助人及有關輔助之職務，準用第一千零九十五條、第一千零九十六條、第一千零九十八條第二項、第一千一百條、第一千一百零二條、第一千一百零三條第二項、第一千一百零四條、第一千一百零六條、第一千一百零六條之一、第一千一百零九條、第一千一百十一條至第一千一百十一條之二、第一千一百十二條之一及第一千一百十二條之二之規定。"
   },
   {
     "lawId": "civil",
@@ -15654,7 +16206,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1113-10",
-    "text": "第 1113-10 條意定監護，除本節有規定者外，準用關於成年人監護之規定。 第 五 章 扶養"
+    "text": "第 1113-10 條意定監護，除本節有規定者外，準用關於成年人監護之規定。"
   },
   {
     "lawId": "civil",
@@ -15709,7 +16261,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1121",
-    "text": "第 1121 條扶養之程度及方法，當事人得因情事之變更，請求變更之。 第 六 章 家"
+    "text": "第 1121 條扶養之程度及方法，當事人得因情事之變更，請求變更之。"
   },
   {
     "lawId": "civil",
@@ -15744,7 +16296,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1128",
-    "text": "第 1128 條家長對於已成年之家屬，得令其由家分離。但以有正當理由時為限。 第 七 章 親屬會議"
+    "text": "第 1128 條家長對於已成年之家屬，得令其由家分離。但以有正當理由時為限。"
   },
   {
     "lawId": "civil",
@@ -15789,7 +16341,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1137",
-    "text": "第 1137 條第一千一百二十九條所定有召集權之人，對於親屬會議之決議有不服者，得於三個月內向法院聲訴。 第 五 編 繼承 第 一 章 遺產繼承人"
+    "text": "第 1137 條第一千一百二十九條所定有召集權之人，對於親屬會議之決議有不服者，得於三個月內向法院聲訴。"
   },
   {
     "lawId": "civil",
@@ -15834,7 +16386,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1146",
-    "text": "第 1146 條繼承權被侵害者，被害人或其法定代理人得請求回復之。前項回復請求權，自知悉被侵害之時起，二年間不行使而消滅；自繼承開始時起逾十年者亦同。 第 二 章 遺產之繼承 第 一 節 效力"
+    "text": "第 1146 條繼承權被侵害者，被害人或其法定代理人得請求回復之。前項回復請求權，自知悉被侵害之時起，二年間不行使而消滅；自繼承開始時起逾十年者亦同。"
   },
   {
     "lawId": "civil",
@@ -15874,7 +16426,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1153",
-    "text": "第 1153 條繼承人對於被繼承人之債務，以因繼承所得遺產為限，負連帶責任。繼承人相互間對於被繼承人之債務，除法律另有規定或另有約定外，按其應繼分比例負擔之。 第 二 節 （刪除）"
+    "text": "第 1153 條繼承人對於被繼承人之債務，以因繼承所得遺產為限，負連帶責任。繼承人相互間對於被繼承人之債務，除法律另有規定或另有約定外，按其應繼分比例負擔之。"
   },
   {
     "lawId": "civil",
@@ -15939,7 +16491,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1163",
-    "text": "第 1163 條繼承人中有下列各款情事之一者，不得主張第一千一百四十八條第二項所定之利益：一、隱匿遺產情節重大。二、在遺產清冊為虛偽之記載情節重大。三、意圖詐害被繼承人之債權人之權利而為遺產之處分。 第 三 節 遺產之分割"
+    "text": "第 1163 條繼承人中有下列各款情事之一者，不得主張第一千一百四十八條第二項所定之利益：一、隱匿遺產情節重大。二、在遺產清冊為虛偽之記載情節重大。三、意圖詐害被繼承人之債權人之權利而為遺產之處分。"
   },
   {
     "lawId": "civil",
@@ -15989,7 +16541,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1173",
-    "text": "第 1173 條繼承人中有在繼承開始前因結婚、分居或營業，已從被繼承人受有財產之贈與者，應將該贈與價額加入繼承開始時被繼承人所有之財產中，為應繼遺產。但被繼承人於贈與時有反對之意思表示者，不在此限。前項贈與價額，應於遺產分割時，由該繼承人之應繼分中扣除。贈與價額，依贈與時之價值計算。 第 四 節 繼承之拋棄"
+    "text": "第 1173 條繼承人中有在繼承開始前因結婚、分居或營業，已從被繼承人受有財產之贈與者，應將該贈與價額加入繼承開始時被繼承人所有之財產中，為應繼遺產。但被繼承人於贈與時有反對之意思表示者，不在此限。前項贈與價額，應於遺產分割時，由該繼承人之應繼分中扣除。贈與價額，依贈與時之價值計算。"
   },
   {
     "lawId": "civil",
@@ -16009,7 +16561,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1176-1",
-    "text": "第 1176-1 條拋棄繼承權者，就其所管理之遺產，於其他繼承人或遺產管理人開始管理前，應與處理自己事務為同一之注意，繼續管理之。 第 五 節 無人承認之繼承"
+    "text": "第 1176-1 條拋棄繼承權者，就其所管理之遺產，於其他繼承人或遺產管理人開始管理前，應與處理自己事務為同一之注意，繼續管理之。"
   },
   {
     "lawId": "civil",
@@ -16059,7 +16611,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1185",
-    "text": "第 1185 條第一千一百七十八條所定之期限屆滿，無繼承人承認繼承時，其遺產於清償債權並交付遺贈物後，如有賸餘，歸屬國庫。 第 三 章 遺囑 第 一 節 通則"
+    "text": "第 1185 條第一千一百七十八條所定之期限屆滿，無繼承人承認繼承時，其遺產於清償債權並交付遺贈物後，如有賸餘，歸屬國庫。"
   },
   {
     "lawId": "civil",
@@ -16074,7 +16626,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1188",
-    "text": "第 1188 條第一千一百四十五條喪失繼承權之規定，於受遺贈人準用之。 第 二 節 方式"
+    "text": "第 1188 條第一千一百四十五條喪失繼承權之規定，於受遺贈人準用之。"
   },
   {
     "lawId": "civil",
@@ -16124,7 +16676,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1198",
-    "text": "第 1198 條下列之人，不得為遺囑見證人：一、未成年人。二、受監護或輔助宣告之人。三、繼承人及其配偶或其直系血親。四、受遺贈人及其配偶或其直系血親。五、為公證人或代行公證職務人之同居人助理人或受僱人。 第 三 節 效力"
+    "text": "第 1198 條下列之人，不得為遺囑見證人：一、未成年人。二、受監護或輔助宣告之人。三、繼承人及其配偶或其直系血親。四、受遺贈人及其配偶或其直系血親。五、為公證人或代行公證職務人之同居人助理人或受僱人。"
   },
   {
     "lawId": "civil",
@@ -16174,7 +16726,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1208",
-    "text": "第 1208 條遺贈無效或拋棄時，其遺贈之財產，仍屬於遺產。 第 四 節 執行"
+    "text": "第 1208 條遺贈無效或拋棄時，其遺贈之財產，仍屬於遺產。"
   },
   {
     "lawId": "civil",
@@ -16229,7 +16781,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1218",
-    "text": "第 1218 條遺囑執行人怠於執行職務，或有其他重大事由時，利害關係人，得請求親屬會議改選他人；其由法院指定者，得聲請法院另行指定。 第 五 節 撤回"
+    "text": "第 1218 條遺囑執行人怠於執行職務，或有其他重大事由時，利害關係人，得請求親屬會議改選他人；其由法院指定者，得聲請法院另行指定。"
   },
   {
     "lawId": "civil",
@@ -16249,7 +16801,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "civil",
     "articleNumber": "1222",
-    "text": "第 1222 條遺囑人故意破毀或塗銷遺囑，或在遺囑上記明廢棄之意思者，其遺囑視為撤回。 第 六 節 特留分"
+    "text": "第 1222 條遺囑人故意破毀或塗銷遺囑，或在遺囑上記明廢棄之意思者，其遺囑視為撤回。"
   },
   {
     "lawId": "civil",
@@ -16309,7 +16861,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "9",
-    "text": "第 9 條本法之施行法，另定之。 第 二 章 地權"
+    "text": "第 9 條本法之施行法，另定之。"
   },
   {
     "lawId": "land",
@@ -16329,7 +16881,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "13",
-    "text": "第 13 條湖澤及可通運之水道及岸地，如因水流變遷而自然增加時，其接連地之所有權人，有優先依法取得其所有權或使用受益之權。 第 三 章 地權限制"
+    "text": "第 13 條湖澤及可通運之水道及岸地，如因水流變遷而自然增加時，其接連地之所有權人，有優先依法取得其所有權或使用受益之權。"
   },
   {
     "lawId": "land",
@@ -16384,7 +16936,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "24",
-    "text": "第 24 條外國人租賃或購買之土地，經登記後，依法令之所定，享受權利，負擔義務。 第 四 章 公有土地"
+    "text": "第 24 條外國人租賃或購買之土地，經登記後，依法令之所定，享受權利，負擔義務。"
   },
   {
     "lawId": "land",
@@ -16399,7 +16951,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "27",
-    "text": "第 27 條直轄市或縣（市）政府應將該管公有土地之收益，列入各該政府預算。 第 五 章 地權調整"
+    "text": "第 27 條直轄市或縣（市）政府應將該管公有土地之收益，列入各該政府預算。"
   },
   {
     "lawId": "land",
@@ -16454,7 +17006,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "35",
-    "text": "第 35 條自耕農場之創設，另以法律定之。 第 二 編 地籍 第 一 章 通則"
+    "text": "第 35 條自耕農場之創設，另以法律定之。"
   },
   {
     "lawId": "land",
@@ -16499,7 +17051,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "43",
-    "text": "第 43 條依本法所為之登記，有絕對效力。 第 二 章 地籍測量"
+    "text": "第 43 條依本法所為之登記，有絕對效力。"
   },
   {
     "lawId": "land",
@@ -16549,7 +17101,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "47-2",
-    "text": "第 47-2 條土地複丈費及建築改良物測量費標準，由中央地政機關定之。 第 三 章 土地總登記"
+    "text": "第 47-2 條土地複丈費及建築改良物測量費標準，由中央地政機關定之。"
   },
   {
     "lawId": "land",
@@ -16669,7 +17221,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "71",
-    "text": "第 71 條損害賠償之請求，如經該地政機關拒絕，受損害人得向司法機關起訴。 第 四 章 土地權利變更登記"
+    "text": "第 71 條損害賠償之請求，如經該地政機關拒絕，受損害人得向司法機關起訴。"
   },
   {
     "lawId": "land",
@@ -16729,7 +17281,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "79-2",
-    "text": "第 79-2 條有左列情形之一者，應繳納工本費或閱覽費：一、聲請換給或補給權利書狀者。二、聲請發給登記簿或地籍圖謄本或節本者。三、聲請抄錄或影印登記聲請書及其附件者。四、聲請分割登記，就新編地號另發權利書狀者。五、聲請閱覽地籍圖之藍曬圖或複製圖者。六、聲請閱覽電子處理之地籍資料者。前項工本費、閱覽費費額，由中央地政機關定之。 第 三 編 土地使用 第 一 章 通則"
+    "text": "第 79-2 條有左列情形之一者，應繳納工本費或閱覽費：一、聲請換給或補給權利書狀者。二、聲請發給登記簿或地籍圖謄本或節本者。三、聲請抄錄或影印登記聲請書及其附件者。四、聲請分割登記，就新編地號另發權利書狀者。五、聲請閱覽地籍圖之藍曬圖或複製圖者。六、聲請閱覽電子處理之地籍資料者。前項工本費、閱覽費費額，由中央地政機關定之。"
   },
   {
     "lawId": "land",
@@ -16779,7 +17331,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "89",
-    "text": "第 89 條直轄市或縣（市）地政機關對於管轄區內之私有空地及荒地，得劃定區域，規定期限，強制依法使用。前項私有荒地，逾期不使用者，該管直轄市或縣（市）政府得照申報地價收買之。 第 二 章 使用限制"
+    "text": "第 89 條直轄市或縣（市）地政機關對於管轄區內之私有空地及荒地，得劃定區域，規定期限，強制依法使用。前項私有荒地，逾期不使用者，該管直轄市或縣（市）政府得照申報地價收買之。"
   },
   {
     "lawId": "land",
@@ -16799,7 +17351,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "93",
-    "text": "第 93 條依都市計畫已公布為道路或其他公共使用之土地，得為保留征收，並限制其建築。但臨時性質之建築，不在此限。 第 三 章 房屋及基地租用"
+    "text": "第 93 條依都市計畫已公布為道路或其他公共使用之土地，得為保留征收，並限制其建築。但臨時性質之建築，不在此限。"
   },
   {
     "lawId": "land",
@@ -16859,7 +17411,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "105",
-    "text": "第 105 條第九十七條第九十九條及第一百零一條之規定，於租用基地建築房屋均準用之。 第 四 章 耕地租用"
+    "text": "第 105 條第九十七條第九十九條及第一百零一條之規定，於租用基地建築房屋均準用之。"
   },
   {
     "lawId": "land",
@@ -16954,7 +17506,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "124",
-    "text": "第 124 條第一百零七條至第一百十三條及第一百二十一條各規定，於有永佃權之土地準用之。 第 五 章 荒地使用"
+    "text": "第 124 條第一百零七條至第一百十三條及第一百二十一條各規定，於有永佃權之土地準用之。"
   },
   {
     "lawId": "land",
@@ -17004,7 +17556,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "134",
-    "text": "第 134 條公有荒地，非農戶或農業生產合作社所能開墾者，得設墾務機關辦理之。 第 六 章 土地重劃"
+    "text": "第 134 條公有荒地，非農戶或農業生產合作社所能開墾者，得設墾務機關辦理之。"
   },
   {
     "lawId": "land",
@@ -17044,7 +17596,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "142",
-    "text": "第 142 條新設都市內之土地重劃，應於分區開放前為之。 第 四 編 土地稅 第 一 章 通則"
+    "text": "第 142 條新設都市內之土地重劃，應於分區開放前為之。"
   },
   {
     "lawId": "land",
@@ -17069,7 +17621,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "147",
-    "text": "第 147 條土地及其改良物，除依本法規定外，不得用任何名目征收或附加稅款。但因建築道路、堤防、溝渠、或其他土地改良之水陸工程，所需費用，得依法征收工程受益費。 第 二 章 地價及改良物價"
+    "text": "第 147 條土地及其改良物，除依本法規定外，不得用任何名目征收或附加稅款。但因建築道路、堤防、溝渠、或其他土地改良之水陸工程，所需費用，得依法征收工程受益費。"
   },
   {
     "lawId": "land",
@@ -17164,7 +17716,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "166",
-    "text": "第 166 條建築改良物之價值，得與重新規定地價時重為估定。 第 三 章 地價稅"
+    "text": "第 166 條建築改良物之價值，得與重新規定地價時重為估定。"
   },
   {
     "lawId": "land",
@@ -17209,7 +17761,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "175",
-    "text": "第 175 條（刪除） 第 四 章 土地增值稅"
+    "text": "第 175 條（刪除）"
   },
   {
     "lawId": "land",
@@ -17254,7 +17806,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "184",
-    "text": "第 184 條土地增值實數額，應減去土地所有權人為改良土地所用之資本及已繳納之工程受益費。 第 五 章 土地改良物稅"
+    "text": "第 184 條土地增值實數額，應減去土地所有權人為改良土地所用之資本及已繳納之工程受益費。"
   },
   {
     "lawId": "land",
@@ -17284,7 +17836,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "190",
-    "text": "第 190 條土地改良物稅全部為地方稅。 第 六 章 土地稅之減免"
+    "text": "第 190 條土地改良物稅全部為地方稅。"
   },
   {
     "lawId": "land",
@@ -17329,7 +17881,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "199",
-    "text": "第 199 條凡減稅或免稅之土地，其減免之原因事實有變更或消滅時，仍應繼續征稅。 第 七 章 欠稅"
+    "text": "第 199 條凡減稅或免稅之土地，其減免之原因事實有變更或消滅時，仍應繼續征稅。"
   },
   {
     "lawId": "land",
@@ -17369,7 +17921,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "207",
-    "text": "第 207 條建築改良物欠稅，準用本章關於地價稅欠稅各條之規定。 第 五 編 土地征收 第 一 章 通則"
+    "text": "第 207 條建築改良物欠稅，準用本章關於地價稅欠稅各條之規定。"
   },
   {
     "lawId": "land",
@@ -17444,7 +17996,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "221",
-    "text": "第 221 條被徵收之土地應有之負擔，其款額計算，以該土地所應得之補償金額為限，並由該管直轄市或縣（市）地政機關於補償地價時為清算結束之。 第 二 章 征收程序"
+    "text": "第 221 條被徵收之土地應有之負擔，其款額計算，以該土地所應得之補償金額為限，並由該管直轄市或縣（市）地政機關於補償地價時為清算結束之。"
   },
   {
     "lawId": "land",
@@ -17514,7 +18066,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land",
     "articleNumber": "235",
-    "text": "第 235 條被征收土地之所有權人，對於其土地之權利義務，於應受之補償發給完竣時終止，在補償費未發給完竣以前，有繼續使用該土地之權。但合於第二百三十一條但書之規定者，不在此限。 第 三 章 征收補償"
+    "text": "第 235 條被征收土地之所有權人，對於其土地之權利義務，於應受之補償發給完竣時終止，在補償費未發給完竣以前，有繼續使用該土地之權。但合於第二百三十一條但書之規定者，不在此限。"
   },
   {
     "lawId": "land",
@@ -17634,7 +18186,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "12",
-    "text": "第 12 條本條例施行區域內地籍總歸戶內容、作業程序、查詢、資料提供範圍與對象及收費等事項之辦法，由中央主管機關擬訂，報請行政院核定。 第 二 章 規定地價"
+    "text": "第 12 條本條例施行區域內地籍總歸戶內容、作業程序、查詢、資料提供範圍與對象及收費等事項之辦法，由中央主管機關擬訂，報請行政院核定。"
   },
   {
     "lawId": "equal_land",
@@ -17654,7 +18206,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "16",
-    "text": "第 16 條舉辦規定地價或重新規定地價時，土地所有權人未於公告期間申報地價者，以公告地價百分之八十為其申報地價。土地所有權人於公告期間申報地價者，其申報之地價超過公告地價百分之一百二十時，以公告地價百分之一百二十為其申報地價；申報之地價未滿公告地價百分之八十時，得照價收買或以公告地價百分之八十為其申報地價。 第 三 章 照價徵稅"
+    "text": "第 16 條舉辦規定地價或重新規定地價時，土地所有權人未於公告期間申報地價者，以公告地價百分之八十為其申報地價。土地所有權人於公告期間申報地價者，其申報之地價超過公告地價百分之一百二十時，以公告地價百分之一百二十為其申報地價；申報之地價未滿公告地價百分之八十時，得照價收買或以公告地價百分之八十為其申報地價。"
   },
   {
     "lawId": "equal_land",
@@ -17714,7 +18266,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "26-1",
-    "text": "第 26-1 條農業用地閒置不用，經直轄市或縣（市）政府報經內政部核准通知限期使用或命其委託經營，逾期仍未使用或委託經營者，按應納田賦加徵一倍至三倍之荒地稅；經加徵荒地稅滿三年，仍不使用者，得照價收買。但有左列情形之一者不在此限：一、因農業生產或政策之必要而休閒者。二、因地區性生產不經濟而休耕者。三、因公害污染不能耕作者。四、因灌溉、排水設施損壞不能耕作者。五、因不可抗力不能耕作者。前項規定之實施辦法，由中央主管機關會同農業主管機關定之。 第 四 章 照價收買"
+    "text": "第 26-1 條農業用地閒置不用，經直轄市或縣（市）政府報經內政部核准通知限期使用或命其委託經營，逾期仍未使用或委託經營者，按應納田賦加徵一倍至三倍之荒地稅；經加徵荒地稅滿三年，仍不使用者，得照價收買。但有左列情形之一者不在此限：一、因農業生產或政策之必要而休閒者。二、因地區性生產不經濟而休耕者。三、因公害污染不能耕作者。四、因灌溉、排水設施損壞不能耕作者。五、因不可抗力不能耕作者。前項規定之實施辦法，由中央主管機關會同農業主管機關定之。"
   },
   {
     "lawId": "equal_land",
@@ -17754,7 +18306,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "34",
-    "text": "第 34 條照價收買之土地，地上建築改良物同屬土地所有權人所有者，應一併收買。但不屬土地所有權人所有者，不在此限。前項改良物之價額，由直轄市或縣（市）政府查估後，提交地價評議委員會評定之。 第 五 章 漲價歸公"
+    "text": "第 34 條照價收買之土地，地上建築改良物同屬土地所有權人所有者，應一併收買。但不屬土地所有權人所有者，不在此限。前項改良物之價額，由直轄市或縣（市）政府查估後，提交地價評議委員會評定之。"
   },
   {
     "lawId": "equal_land",
@@ -17894,7 +18446,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "51",
-    "text": "第 51 條依本條例施行漲價歸公之收入，以供育幼、養老、救災、濟貧、衛生、扶助身心障礙等公共福利事業、興辦社會住宅、徵收公共設施保留地、興辦公共設施、促進農業發展、農村建設、推展國民教育及實施平均地權之用。 第 六 章 土地使用"
+    "text": "第 51 條依本條例施行漲價歸公之收入，以供育幼、養老、救災、濟貧、衛生、扶助身心障礙等公共福利事業、興辦社會住宅、徵收公共設施保留地、興辦公共設施、促進農業發展、農村建設、推展國民教育及實施平均地權之用。"
   },
   {
     "lawId": "equal_land",
@@ -18074,7 +18626,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "79-1",
-    "text": "第 79-1 條私法人買受供住宅使用之房屋，應檢具使用計畫，經中央主管機關許可。但私法人經中央主管機關公告免經許可之情形者，不在此限。前項許可之文件有效期限為一年。私法人取得第一項房屋，於登記完畢後五年內不得辦理移轉、讓與或預告登記。但因強制執行、徵收、法院判決或其他法律規定而移轉或讓與者，不在此限。中央主管機關為審核第一項許可案件，得遴聘（派）專家學者、民間團體及相關機關代表，以合議制方式辦理之。第一項規定適用範圍、許可條件、用途、使用計畫內容、應備文件、審核程序、免經許可情形及其他應遵行事項之辦法，由中央主管機關定之。 第 七 章 罰則"
+    "text": "第 79-1 條私法人買受供住宅使用之房屋，應檢具使用計畫，經中央主管機關許可。但私法人經中央主管機關公告免經許可之情形者，不在此限。前項許可之文件有效期限為一年。私法人取得第一項房屋，於登記完畢後五年內不得辦理移轉、讓與或預告登記。但因強制執行、徵收、法院判決或其他法律規定而移轉或讓與者，不在此限。中央主管機關為審核第一項許可案件，得遴聘（派）專家學者、民間團體及相關機關代表，以合議制方式辦理之。第一項規定適用範圍、許可條件、用途、使用計畫內容、應備文件、審核程序、免經許可情形及其他應遵行事項之辦法，由中央主管機關定之。"
   },
   {
     "lawId": "equal_land",
@@ -18119,7 +18671,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "equal_land",
     "articleNumber": "83-1",
-    "text": "第 83-1 條有左列行為之一者，處三年以下有期徒刑、拘役或科或併科五千元以下罰金：一、移動或毀損重劃測量標樁，致妨害市地重劃工程之設計、施工或土地之分配者。二、以強暴、脅迫或其他非法方法妨害市地重劃之實施者。 第 八 章 附則"
+    "text": "第 83-1 條有左列行為之一者，處三年以下有期徒刑、拘役或科或併科五千元以下罰金：一、移動或毀損重劃測量標樁，致妨害市地重劃工程之設計、施工或土地之分配者。二、以強暴、脅迫或其他非法方法妨害市地重劃之實施者。"
   },
   {
     "lawId": "equal_land",
@@ -18184,7 +18736,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "6",
-    "text": "第 6 條為發展經濟，促進土地利用，增進社會福利，對於國防、政府機關、公共設施、騎樓走廊、研究機構、教育、交通、水利、給水、鹽業、宗教、醫療、衛生、公私墓、慈善或公益事業及合理之自用住宅等所使用之土地，及重劃、墾荒、改良土地者，得予適當之減免；其減免標準及程序，由行政院定之。 第 二 節 名詞定義"
+    "text": "第 6 條為發展經濟，促進土地利用，增進社會福利，對於國防、政府機關、公共設施、騎樓走廊、研究機構、教育、交通、水利、給水、鹽業、宗教、醫療、衛生、公私墓、慈善或公益事業及合理之自用住宅等所使用之土地，及重劃、墾荒、改良土地者，得予適當之減免；其減免標準及程序，由行政院定之。"
   },
   {
     "lawId": "land_tax",
@@ -18219,7 +18771,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "13",
-    "text": "第 13 條本法課徵田賦之用辭定義如左：一、地目：指各直轄市、縣（市）地籍冊所載之土地使用類別。二、等則：指按各種地目土地單位面積全年收益或地價高低所區分之賦率等級。三、賦元：指按各種地目等則土地單位面積全年收益或地價釐定全年賦額之單位。四、賦額：指依每種地目等則之土地面積，乘各該地目等則單位面積釐定之賦元所得每筆土地全年賦元之積。五、實物：指各地區徵收之稻穀、小麥或就其折徵之他種農作產物。六、代金：指按應徵實物折徵之現金。七、夾雜物：指實物中含帶之沙、泥、土、石、稗子等雜物。 第 二 章 地價稅"
+    "text": "第 13 條本法課徵田賦之用辭定義如左：一、地目：指各直轄市、縣（市）地籍冊所載之土地使用類別。二、等則：指按各種地目土地單位面積全年收益或地價高低所區分之賦率等級。三、賦元：指按各種地目等則土地單位面積全年收益或地價釐定全年賦額之單位。四、賦額：指依每種地目等則之土地面積，乘各該地目等則單位面積釐定之賦元所得每筆土地全年賦元之積。五、實物：指各地區徵收之稻穀、小麥或就其折徵之他種農作產物。六、代金：指按應徵實物折徵之現金。七、夾雜物：指實物中含帶之沙、泥、土、石、稗子等雜物。"
   },
   {
     "lawId": "land_tax",
@@ -18259,7 +18811,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "21",
-    "text": "第 21 條凡經直轄市或縣（市）政府核定應徵空地稅之土地，按該宗土地應納地價稅基本稅額加徵二至五倍之空地稅。 第 三 章 田賦"
+    "text": "第 21 條凡經直轄市或縣（市）政府核定應徵空地稅之土地，按該宗土地應納地價稅基本稅額加徵二至五倍之空地稅。"
   },
   {
     "lawId": "land_tax",
@@ -18299,7 +18851,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "27-1",
-    "text": "第 27-1 條為調劑農業生產狀況或因應農業發展需要，行政院得決定停徵全部或部分田賦。 第 四 章 土地增值稅"
+    "text": "第 27-1 條為調劑農業生產狀況或因應農業發展需要，行政院得決定停徵全部或部分田賦。"
   },
   {
     "lawId": "land_tax",
@@ -18404,7 +18956,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "39-3",
-    "text": "第 39-3 條依前條第一項規定申請不課徵土地增值稅者，應由權利人及義務人於申報土地移轉現值時，於土地現值申報書註明農業用地字樣提出申請；其未註明者，得於土地增值稅繳納期間屆滿前補行申請，逾期不得申請不課徵土地增值稅。但依規定得由權利人單獨申報土地移轉現值者，該權利人得單獨提出申請。農業用地移轉，其屬無須申報土地移轉現值者，主管稽徵機關應通知權利人及義務人，其屬權利人單獨申報土地移轉現值者，應通知義務人，如合於前條第一項規定不課徵土地增值稅之要件者，權利人或義務人應於收到通知之次日起三十日內提出申請，逾期不得申請不課徵土地增值稅。 第 五 章 稽徵程序"
+    "text": "第 39-3 條依前條第一項規定申請不課徵土地增值稅者，應由權利人及義務人於申報土地移轉現值時，於土地現值申報書註明農業用地字樣提出申請；其未註明者，得於土地增值稅繳納期間屆滿前補行申請，逾期不得申請不課徵土地增值稅。但依規定得由權利人單獨申報土地移轉現值者，該權利人得單獨提出申請。農業用地移轉，其屬無須申報土地移轉現值者，主管稽徵機關應通知權利人及義務人，其屬權利人單獨申報土地移轉現值者，應通知義務人，如合於前條第一項規定不課徵土地增值稅之要件者，權利人或義務人應於收到通知之次日起三十日內提出申請，逾期不得申請不課徵土地增值稅。"
   },
   {
     "lawId": "land_tax",
@@ -18469,7 +19021,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "52",
-    "text": "第 52 條經徵收或收買之土地，該管直轄市、縣（市）地政機關或收買機關，應檢附土地清冊及補償清冊，通知主管稽徵機關，核算土地增值稅及應納未納之地價稅或田賦，稽徵機關應於收到通知後十五日內，造具代扣稅款證明冊，送由徵收或收買機關，於發放價款或補償費時代為扣繳。 第 六 章 罰則"
+    "text": "第 52 條經徵收或收買之土地，該管直轄市、縣（市）地政機關或收買機關，應檢附土地清冊及補償清冊，通知主管稽徵機關，核算土地增值稅及應納未納之地價稅或田賦，稽徵機關應於收到通知後十五日內，造具代扣稅款證明冊，送由徵收或收買機關，於發放價款或補償費時代為扣繳。"
   },
   {
     "lawId": "land_tax",
@@ -18499,7 +19051,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "land_tax",
     "articleNumber": "56",
-    "text": "第 56 條（刪除） 第 七 章 附則"
+    "text": "第 56 條（刪除）"
   },
   {
     "lawId": "land_tax",
@@ -18839,7 +19391,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "broker",
     "articleNumber": "4",
-    "text": "第 4 條本條例用辭定義如下︰一、不動產︰指土地、土地定著物或房屋及其可移轉之權利；房屋指成屋、預售屋及其可移轉之權利。二、成屋︰指領有使用執照，或於實施建築管理前建造完成之建築物。三、預售屋︰指領有建造執照尚未建造完成而以將來完成之建築物為交易標的之物。四、經紀業︰指依本條例規定經營仲介或代銷業務之公司或商號。五、仲介業務︰指從事不動產買賣、互易、租賃之居間或代理業務。六、代銷業務︰指受起造人或建築業之委託，負責企劃並代理銷售不動產之業務。七、經紀人員︰指經紀人或經紀營業員。經紀人之職務為執行仲介或代銷業務；經紀營業員之職務為協助經紀人執行仲介或代銷業務。八、加盟經營者︰經紀業之一方以契約約定使用他方所發展之服務、營運方式、商標或服務標章等，並受其規範或監督。九、差價︰係指實際買賣交易價格與委託銷售價格之差額。十、營業處所︰指經紀業經營仲介或代銷業務之店面、辦公室或非常態之固定場所。 第 二 章 經紀業"
+    "text": "第 4 條本條例用辭定義如下︰一、不動產︰指土地、土地定著物或房屋及其可移轉之權利；房屋指成屋、預售屋及其可移轉之權利。二、成屋︰指領有使用執照，或於實施建築管理前建造完成之建築物。三、預售屋︰指領有建造執照尚未建造完成而以將來完成之建築物為交易標的之物。四、經紀業︰指依本條例規定經營仲介或代銷業務之公司或商號。五、仲介業務︰指從事不動產買賣、互易、租賃之居間或代理業務。六、代銷業務︰指受起造人或建築業之委託，負責企劃並代理銷售不動產之業務。七、經紀人員︰指經紀人或經紀營業員。經紀人之職務為執行仲介或代銷業務；經紀營業員之職務為協助經紀人執行仲介或代銷業務。八、加盟經營者︰經紀業之一方以契約約定使用他方所發展之服務、營運方式、商標或服務標章等，並受其規範或監督。九、差價︰係指實際買賣交易價格與委託銷售價格之差額。十、營業處所︰指經紀業經營仲介或代銷業務之店面、辦公室或非常態之固定場所。"
   },
   {
     "lawId": "broker",
@@ -18879,7 +19431,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "broker",
     "articleNumber": "12",
-    "text": "第 12 條經紀業應於經紀人到職之日起十五日內，造具名冊報請所在地主管機關層報中央主管機關備查，異動時，亦同。 第 三 章 經紀人員"
+    "text": "第 12 條經紀業應於經紀人到職之日起十五日內，造具名冊報請所在地主管機關層報中央主管機關備查，異動時，亦同。"
   },
   {
     "lawId": "broker",
@@ -18904,7 +19456,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "broker",
     "articleNumber": "17",
-    "text": "第 17 條經紀業不得僱用未具備經紀人員資格者從事仲介或代銷業務。 第 四 章 業務及責任"
+    "text": "第 17 條經紀業不得僱用未具備經紀人員資格者從事仲介或代銷業務。"
   },
   {
     "lawId": "broker",
@@ -18964,7 +19516,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "broker",
     "articleNumber": "27",
-    "text": "第 27 條主管機關檢查經紀業之業務，經紀業不得拒絕。 第 五 章 獎懲"
+    "text": "第 27 條主管機關檢查經紀業之業務，經紀業不得拒絕。"
   },
   {
     "lawId": "broker",
@@ -19004,7 +19556,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "broker",
     "articleNumber": "35",
-    "text": "第 35 條依本條例所處罰鍰，經通知繳納而逾期不繳納者，移送法院強制執行。 第 六 章 附則"
+    "text": "第 35 條依本條例所處罰鍰，經通知繳納而逾期不繳納者，移送法院強制執行。"
   },
   {
     "lawId": "broker",
@@ -19064,7 +19616,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "6",
-    "text": "第 6 條本法所稱主管機關：在中央為目的事業主管機關；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 二 章 消費者權益 第 一 節 健康與安全保障"
+    "text": "第 6 條本法所稱主管機關：在中央為目的事業主管機關；在直轄市為直轄市政府；在縣（市）為縣（市）政府。"
   },
   {
     "lawId": "consumer",
@@ -19094,7 +19646,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "10-1",
-    "text": "第 10-1 條本節所定企業經營者對消費者或第三人之損害賠償責任，不得預先約定限制或免除。 第 二 節 定型化契約"
+    "text": "第 10-1 條本節所定企業經營者對消費者或第三人之損害賠償責任，不得預先約定限制或免除。"
   },
   {
     "lawId": "consumer",
@@ -19139,7 +19691,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "17-1",
-    "text": "第 17-1 條企業經營者與消費者訂立定型化契約，主張符合本節規定之事實者，就其事實負舉證責任。 第 三 節 特種交易"
+    "text": "第 17-1 條企業經營者與消費者訂立定型化契約，主張符合本節規定之事實者，就其事實負舉證責任。"
   },
   {
     "lawId": "consumer",
@@ -19169,7 +19721,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "21",
-    "text": "第 21 條企業經營者與消費者分期付款買賣契約應以書面為之。前項契約書應載明下列事項：一、頭期款。二、各期價款與其他附加費用合計之總價款與現金交易價格之差額。三、利率。企業經營者未依前項規定記載利率者，其利率按現金交易價格週年利率百分之五計算之。企業經營者違反第二項第一款、第二款之規定者，消費者不負現金交易價格以外價款之給付義務。 第 四 節 消費資訊之規範"
+    "text": "第 21 條企業經營者與消費者分期付款買賣契約應以書面為之。前項契約書應載明下列事項：一、頭期款。二、各期價款與其他附加費用合計之總價款與現金交易價格之差額。三、利率。企業經營者未依前項規定記載利率者，其利率按現金交易價格週年利率百分之五計算之。企業經營者違反第二項第一款、第二款之規定者，消費者不負現金交易價格以外價款之給付義務。"
   },
   {
     "lawId": "consumer",
@@ -19199,7 +19751,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "26",
-    "text": "第 26 條企業經營者對於所提供之商品應按其性質及交易習慣，為防震、防潮、防塵或其他保存商品所必要之包裝，以確保商品之品質與消費者之安全。但不得誇張其內容或為過大之包裝。 第 三 章 消費者保護團體"
+    "text": "第 26 條企業經營者對於所提供之商品應按其性質及交易習慣，為防震、防潮、防塵或其他保存商品所必要之包裝，以確保商品之品質與消費者之安全。但不得誇張其內容或為過大之包裝。"
   },
   {
     "lawId": "consumer",
@@ -19229,7 +19781,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "32",
-    "text": "第 32 條消費者保護團體辦理消費者保護工作成績優良者，主管機關得予以財務上之獎助。 第 四 章 行政監督"
+    "text": "第 32 條消費者保護團體辦理消費者保護工作成績優良者，主管機關得予以財務上之獎助。"
   },
   {
     "lawId": "consumer",
@@ -19279,7 +19831,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "42",
-    "text": "第 42 條直轄市、縣（市）政府應設消費者服務中心，辦理消費者之諮詢服務、教育宣導、申訴等事項。直轄市、縣（市）政府消費者服務中心得於轄區內設分中心。 第 五 章 消費爭議之處理 第 一 節 申訴與調解"
+    "text": "第 42 條直轄市、縣（市）政府應設消費者服務中心，辦理消費者之諮詢服務、教育宣導、申訴等事項。直轄市、縣（市）政府消費者服務中心得於轄區內設分中心。"
   },
   {
     "lawId": "consumer",
@@ -19329,7 +19881,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "46",
-    "text": "第 46 條調解成立者應作成調解書。前項調解書之作成及效力，準用鄉鎮市調解條例第二十五條至第二十九條之規定。 第 二 節 消費訴訟"
+    "text": "第 46 條調解成立者應作成調解書。前項調解書之作成及效力，準用鄉鎮市調解條例第二十五條至第二十九條之規定。"
   },
   {
     "lawId": "consumer",
@@ -19374,7 +19926,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "55",
-    "text": "第 55 條民事訴訟法第四十八條、第四十九條之規定，於依前條為訴訟行為者，準用之。 第 六 章 罰則"
+    "text": "第 55 條民事訴訟法第四十八條、第四十九條之規定，於依前條為訴訟行為者，準用之。"
   },
   {
     "lawId": "consumer",
@@ -19414,7 +19966,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "consumer",
     "articleNumber": "62",
-    "text": "第 62 條本法所定之罰鍰，由主管機關處罰，經限期繳納後，屆期仍未繳納者，依法移送行政執行。 第 七 章 附則"
+    "text": "第 62 條本法所定之罰鍰，由主管機關處罰，經限期繳納後，屆期仍未繳納者，依法移送行政執行。"
   },
   {
     "lawId": "consumer",
@@ -19454,7 +20006,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "fair_trade",
     "articleNumber": "6",
-    "text": "第 6 條本法所稱主管機關為公平交易委員會。本法規定事項，涉及其他部會之職掌者，由主管機關商同各該部會辦理之。 第 二 章 限制競爭"
+    "text": "第 6 條本法所稱主管機關為公平交易委員會。本法規定事項，涉及其他部會之職掌者，由主管機關商同各該部會辦理之。"
   },
   {
     "lawId": "fair_trade",
@@ -19524,7 +20076,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "fair_trade",
     "articleNumber": "20",
-    "text": "第 20 條有下列各款行為之一，而有限制競爭之虞者，事業不得為之：一、以損害特定事業為目的，促使他事業對該特定事業斷絕供給、購買或其他交易之行為。二、無正當理由，對他事業給予差別待遇之行為。三、以低價利誘或其他不正當方法，阻礙競爭者參與或從事競爭之行為。四、以脅迫、利誘或其他不正當方法，使他事業不為價格之競爭、參與結合、聯合或為垂直限制競爭之行為。五、以不正當限制交易相對人之事業活動為條件，而與其交易之行為。 第 三 章 不公平競爭"
+    "text": "第 20 條有下列各款行為之一，而有限制競爭之虞者，事業不得為之：一、以損害特定事業為目的，促使他事業對該特定事業斷絕供給、購買或其他交易之行為。二、無正當理由，對他事業給予差別待遇之行為。三、以低價利誘或其他不正當方法，阻礙競爭者參與或從事競爭之行為。四、以脅迫、利誘或其他不正當方法，使他事業不為價格之競爭、參與結合、聯合或為垂直限制競爭之行為。五、以不正當限制交易相對人之事業活動為條件，而與其交易之行為。"
   },
   {
     "lawId": "fair_trade",
@@ -19549,7 +20101,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "fair_trade",
     "articleNumber": "25",
-    "text": "第 25 條除本法另有規定者外，事業亦不得為其他足以影響交易秩序之欺罔或顯失公平之行為。 第 四 章 調查及裁處程序"
+    "text": "第 25 條除本法另有規定者外，事業亦不得為其他足以影響交易秩序之欺罔或顯失公平之行為。"
   },
   {
     "lawId": "fair_trade",
@@ -19564,7 +20116,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "fair_trade",
     "articleNumber": "28",
-    "text": "第 28 條主管機關對於事業涉有違反本法規定之行為進行調查時，事業承諾在主管機關所定期限內，採取具體措施停止並改正涉有違法之行為者，主管機關得中止調查。前項情形，主管機關應對事業有無履行其承諾進行監督。事業已履行其承諾，採取具體措施停止並改正涉有違法之行為者，主管機關得決定終止該案之調查。但有下列情形之一者，應恢復調查：一、事業未履行其承諾。二、作成中止調查之決定所依據之事實發生重大變化。三、作成中止調查之決定係基於事業提供不完整或不真實之資訊。第一項情形，裁處權時效自中止調查之日起，停止進行。主管機關恢復調查者，裁處權時效自恢復調查之翌日起，與停止前已經過之期間一併計算。 第 五 章 損害賠償"
+    "text": "第 28 條主管機關對於事業涉有違反本法規定之行為進行調查時，事業承諾在主管機關所定期限內，採取具體措施停止並改正涉有違法之行為者，主管機關得中止調查。前項情形，主管機關應對事業有無履行其承諾進行監督。事業已履行其承諾，採取具體措施停止並改正涉有違法之行為者，主管機關得決定終止該案之調查。但有下列情形之一者，應恢復調查：一、事業未履行其承諾。二、作成中止調查之決定所依據之事實發生重大變化。三、作成中止調查之決定係基於事業提供不完整或不真實之資訊。第一項情形，裁處權時效自中止調查之日起，停止進行。主管機關恢復調查者，裁處權時效自恢復調查之翌日起，與停止前已經過之期間一併計算。"
   },
   {
     "lawId": "fair_trade",
@@ -19589,7 +20141,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "fair_trade",
     "articleNumber": "33",
-    "text": "第 33 條被害人依本法之規定，向法院起訴時，得請求由侵害人負擔費用，將判決書內容登載新聞紙。 第 六 章 罰則"
+    "text": "第 33 條被害人依本法之規定，向法院起訴時，得請求由侵害人負擔費用，將判決書內容登載新聞紙。"
   },
   {
     "lawId": "fair_trade",
@@ -19644,7 +20196,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "fair_trade",
     "articleNumber": "44",
-    "text": "第 44 條主管機關依第二十七條規定進行調查時，受調查者違反第二十七條第三項規定，得處新臺幣五萬元以上五十萬元以下罰鍰；受調查者再經通知，無正當理由規避、妨礙或拒絕者，主管機關得繼續通知調查，並按次處新臺幣十萬元以上一百萬元以下罰鍰，至接受調查、到場陳述意見或提出有關帳冊、文件等資料或證物為止。 第 七 章 附則"
+    "text": "第 44 條主管機關依第二十七條規定進行調查時，受調查者違反第二十七條第三項規定，得處新臺幣五萬元以上五十萬元以下罰鍰；受調查者再經通知，無正當理由規避、妨礙或拒絕者，主管機關得繼續通知調查，並按次處新臺幣十萬元以上一百萬元以下罰鍰，至接受調查、到場陳述意見或提出有關帳冊、文件等資料或證物為止。"
   },
   {
     "lawId": "fair_trade",
@@ -19714,7 +20266,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "7",
-    "text": "第 7 條依本規則辦理估價所稱之面積，已辦理登記者，以登記之面積為準；其未辦理登記或以部分面積為估價者，應調查註明之。 第 二 章 估價作業程序"
+    "text": "第 7 條依本規則辦理估價所稱之面積，已辦理登記者，以登記之面積為準；其未辦理登記或以部分面積為估價者，應調查註明之。"
   },
   {
     "lawId": "appraisal",
@@ -19764,7 +20316,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "17",
-    "text": "第 17 條估價報告書之事實描述應真實確切，其用語應明確肯定，有難以確定之事項者，應在估價報告書中說明其可能影響勘估標的權利或價值之情形。 第 三 章 估價方法 第 一 節 比較法"
+    "text": "第 17 條估價報告書之事實描述應真實確切，其用語應明確肯定，有難以確定之事項者，應在估價報告書中說明其可能影響勘估標的權利或價值之情形。"
   },
   {
     "lawId": "appraisal",
@@ -19814,7 +20366,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "27",
-    "text": "第 27 條不動產估價師應採用三件以上比較標的，就其經前條推估檢討後之勘估標的試算價格，考量各比較標的蒐集資料可信度、各比較標的與勘估標的價格形成因素之相近程度，決定勘估標的之比較價格，並將比較修正內容敘明之。 第 二 節 收益法"
+    "text": "第 27 條不動產估價師應採用三件以上比較標的，就其經前條推估檢討後之勘估標的試算價格，考量各比較標的蒐集資料可信度、各比較標的與勘估標的價格形成因素之相近程度，決定勘估標的之比較價格，並將比較修正內容敘明之。"
   },
   {
     "lawId": "appraisal",
@@ -19919,7 +20471,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "47",
-    "text": "第 47 條（因條文排版無法完整呈現內容，請詳閱完整條文檔案）一定期間之收益價格，依下列計算式求取：1 1－────── n’ （1＋r） P＝a×──────── r 其中： P ：收益價格 a ：平均一年期間折舊前淨收益 r ：收益資本化率 n ’：可收益之年數收益價格已知者，適用該公式反推平均一年期間折舊前淨收益。一定期間終止後，有期末價值者，收益價格得加計該期末價值之現值，期末價值並得扣除處分不動產所需之相關費用。 第 三 節 成本法"
+    "text": "第 47 條（因條文排版無法完整呈現內容，請詳閱完整條文檔案）一定期間之收益價格，依下列計算式求取：1 1－────── n’ （1＋r） P＝a×──────── r 其中： P ：收益價格 a ：平均一年期間折舊前淨收益 r ：收益資本化率 n ’：可收益之年數收益價格已知者，適用該公式反推平均一年期間折舊前淨收益。一定期間終止後，有期末價值者，收益價格得加計該期末價值之現值，期末價值並得扣除處分不動產所需之相關費用。"
   },
   {
     "lawId": "appraisal",
@@ -20094,7 +20646,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "82",
-    "text": "第 82 條全聯會依第五十六條、第六十條、第六十一條、第六十三條、第六十六條、第六十七條及第七十七條公告之資料，應先報請中央主管機關備查。 第 四 章 宗地估價 第 一 節 通則"
+    "text": "第 82 條全聯會依第五十六條、第六十條、第六十一條、第六十三條、第六十六條、第六十七條及第七十七條公告之資料，應先報請中央主管機關備查。"
   },
   {
     "lawId": "appraisal",
@@ -20129,7 +20681,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "89",
-    "text": "第 89 條受有土壤或地下水污染之土地，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤或地下水污染之影響，並計算其地價減損額後，從正常價格中扣除之，以其餘額為該宗地之價格。 第 二 節 特殊宗地估價"
+    "text": "第 89 條受有土壤或地下水污染之土地，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤或地下水污染之影響，並計算其地價減損額後，從正常價格中扣除之，以其餘額為該宗地之價格。"
   },
   {
     "lawId": "appraisal",
@@ -20169,7 +20721,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "97",
-    "text": "第 97 條公共設施用地及公共設施保留地之估價，以比較法估價為原則。無買賣實例者，得比較其與毗鄰土地使用分區及使用強度差異，及土地價值減損情況，並斟酌毗鄰土地平均價格為基礎推算之。 第 五 章 房地估價"
+    "text": "第 97 條公共設施用地及公共設施保留地之估價，以比較法估價為原則。無買賣實例者，得比較其與毗鄰土地使用分區及使用強度差異，及土地價值減損情況，並斟酌毗鄰土地平均價格為基礎推算之。"
   },
   {
     "lawId": "appraisal",
@@ -20219,7 +20771,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "106",
-    "text": "第 106 條建物已不具備使用價值，得將其基地視為素地估價。但應考量建物拆除成本予以調整之。 第 六 章 土地改良物估價"
+    "text": "第 106 條建物已不具備使用價值，得將其基地視為素地估價。但應考量建物拆除成本予以調整之。"
   },
   {
     "lawId": "appraisal",
@@ -20254,7 +20806,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "113",
-    "text": "第 113 條受有土壤及地下水污染之建物，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤及地下水污染之影響，並計算其減損額後，從正常價格中扣除之，以其餘額為該建物之價格。 第 七 章 權利估價"
+    "text": "第 113 條受有土壤及地下水污染之建物，應先估算其未受污染之正常價格，再依據委託人提供之土壤污染檢測資料，考量該土壤及地下水污染之影響，並計算其減損額後，從正常價格中扣除之，以其餘額為該建物之價格。"
   },
   {
     "lawId": "appraisal",
@@ -20349,7 +20901,7 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "128",
-    "text": "第 128 條權利變換後區分所有建物及其土地應有部分，應考量都市更新權利變換計畫之建築計畫、建材標準、設備等級、工程造價水準及更新前後樓層別效用比關聯性等因素，以都市更新評價基準日當時之新成屋價格查估之。 第 八 章 租金估計"
+    "text": "第 128 條權利變換後區分所有建物及其土地應有部分，應考量都市更新權利變換計畫之建築計畫、建材標準、設備等級、工程造價水準及更新前後樓層別效用比關聯性等因素，以都市更新評價基準日當時之新成屋價格查估之。"
   },
   {
     "lawId": "appraisal",
@@ -20374,11 +20926,696 @@ export const generatedArticlesFlat: { lawId: string; articleNumber: string; text
   {
     "lawId": "appraisal",
     "articleNumber": "133",
-    "text": "第 133 條續訂租約之租金估計，得採下列方式為之：一、以續訂租約之租賃實例為比較標的，運用比較法估計之。二、以勘估標的於價格日期當時之正常價格為基礎，乘以續租之租金收益率，以估計淨收益，再加計必要費用。三、以勘估標的原契約租金之淨收益，就其租金變動趨勢調整後，再加計必要費用。四、分析勘估標的原契約租金與市場經濟租金之差額中，應歸屬於出租人之適當部分，加計契約租金。 第 九 章 附則"
+    "text": "第 133 條續訂租約之租金估計，得採下列方式為之：一、以續訂租約之租賃實例為比較標的，運用比較法估計之。二、以勘估標的於價格日期當時之正常價格為基礎，乘以續租之租金收益率，以估計淨收益，再加計必要費用。三、以勘估標的原契約租金之淨收益，就其租金變動趨勢調整後，再加計必要費用。四、分析勘估標的原契約租金與市場經濟租金之差額中，應歸屬於出租人之適當部分，加計契約租金。"
   },
   {
     "lawId": "appraisal",
     "articleNumber": "134",
     "text": "第 134 條本規則自發布日施行。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "1",
+    "text": "第 1 條為規範土地徵收，確保土地合理利用，並保障私人財產，增進公共利益，特制定本條例。土地徵收，依本條例之規定，本條例未規定者，適用其他法律之規定。其他法律有關徵收程序、徵收補償標準與本條例牴觸者，優先適用本條例。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "2",
+    "text": "第 2 條本條例所稱主管機關：在中央為內政部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "3",
+    "text": "第 3 條國家因公益需要，興辦下列各款事業，得徵收私有土地；徵收之範圍，應以其事業所必須者為限：一、國防事業。二、交通事業。三、公用事業。四、水利事業。五、公共衛生及環境保護事業。六、政府機關、地方自治機關及其他公共建築。七、教育、學術及文化事業。八、社會福利事業。九、國營事業。十、其他依法得徵收土地之事業。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "3-1",
+    "text": "第 3-1 條需用土地人興辦公益事業，應按事業性質及實際需要，勘選適當用地及範圍，並應儘量避免耕地及優先使用無使用計畫之公有土地或國營事業土地。對於經依都市計畫法、區域計畫法或國家公園法劃設或變更後，依法得予徵收或區段徵收之農業用地，於劃設或變更時，應經目的事業主管機關考量徵收之公益性及必要性。需用土地人勘選用地內之農業用地，免經區域計畫擬定機關許可者，於變更為非農業使用時，應先徵得直轄市或縣（市）農業主管機關同意。特定農業區農牧用地，除零星夾雜難以避免者外，不得徵收。但國防、交通、水利事業、公用事業供輸電線路使用者所必須或經行政院核定之重大建設所需者，不在此限。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "3-2",
+    "text": "第 3-2 條需用土地人興辦事業徵收土地時，應依下列因素評估興辦事業之公益性及必要性，並為綜合評估分析：一、社會因素：包括徵收所影響人口之多寡、年齡結構及徵收計畫對周圍社會現況、弱勢族群生活型態及健康風險之影響程度。二、經濟因素：包括徵收計畫對稅收、糧食安全、增減就業或轉業人口、徵收費用、各級政府配合興辦公共設施與政府財務支出及負擔情形、農林漁牧產業鏈及土地利用完整性。三、文化及生態因素：包括因徵收計畫而導致城鄉自然風貌、文化古蹟、生活條件或模式發生改變及對該地區生態環境、周邊居民或社會整體之影響。四、永續發展因素：包括國家永續發展政策、永續指標及國土計畫。五、其他：依徵收計畫個別情形，認為適當或應加以評估參考之事項。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "4",
+    "text": "第 4 條有下列各款情形之一者，得為區段徵收：一、新設都市地區之全部或一部，實施開發建設者。二、舊都市地區為公共安全、衛生、交通之需要或促進土地之合理使用實施更新者。三、都市土地之農業區、保護區變更為建築用地或工業區變更為住宅區、商業區者。四、非都市土地實施開發建設者。五、農村社區為加強公共設施、改善公共衛生之需要或配合農業發展之規劃實施更新者。六、其他依法得為區段徵收者。前項第一款至第三款之開發範圍經中央主管機關核定者，得先行區段徵收，並於區段徵收公告期滿後一年內發布實施都市計畫，不受都市計畫法第五十二條規定之限制。第一項第五款之開發，需用土地人得會同有關機關研擬開發範圍，並檢具經上級目的事業主管機關核准之興辦事業計畫書，報經中央主管機關核定後，先行區段徵收，於區段徵收公告期滿後，依土地使用計畫完成非都市土地分區或用地編定之變更。第一項第四款或第六款之開發，涉及都市計畫之新訂、擴大或變更者，得依第二項之規定辦理；未涉及者，得依前項之規定辦理。不相連之地區，得依都市計畫或興辦事業計畫書內容、範圍合併辦理區段徵收，並適用前三項之規定。區段徵收範圍勘選、計畫之擬定、核定、用地取得、拆遷補償、工程施工、分配設計、地籍整理、權利清理、財務結算及區段徵收與都市計畫配合等事項之實施辦法，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "5",
+    "text": "第 5 條徵收土地時，其土地改良物應一併徵收。但有下列情形之一者，不在此限：一、土地改良物所有權人要求取回，並自公告期滿之日起十五日內自行遷移。二、墳墓及其他紀念物必須遷移。三、建築改良物依法令規定不得建造。四、農作改良物之種類或數量與正常種植情形不相當者，其不相當部分。五、其他法律另有規定。前項應徵收之土地改良物，得視其興辦事業計畫之需要，於土地徵收公告之日起三年內徵收之。但土地改良物所有權人於需用土地人報請徵收土地前，請求同時一併徵收其改良物時，需用土地人應同時辦理一併徵收。第一項第三款及第四款之土地改良物，於徵收土地公告期滿後，由該管直轄市或縣（市）主管機關通知其所有權人或使用人限期遷移或拆除之，不予補償；屆期不拆遷者，由該管直轄市或縣（市）主管機關會同有關機關逕行除去。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "6",
+    "text": "第 6 條需用土地人取得經核准撥用或提供開發之公有土地，該公有土地上之私有土地改良物，得準用前條規定徵收之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "7",
+    "text": "第 7 條申請徵收之土地遇有古蹟、遺址或登錄之歷史建築，應於可能範圍內避免之；其未能避免者，需用土地人應先擬訂保存計畫，徵得目的事業主管機關同意，始得徵收。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "8",
+    "text": "第 8 條有下列各款情形之一者，所有權人得於徵收公告之日起一年內向該管直轄市或縣（市）主管機關申請一併徵收，逾期不予受理：一、徵收土地之殘餘部分面積過小或形勢不整，致不能為相當之使用者。二、徵收建築改良物之殘餘部分不能為相當之使用者。前項申請，應以書面為之。於補償費發給完竣前，得以書面撤回之。一併徵收之土地或建築改良物殘餘部分，應以現金補償之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "9",
+    "text": "第 9 條被徵收之土地，除區段徵收及本條例或其他法律另有規定外，有下列情形之一者，原土地所有權人得於徵收公告之日起二十年內，向該管直轄市或縣（市）主管機關申請照原徵收補償價額收回其土地，不適用土地法第二百十九條之規定：一、徵收補償費發給完竣屆滿三年，未依徵收計畫開始使用者。二、未依核准徵收原定興辦事業使用者。三、依原徵收計畫開始使用後未滿五年，不繼續依原徵收計畫使用者。該管直轄市或縣（市）主管機關收受申請後，經查明合於前項規定時，應報原核准徵收機關核准後，通知原土地所有權人於六個月內繳還原受領之補償地價及地價加成補償，逾期視為放棄收回權。第一項第一款之情形，係因不可歸責於需用土地人之事由者，不得申請收回土地。第一項第一款所稱開始使用，指興辦事業之主體工程動工。但依其事業性質無需興建工程者，不在此限。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "10",
+    "text": "第 10 條需用土地人興辦之事業依法應經目的事業主管機關許可者，於申請徵收土地或土地改良物前，應將其事業計畫報經目的事業主管機關許可。需用土地人於事業計畫報請目的事業主管機關許可前，應舉行公聽會，聽取土地所有權人及利害關係人之意見。但因舉辦具機密性之國防事業或已舉行公聽會或說明會者，不在此限。特定農業區經行政院核定為重大建設須辦理徵收者，若有爭議，應依行政程序法舉行聽證。需用土地人興辦之事業無須報經目的事業主管機關許可者，除有第二項但書情形外，應於與所有權人協議價購或以其他方式取得前，先舉行公聽會。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "11",
+    "text": "第 11 條需用土地人申請徵收土地或土地改良物前，除國防、交通或水利事業，因公共安全急需使用土地未及與所有權人協議者外，應先與所有權人協議價購或以其他方式取得；所有權人拒絕參與協議或經開會未能達成協議且無法以其他方式取得者，始得依本條例申請徵收。前項協議之內容應作成書面，並應記明協議之結果。如未能達成協議，應記明未達成協議之理由，於申請時送交中央主管機關。第一項協議價購，依其他法律規定有優先購買權者，無優先購買權之適用。第一項協議價購，應由需用土地人依市價與所有權人協議。前項所稱市價，指市場正常交易價格。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "12",
+    "text": "第 12 條需用土地人經依前條規定協議不成時，為申請徵收土地或土地改良物之需，得洽請直轄市或縣（市）主管機關會同有關人員進入公、私有土地或土地改良物內實施調查或勘測，其所有權人、占有人、使用人或管理人不得拒絕或阻撓。但進入建築物或設有圍障之土地調查或勘測，應於七日前通知其所有權人、占有人、使用人或管理人。為實施前項調查或勘測，須遷移或拆除地上障礙物，致所有權人或使用人遭受之損失，應先予適當之補償，其補償價額以協議為之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "13",
+    "text": "第 13 條申請徵收土地或土地改良物，應由需用土地人擬具詳細徵收計畫書，並附具徵收土地圖冊或土地改良物清冊及土地使用計畫圖，送由核准徵收機關核准，並副知該管直轄市或縣（市）主管機關。中央主管機關為前項之審核，應審查下列事項：一、是否符合徵收之公益性、必要性及是否適當與合理。二、需用土地人是否具有執行該事業之能力。三、該事業計畫申請徵收之土地是否符合現行都市計畫、區域計畫或國土計畫。四、該事業計畫是否有助於土地適當且合理之利用。五、該事業計畫之財務評估是否合理可行。六、依本條例第三十四條之一提出之安置計畫是否合理可行。七、其他依法應為或得為審查之事項。需用土地人有第二十七條但書之情形者，應一併載明於徵收計畫書送交審核。中央主管機關收受第一項申請後，視需要得會同利害關係人進行現場勘查並作成勘查紀錄。勘查紀錄作成後應於十四日內寄送利害關係人。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "13-1",
+    "text": "第 13-1 條前條所稱徵收計畫書，應記載下列事項，並檢附相關證明文件：一、徵收土地或土地改良物原因。二、徵收土地或土地改良物所在地範圍及面積。三、興辦事業之種類及法令依據。四、興辦事業計畫之必要性說明。五、與土地所有權人或土地改良物所有權人協議價購或以其他方式取得之經過情形及所有權人陳述意見之情形。六、公益性及必要性評估報告。七、土地使用之現狀及其使用人之姓名、住所。八、土地改良物情形。九、一併徵收之土地改良物。十、四鄰接連土地之使用狀況及其改良情形。十一、徵收土地區內有無古蹟、遺址或登錄之歷史建築，並註明其現狀及維護措施。十二、舉行聽證、公聽會、說明會之情形，並應檢附會議紀錄及出席紀錄。十三、土地或土地改良物所有權人或管理人之姓名、住所。十四、被徵收土地之使用配置。十五、興辦事業概略及其計畫進度。十六、應需補償金額總數及其分配。十七、準備金額總數及其來源。十八、涉及原住民土地之徵收，應檢附中央原住民族主管機關之書面同意文件。十九、安置計畫。如僅申請徵收土地改良物，得免記明前項第九款及第十四款事項。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "14",
+    "text": "第 14 條徵收土地或土地改良物，由中央主管機關核准之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "15",
+    "text": "第 15 條中央主管機關為審議徵收案件，應遴聘（派）專家學者、民間團體及相關機關代表，以合議制方式辦理之。前項專家學者應由地政、環境影響評估、都市計畫、城鄉規劃等專業領域學者組成，其中專家學者及民間團體代表不得少於二分之一。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "16",
+    "text": "第 16 條同一土地有二以上需用土地人申請徵收時，以其興辦事業性質之輕重為核定原則。其性質相同者，以其申請之先後為核定原則。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "17",
+    "text": "第 17 條中央主管機關於核准徵收土地或土地改良物後，應將原案通知該管直轄市或縣（市）主管機關。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "18",
+    "text": "第 18 條直轄市或縣（市）主管機關於接到中央主管機關通知核准徵收案時，應即公告，並以書面通知土地或土地改良物所有權人及他項權利人。前項公告之期間為三十日。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "18-1",
+    "text": "第 18-1 條被徵收土地或土地改良物之所有權已登記者，以公告之日土地登記簿或建築改良物登記簿記載之所有權人及他項權利人姓名、住所辦理公告及通知；其效力並及於公告前因繼承、強制執行或法院之判決已取得土地或土地改良物所有權或他項權利，而尚未辦竣登記之人。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "19",
+    "text": "第 19 條徵收土地或土地改良物應發給之補償費，由需用土地人負擔，並繳交該管直轄市或縣（市）主管機關轉發之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "20",
+    "text": "第 20 條徵收土地或土地改良物應發給之補償費，應於公告期滿後十五日內發給之。但依第二十二條第五項規定發給應補償價額之差額者，不在此限。需用土地人未於公告期滿十五日內將應發給之補償費繳交該管直轄市或縣（市）主管機關發給完竣者，該部分土地或土地改良物之徵收從此失其效力。但有下列各款情形之一者，不在此限：一、於公告期間內因對補償之估定有異議，而由該管直轄市或縣（市）主管機關依第二十二條規定提交地價評議委員會復議。二、經應受補償人以書面同意延期或分期發給。三、應受補償人拒絕受領或不能受領。四、應受補償人所在地不明。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "21",
+    "text": "第 21 條被徵收土地或土地改良物之所有權人，對於其土地或土地改良物之權利義務，於應受之補償費發給完竣時終止。前項補償費未發給完竣前，得繼續為從來之使用。但合於第二十七條但書規定者，不在此限。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "22",
+    "text": "第 22 條權利關係人對於第十八條第一項之公告事項有異議者，得於公告期間內向該管直轄市或縣（市）主管機關以書面提出。該管直轄市或縣（市）主管機關接受異議後應即查明處理，並將查處情形以書面通知權利關係人。權利關係人對於徵收補償價額有異議者，得於公告期間屆滿之次日起三十日內以書面向該管直轄市或縣（市）主管機關提出異議，該管直轄市或縣（市）主管機關於接受異議後應即查明處理，並將查處情形以書面通知權利關係人。權利關係人對於前項查處不服者，該管直轄市或縣（市）主管機關得提請地價評議委員會復議，權利關係人不服復議結果者，得依法提起行政救濟。直轄市或縣（市）主管機關依第二十條規定發給補償費完竣後，徵收計畫之執行，不因權利關係人依前三項規定提出異議或提起行政救濟而停止。徵收補償價額經復議、行政救濟結果有變動或補償費經依法發給完竣，嗣經發現原補償價額認定錯誤者，其應補償價額差額，應於其結果確定之日起三個月內發給之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "23",
+    "text": "第 23 條被徵收之土地或土地改良物自公告日起，除於公告前因繼承、強制執行或法院之判決而取得所有權或他項權利，並於公告期間內申請登記者外，不得分割、合併、移轉或設定負擔。土地權利人或使用人並不得在該土地為建築改良物之新建、增建、改建或採取土石、變更地形或為農作改良物之增加種植。其於公告時已在工作中者，應即停止。共有分管之耕地，部分被徵收者，土地所有權人得於徵收補償地價發給完竣前或核定發給抵價地前，申請共有物分割登記或應有部分交換移轉登記，不受前項不得分割、移轉規定之限制。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "24",
+    "text": "第 24 條被徵收土地或建築改良物之所有權或他項權利，以公告之日土地登記簿或建築改良物登記簿記載者為準。但於公告前因繼承、強制執行、法院之判決或其他依法律規定取得土地或建築改良物之所有權或他項權利而未經登記完畢者，其權利人應於徵收公告期間內，向該管直轄市或縣（市）主管機關申請將其權利備案。被徵收土地因前條第二項規定辦理登記，其權利以登記後土地登記簿記載者為準。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "25",
+    "text": "第 25 條被徵收之土地或土地改良物，所有權人死亡未辦竣繼承登記，其徵收補償費得由部分繼承人按其應繼分領取之；其已辦竣公同共有繼承登記者，亦同。前項規定，於本條例施行前尚未領取徵收補償費之土地或土地改良物，適用之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "26",
+    "text": "第 26 條直轄市或縣（市）主管機關應於國庫設立土地徵收補償費保管專戶，保管因受領遲延、拒絕受領或不能受領之補償費，不適用提存法之規定。直轄市或縣（市）主管機關應於本條例規定應發給補償費之期限屆滿次日起三個月內存入專戶保管，並通知應受補償人。自通知送達發生效力之日起，逾十五年未領取之補償費，歸屬國庫。前項保管專戶儲存之補償費應給付利息。以實收利息照付。未受領之徵收補償費，依第一項規定繳存專戶保管時，視同補償完竣。第一項未受領補償費保管辦法，由中央主管機關定之。前四項規定，於本條例施行前未辦竣提存之未受領補償費，準用之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "27",
+    "text": "第 27 條需用土地人應俟補償費發給完竣或核定發給抵價地後，始得進入被徵收土地內工作。但國防、交通及水利事業，因公共安全急需先行使用者，不在此限。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "28",
+    "text": "第 28 條被徵收土地或土地改良物應受之補償費發給完竣或核定發給抵價地後，直轄市或縣（市）主管機關應通知土地權利人或使用人限期遷移完竣。應受領遷移費人無可考或所在地不明，致其應遷移之物件未能遷移者，直轄市或縣（市）主管機關應公告三十日限期遷移完竣。徵收範圍內應遷移之物件逾期未遷移者，由直轄市或縣（市）主管機關或需用土地人依行政執行法執行。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "29",
+    "text": "第 29 條徵收範圍內應行遷葬之墳墓，需用土地人應申請當地墳墓主管機關依殯葬管理條例規定辦理，並將情形詳細記載列冊，報請直轄市或縣（市）政府備案。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "30",
+    "text": "第 30 條被徵收之土地，應按照徵收當期之市價補償其地價。在都市計畫區內之公共設施保留地，應按毗鄰非公共設施保留地之平均市價補償其地價。前項市價，由直轄市、縣（市）主管機關提交地價評議委員會評定之。各直轄市、縣（市）主管機關應經常調查轄區地價動態，每六個月提交地價評議委員會評定被徵收土地市價變動幅度，作為調整徵收補償地價之依據。前三項查估市價之地價調查估計程序、方法及應遵行事項等辦法，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "31",
+    "text": "第 31 條建築改良物之補償費，按徵收當時該建築改良物之重建價格估定之。農作改良物之補償費，於農作改良物被徵收時與其孳息成熟時期相距在一年以內者，按成熟時之孳息估定之；其逾一年者，按其種植及培育費用，並參酌現值估定之。建築改良物及農作改良物之補償費，由直轄市或縣（市）主管機關會同有關機關估定之；其查估基準，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "32",
+    "text": "第 32 條徵收土地公告前已領有建築執照或於農地上為合法改良土地，依第二十三條第一項規定停止工作者，其已支付之土地改良費用，應給予補償。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "33",
+    "text": "第 33 條土地或土地改良物原供合法營業之用，因徵收而致營業停止或營業規模縮小之損失，應給予補償。前項補償基準，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "34",
+    "text": "第 34 條徵收土地或土地改良物時，有下列情形之一，應發給遷移費：一、依第五條第一項第一款或第二款規定遷移者。二、徵收公告六個月前設有戶籍之人口必須遷移者。但因結婚或出生而設籍者，不受六個月期限之限制。三、動力機具、生產原料或經營設備等必須遷移者。四、因土地一部分之徵收而其改良物須全部遷移者。五、水產養殖物或畜產必須遷移者。前項遷移費查估基準，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "34-1",
+    "text": "第 34-1 條徵收公告一年前有居住事實之低收入戶或中低收入戶人口，因其所有建築改良物被徵收，致無屋可居住者，或情境相同經直轄市或縣（市）政府社會工作人員查訪屬實者，需用土地人應訂定安置計畫，並於徵收計畫書內敘明安置計畫情形。前項安置，包括安置住宅、購置住宅貸款利息補貼、租金補貼等。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "35",
+    "text": "第 35 條被徵收之土地或建築改良物應有之負擔，除申請發給抵價地者依第四十一條及第四十二條規定辦理外，其款額計算，以該土地或建築改良物應得之補償金額為限，由該管直轄市或縣（市）主管機關於發給地價補償費或建築改良物補償費時為清償結束之。前項所稱應有之負擔，指他項權利價值及依法應補償耕地三七五租約承租人之地價。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "36",
+    "text": "第 36 條被徵收之土地或建築改良物原設定之他項權利因徵收而消滅。其款額計算，該管直轄市或縣（市）主管機關應通知當事人限期自行協議，再依其協議結果代為清償；協議不成者，其補償費依第二十六條規定辦理。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "36-1",
+    "text": "第 36-1 條被徵收土地或土地改良物，其補償費之核計、核發對象、領取補償費應備文件等事項之辦法，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "37",
+    "text": "第 37 條區段徵收範圍勘定後，該管直轄市或縣（市）主管機關得視實際需要，報經上級主管機關核定後，分別或同時公告禁止建築改良物之新建、增建、改建或重建及採取土石或變更地形。前項禁止期間，不得超過一年六個月。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "38",
+    "text": "第 38 條需用土地人申請區段徵收土地，應檢具區段徵收計畫書、徵收土地圖冊及土地使用計畫圖，送由當地直轄市或縣（市）主管機關邀集需用土地人及土地所有權人舉行公聽會後，報請中央主管機關核准。內政部申請區段徵收時，準用前項規定報請行政院核准。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "39",
+    "text": "第 39 條區段徵收土地時，應依第三十條規定補償其地價。除地價補償得經土地所有權人申請，以徵收後可供建築之抵價地折算抵付外，其餘各項補償費依第三十一條至第三十四條規定補償之。抵價地總面積，以徵收總面積百分之五十為原則。因情況特殊，經上級主管機關核准者，不在此限。但不得少於百分之四十。曾經農地重劃者，該重劃地區部分不得少於百分之四十五。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "40",
+    "text": "第 40 條實施區段徵收時，原土地所有權人不願領取現金補償者，應於徵收公告期間內，檢具有關證明文件，以書面向該管直轄巿或縣（巿）主管機關申請發給抵價地。該管直轄巿或縣（巿）主管機關收受申請後，應即審查，並將審查結果，以書面通知申請人。土地所有權人依前項規定申請發給抵價地時，得就其全部或部分被徵收土地應領之補償地價提出申請。申請發給抵價地者，對其土地之權利義務，於接到該管直轄巿或縣（巿）主管機關核定發給抵價地通知時終止。經核定發給抵價地或已領竣徵收補償地價之土地所有權人，得向直轄巿或縣（巿）主管機關申請，改按原徵收補償地價發給現金補償或發給抵價地，經直轄巿或縣（巿）主管機關徵得需用土地人同意後核准。前項申請改發給現金補償或改發給抵價地者，應於核定發給抵價地通知之日，或現金補償發給完竣之日，或通知補償地價存入保管專戶之日起一個月內為之，並以一次為限。申請改發給抵價地者，直轄巿或縣（巿）主管機關應限期繳回其申請改發給抵價地之徵收補償地價後始得核准。申請發給抵價地者，直轄巿或縣（巿）主管機關不受第二十條第一項發給期限之限制。經核定發給抵價地者，其應領之抵價地由該管直轄巿或縣（巿）主管機關於規劃分配後，囑託該管登記機關逕行辦理土地所有權登記，並通知原土地所有權人定期到場接管。未按指定期限接管者，視為已接管。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "41",
+    "text": "第 41 條土地所有權人申請發給抵價地之原有土地上訂有耕地租約或設定他項權利或限制登記者，除第四十二條另有規定外，直轄市或縣（市）主管機關應通知申請人限期自行清理，並依規定期限提出證明文件。申請人未依前項規定辦理者，直轄市或縣（市）主管機關應核定不發給抵價地。直轄市或縣（市）主管機關經核定不發給抵價地者，應於核定之次日起十五日內發給現金補償。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "42",
+    "text": "第 42 條土地所有權人申請發給抵價地之原有土地上設定有抵押權或典權者，原土地所有權人及該他項權利人得申請於發給之抵價地設定抵押權或典權，申請時並應提出同意塗銷原有土地抵押權或典權之證明文件。依前項規定於發給之抵價地設定抵押權或典權，其權利範圍、價值、次序等內容，由原土地所有權人及他項權利人協議定之。依第一項設定之抵押權或典權，應於抵價地登記時，同時登記；並應於登記後通知該他項權利人。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "43",
+    "text": "第 43 條區段徵收範圍內之公有土地，管理機關應以作價或領回土地方式撥供該管區段徵收主管機關統籌規劃開發、分配。但區段徵收前已作為第四十四條第一項第二款用地使用者，應無償撥供主管機關統籌規劃開發。前項以作價方式提供者，其地價準用第三十條規定計算。以領回土地方式提供者，其領回土地面積按區段徵收之抵價地面積比率計算，配回原管理機關，配回之土地應以第四十四條第一項第二款以外之公共設施用地為優先，並依區段徵收計畫處理。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "43-1",
+    "text": "第 43-1 條區段徵收範圍內得規劃配設農業專用區，供原土地所有權人以其已領之現金地價補償費數額申請折算配售土地，作為農業耕作使用。前項農業專用區規劃原則、申請配售資格、條件、面積、作業程序及其他應遵行事項之辦法，由各級主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "44",
+    "text": "第 44 條區段徵收範圍內土地，經規劃整理後，除依第四十三條規定配回原管理機關及第四十三條之一規定配售外，其處理方式如下：一、抵價地發交被徵收土地所有權人領回。其應領回抵價地之面積，由該管直轄市或縣（市）主管機關按其應領地價補償費與區段徵收補償地價總額之比率計算其應領之權利價值，並以實際領回抵價地之單位地價折算之。二、道路、溝渠、公園、綠地、兒童遊樂場、廣場、停車場、體育場所及國民學校用地，無償登記為當地直轄市有、縣（市）有或鄉（鎮、市）有。三、前款以外之公共設施用地，得由主管機關依財務計畫需要，於徵收計畫書載明有償或無償撥供需地機關或讓售供公營事業機構使用。四、國民住宅用地、安置原住戶或經行政院專案核准所需土地得以讓售。五、其餘可供建築土地，得予標售、標租或設定地上權。依前項第一款規定領回面積不足最小建築單位面積者，應於規定期間內提出申請合併，未於規定期間內申請者，該管直轄市或縣（市）主管機關應於規定期間屆滿之日起三十日內，按原徵收地價補償費發給現金補償。第一項第二款以外之公共設施用地，如該事業得許民營者，其用地應依第一項第五款之規定辦理。依第一項第三款至第五款撥用或讓售地價及標售底價，以開發總費用為基準，按其土地之位置、地勢、交通、道路寬度、公共設施及預期發展等條件之優劣估定之。依第一項第五款標租或設定地上權時，其期限不得逾九十九年。第一項第五款土地之標售、標租及設定地上權辦法，由各級主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "45",
+    "text": "第 45 條實施區段徵收時，直轄市或縣（市）主管機關應預計區段徵收土地平均開發成本，並斟酌區段徵收後各街廓之位置、地勢、交通、道路寬度、公共設施及預期發展情形，估計區段徵收後各路街之路線價或區段價，提經地價評議委員會評定後，作為原土地所有權人領回抵價地之計算基準。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "46",
+    "text": "第 46 條區段徵收土地所有權人應領抵價地面積與實際領回抵價地之面積有所增減時，依下列規定處理：一、實際領回抵價地之面積超過應領之面積者，就其超過部分按評定區段徵收後地價繳納差額地價。二、實際領回抵價地之面積小於應領之面積者，就其不足部分按評定區段徵收後地價發給差額地價。前項第一款應繳納之差額地價，經限期繳納，屆期仍未繳納者，得移送法院強制執行。未繳納差額地價之抵價地，不得移轉或設定他項權利。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "47",
+    "text": "第 47 條區段徵收範圍內不妨礙都市計畫事業及區段徵收計畫之既成建築物基地或已辦竣財團法人登記之私立學校、社會福利、慈善事業、宗教團體用地，得按原位置保留分配，並減輕其依前條規定應繳納之差額地價，其減輕比例由主管機關視實際情形定之，並載明於區段徵收計畫書。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "48",
+    "text": "第 48 條區段徵收之程序及補償，本章未規定者，準用第二章及第三章規定。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "49",
+    "text": "第 49 條已公告徵收之土地，需用土地人應切實按核准計畫及所定期限使用。在未依徵收計畫完成使用前，需用土地人應每年檢討其興辦事業計畫，並由其上級事業主管機關列管。有下列情形之一者，應辦理撤銷徵收：一、因作業錯誤，致原徵收之土地不在工程用地範圍內。二、公告徵收時，都市計畫已規定以聯合開發、市地重劃或其他方式開發。但以聯合開發方式開發之土地，土地所有權人不願參與聯合開發者，不在此限。已公告徵收之土地，有下列情形之一者，應廢止徵收：一、因工程變更設計，致原徵收之土地不在工程用地範圍內。二、依徵收計畫開始使用前，興辦之事業改變、興辦事業計畫經註銷、開發方式改變或取得方式改變。三、已依徵收計畫開始使用，尚未依徵收計畫完成使用之土地，因情事變更，致原徵收土地之全部或一部已無徵收之必要。依前二項辦理撤銷或廢止徵收之土地或土地改良物，其已一併徵收之殘餘部分，應同時辦理撤銷或廢止。但該殘餘部分已移轉或另有他用者，不在此限。前三項規定，於本條例施行前公告徵收之土地，適用之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "50",
+    "text": "第 50 條撤銷或廢止徵收，由需用土地人向中央主管機關申請之。已公告徵收之土地有前條第一項或第二項各款情形之一，而需用土地人未申請撤銷或廢止徵收者，原土地所有權人得向該管直轄巿或縣（巿）主管機關請求之。該管直轄巿或縣（巿）主管機關收受前項請求後，應會同需用土地人及其他有關機關審查。其合於規定者，由需用土地人依第一項規定申請之；不合規定者，該管直轄巿或縣（巿）主管機關應將處理結果函復原土地所有權人。原土地所有權人不服前項處理結果，應於直轄巿或縣（巿）主管機關函復送達之日起三十日內向中央主管機關請求撤銷或廢止徵收。其合於規定者，由中央主管機關逕予撤銷或廢止；不合規定者，由中央主管機關將處理結果函復原土地所有權人。原土地所有權人不服處理結果者，依法提起行政救濟。已公告徵收之土地有前條第一項或第二項各款情形之一，而需用土地人未申請撤銷或廢止徵收者，由該管直轄市或縣（市）主管機關會同需用土地人及其他有關機關審查後向中央主管機關申請撤銷或廢止徵收。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "51",
+    "text": "第 51 條中央主管機關於核准撤銷或廢止徵收後，應將原案通知該管直轄市或縣（市）主管機關。直轄市或縣（市）主管機關於收到中央主管機關通知核准撤銷或廢止徵收案時，應公告三十日，並通知原土地所有權人於一定期間繳清應繳納之價額，發還其原有土地。未於一定期間繳清者，不發還其土地，並不得依第九條規定申請收回該土地。前項一定期間，不得少於六個月。第二項所稱應繳納之價額，指徵收補償地價、地價加成補償及遷移費。但第三十四條第一項規定之人口或物件已遷移者，無須繳納遷移費。前項徵收補償地價，於徵收前設定有他項權利或耕地租約者，包括他項權利人或耕地承租人原應受領之價金。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "52",
+    "text": "第 52 條撤銷或廢止徵收後，徵收前原設定之他項權利及耕地租約不予回復。但依第四十二條規定由原土地所有權人及他項權利人申請於發給之抵價地設定抵押權或典權者，其原抵押權或典權准予回復。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "52-1",
+    "text": "第 52-1 條土地徵收處分有下列情形之一者，其徵收補償費之繳清、土地之發還、原設定他項權利及耕地租約之處理，準用前二條規定：一、經中央主管機關依行政程序法撤銷或廢止。二、經相對人或利害關係人依行政程序法第一百二十八條規定向行政機關申請後予以撤銷或廢止。三、經行政救濟結果撤銷或廢止。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "53",
+    "text": "第 53 條前五條規定，於土地改良物撤銷或廢止徵收時準用之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "54",
+    "text": "第 54 條土地撤銷或廢止徵收時，原一併徵收之土地改良物應一併辦理撤銷或廢止徵收。但該土地改良物已滅失者，不在此限。前項土地改良物與徵收當時相較已減輕其價值，而仍得為相當之使用者，原需用土地人得就其現存部分酌定價額，一併辦理撤銷或廢止徵收。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "55",
+    "text": "第 55 條撤銷或廢止徵收之土地與一併辦理撤銷或廢止徵收之土地改良物原所有權人相同者，應同時繳清土地及土地改良物應繳納之價額後，發還其原有之土地及現存之土地改良物。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "56",
+    "text": "第 56 條徵收之土地，得於徵收計畫書載明以信託、聯合開發、委託開發、委託經營、合作經營、設定地上權或出租提供民間機構投資建設。本條例施行前申請徵收之土地，經申請中央主管機關備案者，得依前項規定之方式提供民間機構投資建設。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "57",
+    "text": "第 57 條需用土地人因興辦第三條規定之事業，需穿越私有土地之上空或地下，得就需用之空間範圍協議取得地上權，協議不成時，準用徵收規定取得地上權。但應擇其損害最少之處所及方法為之。前項土地因事業之興辦，致不能為相當之使用時，土地所有權人得自施工之日起至完工後一年內，請求需用土地人徵收土地所有權，需用土地人不得拒絕。前項土地所有權人原設定地上權取得之對價，應在徵收補償地價內扣除之。地上權徵收補償辦法，由中央目的事業主管機關會同中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "58",
+    "text": "第 58 條國家因興辦臨時性之公共建設工程，得徵用私有土地或土地改良物。徵用期間逾三年，或二次以上徵用，期間合計逾三年者，需用土地人應於申請徵用前，以書面通知；土地或土地改良物所有權人於收到通知書之日起三十日內，得請求需用土地人徵收所有權，需用土地人不得拒絕。依前項規定請求徵收土地或土地改良物所有權者，不得再依第九條規定申請收回其土地或土地改良物。第二章規定，於徵用土地或土地改良物時，準用之。但因情況緊急，如遲延使用土地或土地改良物，公共利益有受重大危害之虞者，得經中央主管機關核准後，先行使用該土地或土地改良物。徵用土地或土地改良物，應自公告徵用之日起計算使用補償費，並於公告期滿後十五日內一次發給所有權人、地上權、典權、不動產役權、農育權、永佃權或耕作權人；其每年補償費，土地依徵用公告期滿第十五日之公告土地現值百分之十計算，土地改良物依徵收補償費百分之十計算；徵用期間不足一年者，按月計算之；不足一月者，按日計算之。前項使用補償費，經應受補償人同意者，得延期或分期發給。因徵用致土地改良物必需拆除或未能回復為徵用前之使用者，準用第三十一條規定給予補償。但其使用方式經徵得所有權人同意者，不在此限。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "59",
+    "text": "第 59 條私有土地經依徵收計畫使用後，依法變更原使用目的，土地管理機關標售該土地時，應公告一個月，被徵收之原土地所有權人或其繼承人有依同樣條件優先購買權。但優先購買權人未於決標後十日內表示優先購買者，其優先購買權視為放棄。依第八條第一項規定一併徵收之土地，須與原徵收土地同時標售時，適用前項之規定。前二項規定，於區段徵收不適用之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "60",
+    "text": "第 60 條本條例施行前，已公告徵收但尚未辦竣結案者，除本條例另有規定外，應依其公告徵收時所依據之法律規定，繼續辦理結案。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "61",
+    "text": "第 61 條本條例施行前公告徵收之土地，其申請收回，仍依施行前之規定辦理。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "62",
+    "text": "第 62 條本條例施行細則，由中央主管機關定之。"
+  },
+  {
+    "lawId": "land_expropriation",
+    "articleNumber": "63",
+    "text": "第 63 條本條例自公布日施行。本條例中華民國一百年十二月十三日修正之第三十條之施行日期，由行政院定之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "1",
+    "text": "第 1 條為加強公寓大廈之管理維護，提昇居住品質，特制定本條例。本條例未規定者，適用其他法令之規定。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "2",
+    "text": "第 2 條本條例所稱主管機關：在中央為內政部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "3",
+    "text": "第 3 條本條例用辭定義如下：一、公寓大廈：指構造上或使用上或在建築執照設計圖樣標有明確界線，得區分為數部分之建築物及其基地。二、區分所有：指數人區分一建築物而各有其專有部分，並就其共用部分按其應有部分有所有權。三、專有部分：指公寓大廈之一部分，具有使用上之獨立性，且為區分所有之標的者。四、共用部分：指公寓大廈專有部分以外之其他部分及不屬專有之附屬建築物，而供共同使用者。五、約定專用部分：公寓大廈共用部分經約定供特定區分所有權人使用者。六、約定共用部分：指公寓大廈專有部分經約定供共同使用者。七、區分所有權人會議：指區分所有權人為共同事務及涉及權利義務之有關事項，召集全體區分所有權人所舉行之會議。八、住戶：指公寓大廈之區分所有權人、承租人或其他經區分所有權人同意而為專有部分之使用者或業經取得停車空間建築物所有權者。九、管理委員會：指為執行區分所有權人會議決議事項及公寓大廈管理維護工作，由區分所有權人選任住戶若干人為管理委員所設立之組織。十、管理負責人：指未成立管理委員會，由區分所有權人推選住戶一人或依第二十八條第三項、第二十九條第六項規定為負責管理公寓大廈事務者。十一、管理服務人：指由區分所有權人會議決議或管理負責人或管理委員會僱傭或委任而執行建築物管理維護事務之公寓大廈管理服務人員或管理維護公司。十二、規約：公寓大廈區分所有權人為增進共同利益，確保良好生活環境，經區分所有權人會議決議之共同遵守事項。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "4",
+    "text": "第 4 條區分所有權人除法律另有限制外，對其專有部分，得自由使用、收益、處分，並排除他人干涉。專有部分不得與其所屬建築物共用部分之應有部分及其基地所有權或地上權之應有部分分離而為移轉或設定負擔。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "5",
+    "text": "第 5 條區分所有權人對專有部分之利用，不得有妨害建築物之正常使用及違反區分所有權人共同利益之行為。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "6",
+    "text": "第 6 條住戶應遵守下列事項：一、於維護、修繕專有部分、約定專用部分或行使其權利時，不得妨害其他住戶之安寧、安全及衛生。二、他住戶因維護、修繕專有部分、約定專用部分或設置管線，必須進入或使用其專有部分或約定專用部分時，不得拒絕。三、管理負責人或管理委員會因維護、修繕共用部分或設置管線，必須進入或使用其專有部分或約定專用部分時，不得拒絕。四、於維護、修繕專有部分、約定專用部分或設置管線，必須使用共用部分時，應經管理負責人或管理委員會之同意後為之。五、其他法令或規約規定事項。前項第二款至第四款之進入或使用，應擇其損害最少之處所及方法為之，並應修復或補償所生損害。住戶違反第一項規定，經協調仍不履行時，住戶、管理負責人或管理委員會得按其性質請求各該主管機關或訴請法院為必要之處置。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "7",
+    "text": "第 7 條公寓大廈共用部分不得獨立使用供做專有部分。其為下列各款者，並不得為約定專用部分：一、公寓大廈本身所占之地面。二、連通數個專有部分之走廊或樓梯，及其通往室外之通路或門廳；社區內各巷道、防火巷弄。三、公寓大廈基礎、主要樑柱、承重牆壁、樓地板及屋頂之構造。四、約定專用有違法令使用限制之規定者。五、其他有固定使用方法，並屬區分所有權人生活利用上不可或缺之共用部分。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "8",
+    "text": "第 8 條公寓大廈周圍上下、外牆面、樓頂平臺及不屬專有部分之防空避難設備，其變更構造、顏色、設置廣告物、鐵鋁窗或其他類似之行為，除應依法令規定辦理外，該公寓大廈規約另有規定或區分所有權人會議已有決議，經向直轄市、縣（市）主管機關完成報備有案者，應受該規約或區分所有權人會議決議之限制。公寓大廈有十二歲以下兒童或六十五歲以上老人之住戶，外牆開口部或陽臺得設置不妨礙逃生且不突出外牆面之防墜設施。防墜設施設置後，設置理由消失且不符前項限制者，區分所有權人應予改善或回復原狀。住戶違反第一項規定，管理負責人或管理委員會應予制止，經制止而不遵從者，應報請主管機關依第四十九條第一項規定處理，該住戶並應於一個月內回復原狀。屆期未回復原狀者，得由管理負責人或管理委員會回復原狀，其費用由該住戶負擔。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "9",
+    "text": "第 9 條各區分所有權人按其共有之應有部分比例，對建築物之共用部分及其基地有使用收益之權。但另有約定者從其約定。住戶對共用部分之使用應依其設置目的及通常使用方法為之。但另有約定者從其約定。前二項但書所約定事項，不得違反本條例、區域計畫法、都市計畫法及建築法令之規定。住戶違反第二項規定，管理負責人或管理委員會應予制止，並得按其性質請求各該主管機關或訴請法院為必要之處置。如有損害並得請求損害賠償。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "10",
+    "text": "第 10 條專有部分、約定專用部分之修繕、管理、維護，由各該區分所有權人或約定專用部分之使用人為之，並負擔其費用。共用部分、約定共用部分之修繕、管理、維護，由管理負責人或管理委員會為之。其費用由公共基金支付或由區分所有權人按其共有之應有部分比例分擔之。但修繕費係因可歸責於區分所有權人或住戶之事由所致者，由該區分所有權人或住戶負擔。其費用若區分所有權人會議或規約另有規定者，從其規定。前項共用部分、約定共用部分，若涉及公共環境清潔衛生之維持、公共消防滅火器材之維護、公共通道溝渠及相關設施之修繕，其費用政府得視情況予以補助，補助辦法由直轄市、縣（市）政府定之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "11",
+    "text": "第 11 條共用部分及其相關設施之拆除、重大修繕或改良，應依區分所有權人會議之決議為之。前項費用，由公共基金支付或由區分所有權人按其共有之應有部分比例分擔。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "12",
+    "text": "第 12 條專有部分之共同壁及樓地板或其內之管線，其維修費用由該共同壁雙方或樓地板上下方之區分所有權人共同負擔。但修繕費係因可歸責於區分所有權人之事由所致者，由該區分所有權人負擔。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "13",
+    "text": "第 13 條公寓大廈之重建，應經全體區分所有權人及基地所有權人、地上權人或典權人之同意。但有下列情形之一者，不在此限：一、配合都市更新計畫而實施重建者。二、嚴重毀損、傾頹或朽壞，有危害公共安全之虞者。三、因地震、水災、風災、火災或其他重大事變，肇致危害公共安全者。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "14",
+    "text": "第 14 條公寓大廈有前條第二款或第三款所定情形之一，經區分所有權人會議決議重建時，區分所有權人不同意決議又不出讓區分所有權或同意後不依決議履行其義務者，管理負責人或管理委員會得訴請法院命區分所有權人出讓其區分所有權及其基地所有權應有部分。前項之受讓人視為同意重建。重建之建造執照之申請，其名義以區分所有權人會議之決議為之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "15",
+    "text": "第 15 條住戶應依使用執照所載用途及規約使用專有部分、約定專用部分，不得擅自變更。住戶違反前項規定，管理負責人或管理委員會應予制止，經制止而不遵從者，報請直轄市、縣（市）主管機關處理，並要求其回復原狀。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "16",
+    "text": "第 16 條住戶不得任意棄置垃圾、排放各種污染物、惡臭物質或發生喧囂、振動及其他與此相類之行為。住戶不得於私設通路、防火間隔、防火巷弄、開放空間、退縮空地、樓梯間、共同走廊、防空避難設備等處所堆置雜物、設置柵欄、門扇或營業使用，或違規設置廣告物或私設路障及停車位侵占巷道妨礙出入。但開放空間及退縮空地，在直轄市、縣（市）政府核准範圍內，得依規約或區分所有權人會議決議供營業使用；防空避難設備，得為原核准範圍之使用；其兼作停車空間使用者，得依法供公共收費停車使用。住戶為維護、修繕、裝修或其他類似之工作時，未經申請主管建築機關核准，不得破壞或變更建築物之主要構造。住戶飼養動物，不得妨礙公共衛生、公共安寧及公共安全。但法令或規約另有禁止飼養之規定時，從其規定。住戶違反前四項規定時，管理負責人或管理委員會應予制止或按規約處理，經制止而不遵從者，得報請直轄市、縣（市）主管機關處理。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "17",
+    "text": "第 17 條住戶於公寓大廈內依法經營餐飲、瓦斯、電焊或其他危險營業或存放有爆炸性或易燃性物品者，應依中央主管機關所定保險金額投保公共意外責任保險。其因此增加其他住戶投保火災保險之保險費者，並應就其差額負補償責任。其投保、補償辦法及保險費率由中央主管機關會同財政部定之。前項投保公共意外責任保險，經催告於七日內仍未辦理者，管理負責人或管理委員會應代為投保；其保險費、差額補償費及其他費用，由該住戶負擔。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "18",
+    "text": "第 18 條公寓大廈應設置公共基金，其來源如下：一、起造人就公寓大廈領得使用執照一年內之管理維護事項，應按工程造價一定比例或金額提列。二、區分所有權人依區分所有權人會議決議繳納。三、本基金之孳息。四、其他收入。依前項第一款規定提列之公共基金，起造人於該公寓大廈使用執照申請時，應提出繳交各直轄市、縣（市）主管機關公庫代收之證明；於公寓大廈成立管理委員會或推選管理負責人，並完成依第五十七條規定點交共用部分、約定共用部分及其附屬設施設備後向直轄市、縣（市）主管機關報備，由公庫代為撥付。同款所稱比例或金額，由中央主管機關定之。公共基金應設專戶儲存，並由管理負責人或管理委員會負責管理；如經區分所有權人會議決議交付信託者，由管理負責人或管理委員會交付信託。其運用應依區分所有權人會議之決議為之。第一項及第二項所規定起造人應提列之公共基金，於本條例公布施行前，起造人已取得建造執照者，不適用之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "19",
+    "text": "第 19 條區分所有權人對於公共基金之權利應隨區分所有權之移轉而移轉；不得因個人事由為讓與、扣押、抵銷或設定負擔。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "20",
+    "text": "第 20 條管理負責人或管理委員會應定期將公共基金或區分所有權人、住戶應分擔或其他應負擔費用之收支、保管及運用情形公告，並於解職、離職或管理委員會改組時，將公共基金收支情形、會計憑證、會計帳簿、財務報表、印鑑及餘額移交新管理負責人或新管理委員會。管理負責人或管理委員會拒絕前項公告或移交，經催告於七日內仍不公告或移交時，得報請主管機關或訴請法院命其公告或移交。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "21",
+    "text": "第 21 條區分所有權人或住戶積欠應繳納之公共基金或應分擔或其他應負擔之費用已逾二期或達相當金額，經定相當期間催告仍不給付者，管理負責人或管理委員會得訴請法院命其給付應繳之金額及遲延利息。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "22",
+    "text": "第 22 條住戶有下列情形之一者，由管理負責人或管理委員會促請其改善，於三個月內仍未改善者，管理負責人或管理委員會得依區分所有權人會議之決議，訴請法院強制其遷離：一、積欠依本條例規定應分擔之費用，經強制執行後再度積欠金額達其區分所有權總價百分之一者。二、違反本條例規定經依第四十九條第一項第一款至第四款規定處以罰鍰後，仍不改善或續犯者。三、其他違反法令或規約情節重大者。前項之住戶如為區分所有權人時，管理負責人或管理委員會得依區分所有權人會議之決議，訴請法院命區分所有權人出讓其區分所有權及其基地所有權應有部分；於判決確定後三個月內不自行出讓並完成移轉登記手續者，管理負責人或管理委員會得聲請法院拍賣之。前項拍賣所得，除其他法律另有規定外，於積欠本條例應分擔之費用，其受償順序與第一順位抵押權同。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "23",
+    "text": "第 23 條有關公寓大廈、基地或附屬設施之管理使用及其他住戶間相互關係，除法令另有規定外，得以規約定之。規約除應載明專有部分及共用部分範圍外，下列各款事項，非經載明於規約者，不生效力：一、約定專用部分、約定共用部分之範圍及使用主體。二、各區分所有權人對建築物共用部分及其基地之使用收益權及住戶對共用部分使用之特別約定。三、禁止住戶飼養動物之特別約定。四、違反義務之處理方式。五、財務運作之監督規定。六、區分所有權人會議決議有出席及同意之區分所有權人人數及其區分所有權比例之特別約定。七、糾紛之協調程序。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "24",
+    "text": "第 24 條區分所有權之繼受人，應於繼受前向管理負責人或管理委員會請求閱覽或影印第三十五條所定文件，並應於繼受後遵守原區分所有權人依本條例或規約所定之一切權利義務事項。公寓大廈專有部分之無權占有人，應遵守依本條例規定住戶應盡之義務。無權占有人違反前項規定，準用第二十一條、第二十二條、第四十七條、第四十九條住戶之規定。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "25",
+    "text": "第 25 條區分所有權人會議，由全體區分所有權人組成，每年至少應召開定期會議一次。有下列情形之一者，應召開臨時會議：一、發生重大事故有及時處理之必要，經管理負責人或管理委員會請求者。二、經區分所有權人五分之一以上及其區分所有權比例合計五分之一以上，以書面載明召集之目的及理由請求召集者。區分所有權人會議除第二十八條規定外，由具區分所有權人身分之管理負責人、管理委員會主任委員或管理委員為召集人；管理負責人、管理委員會主任委員或管理委員喪失區分所有權人資格日起，視同解任。無管理負責人或管理委員會，或無區分所有權人擔任管理負責人、主任委員或管理委員時，由區分所有權人互推一人為召集人；召集人任期依區分所有權人會議或依規約規定，任期一至二年，連選得連任一次。但區分所有權人會議或規約未規定者，任期一年，連選得連任一次。召集人無法依前項規定互推產生時，各區分所有權人得申請直轄市、縣（市）主管機關指定臨時召集人，區分所有權人不申請指定時，直轄市、縣（市）主管機關得視實際需要指定區分所有權人一人為臨時召集人，或依規約輪流擔任，其任期至互推召集人為止。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "26",
+    "text": "第 26 條非封閉式之公寓大廈集居社區其地面層為各自獨立之數幢建築物，且區內屬住宅與辦公、商場混合使用，其辦公、商場之出入口各自獨立之公寓大廈，各該幢內之辦公、商場部分，得就該幢或結合他幢內之辦公、商場部分，經其區分所有權人過半數書面同意，及全體區分所有權人會議決議或規約明定下列各款事項後，以該辦公、商場部分召開區分所有權人會議，成立管理委員會，並向直轄市、縣（市）主管機關報備。一、共用部分、約定共用部分範圍之劃分。二、共用部分、約定共用部分之修繕、管理、維護範圍及管理維護費用之分擔方式。三、公共基金之分配。四、會計憑證、會計帳簿、財務報表、印鑑、餘額及第三十六條第八款規定保管文件之移交。五、全體區分所有權人會議與各該辦公、商場部分之區分所有權人會議之分工事宜。第二十條、第二十七條、第二十九條至第三十九條、第四十八條、第四十九條第一項第七款及第五十四條規定，於依前項召開或成立之區分所有權人會議、管理委員會及其主任委員、管理委員準用之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "27",
+    "text": "第 27 條各專有部分之區分所有權人有一表決權。數人共有一專有部分者，該表決權應推由一人行使。區分所有權人會議之出席人數與表決權之計算，於任一區分所有權人之區分所有權占全部區分所有權五分之一以上者，或任一區分所有權人所有之專有部分之個數超過全部專有部分個數總合之五分之一以上者，其超過部分不予計算。區分所有權人因故無法出席區分所有權人會議時，得以書面委託配偶、有行為能力之直系血親、其他區分所有權人或承租人代理出席；受託人於受託之區分所有權占全部區分所有權五分之一以上者，或以單一區分所有權計算之人數超過區分所有權人數五分之一者，其超過部分不予計算。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "28",
+    "text": "第 28 條公寓大廈建築物所有權登記之區分所有權人達半數以上及其區分所有權比例合計半數以上時，起造人應於三個月內召集區分所有權人召開區分所有權人會議，成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。前項起造人為數人時，應互推一人為之。出席區分所有權人之人數或其區分所有權比例合計未達第三十一條規定之定額而未能成立管理委員會時，起造人應就同一議案重新召集會議一次。起造人於召集區分所有權人召開區分所有權人會議成立管理委員會或推選管理負責人前，為公寓大廈之管理負責人。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "29",
+    "text": "第 29 條公寓大廈應成立管理委員會或推選管理負責人。公寓大廈成立管理委員會者，應由管理委員互推一人為主任委員，主任委員對外代表管理委員會。主任委員、管理委員之選任、解任、權限與其委員人數、召集方式及事務執行方法與代理規定，依區分所有權人會議之決議。但規約另有規定者，從其規定。管理委員、主任委員及管理負責人之任期，依區分所有權人會議或規約之規定，任期一至二年，主任委員、管理負責人、負責財務管理及監察業務之管理委員，連選得連任一次，其餘管理委員，連選得連任。但區分所有權人會議或規約未規定者，任期一年，主任委員、管理負責人、負責財務管理及監察業務之管理委員，連選得連任一次，其餘管理委員，連選得連任。前項管理委員、主任委員及管理負責人任期屆滿未再選任或有第二十條第二項所定之拒絕移交者，自任期屆滿日起，視同解任。公寓大廈之住戶非該專有部分之區分所有權人者，除區分所有權人會議之決議或規約另有規定外，得被選任、推選為管理委員、主任委員或管理負責人。公寓大廈未組成管理委員會且未推選管理負責人時，以第二十五條區分所有權人互推之召集人或申請指定之臨時召集人為管理負責人。區分所有權人無法互推召集人或申請指定臨時召集人時，區分所有權人得申請直轄市、縣（市）主管機關指定住戶一人為管理負責人，其任期至成立管理委員會、推選管理負責人或互推召集人為止。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "29-1",
+    "text": "第 29-1 條本條例施行前或施行後已取得建造執照之未成立管理委員會或推選管理負責人之公寓大廈，經直轄市、縣（市）主管機關認定有危險之虞者，其區分所有權人應於直轄市、縣（市）主管機關通知後一定期限內成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。因故未能於一定期限內成立管理委員會或推選管理負責人並辦理報備者，直轄市、縣（市）主管機關得視實際情況展延一次，並不得超過一年。前項公寓大廈有危險之虞之認定要件及成立管理委員會或推選管理負責人並辦理報備之期限，由中央主管機關公告；直轄市、縣（市）主管機關認有必要時，得公告擴大認定要件並另定其成立管理委員會或推選管理負責人並辦理報備之期限。直轄市、縣（市）主管機關應輔導或委託專業機構輔導第一項之公寓大廈成立管理委員會或推選管理負責人並辦理報備。公寓大廈區分所有權人經依第四十九條之一處罰後，仍未依規定成立管理委員會或推選管理負責人並辦理報備者，必要時，由直轄市、縣（市）主管機關指定住戶一人為管理負責人，其任期至成立管理委員會、推選管理負責人或互推召集人為止。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "30",
+    "text": "第 30 條區分所有權人會議，應由召集人於開會前十日以書面載明開會內容，通知各區分所有權人。但有急迫情事須召開臨時會者，得以公告為之；公告期間不得少於二日。管理委員之選任事項，應在前項開會通知中載明並公告之，不得以臨時動議提出。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "31",
+    "text": "第 31 條區分所有權人會議之決議，除規約另有規定外，應有區分所有權人三分之二以上及其區分所有權比例合計三分之二以上出席，以出席人數四分之三以上及其區分所有權比例占出席人數區分所有權四分之三以上之同意行之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "32",
+    "text": "第 32 條區分所有權人會議依前條規定未獲致決議、出席區分所有權人之人數或其區分所有權比例合計未達前條定額者，召集人得就同一議案重新召集會議；其開議除規約另有規定出席人數外，應有區分所有權人三人並五分之一以上及其區分所有權比例合計五分之一以上出席，以出席人數過半數及其區分所有權比例占出席人數區分所有權合計過半數之同意作成決議。前項決議之會議紀錄依第三十四條第一項規定送達各區分所有權人後，各區分所有權人得於七日內以書面表示反對意見。書面反對意見未超過全體區分所有權人及其區分所有權比例合計半數時，該決議視為成立。第一項會議主席應於會議決議成立後十日內以書面送達全體區分所有權人並公告之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "33",
+    "text": "第 33 條區分所有權人會議之決議，未經依下列各款事項辦理者，不生效力：一、專有部分經依區分所有權人會議約定為約定共用部分者，應經該專有部分區分所有權人同意。二、公寓大廈外牆面、樓頂平臺，設置廣告物、無線電台基地台等類似強波發射設備或其他類似之行為，設置於屋頂者，應經頂層區分所有權人同意；設置其他樓層者，應經該樓層區分所有權人同意。該層住戶，並得參加區分所有權人會議陳述意見。三、依第五十六條第一項規定成立之約定專用部分變更時，應經使用該約定專用部分之區分所有權人同意。但該約定專用顯已違反公共利益，經管理委員會或管理負責人訴請法院判決確定者，不在此限。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "34",
+    "text": "第 34 條區分所有權人會議應作成會議紀錄，載明開會經過及決議事項，由主席簽名，於會後十五日內送達各區分所有權人並公告之。前項會議紀錄，應與出席區分所有權人之簽名簿及代理出席之委託書一併保存。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "35",
+    "text": "第 35 條利害關係人於必要時，得請求閱覽或影印規約、公共基金餘額、會計憑證、會計帳簿、財務報表、欠繳公共基金與應分攤或其他應負擔費用情形、管理委員會會議紀錄及前條會議紀錄，管理負責人或管理委員會不得拒絕。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "36",
+    "text": "第 36 條管理委員會之職務如下：一、區分所有權人會議決議事項之執行。二、共有及共用部分之清潔、維護、修繕及一般改良。三、公寓大廈及其周圍之安全及環境維護事項。四、住戶共同事務應興革事項之建議。五、住戶違規情事之制止及相關資料之提供。六、住戶違反第六條第一項規定之協調。七、收益、公共基金及其他經費之收支、保管及運用。八、規約、會議紀錄、使用執照謄本、竣工圖說、水電、消防、機械設施、管線圖說、會計憑證、會計帳簿、財務報表、公共安全檢查及消防安全設備檢修之申報文件、印鑑及有關文件之保管。九、管理服務人之委任、僱傭及監督。十、會計報告、結算報告及其他管理事項之提出及公告。十一、共用部分、約定共用部分及其附屬設施設備之點收及保管。十二、依規定應由管理委員會申報之公共安全檢查與消防安全設備檢修之申報及改善之執行。十三、其他依本條例或規約所定事項。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "37",
+    "text": "第 37 條管理委員會會議決議之內容不得違反本條例、規約或區分所有權人會議決議。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "38",
+    "text": "第 38 條管理委員會有當事人能力。管理委員會為原告或被告時，應將訴訟事件要旨速告區分所有權人。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "39",
+    "text": "第 39 條管理委員會應向區分所有權人會議負責，並向其報告會務。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "40",
+    "text": "第 40 條第三十六條、第三十八條及前條規定，於管理負責人準用之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "41",
+    "text": "第 41 條公寓大廈管理維護公司應經中央主管機關許可及辦理公司登記，並向中央主管機關申領登記證後，始得執業。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "42",
+    "text": "第 42 條公寓大廈管理委員會、管理負責人或區分所有權人會議，得委任或僱傭領有中央主管機關核發之登記證或認可證之公寓大廈管理維護公司或管理服務人員執行管理維護事務。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "43",
+    "text": "第 43 條公寓大廈管理維護公司，應依下列規定執行業務：一、應依規定類別，聘僱一定人數領有中央主管機關核發認可證之繼續性從業之管理服務人員，並負監督考核之責。二、應指派前款之管理服務人員辦理管理維護事務。三、應依業務執行規範執行業務。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "44",
+    "text": "第 44 條受僱於公寓大廈管理維護公司之管理服務人員，應依下列規定執行業務：一、應依核准業務類別、項目執行管理維護事務。二、不得將管理服務人員認可證提供他人使用或使用他人之認可證執業。三、不得同時受聘於二家以上之管理維護公司。四、應參加中央主管機關舉辦或委託之相關機構、團體辦理之訓練。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "45",
+    "text": "第 45 條前條以外之公寓大廈管理服務人員，應依下列規定執行業務：一、應依核准業務類別、項目執行管理維護事務。二、不得將管理服務人員認可證提供他人使用或使用他人之認可證執業。三、應參加中央主管機關舉辦或委託之相關機構、團體辦理之訓練。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "46",
+    "text": "第 46 條第四十一條至前條公寓大廈管理維護公司及管理服務人員之資格、條件、管理維護公司聘僱管理服務人員之類別與一定人數、登記證與認可證之申請與核發、業務範圍、業務執行規範、責任、輔導、獎勵、參加訓練之方式、內容與時數、受委託辦理訓練之機構、團體之資格、條件與責任及登記費之收費基準等事項之管理辦法，由中央主管機關定之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "47",
+    "text": "第 47 條有下列行為之一者，由直轄市、縣（市）主管機關處新臺幣三千元以上一萬五千元以下罰鍰，並得令其限期改善或履行義務、職務；屆期不改善或不履行者，得連續處罰：一、區分所有權人會議召集人、起造人或臨時召集人違反第二十五條或第二十八條所定之召集義務者。二、住戶違反第十六條第一項或第四項規定者。三、區分所有權人或住戶違反第六條規定，主管機關受理住戶、管理負責人或管理委員會之請求，經通知限期改善，屆期不改善者。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "48",
+    "text": "第 48 條有下列行為之一者，由直轄市、縣（市）主管機關處新臺幣一千元以上五千元以下罰鍰，並得令其限期改善或履行義務、職務；屆期不改善或不履行者，得連續處罰：一、管理負責人、主任委員或管理委員未善盡督促第十七條所定住戶投保責任保險之義務者。二、管理負責人、主任委員或管理委員無正當理由未執行第二十二條所定促請改善或訴請法院強制遷離或強制出讓該區分所有權之職務者。三、管理負責人、主任委員或管理委員無正當理由違反第三十五條規定者。四、管理負責人、主任委員或管理委員無正當理由未執行第三十六條第一款、第五款至第十二款所定之職務，顯然影響住戶權益者。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "49",
+    "text": "第 49 條有下列行為之一者，由直轄市、縣（市）主管機關處新臺幣四萬元以上二十萬元以下罰鍰，並得令其限期改善或履行義務；屆期不改善或不履行者，得連續處罰：一、區分所有權人對專有部分之利用違反第五條規定者。二、住戶違反第八條第一項或第九條第二項關於公寓大廈變更使用限制規定，經制止而不遵從者。三、住戶違反第十五條第一項規定擅自變更專有或約定專用之使用者。四、住戶違反第十六條第二項或第三項規定者。五、住戶違反第十七條所定投保責任保險之義務者。六、區分所有權人違反第十八條第一項第二款規定未繳納公共基金者。七、管理負責人、主任委員或管理委員違反第二十條所定之公告或移交義務者。八、起造人或建築業者違反第五十七條或第五十八條規定者。有供營業使用事實之住戶有前項第三款或第四款行為，因而致人於死者，處一年以上七年以下有期徒刑，得併科新臺幣一百萬元以上五百萬元以下罰金；致重傷者，處六個月以上五年以下有期徒刑，得併科新臺幣五十萬元以上二百五十萬元以下罰金。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "49-1",
+    "text": "第 49-1 條公寓大廈未依第二十九條之一第一項規定於期限內成立管理委員會或推選管理負責人並辦理報備者，由直轄市、縣（市）主管機關按每一專有部分處區分所有權人新臺幣四萬元以上二十萬元以下罰鍰，並令其限期辦理；屆期仍未辦理者，得按次處罰。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "50",
+    "text": "第 50 條從事公寓大廈管理維護業務之管理維護公司或管理服務人員違反第四十二條規定，未經領得登記證、認可證或經廢止登記證、認可證而營業，或接受公寓大廈管理委員會、管理負責人或區分所有權人會議決議之委任或僱傭執行公寓大廈管理維護服務業務者，由直轄市、縣（市）主管機關勒令其停業或停止執行業務，並處新臺幣四萬元以上二十萬元以下罰鍰；其拒不遵從者，得按次連續處罰。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "51",
+    "text": "第 51 條公寓大廈管理維護公司，違反第四十三條規定者，中央主管機關應通知限期改正；屆期不改正者，得予停業、廢止其許可或登記證或處新臺幣三萬元以上十五萬元以下罰鍰；其未依規定向中央主管機關申領登記證者，中央主管機關應廢止其許可。受僱於公寓大廈管理維護公司之管理服務人員，違反第四十四條規定者，中央主管機關應通知限期改正；屆期不改正者，得廢止其認可證或停止其執行公寓大廈管理維護業務三個月以上三年以下或處新臺幣三千元以上一萬五千元以下罰鍰。前項以外之公寓大廈管理服務人員，違反第四十五條規定者，中央主管機關應通知限期改正；屆期不改正者，得廢止其認可證或停止其執行公寓大廈管理維護業務六個月以上三年以下或處新臺幣三千元以上一萬五千元以下罰鍰。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "52",
+    "text": "第 52 條依本條例所處之罰鍰，經限期繳納，屆期仍不繳納者，依法移送強制執行。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "53",
+    "text": "第 53 條多數各自獨立使用之建築物、公寓大廈，其共同設施之使用與管理具有整體不可分性之集居地區者，其管理及組織準用本條例之規定。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "54",
+    "text": "第 54 條本條例所定應行催告事項，由管理負責人或管理委員會以書面為之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "55",
+    "text": "第 55 條本條例施行前已取得建造執照之公寓大廈，其區分所有權人應依第二十五條第四項規定，互推一人為召集人，並召開第一次區分所有權人會議，成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。前項公寓大廈於區分所有權人會議訂定規約前，以第六十條規約範本視為規約。但得不受第七條各款不得為約定專用部分之限制。對第一項未成立管理組織並報備之公寓大廈，直轄市、縣（市）主管機關得分期、分區、分類（按樓高或使用之不同等分類）擬定計畫，輔導召開區分所有權人會議成立管理委員會或推選管理負責人，並向直轄市、縣（市）主管機關報備。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "56",
+    "text": "第 56 條公寓大廈之起造人於申請建造執照時，應檢附專有部分、共用部分、約定專用部分、約定共用部分標示之詳細圖說及規約草約。於設計變更時亦同。前項規約草約經承受人簽署同意後，於區分所有權人會議訂定規約前，視為規約。公寓大廈之起造人或區分所有權人應依使用執照所記載之用途及下列測繪規定，辦理建物所有權第一次登記：一、獨立建築物所有權之牆壁，以牆之外緣為界。二、建築物共用之牆壁，以牆壁之中心為界。三、附屬建物以其外緣為界辦理登記。四、有隔牆之共用牆壁，依第二款之規定，無隔牆設置者，以使用執照竣工平面圖區分範圍為界，其面積應包括四周牆壁之厚度。第一項共用部分之圖說，應包括設置管理維護使用空間之詳細位置圖說。本條例中華民國九十二年十二月九日修正施行前，領得使用執照之公寓大廈，得設置一定規模、高度之管理維護使用空間，並不計入建築面積及總樓地板面積；其免計入建築面積及總樓地板面積之一定規模、高度之管理維護使用空間及設置條件等事項之辦法，由直轄市、縣（市）主管機關定之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "57",
+    "text": "第 57 條起造人應將公寓大廈共用部分、約定共用部分與其附屬設施設備；設施設備使用維護手冊及廠商資料、使用執照謄本、竣工圖說、水電、機械設施、消防及管線圖說，於管理委員會成立或管理負責人推選或指定後七日內會同政府主管機關、公寓大廈管理委員會或管理負責人現場針對水電、機械設施、消防設施及各類管線進行檢測，確認其功能正常無誤後，移交之。前項公寓大廈之水電、機械設施、消防設施及各類管線不能通過檢測，或其功能有明顯缺陷者，管理委員會或管理負責人得報請主管機關處理，其歸責起造人者，主管機關命起造人負責修復改善，並於一個月內，起造人再會同管理委員會或管理負責人辦理移交手續。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "58",
+    "text": "第 58 條公寓大廈起造人或建築業者，非經領得建造執照，不得辦理銷售。公寓大廈之起造人或建築業者，不得將共用部分，包含法定空地、法定停車空間及法定防空避難設備，讓售於特定人或為區分所有權人以外之特定人設定專用使用權或為其他有損害區分所有權人權益之行為。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "59",
+    "text": "第 59 條區分所有權人會議召集人、臨時召集人、起造人、建築業者、區分所有權人、住戶、管理負責人、主任委員或管理委員有第四十七條、第四十八條或第四十九條各款所定情事之一時，他區分所有權人、利害關係人、管理負責人或管理委員會得列舉事實及提出證據，報直轄市、縣（市）主管機關處理。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "59-1",
+    "text": "第 59-1 條直轄市、縣（市）政府為處理有關公寓大廈爭議事件，得聘請資深之專家、學者及建築師、律師，並指定公寓大廈及建築管理主管人員，組設公寓大廈爭議事件調處委員會。前項調處委員會之組織，由內政部定之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "60",
+    "text": "第 60 條規約範本，由中央主管機關定之。第五十六條規約草約，得依前項規約範本制作。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "61",
+    "text": "第 61 條第六條、第九條、第十五條、第十六條、第二十條、第二十五條、第二十八條、第二十九條及第五十九條所定主管機關應處理事項，得委託或委辦鄉（鎮、市、區）公所辦理。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "62",
+    "text": "第 62 條本條例施行細則，由中央主管機關定之。"
+  },
+  {
+    "lawId": "apartment",
+    "articleNumber": "63",
+    "text": "第 63 條本條例自公布日施行。"
   }
 ];
