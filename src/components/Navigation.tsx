@@ -2,7 +2,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Home, BookOpen, Bot, Settings, PencilRuler, Bookmark, BarChart2, Menu, X, Search, ShieldCheck, GraduationCap } from 'lucide-react';
+import { useProgress } from '@/hooks/useProgress';
+import { UpdateLog } from '@/components/UpdateLog';
+import { Home, BookOpen, Bot, Settings, PencilRuler, Bookmark, BarChart2, Menu, X, Search, ShieldCheck, GraduationCap, Trophy, Zap } from 'lucide-react';
 
 const mainNavItems = [
   { name: '首頁', href: '/', icon: Home },
@@ -21,6 +23,8 @@ const mobilePrimary = [mainNavItems[0], mainNavItems[1], mainNavItems[3], bottom
 export function Navigation() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { isLoaded, getGamificationStats } = useProgress();
+  const game = getGamificationStats();
   return (
     <>
       <aside className="hidden md:flex flex-col w-64 h-screen card fixed shadow-sm">
@@ -36,7 +40,7 @@ export function Navigation() {
             <Search size={14} className="text-indigo-600" /> 搜法條 / 關鍵字 / 白話問句
           </Link>
         </div>
-        <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
+        <nav className="flex-1 px-3 space-y-1 overflow-y-auto min-h-0">
           <div className="text-[11px] tracking-widest px-2 mt-2 mb-1 font-bold" style={{ color: 'var(--text-3)' }}>學習</div>
           {mainNavItems.map((item) => {
             const active = pathname === item.href || (item.href==='/laws' && (pathname.startsWith('/laws') || pathname.startsWith('/articles') || pathname.startsWith('/review') || pathname.startsWith('/listen')));
@@ -56,11 +60,19 @@ export function Navigation() {
             );
           })}
         </nav>
-        <div className="p-4 border-t" style={{ borderColor: 'var(--border)' }}>
-          <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 p-4 text-white shadow">
-            <p className="text-xs font-black">今天先學 10 分鐘？</p>
-            <p className="text-xs opacity-80 mt-1">初學看原文，複習用間隔</p>
-            <Link href="/laws" className="mt-3 block text-center bg-white text-indigo-700 text-xs font-black py-2.5 rounded-xl">進入學習中心</Link>
+        <UpdateLog />
+        <div className="p-4 pt-0" style={{ borderColor: 'var(--border)' }}>
+          <div className="rounded-2xl hero-surface p-4 text-white shadow overflow-hidden relative">
+            <div className="absolute -right-6 -top-6 w-20 h-20 rounded-full bg-white/10 blur-xl" />
+            <div className="relative">
+              <div className="flex items-center justify-between gap-2">
+                <span className="inline-flex items-center gap-1.5 text-xs font-black"><Trophy size={13} className="text-amber-300"/> {isLoaded ? `LV.${game.level} · ${game.title}` : '學習等級'}</span>
+                <span className="inline-flex items-center gap-1 text-[10px] font-black text-white/70"><Zap size={11} className="text-yellow-300"/> {isLoaded ? game.xp : 0} XP</span>
+              </div>
+              <div className="mt-3 flex items-center justify-between text-[10px] text-white/70"><span>今日任務</span><span>{isLoaded ? `${Math.min(game.today, game.dailyGoal)}/${game.dailyGoal}` : '0/8'} 條</span></div>
+              <div className="mt-1.5 h-1.5 rounded-full bg-white/15 overflow-hidden"><div className="h-full rounded-full bg-emerald-300 transition-all" style={{ width: `${isLoaded ? game.questProgress : 0}%` }} /></div>
+              <Link href="/laws" className="mt-3 block text-center bg-white text-indigo-700 text-xs font-black py-2.5 rounded-xl hover:bg-indigo-50 transition">繼續闖關</Link>
+            </div>
           </div>
         </div>
       </aside>
