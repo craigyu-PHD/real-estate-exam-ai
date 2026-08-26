@@ -5,6 +5,7 @@ import { useProgress } from '@/hooks/useProgress';
 import { useBookmarks } from '@/hooks/useBookmarks';
 import { lawsData } from '@/data/lawsData';
 import { StudyCalendar, ExamCountdown } from '@/components/StudyCalendar';
+import { ActiveThemeArtwork } from '@/components/ThemeArtwork';
 
 export default function Home() {
   const { isLoaded, getTotalProgress, streak, getTodayReadCount, getProgress, getGamificationStats } = useProgress();
@@ -33,6 +34,7 @@ export default function Home() {
       </div>
 
       <section className="hero-surface rounded-[2rem] shadow-xl overflow-hidden text-white relative">
+        <ActiveThemeArtwork className="theme-hero-art" />
         <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-white/10 blur-3xl" />
         <div className="absolute left-1/3 -bottom-24 w-72 h-72 rounded-full bg-emerald-300/10 blur-3xl" />
         <div className="relative grid lg:grid-cols-[1.1fr_.9fr]">

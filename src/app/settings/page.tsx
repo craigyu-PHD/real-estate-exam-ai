@@ -7,6 +7,7 @@ import { AudioPlayer } from '@/components/AudioPlayer';
 import { VOICE_PRESETS, type VoicePreset } from '@/lib/voiceConfig';
 import { getStoredAiKeys, maskApiKey, saveStoredAiKey, type AiProvider, type StoredAiKeys } from '@/lib/aiKeys';
 import { THEMES, type Appearance, type ThemeId } from '@/lib/themeConfig';
+import { ThemeArtwork } from '@/components/ThemeArtwork';
 
 type TestState = { provider: AiProvider | 'edge' | null; state: 'idle' | 'testing' | 'ok' | 'error'; message: string };
 
@@ -80,7 +81,7 @@ export default function SettingsPage() {
 
           <div>
             <div className="flex items-center justify-between gap-3 mb-3"><div><div className="text-xs font-black text-secondary">2. Theme Pack</div><p className="text-[10px] mt-1 text-tertiary">五套皆為原創視覺語彙，不使用受版權保護的角色圖像或名稱。</p></div><span className="text-[9px] font-black status-current">{THEMES[settings.theme].label}</span></div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">{(Object.entries(THEMES) as [ThemeId,(typeof THEMES)[ThemeId]][]).map(([id,theme]) => <button key={id} onClick={() => updateSettings({ theme: id })} className={`theme-preview theme-preview-${id} rounded-2xl border p-4 text-left card-hover overflow-hidden relative ${settings.theme===id?'ring-2 ring-indigo-500/25':''}`} style={{borderColor:settings.theme===id?'var(--primary)':'var(--border)'}}><div className="absolute inset-0 theme-preview-bg pointer-events-none"/><div className="relative"><div className="flex items-center gap-2"><span className="text-xl">{theme.emoji}</span><div><div className="text-sm font-black text-primary">{theme.label}</div><div className="text-[9px] font-black text-tertiary">{theme.subtitle}</div></div>{settings.theme===id&&<CircleCheck size={15} className="ml-auto text-indigo-600"/>}</div><p className="text-[10px] leading-relaxed mt-3 text-secondary">{theme.description}</p><div className="text-[9px] font-bold mt-3 text-tertiary">{theme.vibe}</div></div></button>)}</div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">{(Object.entries(THEMES) as [ThemeId,(typeof THEMES)[ThemeId]][]).map(([id,theme]) => <button key={id} onClick={() => updateSettings({ theme: id })} className={`theme-preview theme-preview-${id} rounded-2xl border p-4 text-left card-hover overflow-hidden relative ${settings.theme===id?'ring-2 ring-indigo-500/25':''}`} style={{borderColor:settings.theme===id?'var(--primary)':'var(--border)'}}><div className="absolute inset-0 theme-preview-bg pointer-events-none"/><ThemeArtwork theme={id} className="theme-preview-art"/><div className="relative theme-preview-copy"><div className="flex items-center gap-2"><span className="text-xl">{theme.emoji}</span><div><div className="text-sm font-black text-primary">{theme.label}</div><div className="text-[9px] font-black text-tertiary">{theme.subtitle}</div></div>{settings.theme===id&&<CircleCheck size={15} className="ml-auto text-indigo-600"/>}</div><p className="text-[10px] leading-relaxed mt-3 text-secondary">{theme.description}</p><div className="text-[9px] font-bold mt-3 text-tertiary">{theme.vibe}</div></div></button>)}</div>
           </div>
 
           <button onClick={() => updateSettings({ enhancedMotion: !settings.enhancedMotion })} className="surface rounded-2xl p-4 w-full text-left flex items-center justify-between gap-4">

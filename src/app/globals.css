@@ -217,20 +217,24 @@ html.dark[data-theme='shadow-ronin'] {
 }
 
 html[data-theme='cyber-web'] body::before {
-  background-image: radial-gradient(circle at 75% 15%, color-mix(in srgb, var(--danger) 8%, transparent), transparent 28%), repeating-radial-gradient(circle at 85% 12%, transparent 0 35px, color-mix(in srgb, var(--primary) 7%, transparent) 36px 37px, transparent 38px 68px), repeating-conic-gradient(from 12deg at 85% 12%, color-mix(in srgb, var(--primary) 7%, transparent) 0deg .7deg, transparent .8deg 30deg);
+  background-image: url('/themes/cyber-web-bg.svg'), radial-gradient(760px 420px at 15% -8%, color-mix(in srgb,var(--primary) 12%,transparent), transparent 66%), radial-gradient(520px 340px at 92% 8%, color-mix(in srgb,var(--danger) 8%,transparent), transparent 66%);
+  background-repeat:no-repeat; background-position:top right,top left,top right; background-size:min(900px,92vw) auto,auto,auto;
 }
 html[data-theme='iron-forge'] body::before {
-  background-image: linear-gradient(120deg, color-mix(in srgb, var(--primary) 8%, transparent), transparent 28%), repeating-linear-gradient(90deg, transparent 0 79px, color-mix(in srgb, var(--text-1) 3%, transparent) 80px 81px), repeating-linear-gradient(0deg, transparent 0 79px, color-mix(in srgb, var(--text-1) 3%, transparent) 80px 81px);
+  background-image: url('/themes/iron-forge-bg.svg'), radial-gradient(700px 420px at 12% -8%, color-mix(in srgb,var(--primary) 10%,transparent), transparent 65%);
+  background-repeat:no-repeat; background-position:top right,top left; background-size:min(900px,92vw) auto,auto;
 }
 html[data-theme='apex-racing'] body::before {
-  background-image: linear-gradient(115deg, transparent 0 62%, color-mix(in srgb, var(--primary) 8%, transparent) 62.2% 63%, transparent 63.2%), repeating-linear-gradient(115deg, transparent 0 52px, color-mix(in srgb, var(--text-1) 3%, transparent) 53px 54px, transparent 55px 104px);
+  background-image: url('/themes/apex-racing-bg.svg'), radial-gradient(680px 390px at 10% -8%, color-mix(in srgb,var(--primary) 9%,transparent), transparent 64%);
+  background-repeat:no-repeat; background-position:top right,top left; background-size:min(900px,92vw) auto,auto;
 }
 html[data-theme='deep-space'] body::before {
-  background-image: radial-gradient(circle at 15% 18%, color-mix(in srgb, var(--primary) 14%, transparent) 0 1px, transparent 2px), radial-gradient(circle at 72% 22%, color-mix(in srgb, var(--primary) 13%, transparent) 0 1px, transparent 2px), radial-gradient(circle at 82% 72%, color-mix(in srgb, var(--text-1) 10%, transparent) 0 1px, transparent 2px), radial-gradient(700px 430px at 75% 0%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 65%);
-  background-size: 150px 150px, 210px 210px, 260px 260px, auto;
+  background-image: url('/themes/deep-space-bg.svg'), radial-gradient(760px 460px at 82% -6%, color-mix(in srgb,var(--primary) 12%,transparent), transparent 68%);
+  background-repeat:repeat-y,no-repeat; background-position:top right,top right; background-size:min(900px,92vw) auto,auto;
 }
 html[data-theme='shadow-ronin'] body::before {
-  background-image: linear-gradient(100deg, transparent 0 70%, color-mix(in srgb, var(--primary) 7%, transparent) 70.2% 71%, transparent 71.2%), repeating-linear-gradient(8deg, color-mix(in srgb, var(--text-1) 2.5%, transparent) 0 1px, transparent 1px 9px);
+  background-image: url('/themes/shadow-ronin-bg.svg'), radial-gradient(620px 360px at 90% 0%, color-mix(in srgb,var(--primary) 8%,transparent), transparent 65%);
+  background-repeat:no-repeat; background-position:top right; background-size:min(900px,92vw) auto,auto;
 }
 
 html[data-theme='cyber-web'] .hero-surface { background: linear-gradient(132deg, #102b66 0%, #286ddd 48%, #c73555 126%); }
@@ -245,36 +249,58 @@ html[data-theme='apex-racing'] .brand-mark { background: linear-gradient(145deg,
 html[data-theme='deep-space'] .brand-mark { background: linear-gradient(145deg,#082554,#11698c 58%,#21abc0 130%); }
 html[data-theme='shadow-ronin'] .brand-mark { background: linear-gradient(145deg,#201719,#4b3237 58%,#b62e36 130%); }
 
-/* theme cursor + click signatures */
-.theme-cursor { display:none; position:fixed; left:0; top:0; width:20px; height:20px; margin:-10px 0 0 -10px; pointer-events:none; z-index:9999; transition:width .15s ease,height .15s ease,margin .15s ease; will-change:transform; }
-.theme-cursor span { position:absolute; inset:4px; border:1.5px solid var(--primary); border-radius:999px; box-shadow:0 0 10px color-mix(in srgb,var(--primary) 45%,transparent); }
+/* V2.5 illustrated theme cursor + click signatures */
+.theme-cursor { display:none; position:fixed; left:0; top:0; width:22px; height:22px; margin:-11px 0 0 -11px; pointer-events:none; z-index:9999; transition:width .15s ease,height .15s ease,margin .15s ease,filter .15s ease; will-change:transform; mix-blend-mode:normal; }
+.theme-cursor span { position:absolute; inset:4px; border:1.5px solid var(--primary); border-radius:999px; box-shadow:0 0 12px color-mix(in srgb,var(--primary) 48%,transparent); }
 .theme-fx-layer { position:fixed; inset:0; z-index:9998; pointer-events:none; overflow:hidden; }
-.theme-click-fx { position:absolute; width:10px; height:10px; margin:-5px; border:1px solid var(--primary); border-radius:50%; animation:theme-pulse .85s ease-out forwards; }
-.fx-cyber-web::before,.fx-cyber-web::after { content:""; position:absolute; left:50%; top:50%; width:90px; height:1px; background:linear-gradient(90deg,transparent,var(--primary),transparent); transform-origin:center; }
-.fx-cyber-web::after { transform:rotate(60deg); }
-.fx-iron-forge { border-radius:2px; box-shadow:12px -8px 0 -3px var(--primary),-14px 5px 0 -3px var(--warning),5px 14px 0 -3px var(--primary); }
-.fx-apex-racing { width:90px; height:2px; border:0; border-radius:0; background:linear-gradient(90deg,var(--primary),transparent); transform:translateX(-82px); }
-.fx-deep-space { box-shadow:0 0 0 10px color-mix(in srgb,var(--primary) 8%,transparent),0 0 24px var(--primary); }
-.fx-shadow-ronin { width:100px; height:2px; border:0; border-radius:0; background:linear-gradient(90deg,transparent,var(--primary),white,transparent); transform:translate(-50px,-15px) rotate(-25deg); }
+.theme-click-fx { position:absolute; width:120px; height:120px; margin:-60px 0 0 -60px; border:0; border-radius:0; animation:theme-fx-life 1.02s cubic-bezier(.16,.8,.23,1) forwards; transform-origin:center; filter:drop-shadow(0 0 8px color-mix(in srgb,var(--primary) 32%,transparent)); }
+.theme-click-fx svg { width:100%; height:100%; overflow:visible; }
+.web-fx-lines { stroke:color-mix(in srgb,var(--primary) 76%,white 24%); stroke-width:1.25; }
+.web-fx-core { fill:white; filter:drop-shadow(0 0 6px var(--primary)); }
+.fx-cyber-web { width:132px; height:132px; margin:-66px 0 0 -66px; }
+.fx-cyber-web svg { animation:web-fx-twist .95s ease-out both; }
+.fx-apex-racing { width:145px; height:84px; margin:-42px 0 0 -38px; transform-origin:30% 50%; }
+.race-fx-speed { stroke:color-mix(in srgb,var(--primary) 78%,white 22%); stroke-width:3; }
+.race-fx-car,.fx-apex-racing circle { stroke:#fff; stroke-width:2; }
+.race-fx-check { fill:color-mix(in srgb,var(--primary) 70%,white 30%); }
+.space-fx-radar { stroke:color-mix(in srgb,var(--primary) 70%,white 30%); stroke-width:1.25; }
+.space-fx-ship { fill:color-mix(in srgb,var(--primary) 72%,white 28%); filter:drop-shadow(0 0 7px var(--primary)); }
+.space-fx-star { fill:white; }
+.forge-fx-ring { stroke:color-mix(in srgb,var(--primary) 75%,white 25%); stroke-width:2; }
+.forge-fx-sparks { stroke:color-mix(in srgb,var(--warning) 78%,white 22%); stroke-width:3; stroke-linecap:round; }
+.fx-shadow-ronin { width:150px; height:105px; margin:-52px 0 0 -32px; }
+.ronin-fx-blade { fill:none; stroke:white; stroke-width:3.2; stroke-linecap:round; filter:drop-shadow(0 0 8px var(--primary)); }
+.ronin-fx-after { fill:none; stroke:var(--primary); stroke-width:1.3; opacity:.7; }
+.ronin-fx-moon { fill:color-mix(in srgb,var(--primary) 36%,transparent); }
 
 @media (pointer:fine) {
   html:not([data-theme='classic']) body, html:not([data-theme='classic']) a, html:not([data-theme='classic']) button, html:not([data-theme='classic']) input, html:not([data-theme='classic']) textarea, html:not([data-theme='classic']) select { cursor:none !important; }
   html:not([data-theme='classic']) .theme-cursor { display:block; }
-  .cursor-cyber-web { border:1px solid color-mix(in srgb,var(--primary) 60%,transparent); border-radius:50%; }
-  .cursor-cyber-web::before,.cursor-cyber-web::after { content:"";position:absolute;left:50%;top:50%;width:26px;height:1px;background:var(--primary);transform:translate(-50%,-50%);opacity:.5; }
-  .cursor-cyber-web::after { transform:translate(-50%,-50%) rotate(90deg); }
+  .cursor-cyber-web { border:1px solid color-mix(in srgb,var(--primary) 64%,transparent); border-radius:50%; box-shadow:0 0 12px color-mix(in srgb,var(--primary) 22%,transparent); }
+  .cursor-cyber-web::before,.cursor-cyber-web::after { content:"";position:absolute;left:50%;top:50%;width:27px;height:1px;background:var(--primary);transform:translate(-50%,-50%) rotate(30deg);opacity:.5; }
+  .cursor-cyber-web::after { transform:translate(-50%,-50%) rotate(150deg); }
+  .cursor-cyber-web span { inset:6px; border-width:1px; }
+  .cursor-iron-forge { border:1px solid color-mix(in srgb,var(--primary) 45%,transparent); transform-origin:center; }
   .cursor-iron-forge span { border-radius:3px; transform:rotate(45deg); }
-  .cursor-apex-racing span { border-radius:2px 999px 999px 2px; transform:scaleX(1.5); }
-  .cursor-deep-space span { inset:6px; background:var(--primary); border:0; box-shadow:0 0 16px var(--primary); }
-  .cursor-shadow-ronin span { border-radius:1px; transform:rotate(45deg) scale(.8); }
+  .cursor-apex-racing { width:28px; margin-left:-14px; }
+  .cursor-apex-racing span { inset:7px 3px; border-radius:2px 999px 999px 2px; transform:skewX(-20deg); box-shadow:-8px 0 10px color-mix(in srgb,var(--primary) 34%,transparent); }
+  .cursor-deep-space { border:1px solid color-mix(in srgb,var(--primary) 48%,transparent); border-radius:50%; }
+  .cursor-deep-space span { inset:7px; background:var(--primary); border:0; box-shadow:0 0 16px var(--primary); }
+  .cursor-shadow-ronin { width:26px; margin-left:-13px; }
+  .cursor-shadow-ronin span { inset:8px 1px; border-radius:1px; transform:rotate(-35deg); box-shadow:0 0 10px color-mix(in srgb,var(--primary) 48%,transparent); }
 }
 
 html[data-motion='enhanced'] .card-hover:hover { transform:translateY(-2px) scale(1.003); }
 html[data-motion='enhanced'] .sidebar-link-active { animation:theme-active-breathe 2.8s ease-in-out infinite; }
-body.theme-route-transition main::after { content:""; position:fixed; inset:0; z-index:80; pointer-events:none; background:linear-gradient(110deg,transparent 30%,color-mix(in srgb,var(--primary) 16%,transparent) 49%,transparent 68%); transform:translateX(-100%); animation:route-sweep .58s ease-out forwards; }
-html[data-theme='shadow-ronin'] body.theme-route-transition main::after { background:linear-gradient(110deg,transparent 45%,color-mix(in srgb,var(--primary) 28%,transparent) 49%,transparent 52%); }
+body.theme-route-transition main::after { content:""; position:fixed; inset:0; z-index:80; pointer-events:none; background:linear-gradient(110deg,transparent 30%,color-mix(in srgb,var(--primary) 16%,transparent) 49%,transparent 68%); transform:translateX(-100%); animation:route-sweep .66s ease-out forwards; }
+html[data-theme='cyber-web'] body.theme-route-transition main::after { background:radial-gradient(circle at 78% 20%,transparent 0 26px,color-mix(in srgb,var(--primary) 18%,transparent) 27px 28px,transparent 29px 54px,color-mix(in srgb,var(--danger) 12%,transparent) 55px 56px,transparent 57px),linear-gradient(110deg,transparent 35%,color-mix(in srgb,var(--primary) 14%,transparent) 50%,transparent 65%); }
+html[data-theme='apex-racing'] body.theme-route-transition main::after { background:linear-gradient(112deg,transparent 25%,color-mix(in srgb,var(--primary) 24%,transparent) 36% 38%,transparent 39% 46%,rgba(255,255,255,.18) 47% 48%,transparent 49% 60%,color-mix(in srgb,var(--primary) 15%,transparent) 61% 63%,transparent 64%); }
+html[data-theme='deep-space'] body.theme-route-transition main::after { background:radial-gradient(ellipse at 52% 50%,transparent 0 10%,color-mix(in srgb,var(--primary) 16%,transparent) 11% 12%,transparent 13% 24%,color-mix(in srgb,#756bff 11%,transparent) 25% 26%,transparent 27%),linear-gradient(90deg,transparent,color-mix(in srgb,var(--primary) 7%,transparent),transparent); }
+html[data-theme='iron-forge'] body.theme-route-transition main::after { background:linear-gradient(90deg,transparent 0 38%,color-mix(in srgb,var(--primary) 13%,transparent) 39% 40%,transparent 41% 46%,color-mix(in srgb,var(--warning) 12%,transparent) 47% 48%,transparent 49%); }
+html[data-theme='shadow-ronin'] body.theme-route-transition main::after { background:linear-gradient(110deg,transparent 45%,color-mix(in srgb,var(--primary) 34%,transparent) 49%,rgba(255,255,255,.2) 50%,transparent 52%); }
 
-@keyframes theme-pulse { 0%{opacity:.95;transform:scale(.5)} 70%{opacity:.55;transform:scale(5)} 100%{opacity:0;transform:scale(8)} }
+@keyframes theme-fx-life { 0%{opacity:0;transform:scale(.55)} 16%{opacity:1;transform:scale(.92)} 68%{opacity:.75;transform:scale(1.06)} 100%{opacity:0;transform:scale(1.18)} }
+@keyframes web-fx-twist { 0%{transform:rotate(-10deg)} 100%{transform:rotate(8deg)} }
 @keyframes route-sweep { to{transform:translateX(100%);opacity:0} }
 @keyframes theme-active-breathe { 0%,100%{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--primary) 16%,var(--border))}50%{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--primary) 36%,var(--border)),0 5px 18px color-mix(in srgb,var(--primary) 8%,transparent)} }
 
@@ -284,14 +310,25 @@ html[data-theme='shadow-ronin'] body.theme-route-transition main::after { backgr
 html[data-motion='calm'] .theme-click-fx, html[data-motion='calm'] body.theme-route-transition main::after { display:none !important; }
 
 @layer utilities {
-  .theme-preview { background:var(--card); min-height:150px; }
+  .theme-preview { background:var(--card); min-height:190px; isolation:isolate; }
   .theme-preview-bg { opacity:.55; }
-  .theme-preview-cyber-web .theme-preview-bg { background:repeating-radial-gradient(circle at 92% 8%,transparent 0 16px,rgba(38,103,213,.13) 17px 18px,transparent 19px 32px),linear-gradient(135deg,transparent,rgba(181,44,70,.08)); }
-  .theme-preview-iron-forge .theme-preview-bg { background:repeating-linear-gradient(90deg,transparent 0 23px,rgba(120,90,65,.07) 24px 25px),linear-gradient(135deg,transparent,rgba(210,106,34,.12)); }
-  .theme-preview-apex-racing .theme-preview-bg { background:repeating-linear-gradient(115deg,transparent 0 28px,rgba(211,52,52,.08) 29px 30px),linear-gradient(135deg,transparent,rgba(211,52,52,.1)); }
-  .theme-preview-deep-space .theme-preview-bg { background:radial-gradient(circle at 80% 20%,rgba(85,216,255,.24) 0 1px,transparent 2px),radial-gradient(circle at 55% 70%,rgba(85,216,255,.16) 0 1px,transparent 2px),linear-gradient(135deg,transparent,rgba(19,126,167,.1)); background-size:50px 50px,70px 70px,auto; }
-  .theme-preview-shadow-ronin .theme-preview-bg { background:repeating-linear-gradient(8deg,rgba(80,55,48,.04) 0 1px,transparent 1px 8px),linear-gradient(110deg,transparent 64%,rgba(165,44,48,.13) 65% 66%,transparent 67%); }
+  .theme-preview-copy { max-width:62%; z-index:2; }
+  .theme-preview-art { position:absolute; right:-20px; bottom:-10px; width:58%; height:78%; z-index:1; background-repeat:no-repeat; background-position:center; background-size:contain; opacity:.86; pointer-events:none; filter:saturate(1.04) drop-shadow(0 12px 20px rgba(10,24,45,.12)); transition:transform .28s ease,opacity .28s ease; }
+  .theme-preview:hover .theme-preview-art { transform:translate3d(-4px,-3px,0) scale(1.035); opacity:.98; }
+  .theme-preview-classic .theme-preview-copy { max-width:100%; }
+  .theme-preview-cyber-web .theme-preview-bg { background:linear-gradient(135deg,color-mix(in srgb,var(--primary-soft) 70%,transparent),color-mix(in srgb,#c82f49 7%,transparent)); }
+  .theme-preview-iron-forge .theme-preview-bg { background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 80%,transparent),color-mix(in srgb,#a97836 8%,transparent)); }
+  .theme-preview-apex-racing .theme-preview-bg { background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 85%,transparent),color-mix(in srgb,#d33434 9%,transparent)); }
+  .theme-preview-deep-space .theme-preview-bg { background:linear-gradient(135deg,color-mix(in srgb,#137ea7 7%,transparent),color-mix(in srgb,#615fd7 7%,transparent)); }
+  .theme-preview-shadow-ronin .theme-preview-bg { background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 84%,transparent),color-mix(in srgb,#a52c30 8%,transparent)); }
+  .theme-artwork { background-repeat:no-repeat; background-size:contain; background-position:center; }
+  .theme-hero-art { position:absolute; z-index:0; right:-22px; top:0; width:min(44%,520px); height:100%; opacity:.35; background-position:center right; filter:drop-shadow(0 18px 30px rgba(0,0,0,.16)); pointer-events:none; }
+  html[data-theme='apex-racing'] .theme-hero-art,html[data-theme='deep-space'] .theme-hero-art { opacity:.42; }
+  html[data-theme='cyber-web'] .theme-hero-art { opacity:.38; }
+  .hero-surface > .relative { z-index:2; }
 }
+@media (max-width:1023px){.theme-hero-art{width:58%;opacity:.2}.theme-preview-copy{max-width:68%}}
+@media (max-width:639px){.theme-preview{min-height:175px}.theme-preview-art{width:54%;height:66%;opacity:.72}.theme-preview-copy{max-width:72%}.theme-hero-art{width:76%;opacity:.13;right:-22%}}
 
 /* Map existing product accent utilities onto the active Theme Pack. */
 html:not([data-theme='classic']) .bg-indigo-600 { background-color: var(--primary) !important; }

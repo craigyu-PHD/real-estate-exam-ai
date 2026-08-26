@@ -1,0 +1,18 @@
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="car" x1="0" x2="1"><stop stop-color="#f7f9fb"/><stop offset=".46" stop-color="#d5dde5"/><stop offset=".48" stop-color="#ff4e5a"/><stop offset="1" stop-color="#b91726"/></linearGradient>
+  <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#7fd5ff" stop-opacity=".9"/><stop offset="1" stop-color="#143957" stop-opacity=".95"/></linearGradient>
+ </defs>
+ <g opacity=".34" stroke="#fff" fill="none"><path d="M-20 214Q120 126 260 177T470 122" stroke-width="5"/><path d="M-10 235Q133 147 268 197T455 151" stroke-width="1.5" stroke-dasharray="14 12"/></g>
+ <g transform="translate(48 73)">
+  <ellipse cx="174" cy="115" rx="145" ry="17" fill="#081017" opacity=".32"/>
+  <path d="M18 91 50 58c14-15 34-23 55-25l85-7c22-2 42 5 59 19l40 33 45 12c9 2 16 10 16 20v8H7v-7c0-9 4-15 11-20Z" fill="url(#car)"/>
+  <path d="m91 42 81-6c16-1 30 4 42 14l28 23-160 1 9-32Z" fill="url(#glass)"/>
+  <path d="M10 98h330M56 58l-26 34M279 71l26 18" stroke="#fff" stroke-width="2" opacity=".36"/>
+  <path d="M156 31v61" stroke="#ff6b73" stroke-width="4" opacity=".8"/>
+  <circle cx="75" cy="113" r="25" fill="#111820"/><circle cx="75" cy="113" r="11" fill="#aeb9c3"/><circle cx="277" cy="113" r="25" fill="#111820"/><circle cx="277" cy="113" r="11" fill="#aeb9c3"/>
+  <path d="M306 89h37l-10 12h-29Z" fill="#ffd452"/><path d="M27 88h36l-12 12H18Z" fill="#f8fbff" opacity=".9"/>
+ </g>
+ <g opacity=".5"><path d="M23 46h86M8 62h57M331 42h76M355 59h52" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
+ <g transform="translate(334 174)" opacity=".65"><path d="M0 0h16v16H0zm16 16h16v16H16zm32 0h16v16H32zM0 32h16v16H0zm32 32h16v16H32z" fill="#fff"/><path d="M16 0h16v16H16zm32 0h16v16H48zM0 16h16v16H0zm32 16h16v16H32zM16 48h16v16H16zM48 48h16v16H48z" fill="#111820"/></g>
+</svg>
