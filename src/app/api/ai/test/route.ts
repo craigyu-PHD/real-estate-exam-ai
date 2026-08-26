@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import { synthesizeEdgeTTS } from '@/lib/server/edgeTts';
 
-type Provider = 'gemini' | 'groq' | 'openrouter' | 'edge';
+export const runtime = 'nodejs';
+
+type Provider = 'gemini' | 'groq' | 'mistral' | 'openrouter' | 'huggingface' | 'edge';
 
 export async function POST(req: Request) {
   try {
@@ -28,10 +30,20 @@ export async function POST(req: Request) {
       const data=JSON.parse(raw) as {data?:{id?:string}[]};
       return NextResponse.json({ok:true,provider:'Groq Free',model:(data.data||[]).some(x=>x.id==='openai/gpt-oss-20b')});
     }
+    if (provider === 'mistral') {
+      const r=await fetch('https://api.mistral.ai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${supplied}`},body:JSON.stringify({model:'mistral-small-latest',messages:[{role:'user',content:'只回答 OK'}],max_tokens:4}),signal:AbortSignal.timeout(16000)});
+      const raw=await r.text(); if(!r.ok)return NextResponse.json({ok:false,error:safeMessage(raw,r.status)},{status:502});
+      return NextResponse.json({ok:true,provider:'Mistral Free',model:'mistral-small-latest'});
+    }
     if (provider === 'openrouter') {
       const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${supplied}`},body:JSON.stringify({model:'openrouter/free',messages:[{role:'user',content:'只回答 OK'}],max_tokens:4}),signal:AbortSignal.timeout(20000)});
       const raw=await r.text(); if(!r.ok)return NextResponse.json({ok:false,error:safeMessage(raw,r.status)},{status:502});
       return NextResponse.json({ok:true,provider:'OpenRouter Free',model:'openrouter/free'});
+    }
+    if (provider === 'huggingface') {
+      const r=await fetch('https://router.huggingface.co/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${supplied}`},body:JSON.stringify({model:'openai/gpt-oss-20b:groq',messages:[{role:'user',content:'只回答 OK'}],max_tokens:4}),signal:AbortSignal.timeout(20000)});
+      const raw=await r.text(); if(!r.ok)return NextResponse.json({ok:false,error:safeMessage(raw,r.status)},{status:502});
+      return NextResponse.json({ok:true,provider:'Hugging Face',model:'openai/gpt-oss-20b:groq'});
     }
     return NextResponse.json({ok:false,error:'unknown provider'},{status:400});
   } catch (error) {

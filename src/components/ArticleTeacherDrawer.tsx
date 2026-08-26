@@ -22,7 +22,7 @@ export function ArticleTeacherDrawer({ open, onClose, lawName, articleId, detail
   const initialized = useRef(false);
   const endRef = useRef<HTMLDivElement>(null);
 
-  const context = `一句話：${detail.oneLiner}\nB 白話解析：${detail.explanation}\nC 為什麼：${detail.why}\nD 案例：${detail.cases.map(c => `${c.title}：${c.content}`).join('\n')}\n易錯：${detail.pitfalls.join('；')}\n考點：${detail.examTips.join('；')}`;
+  const context = `一句話：${detail.oneLiner}\nB 白話解析：${detail.explanation}\nC 為什麼：${detail.why}\nD 案例：${detail.cases.map(c => `${c.title}：${c.content}`).join('\n')}\n易錯：${detail.pitfalls.join('；')}\n易混淆：${(detail.confuseWith || []).map(item => `${item.article}：${item.diff}`).join('；')}\n考點：${detail.examTips.join('；')}`;
 
   const ask = async (question: string) => {
     const q = question.trim();
@@ -46,7 +46,7 @@ export function ArticleTeacherDrawer({ open, onClose, lawName, articleId, detail
       const data = await res.json();
       setMessages(prev => [...prev, { role: 'ai', content: data.reply || data.error || '目前沒有回覆。', provider: data.provider }]);
     } catch {
-      setMessages(prev => [...prev, { role: 'ai', content: '連線失敗。請先確認 Gemini API 設定與網路連線。' }]);
+      setMessages(prev => [...prev, { role: 'ai', content: '外部 AI 連線失敗；請稍後重試。即使沒有 API Key，六個快捷問題仍可使用本機教材模式。' }]);
     } finally {
       setLoading(false);
     }

@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { MessageCircleQuestion, Lightbulb, BookText, Bookmark, ChevronLeft, ChevronRight, CheckCircle2, AlertTriangle, Scale, GraduationCap, HelpCircle, ArrowLeft, Trophy, Zap, Headphones, Flag, ChevronDown, ChevronUp, Bot } from 'lucide-react';
+import { MessageCircleQuestion, Lightbulb, BookText, Bookmark, ChevronLeft, ChevronRight, CheckCircle2, AlertTriangle, Scale, GraduationCap, HelpCircle, ArrowLeft, Trophy, Zap, Headphones, Flag, Bot, Landmark, BriefcaseBusiness } from 'lucide-react';
 import { AudioPlayer } from '@/components/AudioPlayer';
 import { ChatGPTButton } from '@/components/ChatGPTButton';
 import { ArticleTeacherDrawer } from '@/components/ArticleTeacherDrawer';
@@ -17,7 +17,6 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const [showToast, setShowToast] = useState<string | null>(null);
   const [showReward, setShowReward] = useState(false);
   const [teacherOpen, setTeacherOpen] = useState(false);
-  const [expanded, setExpanded] = useState<'why' | 'cases' | null>('cases');
 
   const idParts = rawId.split('-');
   const lawId = idParts[0] || 'civil';
@@ -91,18 +90,25 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
           <p className="leading-[1.9] text-[14px] md:text-[15px] text-primary whitespace-pre-line">{detail.explanation}</p>
         </section>
 
-        <section className="grid md:grid-cols-2 gap-3">
-          <button onClick={() => setExpanded(expanded === 'why' ? null : 'why')} className="card rounded-[1.25rem] p-4 text-left card-hover self-start">
-            <div className="flex items-center justify-between gap-2"><div className="flex items-center gap-2 text-amber-700 dark:text-amber-300 font-black text-sm"><Lightbulb size={16}/> C. 為什麼這樣規定</div>{expanded==='why'?<ChevronUp size={15} className="text-tertiary"/>:<ChevronDown size={15} className="text-tertiary"/>}</div>
-            <p className={`mt-2 text-xs leading-[1.75] text-secondary whitespace-pre-line ${expanded==='why'?'':'line-clamp-3'}`}>{detail.why}</p>
-            <div className="text-[9px] mt-2 text-amber-600">{expanded==='why'?'收合制度脈絡':'展開完整制度脈絡'}</div>
-          </button>
-          <button onClick={() => setExpanded(expanded === 'cases' ? null : 'cases')} className="card rounded-[1.25rem] p-4 text-left card-hover self-start">
-            <div className="flex items-center justify-between gap-2"><div className="flex items-center gap-2 text-sky-700 dark:text-sky-300 font-black text-sm"><GraduationCap size={16}/> D. 實務與考場案例</div>{expanded==='cases'?<ChevronUp size={15} className="text-tertiary"/>:<ChevronDown size={15} className="text-tertiary"/>}</div>
-            <div className="mt-2"><div className="text-xs font-black text-primary">{detail.cases[0]?.title}</div><p className={`text-xs mt-1 leading-[1.75] text-secondary whitespace-pre-line ${expanded==='cases'?'':'line-clamp-3'}`}>{detail.cases[0]?.content}</p></div>
-            {expanded==='cases' && detail.cases.slice(1).map((c,i)=><div key={i} className="mt-3 pt-3 border-t" style={{borderColor:'var(--border)'}}><div className="text-xs font-black text-primary">{c.title}</div><p className="text-xs mt-1 leading-relaxed text-secondary">{c.content}</p></div>)}
-            <div className="text-[9px] mt-2 text-sky-600">{expanded==='cases'?'收合案例':'展開第二個案例'}</div>
-          </button>
+        <section className="grid md:grid-cols-2 gap-3 items-stretch">
+          <div className="learning-panel learning-panel-why rounded-[1.25rem] p-4 md:p-5 h-full flex flex-col">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 font-black text-sm text-amber-700 dark:text-amber-200"><span className="learning-panel-icon bg-amber-500/12 text-amber-600 dark:text-amber-300"><Landmark size={15}/></span>C. 為什麼這樣規定</div>
+              <span className="text-[9px] font-black text-tertiary">制度脈絡</span>
+            </div>
+            <p className="mt-3 text-[13px] md:text-sm leading-[1.85] text-secondary whitespace-pre-line flex-1">{detail.why}</p>
+            <div className="mt-3 pt-3 border-t text-[10px] font-bold text-amber-700 dark:text-amber-200 flex items-center gap-1.5" style={{borderColor:'var(--border)'}}><Lightbulb size={12}/>先理解制度問題，再記條文文字會更牢。</div>
+          </div>
+          <div className="learning-panel learning-panel-case rounded-[1.25rem] p-4 md:p-5 h-full flex flex-col">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 font-black text-sm text-sky-700 dark:text-sky-200"><span className="learning-panel-icon bg-sky-500/12 text-sky-600 dark:text-sky-300"><BriefcaseBusiness size={15}/></span>D. 實務與考場案例</div>
+              <span className="text-[9px] font-black text-tertiary">情境套用</span>
+            </div>
+            <div className="mt-3 space-y-3 flex-1">
+              {detail.cases.map((c,i)=><div key={i} className={`${i ? 'pt-3 border-t' : ''}`} style={i ? {borderColor:'var(--border)'} : undefined}><div className="text-xs font-black text-primary flex items-center gap-1.5"><GraduationCap size={12} className="text-sky-500"/>{c.title}</div><p className="text-[13px] md:text-sm mt-1.5 leading-[1.8] text-secondary whitespace-pre-line">{c.content}</p></div>)}
+            </div>
+            <div className="mt-3 pt-3 border-t text-[10px] font-bold text-sky-700 dark:text-sky-200 flex items-center gap-1.5" style={{borderColor:'var(--border)'}}><GraduationCap size={12}/>把條文放進具體人物與交易流程裡理解。</div>
+          </div>
         </section>
 
         <section className="card rounded-[1.25rem] p-4 md:p-5 ai-cta-panel relative overflow-hidden">

@@ -12,7 +12,7 @@ type TestState = { provider: AiProvider | 'edge' | null; state: 'idle' | 'testin
 
 export default function SettingsPage() {
   const { isLoaded, settings, updateSettings } = useSettings();
-  const emptyKeys: StoredAiKeys = { gemini: '', groq: '', openrouter: '' };
+  const emptyKeys: StoredAiKeys = { gemini: '', groq: '', mistral: '', openrouter: '', huggingface: '' };
   const [apiKeys, setApiKeys] = useState<StoredAiKeys>(emptyKeys);
   const [savedKeys, setSavedKeys] = useState<StoredAiKeys>(emptyKeys);
   const [showProvider, setShowProvider] = useState<AiProvider | null>(null);
@@ -101,15 +101,17 @@ export default function SettingsPage() {
       <section className="card rounded-[1.4rem] overflow-hidden">
         <div className="px-5 py-4 border-b flex flex-wrap items-center justify-between gap-3" style={{borderColor:'var(--border)'}}>
           <div className="flex items-center gap-2"><KeyRound size={16} className="text-amber-600"/><span className="text-sm font-black text-primary">免費 AI API 備援</span></div>
-          <span className="text-[10px] font-black status-current">Gemini → Groq → OpenRouter</span>
+          <span className="text-[10px] font-black status-current">5 路 AI + Local Tutor</span>
         </div>
         <div className="p-5 space-y-4">
-          <div className="rounded-2xl p-4 surface flex gap-3"><LockKeyhole size={18} className="text-indigo-600 shrink-0 mt-0.5"/><div><div className="text-xs font-black text-primary">三路 BYOK + 一路免 Key 語音</div><p className="text-[11px] leading-relaxed mt-1 text-secondary">AI 老師會依序嘗試 Gemini、Groq Free、OpenRouter Free。API Key 只存在目前瀏覽器；語音另外有免 Key 的 Edge Neural，所以即使文字 AI Key 暫時失效，Mini Lecture 仍可使用自然台灣聲線。</p></div></div>
-          <div className="grid lg:grid-cols-3 gap-3">
+          <div className="rounded-2xl p-4 surface flex gap-3"><LockKeyhole size={18} className="text-indigo-600 shrink-0 mt-0.5"/><div><div className="text-xs font-black text-primary">五路 BYOK + Local Tutor 永不中斷</div><p className="text-[11px] leading-relaxed mt-1 text-secondary">AI 老師依序嘗試 Gemini、Groq、Mistral、OpenRouter、Hugging Face；全部無 Key 或暫時失敗時，會立即改用本條預生成教材回答，不再整頁失效。Key 只存在目前瀏覽器；語音另有免 Key Edge Neural。</p></div></div>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-3">
             {([
               {id:'gemini' as AiProvider,label:'Gemini Free',desc:'主力：AI 老師＋Gemini TTS',placeholder:'Google AI Studio API Key',href:'https://aistudio.google.com/apikey'},
-              {id:'groq' as AiProvider,label:'Groq Free',desc:'高速文字 AI 備援 · GPT-OSS 20B',placeholder:'Groq API Key',href:'https://console.groq.com/keys'},
-              {id:'openrouter' as AiProvider,label:'OpenRouter Free',desc:'免費模型路由備援',placeholder:'OpenRouter API Key',href:'https://openrouter.ai/settings/keys'},
+              {id:'groq' as AiProvider,label:'Groq Free',desc:'高速文字 AI · Free Plan',placeholder:'Groq API Key',href:'https://console.groq.com/keys'},
+              {id:'mistral' as AiProvider,label:'Mistral Free',desc:'Free mode · 無需信用卡',placeholder:'Mistral API Key',href:'https://console.mistral.ai/api-keys'},
+              {id:'openrouter' as AiProvider,label:'OpenRouter Free',desc:'免費模型自動路由',placeholder:'OpenRouter API Key',href:'https://openrouter.ai/settings/keys'},
+              {id:'huggingface' as AiProvider,label:'Hugging Face',desc:'Inference Providers 免費額度',placeholder:'HF Access Token',href:'https://huggingface.co/settings/tokens'},
             ]).map(provider => <div key={provider.id} className="surface rounded-2xl p-4">
               <div className="flex items-start justify-between gap-2"><div><div className="text-sm font-black text-primary">{provider.label}</div><div className="text-[10px] mt-1 text-tertiary">{provider.desc}</div></div><span className={`text-[9px] font-black ${savedKeys[provider.id]?'text-emerald-600':'text-tertiary'}`}>{savedKeys[provider.id]?'已保存':'未設定'}</span></div>
               <div className="relative mt-3"><input type={showProvider===provider.id?'text':'password'} value={apiKeys[provider.id]} onChange={e=>{setApiKeys(prev=>({...prev,[provider.id]:e.target.value}));setTestState({provider:null,state:'idle',message:''});}} placeholder={provider.placeholder} className="input-shell w-full rounded-xl px-3 py-2.5 pr-10 text-xs outline-none" autoComplete="off" spellCheck={false}/><button onClick={()=>setShowProvider(showProvider===provider.id?null:provider.id)} className="absolute right-1.5 top-1/2 -translate-y-1/2 icon-button !w-7 !h-7 border-0">{showProvider===provider.id?<EyeOff size={13}/>:<Eye size={13}/>}</button></div>
@@ -134,7 +136,7 @@ export default function SettingsPage() {
       </section>
 
       <section className="card rounded-[1.4rem] p-5">
-        <div className="text-sm font-black flex items-center gap-2 text-primary"><Shield size={16} className="text-emerald-600"/>資料與防呆</div><ul className="text-xs mt-3 space-y-2 text-secondary"><li>✓ 2,399 條教材為預先生成資料，AI Drawer 僅用於追問或修正建議。</li><li>✓ AI 音檔快取在 IndexedDB，減少重複生成。</li><li>✓ Appearance、Theme、語音設定與 BYOK API Keys 都只保存在本機。</li></ul><button onClick={()=>{if(confirm('確定要清除所有本機進度、標記、API Key 與設定？此動作無法復原。')){localStorage.clear();location.reload();}}} className="mt-4 w-full bg-rose-500/10 hover:bg-rose-500/15 border border-rose-500/20 text-rose-600 dark:text-rose-300 font-black py-3 rounded-xl flex justify-center items-center gap-2"><Trash2 size={16}/>清除所有本機資料</button>
+        <div className="text-sm font-black flex items-center gap-2 text-primary"><Shield size={16} className="text-emerald-600"/>資料與防呆</div><ul className="text-xs mt-3 space-y-2 text-secondary"><li>✓ 2,399 條教材為預先生成資料，AI Drawer 僅用於追問或修正建議。</li><li>✓ AI 音檔快取在 IndexedDB，減少重複生成。</li><li>✓ Appearance、Theme、語音設定與 5 路 BYOK API Keys 都只保存在本機。</li></ul><button onClick={()=>{if(confirm('確定要清除所有本機進度、標記、API Key 與設定？此動作無法復原。')){localStorage.clear();location.reload();}}} className="mt-4 w-full bg-rose-500/10 hover:bg-rose-500/15 border border-rose-500/20 text-rose-600 dark:text-rose-300 font-black py-3 rounded-xl flex justify-center items-center gap-2"><Trash2 size={16}/>清除所有本機資料</button>
       </section>
     </div>
   );

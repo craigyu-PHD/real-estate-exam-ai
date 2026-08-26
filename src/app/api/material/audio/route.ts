@@ -1,4 +1,4 @@
-import { getArticleDetail } from '@/data/articleExplanations';
+import { getPodcastLecture } from '@/lib/server/podcastLecture';
 import { createEdgeTTSStream } from '@/lib/server/edgeTts';
 import { isVoicePreset, type VoicePreset } from '@/lib/voiceConfig';
 
@@ -13,9 +13,9 @@ export async function GET(req: Request) {
   const preset: VoicePreset = isVoicePreset(rawPreset) ? rawPreset : 'warm';
   if (!lawId || !articleId) return Response.json({ error: 'missing article' }, { status: 400 });
 
-  const detail = getArticleDetail(lawId, articleId);
-  if (!detail) return Response.json({ error: 'article not found' }, { status: 404 });
-  const lecture = (detail.lectureScript || [detail.articleText, detail.explanation, detail.why, detail.cases[0]?.content, detail.examTips.join(' ')].filter(Boolean).join('\n')).slice(0, 3200);
+  const podcast = getPodcastLecture(lawId, articleId);
+  if (!podcast) return Response.json({ error: 'article not found' }, { status: 404 });
+  const lecture = podcast.lectureScript.slice(0, 4200);
 
   try {
     const edge = await createEdgeTTSStream(lecture, preset);
@@ -43,7 +43,8 @@ export async function GET(req: Request) {
     return new Response(body, {
       headers: {
         'Content-Type': 'audio/mpeg',
-        'Cache-Control': 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000',
+        'Cache-Control': 'public, max-age=86400, stale-while-revalidate=2592000',
+        'Vercel-CDN-Cache-Control': 'public, s-maxage=604800, stale-while-revalidate=2592000',
         'X-TTS-Engine': 'edge-neural-stream',
         'X-TTS-Voice': edge.voice,
       },

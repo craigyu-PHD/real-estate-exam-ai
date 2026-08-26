@@ -1,12 +1,14 @@
 'use client';
 
-export type AiProvider = 'gemini' | 'groq' | 'openrouter';
+export type AiProvider = 'gemini' | 'groq' | 'mistral' | 'openrouter' | 'huggingface';
 export type StoredAiKeys = Record<AiProvider, string>;
 
 const STORAGE: Record<AiProvider, string> = {
   gemini: 'gemini_api_key',
   groq: 'groq_api_key',
+  mistral: 'mistral_api_key',
   openrouter: 'openrouter_api_key',
+  huggingface: 'huggingface_api_key',
 };
 
 export function getStoredAiKey(provider: AiProvider) {
@@ -18,7 +20,9 @@ export function getStoredAiKeys(): StoredAiKeys {
   return {
     gemini: getStoredAiKey('gemini'),
     groq: getStoredAiKey('groq'),
+    mistral: getStoredAiKey('mistral'),
     openrouter: getStoredAiKey('openrouter'),
+    huggingface: getStoredAiKey('huggingface'),
   };
 }
 
