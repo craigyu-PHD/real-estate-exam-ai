@@ -61,7 +61,8 @@ export async function POST(req: Request) {
     }
 
     const clean = text.replace(/\s+/g, ' ').trim().slice(0, 6000);
-    const geminiKey = process.env.GEMINI_API_KEY;
+    const suppliedKey = typeof body?.apiKey === 'string' ? body.apiKey.trim() : '';
+    const geminiKey = suppliedKey || process.env.GEMINI_API_KEY;
 
     if (geminiKey) {
       try {

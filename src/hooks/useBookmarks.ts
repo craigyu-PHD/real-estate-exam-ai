@@ -17,13 +17,13 @@ export function useBookmarks() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem('app_bookmarks');
-    if (stored) {
-      try {
-        setBookmarks(JSON.parse(stored));
-      } catch (e) {}
-    }
-    setIsLoaded(true);
+    queueMicrotask(() => {
+      const stored = localStorage.getItem('app_bookmarks');
+      if (stored) {
+        try { setBookmarks(JSON.parse(stored)); } catch {}
+      }
+      setIsLoaded(true);
+    });
   }, []);
 
   const toggleBookmark = (lawId: string, articleId: string, type: BookmarkType, note?: string) => {

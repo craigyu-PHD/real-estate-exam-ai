@@ -17,9 +17,11 @@ export function useReview() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(KEY);
-    if (stored) try { setQueue(JSON.parse(stored)); } catch {}
-    setIsLoaded(true);
+    queueMicrotask(() => {
+      const stored = localStorage.getItem(KEY);
+      if (stored) { try { setQueue(JSON.parse(stored)); } catch {} }
+      setIsLoaded(true);
+    });
   }, []);
 
   const save = (q: ReviewItem[]) => {
@@ -37,8 +39,7 @@ export function useReview() {
 
   const grade = (lawId: string, articleId: string, result: 'again'|'hard'|'good'|'easy') => {
     const idx = queue.findIndex(x=>x.lawId===lawId && x.articleId===articleId);
-    if (idx===-1) return;
-    const item = queue[idx];
+    const item = idx===-1 ? { lawId, articleId, dueDate: new Date().toISOString(), interval: 1, ease: 2.5 } : queue[idx];
     let interval = item.interval;
     let ease = item.ease;
     if (result==='again') { interval=1; ease=Math.max(1.3, ease-0.2); }
@@ -46,7 +47,8 @@ export function useReview() {
     else if (result==='good') { interval=Math.round(interval*ease); }
     else if (result==='easy') { interval=Math.round(interval*ease*1.3); ease+=0.15; }
     const due = new Date(); due.setDate(due.getDate()+interval);
-    const next = [...queue]; next[idx]={...item, interval, ease, dueDate: due.toISOString(), lastResult: result};
+    const updated={...item, interval, ease, dueDate: due.toISOString(), lastResult: result};
+    const next = idx===-1 ? [...queue, updated] : queue.map((entry,i)=>i===idx?updated:entry);
     save(next);
   };
 

@@ -4,7 +4,8 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { useProgress } from '@/hooks/useProgress';
 import { UpdateLog } from '@/components/UpdateLog';
-import { Home, BookOpen, Bot, Settings, PencilRuler, Bookmark, BarChart2, Menu, X, Search, ShieldCheck, GraduationCap, Trophy, Zap } from 'lucide-react';
+import { BrandMark } from '@/components/BrandMark';
+import { Home, Bot, Settings, PencilRuler, Bookmark, BarChart2, Menu, X, Search, GraduationCap, Trophy, Zap, Headphones, RefreshCcw } from 'lucide-react';
 
 const mainNavItems = [
   { name: '首頁', href: '/', icon: Home },
@@ -12,100 +13,94 @@ const mainNavItems = [
   { name: 'AI 老師', href: '/teacher', icon: Bot },
   { name: '題庫', href: '/exams', icon: PencilRuler },
 ];
+const utilityItems = [
+  { name: '聽課模式', href: '/listen', icon: Headphones },
+  { name: '間隔複習', href: '/review', icon: RefreshCcw },
+];
 const bottomNavItems = [
   { name: '我的重點', href: '/bookmarks', icon: Bookmark },
   { name: '學習進度', href: '/progress', icon: BarChart2 },
   { name: '設定', href: '/settings', icon: Settings },
 ];
-const allNavItems = [...mainNavItems, ...bottomNavItems];
-const mobilePrimary = [mainNavItems[0], mainNavItems[1], mainNavItems[3], bottomNavItems[1], bottomNavItems[2]];
+const allNavItems = [...mainNavItems, ...utilityItems, ...bottomNavItems];
+const mobilePrimary = [mainNavItems[0], mainNavItems[1], mainNavItems[3], bottomNavItems[1]];
+
+function NavLink({ item, active, onClick }: { item: typeof mainNavItems[number]; active: boolean; onClick?: () => void }) {
+  return (
+    <Link onClick={onClick} href={item.href} className={`sidebar-link ${active ? 'sidebar-link-active' : ''}`}>
+      <item.icon size={18}/><span>{item.name}</span>
+    </Link>
+  );
+}
 
 export function Navigation() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const { isLoaded, getGamificationStats } = useProgress();
   const game = getGamificationStats();
+  const isActive = (href: string) => pathname === href || (href === '/laws' && (pathname.startsWith('/laws') || pathname.startsWith('/articles')));
+
   return (
     <>
-      <aside className="hidden md:flex flex-col w-64 h-screen card fixed shadow-sm">
-        <div className="p-6 border-b" style={{ borderColor: 'var(--border)' }}>
-          <h1 className="text-[17px] font-black flex items-center gap-2" style={{ color: 'var(--text-1)' }}>
-            <span className="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center shadow"><BookOpen size={16} className="text-white" /></span>
-            不動產法規 AI
-          </h1>
-          <p className="text-xs mt-1.5 flex items-center gap-1" style={{ color: 'var(--text-3)' }}><ShieldCheck size={12} className="text-emerald-600"/> 學習中心：初學＋複習一體</p>
-        </div>
-        <div className="p-3">
-          <Link href="/search" className="flex items-center gap-2 text-sm card rounded-xl px-3 py-2.5 hover:shadow-sm transition" style={{ color: 'var(--text-2)' }}>
-            <Search size={14} className="text-indigo-600" /> 搜法條 / 關鍵字 / 白話問句
+      <aside className="hidden md:flex flex-col w-[280px] h-dvh fixed left-0 top-0 sidebar-shell z-50">
+        <div className="px-4 pt-5 pb-4 border-b" style={{borderColor:'var(--border)'}}>
+          <Link href="/" className="flex items-center gap-3 group">
+            <BrandMark />
+            <div className="min-w-0">
+              <div className="text-[15px] font-black tracking-tight text-primary">不動產法規 AI</div>
+              <div className="text-[10px] mt-0.5 text-tertiary">Real Estate Exam Tutor</div>
+            </div>
           </Link>
         </div>
-        <nav className="flex-1 px-3 space-y-1 overflow-y-auto min-h-0">
-          <div className="text-[11px] tracking-widest px-2 mt-2 mb-1 font-bold" style={{ color: 'var(--text-3)' }}>學習</div>
-          {mainNavItems.map((item) => {
-            const active = pathname === item.href || (item.href==='/laws' && (pathname.startsWith('/laws') || pathname.startsWith('/articles') || pathname.startsWith('/review') || pathname.startsWith('/listen')));
-            return (
-              <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition ${active ? 'bg-indigo-600 text-white shadow' : 'hover:opacity-80'}`} style={!active ? { color: 'var(--text-2)' } : undefined}>
-                <item.icon size={18} /> {item.name}
-              </Link>
-            );
-          })}
-          <div className="text-[11px] tracking-widest px-2 mt-4 mb-1 font-bold" style={{ color: 'var(--text-3)' }}>我的</div>
-          {bottomNavItems.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <Link key={item.name} href={item.href} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition ${active ? 'bg-indigo-600 text-white shadow' : 'hover:opacity-80'}`} style={!active ? { color: 'var(--text-2)' } : undefined}>
-                <item.icon size={18} /> {item.name}
-              </Link>
-            );
-          })}
+
+        <div className="px-3 pt-3">
+          <Link href="/search" className="sidebar-search"><Search size={15}/><span>搜尋法條與關鍵字</span><kbd>⌘K</kbd></Link>
+        </div>
+
+        <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-4 sidebar-scroll">
+          <section>
+            <div className="sidebar-section-label">主要功能</div>
+            <div className="space-y-1">{mainNavItems.map(item => <NavLink key={item.href} item={item} active={isActive(item.href)}/>)}</div>
+          </section>
+          <section>
+            <div className="sidebar-section-label">學習工具</div>
+            <div className="space-y-1">{utilityItems.map(item => <NavLink key={item.href} item={item} active={isActive(item.href)}/>)}</div>
+          </section>
+          <section>
+            <div className="sidebar-section-label">我的</div>
+            <div className="space-y-1">{bottomNavItems.map(item => <NavLink key={item.href} item={item} active={isActive(item.href)}/>)}</div>
+          </section>
         </nav>
-        <UpdateLog />
-        <div className="p-4 pt-0" style={{ borderColor: 'var(--border)' }}>
-          <div className="rounded-2xl hero-surface p-4 text-white shadow overflow-hidden relative">
-            <div className="absolute -right-6 -top-6 w-20 h-20 rounded-full bg-white/10 blur-xl" />
-            <div className="relative">
-              <div className="flex items-center justify-between gap-2">
-                <span className="inline-flex items-center gap-1.5 text-xs font-black"><Trophy size={13} className="text-amber-300"/> {isLoaded ? `LV.${game.level} · ${game.title}` : '學習等級'}</span>
-                <span className="inline-flex items-center gap-1 text-[10px] font-black text-white/70"><Zap size={11} className="text-yellow-300"/> {isLoaded ? game.xp : 0} XP</span>
-              </div>
-              <div className="mt-3 flex items-center justify-between text-[10px] text-white/70"><span>今日任務</span><span>{isLoaded ? `${Math.min(game.today, game.dailyGoal)}/${game.dailyGoal}` : '0/8'} 條</span></div>
-              <div className="mt-1.5 h-1.5 rounded-full bg-white/15 overflow-hidden"><div className="h-full rounded-full bg-emerald-300 transition-all" style={{ width: `${isLoaded ? game.questProgress : 0}%` }} /></div>
-              <Link href="/laws" className="mt-3 block text-center bg-white text-indigo-700 text-xs font-black py-2.5 rounded-xl hover:bg-indigo-50 transition">繼續闖關</Link>
+
+        <div className="shrink-0 border-t pt-2" style={{borderColor:'var(--border)'}}>
+          <UpdateLog />
+          <div className="mx-3 mb-3 quest-mini">
+            <div className="flex items-center justify-between gap-2">
+              <span className="flex items-center gap-1.5 text-[11px] font-black"><Trophy size={13} className="text-amber-500"/>{isLoaded ? `LV.${game.level} ${game.title}` : '學習等級'}</span>
+              <span className="flex items-center gap-1 text-[10px] font-black text-tertiary"><Zap size={11} className="text-indigo-500"/>{isLoaded ? game.xp : 0} XP</span>
             </div>
+            <div className="mt-2 flex items-center justify-between text-[10px] text-tertiary"><span>今日任務</span><span>{isLoaded ? `${Math.min(game.today, game.dailyGoal)}/${game.dailyGoal}` : '0/8'} 條</span></div>
+            <div className="mt-1.5 h-1.5 rounded-full progress-track overflow-hidden"><div className="h-full rounded-full bg-indigo-600" style={{width:`${isLoaded ? game.questProgress : 0}%`}}/></div>
           </div>
         </div>
       </aside>
 
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 card border-t flex justify-around p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] z-50 shadow-[0_-8px_24px_rgba(0,0,0,0.06)]">
-        {mobilePrimary.map((item) => {
-          const active = pathname === item.href;
-          return (
-            <Link key={item.name} href={item.href} className={`flex flex-col items-center gap-1 px-2 py-1 rounded-xl ${active ? 'text-indigo-600 bg-indigo-50' : ''}`} style={!active ? { color: 'var(--text-3)' } : undefined}>
-              <item.icon size={20} />
-              <span className="text-[10px] font-bold">{item.name}</span>
-            </Link>
-          );
-        })}
-        <button onClick={() => setOpen(true)} className="flex flex-col items-center gap-1 px-2 py-1" style={{ color: 'var(--text-3)' }}>
-          <Menu size={20} /><span className="text-[10px] font-bold">更多</span>
-        </button>
+      <nav className="md:hidden fixed bottom-0 inset-x-0 mobile-nav z-50 pb-[max(.45rem,env(safe-area-inset-bottom))]">
+        <div className="grid grid-cols-5 px-2 pt-2">
+          {mobilePrimary.map(item => {
+            const active = isActive(item.href);
+            return <Link key={item.href} href={item.href} className={`mobile-nav-item ${active?'mobile-nav-active':''}`}><item.icon size={19}/><span>{item.name}</span></Link>;
+          })}
+          <button onClick={() => setOpen(true)} className="mobile-nav-item"><Menu size={19}/><span>更多</span></button>
+        </div>
       </nav>
+
       {open && (
-        <div className="md:hidden fixed inset-0 z-[60]">
-          <div className="absolute inset-0 bg-slate-900/30 backdrop-blur-sm" onClick={() => setOpen(false)} />
-          <div className="absolute bottom-0 left-0 right-0 card rounded-t-[1.5rem] p-4 shadow-2xl">
-            <div className="flex justify-between items-center mb-3">
-              <span className="font-black" style={{ color: 'var(--text-1)' }}>更多功能</span>
-              <button onClick={() => setOpen(false)} className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: 'var(--muted)', color: 'var(--text-2)' }}><X size={16} /></button>
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              {allNavItems.map((item) => (
-                <Link key={item.name} href={item.href} onClick={() => setOpen(false)} className={`flex flex-col items-center gap-2 p-3 rounded-2xl border ${pathname===item.href?'bg-indigo-600 border-indigo-600 text-white':'card'}`}>
-                  <item.icon size={20} /><span className="text-xs font-bold">{item.name}</span>
-                </Link>
-              ))}
-            </div>
+        <div className="md:hidden fixed inset-0 z-[80]">
+          <button className="absolute inset-0 bg-slate-950/35 backdrop-blur-[2px]" onClick={() => setOpen(false)} aria-label="關閉選單"/>
+          <div className="absolute bottom-0 inset-x-0 mobile-sheet rounded-t-[28px] p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-2xl">
+            <div className="flex items-center justify-between mb-4"><div className="flex items-center gap-2"><BrandMark compact/><div><div className="text-sm font-black text-primary">全部功能</div><div className="text-[10px] text-tertiary">不動產法規 AI</div></div></div><button onClick={() => setOpen(false)} className="icon-button"><X size={17}/></button></div>
+            <div className="grid grid-cols-3 gap-2">{allNavItems.map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className={`mobile-sheet-item ${isActive(item.href)?'mobile-sheet-active':''}`}><item.icon size={20}/><span>{item.name}</span></Link>)}</div>
           </div>
         </div>
       )}

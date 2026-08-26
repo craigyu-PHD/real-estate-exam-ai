@@ -151,7 +151,7 @@ export default function ArticleDetail({ params }: { params: Promise<{ id: string
         </section>
       </div>
 
-      <footer className="fixed bottom-0 left-0 md:left-64 right-0 glass border-t p-3 flex justify-between z-30 pb-[max(0.75rem,env(safe-area-inset-bottom))]" style={{borderColor:'var(--border)'}}>
+      <footer className="fixed bottom-0 left-0 md:left-[280px] right-0 glass border-t p-3 flex justify-between z-30 pb-[max(0.75rem,env(safe-area-inset-bottom))]" style={{borderColor:'var(--border)'}}>
         {prevId ? <Link href={`/articles/${prevId}`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold hover:bg-indigo-500/10" style={{color:'var(--text-2)'}}><ChevronLeft size={18}/> 上一條</Link> : <span className="px-3 py-2 text-sm" style={{color:'var(--text-3)'}}>已是首條</span>}
         <Link href={`/laws/${lawId}`} className="text-xs font-bold px-2 py-2" style={{color:'var(--text-3)'}}>回目錄</Link>
         {nextId ? <Link href={`/articles/${nextId}`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-black bg-indigo-600 text-white shadow-sm">下一條 <ChevronRight size={18}/></Link> : <span className="px-3 py-2 text-sm" style={{color:'var(--text-3)'}}>已是末條</span>}

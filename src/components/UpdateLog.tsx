@@ -1,62 +1,82 @@
 'use client';
 
-import { useState } from 'react';
-import { ChevronDown, ChevronUp, Clock3, GitBranch, CheckCircle2, CircleDashed, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { X, Clock3, GitBranch, CheckCircle2, CircleDashed, Sparkles, ChevronRight } from 'lucide-react';
 import { currentVersion, releaseLog, type ReleaseEntry } from '@/data/changelog';
 
 const statusMeta: Record<ReleaseEntry['status'], { label: string; className: string }> = {
-  current: { label: '目前版本', className: 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/20' },
-  completed: { label: '已完成', className: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/20' },
-  planned: { label: '下一版', className: 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20' },
+  current: { label: '目前版本', className: 'status-current' },
+  completed: { label: '已完成', className: 'status-complete' },
+  planned: { label: '下一版', className: 'status-planned' },
 };
 
 export function UpdateLog() {
-  const [expanded, setExpanded] = useState(false);
+  const [open, setOpen] = useState(false);
   const current = releaseLog.find(item => item.version === currentVersion)!;
-  const visible = expanded ? releaseLog : releaseLog.filter(item => item.status === 'current' || item.status === 'planned');
+
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, [open]);
 
   return (
-    <section className="mx-3 mb-3 rounded-2xl border overflow-hidden" style={{ borderColor: 'var(--border)', background: 'var(--card)' }}>
-      <button onClick={() => setExpanded(v => !v)} className="w-full px-3.5 py-3 text-left hover:bg-indigo-500/[0.035] transition">
-        <div className="flex items-center justify-between gap-2">
-          <div className="min-w-0">
-            <div className="flex items-center gap-1.5 text-[10px] font-black tracking-[0.16em] uppercase text-indigo-600"><GitBranch size={12}/> Update Log</div>
-            <div className="mt-1 flex items-center gap-2 min-w-0">
-              <span className="text-sm font-black truncate" style={{ color: 'var(--text-1)' }}>V{current.version}</span>
-              <span className="text-[9px] font-black px-2 py-0.5 rounded-full border bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/20">目前版本</span>
-            </div>
+    <>
+      <button onClick={() => setOpen(true)} className="sidebar-release mx-3 mb-2 text-left" aria-label="開啟版本更新日誌">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-8 h-8 rounded-xl release-icon flex items-center justify-center shrink-0"><GitBranch size={14}/></span>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5"><span className="text-[10px] font-black tracking-[0.12em] text-tertiary">版本更新</span><span className="status-dot"/></div>
+            <div className="text-xs font-black truncate text-primary">V{current.version} · {current.title}</div>
           </div>
-          {expanded ? <ChevronUp size={15} style={{ color: 'var(--text-3)' }} /> : <ChevronDown size={15} style={{ color: 'var(--text-3)' }} />}
+          <ChevronRight size={14} className="text-tertiary shrink-0"/>
         </div>
-        <div className="mt-2 flex items-center justify-between text-[10px]" style={{ color: 'var(--text-3)' }}>
-          <span className="inline-flex items-center gap-1"><Clock3 size={10}/>{current.date}</span>
-          <span>{current.progress}% 完成</span>
-        </div>
-        <div className="mt-1.5 h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--muted)' }}><div className="h-full rounded-full bg-indigo-600" style={{ width: `${current.progress}%` }}/></div>
       </button>
 
-      <div className="border-t px-3 py-2.5 space-y-2.5 max-h-64 overflow-y-auto" style={{ borderColor: 'var(--border)' }}>
-        {visible.map(entry => {
-          const meta = statusMeta[entry.status];
-          return (
-            <div key={entry.version} className="rounded-xl p-2.5" style={{ background: 'var(--muted)' }}>
-              <div className="flex items-start justify-between gap-2">
-                <div className="min-w-0">
-                  <div className="flex items-center gap-1.5">
-                    {entry.status === 'planned' ? <CircleDashed size={12} className="text-amber-500"/> : entry.status === 'current' ? <Sparkles size={12} className="text-indigo-600"/> : <CheckCircle2 size={12} className="text-emerald-600"/>}
-                    <span className="text-[11px] font-black" style={{ color: 'var(--text-1)' }}>V{entry.version}</span>
-                  </div>
-                  <div className="text-[10px] font-bold mt-1 leading-snug" style={{ color: 'var(--text-2)' }}>{entry.title}</div>
-                </div>
-                <span className={`shrink-0 text-[8px] font-black px-1.5 py-0.5 rounded-full border ${meta.className}`}>{meta.label}</span>
+      {open && (
+        <div className="fixed inset-0 z-[90] flex items-stretch justify-end" role="dialog" aria-modal="true" aria-label="版本更新日誌">
+          <button className="absolute inset-0 bg-slate-950/35 backdrop-blur-[2px]" onClick={() => setOpen(false)} aria-label="關閉更新日誌"/>
+          <aside className="relative w-full max-w-[430px] h-full update-drawer shadow-2xl flex flex-col">
+            <header className="p-5 md:p-6 border-b flex items-start justify-between gap-4" style={{borderColor:'var(--border)'}}>
+              <div>
+                <div className="text-[10px] tracking-[0.16em] font-black text-indigo-600 flex items-center gap-1.5"><GitBranch size={12}/> PRODUCT CHANGELOG</div>
+                <h2 className="text-xl font-black mt-1 text-primary">版本更新日誌</h2>
+                <p className="text-xs mt-1 text-tertiary">版本、完成度與下一步集中在這裡，不再占用主要導覽空間。</p>
               </div>
-              <div className="mt-2 flex items-center justify-between text-[9px]" style={{ color: 'var(--text-3)' }}><span>{entry.date}</span><span>{entry.progress}%</span></div>
-              <div className="mt-1 h-1 rounded-full overflow-hidden" style={{ background: 'color-mix(in srgb, var(--border) 70%, transparent)' }}><div className={`h-full rounded-full ${entry.status === 'planned' ? 'bg-amber-400' : entry.status === 'current' ? 'bg-indigo-600' : 'bg-emerald-500'}`} style={{ width: `${entry.progress}%` }}/></div>
-              {expanded && <div className="mt-2 text-[9px] leading-relaxed" style={{ color: 'var(--text-3)' }}>{entry.summary}</div>}
+              <button onClick={() => setOpen(false)} className="icon-button"><X size={17}/></button>
+            </header>
+
+            <div className="flex-1 overflow-y-auto p-4 md:p-5 space-y-3">
+              {releaseLog.map(entry => {
+                const meta = statusMeta[entry.status];
+                return (
+                  <article key={entry.version} className={`release-card ${entry.status === 'current' ? 'release-card-current' : ''}`}>
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex gap-3 min-w-0">
+                        <span className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${entry.status==='planned'?'bg-amber-500/10 text-amber-600':entry.status==='current'?'bg-indigo-500/10 text-indigo-600':'bg-emerald-500/10 text-emerald-600'}`}>
+                          {entry.status === 'planned' ? <CircleDashed size={16}/> : entry.status === 'current' ? <Sparkles size={16}/> : <CheckCircle2 size={16}/>}
+                        </span>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap"><span className="font-black text-primary">V{entry.version}</span><span className={`release-status ${meta.className}`}>{meta.label}</span></div>
+                          <h3 className="text-sm font-black mt-1 text-primary">{entry.title}</h3>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-bold text-tertiary shrink-0">{entry.progress}%</span>
+                    </div>
+                    <div className="mt-3 h-1.5 rounded-full overflow-hidden progress-track"><div className={`h-full rounded-full ${entry.status==='planned'?'bg-amber-400':entry.status==='current'?'bg-indigo-600':'bg-emerald-500'}`} style={{width:`${entry.progress}%`}}/></div>
+                    <div className="mt-3 flex items-center gap-1.5 text-[10px] text-tertiary"><Clock3 size={11}/>{entry.date}</div>
+                    <p className="text-xs leading-relaxed mt-2 text-secondary">{entry.summary}</p>
+                    <ul className="mt-3 grid gap-1.5">
+                      {entry.highlights.map(item => <li key={item} className="text-[11px] flex gap-2 text-secondary"><span className="text-indigo-500">•</span><span>{item}</span></li>)}
+                    </ul>
+                  </article>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
-    </section>
+          </aside>
+        </div>
+      )}
+    </>
   );
 }

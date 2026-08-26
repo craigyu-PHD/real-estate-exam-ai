@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
 
-// @ts-ignore - next-pwa typing issues with Next 15 sometimes
+// @ts-expect-error - next-pwa typing is not fully aligned with the current Next.js version
 import withPWAInit from "next-pwa";
 
 const withPWA = withPWAInit({

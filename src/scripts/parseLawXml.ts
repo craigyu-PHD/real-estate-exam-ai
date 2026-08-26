@@ -1,6 +1,5 @@
 import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
-import path from 'path';
 
 // 台灣政府開放資料：全國法規資料庫 (ChLaw.xml)
 // 包含 <法規> 標籤，內含 <法規名稱>, <最新異動日期>, <法規條文> (內含多個 <條文內容>) 等

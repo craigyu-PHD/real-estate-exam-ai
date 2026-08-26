@@ -16,8 +16,10 @@ export function useExamHistory(){
   const [records,setRecords]=useState<ExamRecord[]>([]);
   const [isLoaded,setIsLoaded]=useState(false);
   useEffect(()=>{
-    try{ const v=localStorage.getItem(KEY); if(v) setRecords(JSON.parse(v)); }catch{}
-    setIsLoaded(true);
+    queueMicrotask(() => {
+      try{ const v=localStorage.getItem(KEY); if(v) setRecords(JSON.parse(v)); }catch{}
+      setIsLoaded(true);
+    });
   },[]);
   const add = (r: ExamRecord)=>{
     const next=[r,...records].slice(0,50);

@@ -1,6 +1,7 @@
 'use client';
 
 import type { VoicePreset } from '@/lib/voiceConfig';
+import { getStoredGeminiKey } from '@/lib/geminiKey';
 
 const DB_NAME = 'tts-cache';
 const STORE = 'audio';
@@ -88,7 +89,7 @@ export async function fetchServerTTS(text: string, voicePreset: VoicePreset = 'w
     const res = await fetch('/api/tts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, voicePreset }),
+      body: JSON.stringify({ text, voicePreset, apiKey: getStoredGeminiKey() || undefined }),
     });
     if (!res.ok) return null;
     const blob = await res.blob();
