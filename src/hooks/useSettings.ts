@@ -17,7 +17,7 @@ export interface Settings {
 }
 
 export const defaultSettings: Settings = {
-  appearance: 'system',
+  appearance: 'dark',
   theme: 'classic',
   fontSize: 'medium',
   voiceEngine: 'auto',

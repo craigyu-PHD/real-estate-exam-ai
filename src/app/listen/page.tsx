@@ -1,6 +1,6 @@
 'use client';
 
-import { AlertCircle, CheckCircle2, ChevronDown, Clock, Headphones, LoaderCircle, Pause, Play, Route, SkipBack, SkipForward, Sparkles, Volume2, Waves } from 'lucide-react';
+import { AlertCircle, Bot, CheckCircle2, ChevronDown, Clock, LoaderCircle, Pause, Play, Route, SkipBack, SkipForward, Volume2, Waves } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { lawsData } from '@/data/lawsData';
 import { generatedArticles } from '@/data/generatedArticles';
@@ -193,7 +193,7 @@ export default function ListenPage() {
       const nextIndex = index + 1;
       if (!settingsRef.current.autoPlayNext || nextIndex >= queueRef.current.length) {
         setPlaybackState('idle');
-        setStatus(nextIndex >= queueRef.current.length ? '本輪完成 ✓' : '本條播放完成');
+        setStatus(nextIndex >= queueRef.current.length ? '本輪完成' : '本條播放完成');
         return;
       }
       setIdx(nextIndex);
@@ -351,60 +351,141 @@ export default function ListenPage() {
   };
 
   return (
-    <div className="page-shell max-w-6xl space-y-3 pb-28 md:pb-6">
-      <header className="page-header !p-4 relative overflow-hidden">
-        <div className="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-violet-500/10 blur-3xl" />
-        <div className="relative flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center shadow-sm shrink-0"><Headphones size={19}/></div>
-            <div className="min-w-0"><div className="text-[9px] font-black tracking-[0.18em] text-violet-600">PODCAST STUDY MODE</div><h1 className="text-xl md:text-2xl font-black mt-0.5 text-primary">AI 聽課模式</h1><p className="text-[11px] md:text-xs mt-0.5 text-secondary truncate">原文 → 白話拆解 → 立法目的 → 案例 → 考點，完整 Podcast 式教學。</p></div>
-          </div>
-          <span className="hidden sm:inline-flex items-center gap-1.5 text-[10px] font-black px-3 py-1.5 rounded-full bg-violet-500/10 text-violet-700 dark:text-violet-200 border border-violet-500/25"><Sparkles size={12}/> {voice.emoji} {voice.label}</span>
+    <div className="page-shell max-w-6xl space-y-5 pb-28 md:pb-8">
+      <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <div className="text-xs font-medium tracking-[0.1em] text-tertiary">LISTEN MODE</div>
+          <h1 className="text-[28px] leading-tight font-bold mt-1 text-primary">AI 聽課模式</h1>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-secondary">把法條原文、白話拆解、制度目的、案例與考點串成可連續播放的 Podcast 式課程。</p>
         </div>
+        <div className="text-xs text-tertiary">{voice.label} · {settings.voiceSpeed}x · {settings.autoPlayNext ? '自動連播' : '手動切換'}</div>
       </header>
 
-      <section className="card rounded-[1.25rem] p-3.5 grid md:grid-cols-[minmax(0,1.4fr)_minmax(170px,.55fr)_auto] gap-3 items-end">
+      <section className="card rounded-2xl p-4 grid md:grid-cols-[minmax(0,1.3fr)_minmax(180px,.65fr)_auto] gap-3 items-end">
         <label className="min-w-0">
-          <span className="text-[10px] font-black text-tertiary flex items-center gap-1.5"><Route size={12}/>學習路線</span>
-          <div className="relative mt-1.5"><select value={lawId} onChange={event => changeRoute(event.target.value)} className="input-shell appearance-none w-full rounded-xl px-3 py-2.5 pr-9 text-xs font-black outline-none text-primary">{lawsData.map(law => <option key={law.id} value={law.id}>{law.name} · {generatedArticles[law.id]?.length || 0} 條</option>)}</select><ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-tertiary pointer-events-none"/></div>
+          <span className="text-xs font-medium text-tertiary flex items-center gap-1.5"><Route size={13} strokeWidth={1.9}/>學習路線</span>
+          <div className="relative mt-1.5">
+            <select value={lawId} onChange={event => changeRoute(event.target.value)} className="input-shell appearance-none w-full rounded-lg px-3 py-2.5 pr-9 text-xs font-medium outline-none text-primary">
+              {lawsData.map(law => <option key={law.id} value={law.id}>{law.name} · {generatedArticles[law.id]?.length || 0} 條</option>)}
+            </select>
+            <ChevronDown size={14} strokeWidth={1.9} className="absolute right-3 top-1/2 -translate-y-1/2 text-tertiary pointer-events-none"/>
+          </div>
         </label>
         <label className="min-w-0">
-          <span className="text-[10px] font-black text-tertiary flex items-center gap-1.5"><Waves size={12}/>進度起點</span>
-          <div className="relative mt-1.5"><select value={sessionStart} onChange={event => selectSessionStart(Number(event.target.value))} className="input-shell appearance-none w-full rounded-xl px-3 py-2.5 pr-8 text-xs font-black outline-none text-primary">{progressStops.map(start => <option key={start} value={start}>第 {start + 1} 條起 · {Math.min(start + 10, arts.length)}/{arts.length}</option>)}</select><ChevronDown size={13} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-tertiary pointer-events-none"/></div>
+          <span className="text-xs font-medium text-tertiary flex items-center gap-1.5"><Waves size={13} strokeWidth={1.9}/>進度起點</span>
+          <div className="relative mt-1.5">
+            <select value={sessionStart} onChange={event => selectSessionStart(Number(event.target.value))} className="input-shell appearance-none w-full rounded-lg px-3 py-2.5 pr-8 text-xs font-medium outline-none text-primary">
+              {progressStops.map(start => <option key={start} value={start}>第 {start + 1} 條起 · {Math.min(start + 10, arts.length)}/{arts.length}</option>)}
+            </select>
+            <ChevronDown size={13} strokeWidth={1.9} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-tertiary pointer-events-none"/>
+          </div>
         </label>
         <div>
-          <span className="text-[10px] font-black text-tertiary flex items-center gap-1.5"><Clock size={12}/>本輪時間</span>
-          <div className="flex gap-1 mt-1.5">{[5,10,20,30].map(value => <button key={value} onClick={() => changeMinutes(value)} className={`px-2.5 py-2.5 rounded-xl border text-[10px] font-black transition ${minutes===value?'bg-emerald-600 border-emerald-600 text-white shadow-sm':'surface text-secondary'}`}>{value}分</button>)}</div>
+          <span className="text-xs font-medium text-tertiary flex items-center gap-1.5"><Clock size={13} strokeWidth={1.9}/>本輪時間</span>
+          <div className="flex gap-1.5 mt-1.5">
+            {[5, 10, 20, 30].map(value => (
+              <button key={value} type="button" aria-pressed={minutes === value} onClick={() => changeMinutes(value)} className={`min-h-10 px-3 rounded-lg border text-xs font-medium ${minutes === value ? 'text-white border-transparent' : 'text-secondary'}`} style={minutes === value ? { background: 'var(--primary)' } : { background: 'transparent', borderColor: 'var(--border)' }}>
+                {value} 分
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="grid xl:grid-cols-[minmax(0,1.35fr)_minmax(320px,.65fr)] gap-3 items-stretch">
-        <div className="listen-stage min-w-0 w-full rounded-[1.5rem] p-4 md:p-5 text-white shadow-xl relative overflow-hidden min-h-[280px] flex items-center">
-          <div className="absolute inset-0 pointer-events-none opacity-50 bg-[radial-gradient(circle_at_15%_15%,rgba(255,255,255,.2),transparent_24%),radial-gradient(circle_at_85%_85%,rgba(45,212,191,.28),transparent_30%)]" />
-          <div className="relative w-full max-w-2xl mx-auto flex flex-col items-center text-center">
-            <div className="w-full flex items-center justify-between text-[9px] font-black tracking-[0.12em] opacity-75"><span>NOW LEARNING</span><span>{currentLaw?.name} · {activeGlobalIndex + 1}/{arts.length}</span></div>
-            <div className={`lecture-loader lecture-loader-compact mt-1.5 ${isPreparing ? 'is-loading' : isPlaying ? 'is-playing' : ''}`} aria-hidden="true"><div className="lecture-loader-ring ring-one"/><div className="lecture-loader-ring ring-two"/><div className="lecture-teacher-avatar">{isPreparing ? <LoaderCircle size={28} className="animate-spin"/> : <span>{voice.emoji}</span>}</div><div className="lecture-wave-bars">{[0,1,2,3,4].map(bar => <i key={bar}/>)}</div></div>
-            <div className="mt-2 min-h-6 inline-flex items-center gap-2 text-[10px] px-3 py-1.5 rounded-full bg-white/10 border border-white/15 max-w-full">{isPreparing ? <LoaderCircle size={13} className="animate-spin shrink-0"/> : <Volume2 size={13} className="shrink-0"/>}<span className="truncate">{status || (warming ? '正在預先準備教材…' : '已準備好，點擊開始聽課')}</span></div>
-            <h2 className="text-lg md:text-xl font-black mt-2">第 {cur.articleNumber} 條 <span className="text-[10px] font-bold opacity-65">· 原文＋白話＋目的＋案例＋考點</span></h2>
-            <button onClick={handleToggle} disabled={isPreparing} className={`mt-3 min-w-40 inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full font-black text-xs shadow-lg transition active:scale-[0.98] disabled:cursor-wait disabled:opacity-80 ${isPreparing?'bg-white/20 text-white':isPlaying?'bg-amber-300 text-slate-950 hover:bg-amber-200':'bg-white text-indigo-700 hover:bg-indigo-50'}`}>{isPreparing ? <><LoaderCircle size={15} className="animate-spin"/>正在準備…</> : isPlaying ? <><Pause size={15}/>暫停</> : isPaused ? <><Play size={15} className="fill-current"/>繼續播放</> : <><Play size={15} className="fill-current"/>開始聽課</>}</button>
-            <div className="w-full flex items-center gap-3 mt-2.5"><button onClick={() => jump(-1)} disabled={idx===0 || isPreparing} className="w-8 h-8 rounded-full bg-white/10 disabled:opacity-25 flex items-center justify-center"><SkipBack size={13}/></button><div className="flex-1"><div className="flex justify-between text-[9px] opacity-70 mb-1"><span>全法進度 {progressPct}%</span><span>本輪 {idx+1}/{queue.length}</span></div><div className="h-1.5 bg-white/10 rounded-full overflow-hidden"><div className="h-full rounded-full bg-emerald-300 transition-all duration-500" style={{ width: `${progressPct}%` }} /></div></div><button onClick={() => jump(1)} disabled={idx===queue.length-1 || isPreparing} className="w-8 h-8 rounded-full bg-white/10 disabled:opacity-25 flex items-center justify-center"><SkipForward size={13}/></button></div>
-            <div className="mt-2 flex flex-wrap justify-center gap-1.5 text-[9px]"><span className="px-2 py-1 rounded-full bg-white/10 border border-white/10">🎧 本輪 {queue.length} 條</span><span className="px-2 py-1 rounded-full bg-white/10 border border-white/10">⚡ {settings.voiceSpeed}x</span><span className="px-2 py-1 rounded-full bg-white/10 border border-white/10">🌐 {settings.voiceEngine === 'edge-neural' ? 'Edge Neural' : settings.voiceEngine === 'auto' ? '智慧自動' : settings.voiceEngine}</span></div>
+      <section className="grid xl:grid-cols-[minmax(300px,.36fr)_minmax(0,.64fr)] gap-4 items-stretch">
+        <aside className="card rounded-2xl overflow-hidden min-h-[460px] flex flex-col order-2 xl:order-1">
+          <div className="px-4 py-4 border-b" style={{ borderColor: 'var(--border)' }}>
+            <div className="text-xs font-medium tracking-[0.1em] text-tertiary">PLAYLIST</div>
+            <div className="mt-1 flex items-center justify-between gap-3">
+              <h2 className="text-base font-semibold text-primary">{currentLaw?.name}</h2>
+              <span className="text-xs text-tertiary">{arts.length} 條</span>
+            </div>
+            <div className="mt-1 text-xs text-tertiary">本輪從第 {sessionStart + 1} 條開始，共 {queue.length} 條</div>
           </div>
-        </div>
-
-        <div className="card min-w-0 w-full rounded-[1.5rem] p-3.5 md:p-4 min-h-[280px] flex flex-col">
-          <div className="flex items-start justify-between gap-3"><div><div className="text-sm font-black text-primary flex items-center gap-2"><Waves size={15} className="text-indigo-600"/>完整播放清單</div><div className="text-[10px] mt-1 text-tertiary">{currentLaw?.name}全部 {arts.length} 條 · 本輪從第 {sessionStart + 1} 條開始</div></div><span className="text-[9px] font-black status-current">全 {arts.length}</span></div>
-          <div className="mt-3 flex-1 min-h-0 max-h-[210px] overflow-y-auto space-y-1 pr-1 sidebar-scroll">
+          <div className="flex-1 min-h-0 max-h-[560px] overflow-y-auto sidebar-scroll">
             {arts.map((article, index) => {
               const active = index === activeGlobalIndex;
               const inSession = index >= sessionStart && index < sessionStart + queue.length;
-              return <button key={`${lawId}-${article.articleNumber}`} onClick={() => selectSessionStart(index)} disabled={isPreparing} className={`w-full text-left px-3 py-2 rounded-xl text-[11px] flex items-center gap-2.5 transition border ${active?'bg-indigo-600 border-indigo-600 text-white shadow-sm':inSession?'border-indigo-500/25 bg-indigo-500/[0.055] text-secondary':'surface text-secondary hover:border-indigo-400/40'}`}><span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 text-[9px] font-black ${active?'bg-white/15':'bg-indigo-500/10 text-indigo-600 dark:text-indigo-300'}`}>{index+1}</span><span className="min-w-0 flex-1 truncate"><b>第 {article.articleNumber} 條</b><span className={active?'text-white/70':'text-tertiary'}> · {article.text.replace(/^第\s*[^條]+條\s*/, '').slice(0, 42)}</span></span>{active && isPlaying ? <Volume2 size={12} className="animate-pulse shrink-0"/> : active ? <CheckCircle2 size={12} className="shrink-0"/> : inSession ? <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"/> : null}</button>;
+              return (
+                <button
+                  key={`${lawId}-${article.articleNumber}`}
+                  type="button"
+                  onClick={() => selectSessionStart(index)}
+                  disabled={isPreparing}
+                  className={`listen-playlist-row ${active ? 'listen-playlist-active' : ''}`}
+                >
+                  <span className="w-8 text-xs font-medium text-tertiary shrink-0">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="min-w-0 flex-1 text-left">
+                    <span className="block text-sm font-medium text-primary">第 {article.articleNumber} 條</span>
+                    <span className="block mt-0.5 text-xs text-tertiary truncate">{article.text.replace(/^第\s*[^條]+條\s*/, '').slice(0, 54)}</span>
+                  </span>
+                  {active && isPlaying ? <Volume2 size={14} strokeWidth={1.9} style={{ color: 'var(--primary)' }} className="shrink-0"/> : active ? <CheckCircle2 size={14} strokeWidth={1.9} style={{ color: 'var(--primary)' }} className="shrink-0"/> : inSession ? <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: 'var(--primary)' }}/> : null}
+                </button>
+              );
             })}
+          </div>
+        </aside>
+
+        <div className="card rounded-2xl min-h-[460px] p-5 md:p-7 flex flex-col order-1 xl:order-2 relative overflow-hidden">
+          <div className="absolute inset-x-0 top-0 h-px" style={{ background: 'var(--primary)' }}/>
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <div className="text-xs font-medium tracking-[0.1em] text-tertiary">NOW PLAYING</div>
+              <h2 className="text-xl font-semibold mt-2 text-primary">第 {cur.articleNumber} 條</h2>
+              <div className="mt-1 text-xs text-tertiary">{currentLaw?.name} · {activeGlobalIndex + 1} / {arts.length}</div>
+            </div>
+            <div className="flex items-center gap-2 surface rounded-lg px-3 py-2">
+              <Bot size={16} strokeWidth={1.9} style={{ color: 'var(--primary)' }}/>
+              <div><div className="text-xs font-medium text-primary">AI 講師</div><div className="text-xs text-tertiary">{voice.label}</div></div>
+            </div>
+          </div>
+
+          <div className="mt-6 flex-1">
+            <div className="text-xs font-medium text-tertiary">法條原文</div>
+            <p className="mt-2 font-serif text-base md:text-lg leading-8 text-primary whitespace-pre-wrap">{cur.text}</p>
+          </div>
+
+          <div className="mt-6 border-t pt-5" style={{ borderColor: 'var(--border)' }}>
+            <div className="min-h-6 flex items-center gap-2 text-xs text-tertiary">
+              {isPreparing ? <LoaderCircle size={14} strokeWidth={1.9} className="animate-spin shrink-0"/> : <Volume2 size={14} strokeWidth={1.9} className="shrink-0"/>}
+              <span>{status || (warming ? '正在預先準備教材…' : '已準備好，開始後會依序播放原文與教學內容。')}</span>
+            </div>
+
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <button type="button" onClick={() => jump(-1)} disabled={idx === 0 || isPreparing} className="icon-button !w-10 !h-10 disabled:opacity-30" aria-label="上一條"><SkipBack size={16} strokeWidth={1.9}/></button>
+              <button
+                type="button"
+                onClick={handleToggle}
+                disabled={isPreparing}
+                className="w-14 h-14 rounded-full text-white flex items-center justify-center disabled:opacity-60"
+                style={{ background: 'var(--primary)' }}
+                aria-label={isPlaying ? '暫停' : '播放'}
+              >
+                {isPreparing ? <LoaderCircle size={20} strokeWidth={1.9} className="animate-spin"/> : isPlaying ? <Pause size={20} strokeWidth={1.9}/> : <Play size={20} strokeWidth={1.9} className="ml-0.5"/>}
+              </button>
+              <button type="button" onClick={() => jump(1)} disabled={idx === queue.length - 1 || isPreparing} className="icon-button !w-10 !h-10 disabled:opacity-30" aria-label="下一條"><SkipForward size={16} strokeWidth={1.9}/></button>
+            </div>
+
+            <div className="mt-5">
+              <div className="flex items-center justify-between gap-3 text-xs text-tertiary"><span>全法進度 {progressPct}%</span><span>本輪 {idx + 1} / {queue.length}</span></div>
+              <div className="mt-2 h-1.5 progress-track rounded-full overflow-hidden"><div className="h-full rounded-full progress-fill" style={{ width: `${progressPct}%`, background: 'var(--primary)' }}/></div>
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-tertiary">
+              <span>本輪 {queue.length} 條</span>
+              <span>{settings.voiceSpeed}x</span>
+              <span>{settings.voiceEngine === 'edge-neural' ? 'Edge Neural' : settings.voiceEngine === 'auto' ? '智慧自動' : settings.voiceEngine}</span>
+              <span>{isPaused ? '已暫停' : isPlaying ? '播放中' : '待播放'}</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {!settings.autoPlayNext && <div className="card rounded-xl p-2.5 text-[10px] flex items-center gap-2 text-amber-700 dark:text-amber-200"><AlertCircle size={13}/>自動連播目前關閉；每條播完需手動下一條。</div>}
+      {!settings.autoPlayNext && (
+        <div className="rounded-xl border p-3 text-sm flex items-center gap-2 text-secondary" style={{ borderColor: 'color-mix(in srgb,var(--warning) 35%,var(--border))', background: 'color-mix(in srgb,var(--warning) 5%,var(--card))' }}>
+          <AlertCircle size={15} strokeWidth={1.9} style={{ color: 'var(--warning)' }}/> 自動連播目前關閉，每條播放完成後需手動切換下一條。
+        </div>
+      )}
     </div>
   );
 }

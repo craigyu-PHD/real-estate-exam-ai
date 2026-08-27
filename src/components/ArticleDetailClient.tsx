@@ -1,7 +1,28 @@
 'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
-import { MessageCircleQuestion, Lightbulb, BookText, Bookmark, ChevronLeft, ChevronRight, CheckCircle2, AlertTriangle, Scale, GraduationCap, HelpCircle, ArrowLeft, Trophy, Zap, Headphones, Flag, Bot, Landmark, BriefcaseBusiness } from 'lucide-react';
+import {
+  AlertTriangle,
+  ArrowLeft,
+  Bookmark,
+  BookText,
+  Bot,
+  BriefcaseBusiness,
+  CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+  Flag,
+  GraduationCap,
+  Headphones,
+  HelpCircle,
+  Landmark,
+  Lightbulb,
+  MessageCircleQuestion,
+  Scale,
+  Trophy,
+  Zap,
+} from 'lucide-react';
 import { AudioPlayer } from '@/components/AudioPlayer';
 import { ChatGPTButton } from '@/components/ChatGPTButton';
 import { ArticleTeacherDrawer } from '@/components/ArticleTeacherDrawer';
@@ -21,7 +42,7 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const idParts = rawId.split('-');
   const lawId = idParts[0] || 'civil';
   const articleId = idParts.slice(1).join('-') || rawId;
-  const lawName = lawsData.find(l => l.id === lawId)?.name || lawId;
+  const lawName = lawsData.find(law => law.id === lawId)?.name || lawId;
   const game = getGamificationStats();
   const articles = generatedArticles[lawId] || [];
   const currentIndex = articles.findIndex(article => article.articleNumber === articleId);
@@ -29,6 +50,7 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const nextArticle = currentIndex >= 0 && currentIndex < articles.length - 1 ? articles[currentIndex + 1] : null;
   const prevId = prevArticle ? `${lawId}-${prevArticle.articleNumber}` : null;
   const nextId = nextArticle ? `${lawId}-${nextArticle.articleNumber}` : null;
+  const nearbyArticles = currentIndex >= 0 ? articles.slice(Math.max(0, currentIndex - 2), Math.min(articles.length, currentIndex + 3)) : [];
   const isMarked = isArticleRead(lawId, articleId);
 
   const handleMarkAsRead = () => {
@@ -38,8 +60,8 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
     } else {
       markAsRead(lawId, articleId);
       setShowReward(true);
-      setShowToast('完成一關 · +12 XP');
-      setTimeout(() => setShowReward(false), 1000);
+      setShowToast('完成一條 · +12 XP');
+      setTimeout(() => setShowReward(false), 900);
     }
     setTimeout(() => setShowToast(null), 1800);
   };
@@ -49,98 +71,172 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const isConfusing = hasBookmark(lawId, articleId, 'confusing');
   const lectureText = `${lawName}第${articleId}條。先聽法條原文。${detail.articleText}。接著老師用白話拆解：${detail.explanation}。為什麼這樣規定：${detail.why}。實務案例：${detail.cases.map(item => item.content).join(' ')}。考試提醒：${detail.examTips.join(' ')}`;
   const lawProgress = currentIndex >= 0 && articles.length > 0 ? Math.round(((currentIndex + 1) / articles.length) * 100) : 0;
+  const cleanCaseTitle = (title: string) => title.replace(/^[\u2600-\u27BF\u{1F300}-\u{1FAFF}\uFE0F\u200D\s]+/u, '');
 
-
+  const bookmarkButtons = (
+    <div className="grid grid-cols-3 gap-2">
+      <button type="button" onClick={() => toggleBookmark(lawId, articleId, 'important')} className={`reader-tool-button ${isImportant ? 'reader-tool-active' : ''}`} title="重要" aria-pressed={isImportant}>
+        <Bookmark size={15} strokeWidth={1.9}/><span>重要</span>
+      </button>
+      <button type="button" onClick={() => toggleBookmark(lawId, articleId, 'memorize')} className={`reader-tool-button ${isMemorize ? 'reader-tool-active' : ''}`} title="必背" aria-pressed={isMemorize}>
+        <BookText size={15} strokeWidth={1.9}/><span>必背</span>
+      </button>
+      <button type="button" onClick={() => toggleBookmark(lawId, articleId, 'confusing')} className={`reader-tool-button ${isConfusing ? 'reader-tool-active' : ''}`} title="不懂" aria-pressed={isConfusing}>
+        <HelpCircle size={15} strokeWidth={1.9}/><span>不懂</span>
+      </button>
+    </div>
+  );
 
   return (
-    <div className="max-w-[900px] mx-auto pb-28 relative z-10">
-      <div className="sticky top-0 glass border-b px-3 md:px-5 py-2.5 flex items-center justify-between z-30" style={{borderColor:'var(--border)'}}>
+    <div className="max-w-[1240px] mx-auto pb-44 md:pb-28 relative z-10">
+      <div className="sticky top-0 z-30 border-b px-4 md:px-6 py-3 flex items-center justify-between gap-4" style={{ borderColor: 'var(--border)', background: 'var(--bg)' }}>
         <div className="flex items-center gap-2 min-w-0">
-          <Link href={`/laws/${lawId}`} className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center hover:bg-indigo-500/10" style={{background:'var(--muted)', color:'var(--text-2)'}}><ArrowLeft size={15}/></Link>
-          <div className="min-w-0"><div className="text-[9px] font-black tracking-wider uppercase text-tertiary">Article Quest</div><div className="flex items-center gap-2"><h1 className="text-sm font-black truncate text-primary">{lawName} · 第 {articleId} 條</h1>{detail.importance >= 4 && <span className="hidden sm:inline text-[9px] font-black status-planned">高頻</span>}</div></div>
+          <Link href={`/laws/${lawId}`} className="icon-button shrink-0" aria-label="回法規目錄"><ArrowLeft size={16} strokeWidth={1.9}/></Link>
+          <div className="min-w-0">
+            <div className="text-xs font-medium tracking-[0.1em] text-tertiary">ARTICLE READER</div>
+            <h1 className="text-sm font-semibold truncate text-primary">{lawName} · 第 {articleId} 條</h1>
+          </div>
         </div>
-        <div className="flex gap-1.5 shrink-0">
-          <button onClick={() => toggleBookmark(lawId, articleId, 'important')} title="重要" className={`w-8 h-8 flex items-center justify-center rounded-full border transition ${isImportant?'bg-amber-500 text-white border-amber-500':'card text-tertiary'}`}><Bookmark size={14} className={isImportant?'fill-current':''}/></button>
-          <button onClick={() => toggleBookmark(lawId, articleId, 'memorize')} title="必背" className={`w-8 h-8 flex items-center justify-center rounded-full border text-[10px] font-black transition ${isMemorize?'bg-rose-500 text-white border-rose-500':'card text-tertiary'}`}>背</button>
-          <button onClick={() => toggleBookmark(lawId, articleId, 'confusing')} title="不懂" className={`w-8 h-8 flex items-center justify-center rounded-full border transition ${isConfusing?'bg-orange-500 text-white border-orange-500':'card text-tertiary'}`}><HelpCircle size={14}/></button>
+        <div className="hidden sm:flex items-center gap-3 text-xs text-tertiary shrink-0">
+          <span>{currentIndex >= 0 ? `${currentIndex + 1} / ${articles.length}` : `第 ${articleId} 條`}</span>
+          <span>{lawProgress}%</span>
         </div>
       </div>
 
-      <div className="px-3 md:px-5 pt-4 space-y-3.5">
-        <section className="card rounded-[1.35rem] p-4 md:p-5 soft-grid relative overflow-hidden">
-          <div className="flex items-center justify-between gap-3"><div className="flex flex-wrap gap-1.5 text-[9px] font-black"><span className="px-2 py-1 rounded-full status-current">第一輪 · 建立印象</span><span className="surface px-2 py-1 rounded-full text-tertiary">{currentIndex >= 0 ? `第 ${currentIndex + 1}/${articles.length} 關` : `第 ${articleId} 條`}</span></div><span className="text-xl">⚖️</span></div>
-          <div className="mt-3 flex flex-wrap gap-1.5">{detail.keywords.slice(0,6).map(k => <span key={k} className="text-[10px] px-2 py-1 rounded-full surface text-secondary">#{k}</span>)}</div>
-          <div className="mt-4 flex items-center gap-2"><div className="flex-1 h-1.5 rounded-full progress-track overflow-hidden"><div className="h-full bg-indigo-600 rounded-full" style={{width:`${lawProgress}%`}}/></div><span className="text-[10px] font-black text-tertiary">{lawProgress}%</span></div>
-        </section>
-
-        <section className="card rounded-[1.25rem] p-3.5 md:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="flex items-center gap-3"><div className="w-9 h-9 rounded-xl bg-violet-500/10 text-violet-600 flex items-center justify-center"><Headphones size={17}/></div><div><div className="text-sm font-black text-primary">Mini Lecture · 聽老師說</div><div className="text-[10px] mt-0.5 text-tertiary">法條原文 → 白話解析 → 制度目的 → 案例 → 考點</div></div></div>
-          <AudioPlayer text={lectureText} articleRef={{lawId, articleId}}/>
-        </section>
-
-        <section>
-          <div className="flex items-center gap-2 mb-1.5 text-[11px] font-black text-secondary"><BookText size={14}/> A. 官方法條原文 <span className="font-normal text-tertiary">不由 AI 改寫</span></div>
-          <div className="card rounded-[1.25rem] p-4 md:p-5 text-[14px] md:text-base leading-[1.95] tracking-wide font-serif whitespace-pre-wrap text-primary">{detail.articleText}</div>
-          <p className="text-[9px] mt-1.5 flex items-center gap-1.5 text-tertiary"><Scale size={10}/> 正式文字來自本地法規資料；AI 只處理教學層。</p>
-        </section>
-
-        <section className="rounded-[1.25rem] p-4 md:p-5 border bg-indigo-500/[0.04] border-indigo-500/15">
-          <div className="flex items-center justify-between gap-3 mb-2"><div className="flex items-center gap-2 text-indigo-700 dark:text-indigo-300 font-black text-sm"><MessageCircleQuestion size={16}/> B. 老師白話解析</div><span className="text-[9px] text-tertiary">逐條客製教材</span></div>
-          <p className="leading-[1.9] text-[14px] md:text-[15px] text-primary whitespace-pre-line">{detail.explanation}</p>
-        </section>
-
-        <section className="grid md:grid-cols-2 gap-3 items-stretch">
-          <div className="learning-panel learning-panel-why rounded-[1.25rem] p-4 md:p-5 h-full flex flex-col">
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2 font-black text-sm text-amber-700 dark:text-amber-200"><span className="learning-panel-icon bg-amber-500/12 text-amber-600 dark:text-amber-300"><Landmark size={15}/></span>C. 為什麼這樣規定</div>
-              <span className="text-[9px] font-black text-tertiary">制度脈絡</span>
+      <div className="grid xl:grid-cols-[180px_minmax(0,780px)_220px] gap-5 px-4 md:px-6 pt-6 items-start justify-center">
+        <aside className="hidden xl:block sticky top-20">
+          <div className="surface rounded-xl p-3">
+            <div className="text-xs font-medium tracking-[0.1em] text-tertiary">ARTICLE NAV</div>
+            <div className="mt-2 text-sm font-semibold text-primary line-clamp-2">{lawName}</div>
+            <div className="mt-3 h-1.5 rounded-full progress-track overflow-hidden">
+              <div className="h-full rounded-full" style={{ width: `${lawProgress}%`, background: 'var(--primary)' }}/>
             </div>
-            <p className="mt-3 text-[13px] md:text-sm leading-[1.85] text-secondary whitespace-pre-line flex-1">{detail.why}</p>
-            <div className="mt-3 pt-3 border-t text-[10px] font-bold text-amber-700 dark:text-amber-200 flex items-center gap-1.5" style={{borderColor:'var(--border)'}}><Lightbulb size={12}/>先理解制度問題，再記條文文字會更牢。</div>
+            <div className="mt-4 space-y-1">
+              {nearbyArticles.map(article => {
+                const active = article.articleNumber === articleId;
+                return (
+                  <Link key={article.articleNumber} href={`/articles/${lawId}-${article.articleNumber}`} className={`reader-nav-row ${active ? 'reader-nav-active' : ''}`}>
+                    <span>第 {article.articleNumber} 條</span>
+                    {isArticleRead(lawId, article.articleNumber) && <CheckCircle2 size={13} strokeWidth={1.9}/>}
+                  </Link>
+                );
+              })}
+            </div>
+            <Link href={`/laws/${lawId}`} className="mt-3 block text-xs font-medium text-tertiary hover:text-primary">查看完整目錄</Link>
           </div>
-          <div className="learning-panel learning-panel-case rounded-[1.25rem] p-4 md:p-5 h-full flex flex-col">
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2 font-black text-sm text-sky-700 dark:text-sky-200"><span className="learning-panel-icon bg-sky-500/12 text-sky-600 dark:text-sky-300"><BriefcaseBusiness size={15}/></span>D. 實務與考場案例</div>
-              <span className="text-[9px] font-black text-tertiary">情境套用</span>
-            </div>
-            <div className="mt-3 space-y-3 flex-1">
-              {detail.cases.map((c,i)=><div key={i} className={`${i ? 'pt-3 border-t' : ''}`} style={i ? {borderColor:'var(--border)'} : undefined}><div className="text-xs font-black text-primary flex items-center gap-1.5"><GraduationCap size={12} className="text-sky-500"/>{c.title}</div><p className="text-[13px] md:text-sm mt-1.5 leading-[1.8] text-secondary whitespace-pre-line">{c.content}</p></div>)}
-            </div>
-            <div className="mt-3 pt-3 border-t text-[10px] font-bold text-sky-700 dark:text-sky-200 flex items-center gap-1.5" style={{borderColor:'var(--border)'}}><GraduationCap size={12}/>把條文放進具體人物與交易流程裡理解。</div>
-          </div>
-        </section>
+        </aside>
 
-        <section className="card rounded-[1.25rem] p-4 md:p-5 ai-cta-panel relative overflow-hidden">
-          <div className="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-violet-500/10 blur-2xl" />
-          <div className="relative flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="w-11 h-11 rounded-2xl bg-violet-600 text-white flex items-center justify-center shrink-0"><Bot size={19}/></div>
-            <div className="flex-1 min-w-0">
-              <div className="text-sm font-black text-primary">這條還有疑問？直接問 AI 老師</div>
-              <div className="text-[10px] mt-1 leading-relaxed text-tertiary">已自動帶入本條原文與 B／C／D 教材。右側對話框內提供「再講白一點、換例子、為什麼、重要嗎、容易搞混、考試怎麼考」六個快捷問題。</div>
+        <article className="min-w-0 space-y-5">
+          <section className="border-b pb-5" style={{ borderColor: 'var(--border)' }}>
+            <div className="flex flex-wrap items-center gap-2 text-xs text-tertiary">
+              <span>第一輪閱讀</span>
+              <span>·</span>
+              <span>{detail.importance >= 4 ? '高頻條文' : '一般條文'}</span>
+              <span>·</span>
+              <span>進度 {lawProgress}%</span>
             </div>
-            <button onClick={() => setTeacherOpen(true)} className="shrink-0 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl px-4 py-3 text-xs font-black transition"><Bot size={14}/>直接問 AI 老師</button>
-          </div>
-        </section>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {detail.keywords.slice(0, 6).map(keyword => <span key={keyword} className="reader-keyword">#{keyword}</span>)}
+            </div>
+            <div className="xl:hidden mt-4">{bookmarkButtons}</div>
+          </section>
 
-        <section className="grid md:grid-cols-2 gap-3">
-          <div className="rounded-[1.25rem] p-4 border bg-rose-500/[0.035] border-rose-500/15"><div className="text-rose-700 dark:text-rose-300 font-black text-xs mb-2 flex items-center gap-1.5"><AlertTriangle size={14}/> 容易誤會</div><ul className="space-y-1.5 text-xs text-secondary">{detail.pitfalls.map((p,i) => <li key={i} className="flex gap-2"><span className="text-rose-500">•</span><span>{p}</span></li>)}</ul></div>
-          <div className="rounded-[1.25rem] p-4 border bg-amber-500/[0.035] border-amber-500/15"><div className="text-amber-700 dark:text-amber-300 font-black text-xs mb-2 flex items-center gap-1.5"><Flag size={14}/> 考試提醒</div><ul className="space-y-1.5 text-xs text-secondary">{detail.examTips.map((p,i) => <li key={i} className="flex gap-2"><span className="text-amber-500">•</span><span>{p}</span></li>)}</ul></div>
-        </section>
+          <section className="surface rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: 'var(--primary-soft)', color: 'var(--primary)' }}><Headphones size={17} strokeWidth={1.9}/></span>
+              <div>
+                <div className="text-sm font-semibold text-primary">Mini Lecture</div>
+                <div className="text-xs mt-1 text-tertiary">原文 → 白話解析 → 制度目的 → 案例 → 考點</div>
+              </div>
+            </div>
+            <AudioPlayer text={lectureText} articleRef={{ lawId, articleId }}/>
+          </section>
 
-        <section className="card rounded-[1.35rem] p-4 md:p-5 quest-glow relative overflow-hidden">
-          <div className="relative flex flex-col md:flex-row md:items-center gap-3"><div className="flex-1"><div className="text-[10px] font-black text-emerald-600">完成本關</div><h3 className="text-base font-black mt-1 text-primary">{isMarked ? '這一條已完成，可以往下一關。' : '大致懂了就過關，不必等到百分之百。'}</h3><div className="mt-2 flex gap-2 text-[9px]"><span className="surface px-2 py-1 rounded-full text-secondary"><Trophy size={10} className="inline mr-1"/>LV.{game.level}</span><span className="surface px-2 py-1 rounded-full text-secondary"><Zap size={10} className="inline mr-1"/>+12 XP</span></div></div><div className="flex flex-col gap-2 md:min-w-56"><button onClick={handleMarkAsRead} className={`px-5 py-3 rounded-xl font-black text-sm flex justify-center items-center gap-2 ${isMarked?'bg-emerald-600 text-white':'bg-indigo-600 text-white'}`}>{isMarked?<><CheckCircle2 size={17}/>已完成 · 點擊取消</>:<>✅ 大致懂了，完成這關</>}</button><ChatGPTButton article={`${lawName}第 ${articleId} 條`} text={`${detail.articleText}\n\n白話解析：${detail.explanation}`}/></div></div>
-        </section>
+          <section className="reader-section">
+            <div className="reader-section-label"><BookText size={15} strokeWidth={1.9}/><span>A. 官方法條原文</span><span className="reader-meta">不由 AI 改寫</span></div>
+            <div className="reader-law-text">{detail.articleText}</div>
+            <div className="mt-3 text-xs text-tertiary flex items-center gap-1.5"><Scale size={13} strokeWidth={1.9}/> 正式文字來自本地法規資料，AI 僅處理教學層。</div>
+          </section>
+
+          <section className="reader-ai-panel rounded-xl p-5">
+            <div className="reader-section-label"><MessageCircleQuestion size={15} strokeWidth={1.9}/><span>B. AI 白話解讀</span><span className="reader-meta">逐條教材</span></div>
+            <p className="mt-3 leading-7 text-[15px] text-primary whitespace-pre-line">{detail.explanation}</p>
+          </section>
+
+          <section className="grid md:grid-cols-2 gap-4">
+            <div className="reader-section rounded-xl border p-5" style={{ borderColor: 'var(--border)' }}>
+              <div className="reader-section-label"><Landmark size={15} strokeWidth={1.9}/><span>C. 制度目的</span><span className="reader-meta">WHY</span></div>
+              <p className="mt-3 text-sm leading-7 text-secondary whitespace-pre-line">{detail.why}</p>
+              <div className="mt-4 pt-3 border-t text-xs text-tertiary flex items-center gap-1.5" style={{ borderColor: 'var(--border)' }}><Lightbulb size={13} strokeWidth={1.9}/> 先理解制度問題，再記條文文字。</div>
+            </div>
+
+            <div className="reader-section rounded-xl border p-5" style={{ borderColor: 'var(--border)' }}>
+              <div className="reader-section-label"><BriefcaseBusiness size={15} strokeWidth={1.9}/><span>D. 實務案例</span><span className="reader-meta">CASE</span></div>
+              <div className="mt-3 space-y-4">
+                {detail.cases.map((item, index) => (
+                  <div key={index} className={index ? 'pt-4 border-t' : ''} style={index ? { borderColor: 'var(--border)' } : undefined}>
+                    <div className="text-sm font-semibold text-primary flex items-center gap-1.5"><GraduationCap size={14} strokeWidth={1.9}/>{cleanCaseTitle(item.title)}</div>
+                    <p className="text-sm mt-2 leading-7 text-secondary whitespace-pre-line">{item.content}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="grid md:grid-cols-2 gap-4">
+            <div className="reader-semantic-panel rounded-xl p-4">
+              <div className="text-sm font-semibold flex items-center gap-2" style={{ color: 'var(--danger)' }}><AlertTriangle size={15} strokeWidth={1.9}/> 容易誤會</div>
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-secondary">
+                {detail.pitfalls.map((item, index) => <li key={index} className="flex gap-2"><span style={{ color: 'var(--danger)' }}>•</span><span>{item}</span></li>)}
+              </ul>
+            </div>
+            <div className="reader-semantic-panel rounded-xl p-4">
+              <div className="text-sm font-semibold flex items-center gap-2" style={{ color: 'var(--warning)' }}><Flag size={15} strokeWidth={1.9}/> 國考考點</div>
+              <ul className="mt-3 space-y-2 text-sm leading-6 text-secondary">
+                {detail.examTips.map((item, index) => <li key={index} className="flex gap-2"><span style={{ color: 'var(--warning)' }}>•</span><span>{item}</span></li>)}
+              </ul>
+            </div>
+          </section>
+
+          <section className="card rounded-xl p-5">
+            <div className="flex flex-col md:flex-row md:items-center gap-4">
+              <div className="flex-1 min-w-0">
+                <div className="text-xs font-medium tracking-[0.1em] text-tertiary">COMPLETE ARTICLE</div>
+                <h2 className="text-base font-semibold mt-1 text-primary">{isMarked ? '這一條已完成，可以往下一條。' : '理解到可辨識考點，就先完成這一條。'}</h2>
+                <div className="mt-2 flex gap-3 text-xs text-tertiary"><span>LV.{game.level}</span><span className="inline-flex items-center gap-1"><Zap size={12} strokeWidth={1.9}/> +12 XP</span></div>
+              </div>
+              <div className="flex flex-col gap-2 md:min-w-56">
+                <button type="button" onClick={handleMarkAsRead} className="workspace-primary-action w-full">
+                  <CheckCircle2 size={15} strokeWidth={1.9}/>{isMarked ? '已完成 · 點擊取消' : '完成這一條'}
+                </button>
+                <ChatGPTButton article={`${lawName}第 ${articleId} 條`} text={`${detail.articleText}\n\n白話解析：${detail.explanation}`}/>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside className="hidden xl:block sticky top-20 space-y-3">
+          <section className="surface rounded-xl p-3">
+            <div className="text-xs font-medium tracking-[0.1em] text-tertiary">READER TOOLS</div>
+            <div className="mt-3">{bookmarkButtons}</div>
+          </section>
+          <section className="reader-ai-panel rounded-xl p-4">
+            <div className="flex items-center gap-2 text-sm font-semibold text-primary"><Bot size={16} strokeWidth={1.9} style={{ color: 'var(--primary)' }}/> AI 老師</div>
+            <p className="mt-2 text-xs leading-5 text-secondary">已帶入本條原文與教學內容，可直接追問概念、差異、案例與考點。</p>
+            <button type="button" onClick={() => setTeacherOpen(true)} className="workspace-secondary-action w-full mt-3"><Bot size={14} strokeWidth={1.9}/> 開啟 AI 對話</button>
+          </section>
+        </aside>
       </div>
 
-      <footer className="fixed bottom-0 left-0 md:left-[280px] right-0 glass border-t px-3 py-2.5 flex justify-between z-30 pb-[max(.65rem,env(safe-area-inset-bottom))]" style={{borderColor:'var(--border)'}}>
-        {prevId ? <Link href={`/articles/${prevId}`} className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-bold text-secondary"><ChevronLeft size={16}/>上一條</Link> : <span className="px-3 py-2 text-xs text-tertiary">已是首條</span>}
-        <Link href={`/laws/${lawId}`} className="text-[10px] font-bold px-2 py-2 text-tertiary">回目錄</Link>
-        {nextId ? <Link href={`/articles/${nextId}`} className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-black bg-indigo-600 text-white">下一條 <ChevronRight size={16}/></Link> : <span className="px-3 py-2 text-xs text-tertiary">已是末條</span>}
+      <footer className="reader-footer fixed left-0 md:left-[248px] right-0 border-t px-3 py-2.5 flex items-center justify-between z-30" style={{ borderColor: 'var(--border)', background: 'var(--card)' }}>
+        {prevId ? <Link href={`/articles/${prevId}`} className="workspace-secondary-action"><ChevronLeft size={15} strokeWidth={1.9}/> 上一條</Link> : <span className="text-sm text-tertiary px-2">已是首條</span>}
+        <Link href={`/laws/${lawId}`} className="text-sm font-medium text-tertiary hover:text-primary">回目錄</Link>
+        {nextId ? <Link href={`/articles/${nextId}`} className="workspace-primary-action">下一條 <ChevronRight size={15} strokeWidth={1.9}/></Link> : <span className="text-sm text-tertiary px-2">已是末條</span>}
       </footer>
 
       <ArticleTeacherDrawer open={teacherOpen} onClose={() => setTeacherOpen(false)} lawName={lawName} articleId={articleId} detail={detail}/>
-      {showToast && <div className="fixed bottom-20 left-1/2 -translate-x-1/2 card text-xs font-black px-4 py-2 rounded-full shadow-xl z-40 text-primary">{showToast}</div>}
-      {showReward && <div className="fixed bottom-32 left-1/2 -translate-x-1/2 z-50 reward-burst pointer-events-none"><div className="bg-amber-300 text-amber-950 font-black px-4 py-2.5 rounded-full shadow-xl whitespace-nowrap">✨ +12 XP · 過關！ 🏆</div></div>}
+      {showToast && <div className="fixed bottom-20 left-1/2 -translate-x-1/2 card text-sm font-semibold px-4 py-2 rounded-full z-40 text-primary">{showToast}</div>}
+      {showReward && <div className="fixed bottom-32 left-1/2 -translate-x-1/2 z-50 reward-burst pointer-events-none"><div className="card font-semibold px-4 py-2.5 rounded-full flex items-center gap-2 text-primary"><Trophy size={15} strokeWidth={1.9} style={{ color: 'var(--warning)' }}/> +12 XP · 過關</div></div>}
     </div>
   );
 }

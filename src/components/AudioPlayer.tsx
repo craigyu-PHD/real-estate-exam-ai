@@ -138,23 +138,24 @@ export function AudioPlayer({ text, onEnded, articleRef }: { text: string; onEnd
           ? '裝置自然語音'
           : engine === 'web-speech'
             ? '系統語音'
-            : `${voice.emoji} ${voice.shortLabel}`;
+            : voice.shortLabel;
 
   return (
     <div className="flex flex-wrap items-center gap-2">
       <button
+        type="button"
         onClick={handle}
         disabled={loading}
-        className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white px-4 py-2.5 rounded-full text-sm font-black shadow-sm transition active:scale-[0.98]"
+        className="workspace-primary-action disabled:opacity-60"
       >
         {loading ? <LoaderCircle size={15} className="animate-spin"/> : isPlaying ? <Pause size={15}/> : <Play size={15} className="fill-current"/>}
         {loading ? '準備自然語音…' : isPlaying ? '暫停' : '聽老師說'}
       </button>
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs font-bold card" style={{ color: engine === 'gemini' || engine === 'edge-neural' ? 'var(--primary)' : 'var(--text-2)' }}>
+      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-medium card" style={{ color: engine === 'gemini' || engine === 'edge-neural' ? 'var(--primary)' : 'var(--text-2)' }}>
         {engine === 'gemini' || engine === 'edge-neural' ? <Sparkles size={12}/> : <Volume2 size={12}/>}
         {engineLabel}
       </span>
-      <span className="text-[11px] hidden sm:inline" style={{ color: 'var(--text-3)' }}>{settings.voiceSpeed}x</span>
+      <span className="text-xs hidden sm:inline" style={{ color: 'var(--text-3)' }}>{settings.voiceSpeed}x</span>
     </div>
   );
 }

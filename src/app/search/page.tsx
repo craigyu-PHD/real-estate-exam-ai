@@ -1,43 +1,73 @@
 'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, FileText, ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, FileText, Search } from 'lucide-react';
+import { WorkspacePageHeader } from '@/components/WorkspacePageHeader';
 import { generatedArticlesFlat } from '@/data/generatedArticles';
 import { lawsData } from '@/data/lawsData';
 
 export default function SearchPage() {
-  const [q, setQ] = useState('');
-  const results = q.trim().length < 1 ? [] : generatedArticlesFlat.filter(a => {
-    const lawName = lawsData.find(l=>l.id===a.lawId)?.name || '';
-    const needle=q.trim();
-    return a.articleNumber.includes(needle) || a.text.includes(needle) || lawName.includes(needle) || `${a.lawId}${a.articleNumber}`.includes(needle);
+  const [query, setQuery] = useState('');
+  const needle = query.trim();
+  const results = needle.length < 1 ? [] : generatedArticlesFlat.filter(article => {
+    const lawName = lawsData.find(law => law.id === article.lawId)?.name || '';
+    return article.articleNumber.includes(needle) || article.text.includes(needle) || lawName.includes(needle) || `${article.lawId}${article.articleNumber}`.includes(needle);
   }).slice(0, 50);
 
   return (
     <div className="page-shell max-w-5xl space-y-5">
-      <header className="page-header flex items-start gap-4">
-        <div className="w-11 h-11 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center"><Search size={20}/></div>
-        <div><div className="text-[10px] font-black tracking-[.16em] text-indigo-600">SMART SEARCH</div><h1 className="text-2xl font-black mt-1 text-primary">搜尋法條</h1><p className="text-sm mt-1 text-secondary">從 2,399 條現行法規資料中搜尋法規名稱、條號與原文關鍵字。</p></div>
-      </header>
+      <WorkspacePageHeader eyebrow="WORKSPACE SEARCH" title="搜尋法條" description="搜尋法規名稱、條號與原文關鍵字，結果直接回到條文閱讀器。"/>
 
-      <section className="card rounded-[1.4rem] p-4 md:p-5">
-        <div className="relative"><Search size={17} className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary"/><input value={q} onChange={e=>setQ(e.target.value)} placeholder="例如：民法 758、抵押權、未辦登記" className="input-shell w-full rounded-xl pl-11 pr-4 py-3.5 text-sm outline-none" autoFocus/></div>
-        <div className="mt-3 flex flex-wrap gap-2 text-[10px] text-tertiary"><span className="surface rounded-full px-2.5 py-1">條號</span><span className="surface rounded-full px-2.5 py-1">法規名稱</span><span className="surface rounded-full px-2.5 py-1">原文關鍵字</span></div>
+      <section className="card rounded-2xl p-4 md:p-5">
+        <div className="relative">
+          <Search size={18} strokeWidth={1.9} className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary"/>
+          <input
+            value={query}
+            onChange={event => setQuery(event.target.value)}
+            aria-label="搜尋法條"
+            placeholder="搜尋法條、條號、概念、關鍵字…"
+            className="input-shell w-full rounded-xl pl-11 pr-4 py-3.5 text-sm outline-none"
+            autoFocus
+          />
+        </div>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-tertiary"><span>條號</span><span>法規名稱</span><span>原文關鍵字</span><span>最多顯示 50 筆</span></div>
       </section>
 
-      {q && <div className="flex items-center justify-between text-xs text-tertiary"><span>找到 {results.length} 筆{results.length===50?'（僅顯示前 50 筆）':''}</span><span>輸入越精準，結果越集中</span></div>}
+      {needle && (
+        <div className="flex items-center justify-between gap-4 text-xs text-tertiary">
+          <span>找到 {results.length} 筆{results.length === 50 ? '，目前顯示前 50 筆' : ''}</span>
+          <span className="hidden sm:inline">關鍵字越精準，結果越集中</span>
+        </div>
+      )}
 
-      <div className="space-y-2.5">
-        {results.map(r=>{
-          const lawName=lawsData.find(l=>l.id===r.lawId)?.name||r.lawId;
-          return <Link key={`${r.lawId}-${r.articleNumber}`} href={`/articles/${r.lawId}-${r.articleNumber}`} className="card rounded-2xl p-4 md:p-5 card-hover flex items-start gap-3 group">
-            <div className="w-9 h-9 rounded-xl surface flex items-center justify-center text-indigo-600 shrink-0"><FileText size={16}/></div>
-            <div className="min-w-0 flex-1"><div className="text-[10px] font-bold text-tertiary">{lawName}</div><div className="text-sm font-black mt-0.5 text-primary">第 {r.articleNumber} 條</div><p className="text-xs leading-relaxed mt-1 line-clamp-2 text-secondary">{r.text}</p></div>
-            <ArrowRight size={15} className="text-tertiary group-hover:text-indigo-600 group-hover:translate-x-0.5 transition shrink-0 mt-2"/>
-          </Link>;
-        })}
-        {q && results.length===0 && <div className="card rounded-[1.4rem] p-10 text-center"><Sparkles size={28} className="mx-auto text-tertiary"/><div className="text-sm font-black mt-3 text-primary">沒有找到直接符合的法條</div><p className="text-xs mt-1 text-tertiary">可改用更短的關鍵字，或到 AI 老師用白話提問。</p><Link href="/teacher" className="inline-flex mt-4 text-sm font-black text-indigo-600">改問 AI 老師 →</Link></div>}
-      </div>
+      {needle && results.length > 0 && (
+        <section className="card rounded-2xl overflow-hidden divide-y" style={{ borderColor: 'var(--border)' }}>
+          {results.map(result => {
+            const lawName = lawsData.find(law => law.id === result.lawId)?.name || result.lawId;
+            return (
+              <Link key={`${result.lawId}-${result.articleNumber}`} href={`/articles/${result.lawId}-${result.articleNumber}`} className="knowledge-row group">
+                <div className="w-9 h-9 rounded-lg surface flex items-center justify-center shrink-0"><FileText size={15} strokeWidth={1.9} style={{ color: 'var(--primary)' }}/></div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs text-tertiary">{lawName}</div>
+                  <div className="text-base font-semibold mt-1 text-primary">第 {result.articleNumber} 條</div>
+                  <p className="text-sm leading-6 mt-1 text-secondary line-clamp-2">{result.text}</p>
+                </div>
+                <ArrowRight size={15} strokeWidth={1.9} className="text-tertiary shrink-0 group-hover:translate-x-0.5 transition-transform"/>
+              </Link>
+            );
+          })}
+        </section>
+      )}
+
+      {needle && results.length === 0 && (
+        <section className="card rounded-2xl p-7 md:p-8">
+          <Search size={24} strokeWidth={1.9} className="text-tertiary"/>
+          <h2 className="text-lg font-semibold mt-4 text-primary">沒有找到直接符合的法條</h2>
+          <p className="text-sm leading-6 mt-2 text-secondary">可以縮短關鍵字，或改到 AI 老師用白話描述問題。</p>
+          <Link href="/teacher" className="workspace-secondary-action mt-5">改問 AI 老師</Link>
+        </section>
+      )}
     </div>
   );
 }
