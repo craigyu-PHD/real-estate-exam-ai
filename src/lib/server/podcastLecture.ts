@@ -11,8 +11,7 @@ export function getPodcastLecture(lawId: string, articleId: string) {
   const lectureScript = [
     `現在進入 ${lawName} 第 ${articleId} 條。先完整聽一次法條原文。`,
     detail.articleText,
-    `原文先到這裡。這一條的一句話重點是：${detail.oneLiner}`,
-    `接著做白話拆解。${detail.explanation}`,
+    `原文先到這裡。接著做白話拆解。${detail.explanation}`,
     `再來說明法律為什麼這樣規定。${detail.why}`,
     `把規則放進實際情境。${cases}`,
     `最後整理國考最需要記住的地方。${exam}`,

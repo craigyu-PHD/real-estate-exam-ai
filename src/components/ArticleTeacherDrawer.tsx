@@ -22,7 +22,7 @@ export function ArticleTeacherDrawer({ open, onClose, lawName, articleId, detail
   const initialized = useRef(false);
   const endRef = useRef<HTMLDivElement>(null);
 
-  const context = `一句話：${detail.oneLiner}\nB 白話解析：${detail.explanation}\nC 為什麼：${detail.why}\nD 案例：${detail.cases.map(c => `${c.title}：${c.content}`).join('\n')}\n易錯：${detail.pitfalls.join('；')}\n易混淆：${(detail.confuseWith || []).map(item => `${item.article}：${item.diff}`).join('；')}\n考點：${detail.examTips.join('；')}`;
+  const context = `B 白話解析：${detail.explanation}\nC 為什麼：${detail.why}\nD 案例：${detail.cases.map(c => `${c.title}：${c.content}`).join('\n')}\n易錯：${detail.pitfalls.join('；')}\n易混淆：${(detail.confuseWith || []).map(item => `${item.article}：${item.diff}`).join('；')}\n考點：${detail.examTips.join('；')}`;
 
   const ask = async (question: string) => {
     const q = question.trim();

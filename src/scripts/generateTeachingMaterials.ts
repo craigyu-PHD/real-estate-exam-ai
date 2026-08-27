@@ -369,7 +369,6 @@ function buildMaterial(lawId: string, articleNumber: string, text: string, index
   const lectureScript = [
     `現在學的是${law.name}第${articleNumber}條。先聽一次法條原文。`,
     text,
-    `好，先抓一句話重點。${oneLiner}。`,
     `接著老師用白話拆解。${explanation}`,
     `為什麼要這樣規定？${why}`,
     `來看一個${profile.scene}的情境。${case1}`,

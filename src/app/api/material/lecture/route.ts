@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     if (!lawId || !articleId) return NextResponse.json({ error: 'missing article' }, { status: 400 });
     const podcast = getPodcastLecture(lawId, articleId);
     if (!podcast) return NextResponse.json({ error: 'article not found' }, { status: 404 });
-    return NextResponse.json({ lectureScript: podcast.lectureScript, oneLiner: podcast.detail.oneLiner });
+    return NextResponse.json({ lectureScript: podcast.lectureScript });
   } catch {
     return NextResponse.json({ error: 'material failed' }, { status: 500 });
   }

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { lawsData } from '@/data/lawsData';
+import { resolveStudyDateKey, useStudyDateKey } from '@/hooks/useStudyDate';
 
 type ProgressData = {
   readArticles: Record<string, string[]>;
@@ -17,13 +18,6 @@ const emptyData: ProgressData = {
   lastStudyDate: null,
   streak: 0,
 };
-
-function localDateKey(date = new Date()) {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-}
 
 function dayDiff(a: string, b: string) {
   const [ay, am, ad] = a.split('-').map(Number);
@@ -46,6 +40,7 @@ function normalize(parsed: Partial<ProgressData>): ProgressData {
 export function useProgress() {
   const [data, setData] = useState<ProgressData>(emptyData);
   const [isLoaded, setIsLoaded] = useState(false);
+  const todayKey = useStudyDateKey();
 
   const readStored = () => {
     const stored = localStorage.getItem('app_progress');
@@ -77,7 +72,7 @@ export function useProgress() {
     setData(prev => {
       const currentRead = prev.readArticles[lawId] || [];
       if (currentRead.includes(articleId)) return prev;
-      const today = localDateKey();
+      const today = resolveStudyDateKey();
       let newStreak = prev.streak;
       if (prev.lastStudyDate) {
         const diff = dayDiff(prev.lastStudyDate, today);
@@ -139,7 +134,7 @@ export function useProgress() {
     return totalArticles === 0 ? 0 : Math.min(100, Math.floor((totalRead / totalArticles) * 100));
   };
 
-  const getTodayReadCount = () => isLoaded ? data.dailyCounts[localDateKey()] || 0 : 0;
+  const getTodayReadCount = () => isLoaded ? data.dailyCounts[todayKey] || 0 : 0;
 
   const getGamificationStats = () => {
     const totalRead = getTotalReadCount();
@@ -164,6 +159,7 @@ export function useProgress() {
     getTotalReadCount,
     getGamificationStats,
     streak: data.streak,
+    todayKey,
     getTodayReadCount,
     isArticleRead,
   };

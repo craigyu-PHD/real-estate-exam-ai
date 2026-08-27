@@ -6,15 +6,16 @@ import { useBookmarks } from '@/hooks/useBookmarks';
 import { lawsData } from '@/data/lawsData';
 import { StudyCalendar, ExamCountdown } from '@/components/StudyCalendar';
 import { ActiveThemeArtwork } from '@/components/ThemeArtwork';
+import { dateFromKey } from '@/hooks/useStudyDate';
 
 export default function Home() {
-  const { isLoaded, getTotalProgress, streak, getTodayReadCount, getProgress, getGamificationStats } = useProgress();
+  const { isLoaded, getTotalProgress, streak, todayKey, getTodayReadCount, getProgress, getGamificationStats } = useProgress();
   const { getBookmarksByType } = useBookmarks();
   const total = getTotalProgress();
   const today = getTodayReadCount();
   const game = getGamificationStats();
   const confusing = getBookmarksByType('confusing').length;
-  const todayStr = new Date().toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+  const todayStr = dateFromKey(todayKey).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
 
   if (!isLoaded) return <div className="p-10 text-center" style={{ color: 'var(--text-3)' }}>正在整理今日學習地圖…</div>;
 
@@ -118,7 +119,7 @@ export default function Home() {
             <div className="mt-4 space-y-3">
               {[
                 ['👀','先見過','先知道這條在處理什麼'],
-                ['💡','再理解','一句話＋白話＋生活案例'],
+                ['💡','再理解','白話解析＋制度脈絡＋生活案例'],
                 ['✅','最後標記','懂了、不懂、必背都留下痕跡'],
               ].map(([emoji,title,desc]) => <div key={title} className="flex gap-3 rounded-xl p-3" style={{background:'var(--muted)'}}><span className="text-lg">{emoji}</span><div><div className="text-xs font-black" style={{color:'var(--text-1)'}}>{title}</div><div className="text-[11px] mt-0.5" style={{color:'var(--text-3)'}}>{desc}</div></div></div>)}
             </div>

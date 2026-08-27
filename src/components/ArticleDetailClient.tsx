@@ -47,7 +47,7 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
   const isImportant = hasBookmark(lawId, articleId, 'important');
   const isMemorize = hasBookmark(lawId, articleId, 'memorize');
   const isConfusing = hasBookmark(lawId, articleId, 'confusing');
-  const lectureText = detail.lectureScript || `${lawName}第${articleId}條。先聽法條原文。${detail.articleText}。老師白話解析：${detail.explanation}。為什麼這樣規定：${detail.why}。實務案例：${detail.cases[0]?.content || ''}。考試提醒：${detail.examTips.join(' ')}`;
+  const lectureText = `${lawName}第${articleId}條。先聽法條原文。${detail.articleText}。接著老師用白話拆解：${detail.explanation}。為什麼這樣規定：${detail.why}。實務案例：${detail.cases.map(item => item.content).join(' ')}。考試提醒：${detail.examTips.join(' ')}`;
   const lawProgress = currentIndex >= 0 && articles.length > 0 ? Math.round(((currentIndex + 1) / articles.length) * 100) : 0;
 
 
@@ -69,7 +69,6 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
       <div className="px-3 md:px-5 pt-4 space-y-3.5">
         <section className="card rounded-[1.35rem] p-4 md:p-5 soft-grid relative overflow-hidden">
           <div className="flex items-center justify-between gap-3"><div className="flex flex-wrap gap-1.5 text-[9px] font-black"><span className="px-2 py-1 rounded-full status-current">第一輪 · 建立印象</span><span className="surface px-2 py-1 rounded-full text-tertiary">{currentIndex >= 0 ? `第 ${currentIndex + 1}/${articles.length} 關` : `第 ${articleId} 條`}</span></div><span className="text-xl">⚖️</span></div>
-          <h2 className="text-xl md:text-2xl font-black mt-3 leading-relaxed text-primary">{detail.oneLiner}</h2>
           <div className="mt-3 flex flex-wrap gap-1.5">{detail.keywords.slice(0,6).map(k => <span key={k} className="text-[10px] px-2 py-1 rounded-full surface text-secondary">#{k}</span>)}</div>
           <div className="mt-4 flex items-center gap-2"><div className="flex-1 h-1.5 rounded-full progress-track overflow-hidden"><div className="h-full bg-indigo-600 rounded-full" style={{width:`${lawProgress}%`}}/></div><span className="text-[10px] font-black text-tertiary">{lawProgress}%</span></div>
         </section>
@@ -129,7 +128,7 @@ export function ArticleDetailClient({ rawId, detail }: { rawId: string; detail: 
         </section>
 
         <section className="card rounded-[1.35rem] p-4 md:p-5 quest-glow relative overflow-hidden">
-          <div className="relative flex flex-col md:flex-row md:items-center gap-3"><div className="flex-1"><div className="text-[10px] font-black text-emerald-600">完成本關</div><h3 className="text-base font-black mt-1 text-primary">{isMarked ? '這一條已完成，可以往下一關。' : '大致懂了就過關，不必等到百分之百。'}</h3><div className="mt-2 flex gap-2 text-[9px]"><span className="surface px-2 py-1 rounded-full text-secondary"><Trophy size={10} className="inline mr-1"/>LV.{game.level}</span><span className="surface px-2 py-1 rounded-full text-secondary"><Zap size={10} className="inline mr-1"/>+12 XP</span></div></div><div className="flex flex-col gap-2 md:min-w-56"><button onClick={handleMarkAsRead} className={`px-5 py-3 rounded-xl font-black text-sm flex justify-center items-center gap-2 ${isMarked?'bg-emerald-600 text-white':'bg-indigo-600 text-white'}`}>{isMarked?<><CheckCircle2 size={17}/>已完成 · 點擊取消</>:<>✅ 大致懂了，完成這關</>}</button><ChatGPTButton article={`${lawName}第 ${articleId} 條`} text={`${detail.articleText}\n\n白話：${detail.oneLiner}\n講解：${detail.explanation}`}/></div></div>
+          <div className="relative flex flex-col md:flex-row md:items-center gap-3"><div className="flex-1"><div className="text-[10px] font-black text-emerald-600">完成本關</div><h3 className="text-base font-black mt-1 text-primary">{isMarked ? '這一條已完成，可以往下一關。' : '大致懂了就過關，不必等到百分之百。'}</h3><div className="mt-2 flex gap-2 text-[9px]"><span className="surface px-2 py-1 rounded-full text-secondary"><Trophy size={10} className="inline mr-1"/>LV.{game.level}</span><span className="surface px-2 py-1 rounded-full text-secondary"><Zap size={10} className="inline mr-1"/>+12 XP</span></div></div><div className="flex flex-col gap-2 md:min-w-56"><button onClick={handleMarkAsRead} className={`px-5 py-3 rounded-xl font-black text-sm flex justify-center items-center gap-2 ${isMarked?'bg-emerald-600 text-white':'bg-indigo-600 text-white'}`}>{isMarked?<><CheckCircle2 size={17}/>已完成 · 點擊取消</>:<>✅ 大致懂了，完成這關</>}</button><ChatGPTButton article={`${lawName}第 ${articleId} 條`} text={`${detail.articleText}\n\n白話解析：${detail.explanation}`}/></div></div>
         </section>
       </div>
 

@@ -198,7 +198,7 @@ function resolveQuestionContext(question: string) {
   if (!articleId) return null;
   const detail = getArticleDetail(law.id, articleId);
   if (!detail) return null;
-  const teachingContext = `一句話：${detail.oneLiner}\nB 白話解析：${detail.explanation}\nC 為什麼：${detail.why}\nD 案例：${detail.cases.map(c => `${c.title}：${c.content}`).join('\n')}\n易錯：${detail.pitfalls.join('；')}\n易混淆：${(detail.confuseWith || []).map(item => `${item.article}：${item.diff}`).join('；')}\n考點：${detail.examTips.join('；')}`;
+  const teachingContext = `B 白話解析：${detail.explanation}\nC 為什麼：${detail.why}\nD 案例：${detail.cases.map(c => `${c.title}：${c.content}`).join('\n')}\n易錯：${detail.pitfalls.join('；')}\n易混淆：${(detail.confuseWith || []).map(item => `${item.article}：${item.diff}`).join('；')}\n考點：${detail.examTips.join('；')}`;
   return { lawName: law.name, articleId, articleText: detail.articleText, teachingContext };
 }
 

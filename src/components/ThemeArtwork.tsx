@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import type { ThemeId } from '@/lib/themeConfig';
 
 const ART: Partial<Record<ThemeId, string>> = {
-  'cyber-web': '/themes/cyber-web-hero.svg',
-  'iron-forge': '/themes/iron-forge-hero.svg',
-  'apex-racing': '/themes/apex-racing-hero.svg',
-  'deep-space': '/themes/deep-space-hero.svg',
-  'shadow-ronin': '/themes/shadow-ronin-hero.svg',
+  'cyber-web': '/themes/cyber-web-hero.webp',
+  'iron-forge': '/themes/iron-forge-hero.webp',
+  'apex-racing': '/themes/apex-racing-hero.webp',
+  'deep-space': '/themes/deep-space-hero.webp',
+  'shadow-ronin': '/themes/shadow-ronin-hero.webp',
 };
 
 function currentTheme(): ThemeId {
